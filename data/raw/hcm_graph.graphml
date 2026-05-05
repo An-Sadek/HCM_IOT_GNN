@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="geometry" attr.type="string"/>
+<key id="d11" for="edge" attr.name="length" attr.type="string"/>
+<key id="d10" for="edge" attr.name="reversed" attr.type="string"/>
+<key id="d9" for="edge" attr.name="oneway" attr.type="string"/>
+<key id="d8" for="edge" attr.name="highway" attr.type="string"/>
+<key id="d7" for="edge" attr.name="osmid" attr.type="string"/>
+<key id="d6" for="node" attr.name="street_count" attr.type="string"/>
+<key id="d5" for="node" attr.name="x" attr.type="string"/>
+<key id="d4" for="node" attr.name="y" attr.type="string"/>
+<key id="d3" for="graph" attr.name="simplified" attr.type="string"/>
+<key id="d2" for="graph" attr.name="crs" attr.type="string"/>
+<key id="d1" for="graph" attr.name="created_with" attr.type="string"/>
+<key id="d0" for="graph" attr.name="created_date" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">2026-05-05 13:44:54</data>
+<data key="d1">OSMnx 2.0.7</data>
+<data key="d2">epsg:4326</data>
+<data key="d3">True</data>
+<node id="7741240169">
+  <data key="d4">10.6720683</data>
+  <data key="d5">106.8583699</data>
+  <data key="d6">3</data>
+</node>
+<node id="7741240170">
+  <data key="d4">10.6724976</data>
+  <data key="d5">106.8581682</data>
+  <data key="d6">3</data>
+</node>
+<node id="7941367072">
+  <data key="d4">10.6727659</data>
+  <data key="d5">106.8579895</data>
+  <data key="d6">1</data>
+</node>
+<node id="7959007675">
+  <data key="d4">10.6717208</data>
+  <data key="d5">106.8579733</data>
+  <data key="d6">1</data>
+</node>
+<node id="7959007676">
+  <data key="d4">10.6715692</data>
+  <data key="d5">106.8602277</data>
+  <data key="d6">1</data>
+</node>
+<node id="7959007681">
+  <data key="d4">10.6711211</data>
+  <data key="d5">106.8599808</data>
+  <data key="d6">3</data>
+</node>
+<edge source="7741240169" target="7959007681" id="0">
+  <data key="d7">829354379</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">False</data>
+  <data key="d11">208.5790473396785</data>
+  <data key="d12">LINESTRING (106.8583699 10.6720683, 106.8584358 10.6720123, 106.8589967 10.6715379, 106.859134 10.6714541, 106.8596596 10.6711911, 106.859772 10.671153, 106.8599808 10.6711211)</data>
+</edge>
+<edge source="7741240169" target="7741240170" id="0">
+  <data key="d7">829354379</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">True</data>
+  <data key="d11">52.758123676085745</data>
+  <data key="d12">LINESTRING (106.8583699 10.6720683, 106.8583171 10.6721453, 106.8582749 10.6722367, 106.8582247 10.6723675, 106.858178 10.672475, 106.8581682 10.6724976)</data>
+</edge>
+<edge source="7741240169" target="7959007675" id="0">
+  <data key="d7">853234939</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">True</data>
+  <data key="d11">58.449272735863616</data>
+  <data key="d12">LINESTRING (106.8583699 10.6720683, 106.8583247 10.6720068, 106.8582201 10.6719, 106.8579733 10.6717208)</data>
+</edge>
+<edge source="7741240170" target="7741240169" id="0">
+  <data key="d7">829354379</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">False</data>
+  <data key="d11">52.758123676085745</data>
+  <data key="d12">LINESTRING (106.8581682 10.6724976, 106.858178 10.672475, 106.8582247 10.6723675, 106.8582749 10.6722367, 106.8583171 10.6721453, 106.8583699 10.6720683)</data>
+</edge>
+<edge source="7741240170" target="7941367072" id="0">
+  <data key="d7">851422419</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">False</data>
+  <data key="d11">35.78540406756198</data>
+  <data key="d12">LINESTRING (106.8581682 10.6724976, 106.8580954 10.6726302, 106.8580377 10.6727099, 106.8579895 10.6727659)</data>
+</edge>
+<edge source="7941367072" target="7741240170" id="0">
+  <data key="d7">851422419</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">True</data>
+  <data key="d11">35.78540406756198</data>
+  <data key="d12">LINESTRING (106.8579895 10.6727659, 106.8580377 10.6727099, 106.8580954 10.6726302, 106.8581682 10.6724976)</data>
+</edge>
+<edge source="7959007675" target="7741240169" id="0">
+  <data key="d7">853234939</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">False</data>
+  <data key="d11">58.449272735863616</data>
+  <data key="d12">LINESTRING (106.8579733 10.6717208, 106.8582201 10.6719, 106.8583247 10.6720068, 106.8583699 10.6720683)</data>
+</edge>
+<edge source="7959007676" target="7959007681" id="0">
+  <data key="d7">853234940</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">True</data>
+  <data key="d11">56.854768277981286</data>
+  <data key="d12">LINESTRING (106.8602277 10.6715692, 106.8601895 10.6714868, 106.8601318 10.6713676, 106.8600829 10.6712911, 106.8600212 10.6712081, 106.8599808 10.6711211)</data>
+</edge>
+<edge source="7959007681" target="7741240169" id="0">
+  <data key="d7">829354379</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">True</data>
+  <data key="d11">208.57904733967848</data>
+  <data key="d12">LINESTRING (106.8599808 10.6711211, 106.859772 10.671153, 106.8596596 10.6711911, 106.859134 10.6714541, 106.8589967 10.6715379, 106.8584358 10.6720123, 106.8583699 10.6720683)</data>
+</edge>
+<edge source="7959007681" target="7959007676" id="0">
+  <data key="d7">853234940</data>
+  <data key="d8">residential</data>
+  <data key="d9">False</data>
+  <data key="d10">False</data>
+  <data key="d11">56.854768277981286</data>
+  <data key="d12">LINESTRING (106.8599808 10.6711211, 106.8600212 10.6712081, 106.8600829 10.6712911, 106.8601318 10.6713676, 106.8601895 10.6714868, 106.8602277 10.6715692)</data>
+</edge>
+</graph></graphml>
