@@ -1,0 +1,188 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5769482813,
+      "lat": 10.7721763,
+      "lon": 106.626167,
+      "timestamp": "2018-07-19T04:26:33Z",
+      "version": 1,
+      "changeset": 60854671,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5769482813,
+      "lat": 10.7721671,
+      "lon": 106.626163,
+      "timestamp": "2019-07-23T11:26:36Z",
+      "version": 2,
+      "changeset": 72552796,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5769486919,
+      "lat": 10.7877788,
+      "lon": 106.6704453,
+      "timestamp": "2018-07-19T04:29:57Z",
+      "version": 1,
+      "changeset": 60854715,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769486919,
+      "lat": 10.7877981,
+      "lon": 106.6703695,
+      "timestamp": "2024-05-12T05:02:30Z",
+      "version": 2,
+      "changeset": 151209343,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5769487958,
+      "lat": 10.8593005,
+      "lon": 106.6512682,
+      "timestamp": "2018-07-19T04:32:45Z",
+      "version": 1,
+      "changeset": 60854767,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5769487985,
+      "lat": 10.8606472,
+      "lon": 106.6501155,
+      "timestamp": "2018-07-19T04:32:46Z",
+      "version": 1,
+      "changeset": 60854767,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5769487986,
+      "lat": 10.8605853,
+      "lon": 106.6500632,
+      "timestamp": "2018-07-19T04:32:46Z",
+      "version": 1,
+      "changeset": 60854767,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5769487986,
+      "lat": 10.8606077,
+      "lon": 106.650031,
+      "timestamp": "2023-12-08T14:27:04Z",
+      "version": 2,
+      "changeset": 144905980,
+      "user": "traian_cozmi",
+      "uid": 14046792
+    },
+    {
+      "type": "node",
+      "id": 5769487987,
+      "lat": 10.8588534,
+      "lon": 106.6519502,
+      "timestamp": "2018-07-19T04:32:46Z",
+      "version": 1,
+      "changeset": 60854767,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5769487988,
+      "lat": 10.8587994,
+      "lon": 106.6518992,
+      "timestamp": "2018-07-19T04:32:46Z",
+      "version": 1,
+      "changeset": 60854767,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5769487988,
+      "lat": 10.858836,
+      "lon": 106.6518613,
+      "timestamp": "2023-11-20T13:43:18Z",
+      "version": 2,
+      "changeset": 144248033,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5769487988,
+      "lat": 10.858836,
+      "lon": 106.6518744,
+      "timestamp": "2025-08-12T04:41:39Z",
+      "version": 3,
+      "changeset": 170320888,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5769487989,
+      "lat": 10.8591321,
+      "lon": 106.6516745,
+      "timestamp": "2018-07-19T04:32:46Z",
+      "version": 1,
+      "changeset": 60854767,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5769487990,
+      "lat": 10.8592742,
+      "lon": 106.6515283,
+      "timestamp": "2018-07-19T04:32:46Z",
+      "version": 1,
+      "changeset": 60854767,
+      "user": "lakkarssu",
+      "uid": 8196672,
+      "tags": {
+        "name": "Cầu Trường Đai",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5769487990,
+      "lat": 10.8592742,
+      "lon": 106.6515283,
+      "timestamp": "2022-05-10T04:51:59Z",
+      "version": 2,
+      "changeset": 120772929,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Cầu Trường Đai"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5769487991,
+      "lat": 10.859455,
+      "lon": 106.6513443,
+      "timestamp": "2018-07-19T04:32:46Z",
+      "version": 1,
+      "changeset": 60854767,
+      "user": "lakkarssu",
+      "uid": 8196672
+    }
+  ]
+}

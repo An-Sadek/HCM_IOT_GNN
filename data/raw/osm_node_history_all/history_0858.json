@@ -1,0 +1,188 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5742989290,
+      "lat": 10.82824,
+      "lon": 106.6862422,
+      "timestamp": "2018-07-06T07:55:33Z",
+      "version": 1,
+      "changeset": 60457916,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5742989290,
+      "lat": 10.8280621,
+      "lon": 106.6862389,
+      "timestamp": "2018-07-06T10:33:58Z",
+      "version": 2,
+      "changeset": 60463114,
+      "user": "kawle",
+      "uid": 7446620
+    },
+    {
+      "type": "node",
+      "id": 5742997204,
+      "lat": 10.7819965,
+      "lon": 106.7001334,
+      "timestamp": "2018-07-06T08:00:51Z",
+      "version": 1,
+      "changeset": 60458065,
+      "user": "kawle",
+      "uid": 7446620
+    },
+    {
+      "type": "node",
+      "id": 5743031168,
+      "lat": 10.8882744,
+      "lon": 106.7005934,
+      "timestamp": "2018-07-06T08:13:53Z",
+      "version": 1,
+      "changeset": 60458435,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5743072751,
+      "lat": 10.7757787,
+      "lon": 106.6990847,
+      "timestamp": "2018-07-06T08:39:26Z",
+      "version": 1,
+      "changeset": 60459321,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5743072751,
+      "lat": 10.7758208,
+      "lon": 106.6990461,
+      "timestamp": "2023-11-04T14:15:02Z",
+      "version": 2,
+      "changeset": 143615803,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5743078025,
+      "lat": 10.8303625,
+      "lon": 106.6700008,
+      "timestamp": "2018-07-06T08:43:27Z",
+      "version": 1,
+      "changeset": 60459465,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5743078025,
+      "lat": 10.8303625,
+      "lon": 106.6700008,
+      "timestamp": "2019-09-03T18:41:47Z",
+      "version": 2,
+      "changeset": 74054605,
+      "user": "GhostEye",
+      "uid": 9633773,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5743078027,
+      "lat": 10.8292801,
+      "lon": 106.6720627,
+      "timestamp": "2018-07-06T08:43:27Z",
+      "version": 1,
+      "changeset": 60459465,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5743332287,
+      "lat": 10.8281688,
+      "lon": 106.6858799,
+      "timestamp": "2018-07-06T10:33:58Z",
+      "version": 1,
+      "changeset": 60463114,
+      "user": "kawle",
+      "uid": 7446620
+    },
+    {
+      "type": "node",
+      "id": 5743332292,
+      "lat": 10.8326822,
+      "lon": 106.695348,
+      "timestamp": "2018-07-06T10:33:58Z",
+      "version": 1,
+      "changeset": 60463114,
+      "user": "kawle",
+      "uid": 7446620
+    },
+    {
+      "type": "node",
+      "id": 5743332292,
+      "lat": 10.8327013,
+      "lon": 106.6953725,
+      "timestamp": "2024-01-17T12:53:02Z",
+      "version": 2,
+      "changeset": 146363051,
+      "user": "CristinaSabau",
+      "uid": 16542258
+    },
+    {
+      "type": "node",
+      "id": 5748074768,
+      "lat": 10.8758696,
+      "lon": 106.5928385,
+      "timestamp": "2018-07-09T01:27:29Z",
+      "version": 1,
+      "changeset": 60521525,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5748074768,
+      "lat": 10.8758512,
+      "lon": 106.5928197,
+      "timestamp": "2018-07-12T04:37:21Z",
+      "version": 2,
+      "changeset": 60633056,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5748074824,
+      "lat": 10.8749333,
+      "lon": 106.5935139,
+      "timestamp": "2018-07-09T01:27:30Z",
+      "version": 1,
+      "changeset": 60521525,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5748074824,
+      "lat": 10.8749162,
+      "lon": 106.5934857,
+      "timestamp": "2018-07-12T04:37:21Z",
+      "version": 2,
+      "changeset": 60633056,
+      "user": "neela1",
+      "uid": 7795604
+    }
+  ]
+}

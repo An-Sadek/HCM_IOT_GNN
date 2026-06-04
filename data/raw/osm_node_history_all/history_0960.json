@@ -1,0 +1,290 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5766180799,
+      "lat": 10.7620821,
+      "lon": 106.6445598,
+      "timestamp": "2018-07-17T15:14:55Z",
+      "version": 1,
+      "changeset": 60805307,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5766180799,
+      "lat": 10.7620768,
+      "lon": 106.6446027,
+      "timestamp": "2018-07-27T01:22:40Z",
+      "version": 2,
+      "changeset": 61104163,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5766180799,
+      "lat": 10.7620755,
+      "lon": 106.6446066,
+      "timestamp": "2023-11-05T23:24:11Z",
+      "version": 3,
+      "changeset": 143671253,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5766180799,
+      "lat": 10.7620697,
+      "lon": 106.6446419,
+      "timestamp": "2024-05-14T00:14:56Z",
+      "version": 4,
+      "changeset": 151289649,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5766180799,
+      "lat": 10.7620709,
+      "lon": 106.6446343,
+      "timestamp": "2024-06-20T08:53:57Z",
+      "version": 5,
+      "changeset": 152931898,
+      "user": "RedGreenBlue09",
+      "uid": 21224147
+    },
+    {
+      "type": "node",
+      "id": 5767074242,
+      "lat": 10.8620129,
+      "lon": 106.6541628,
+      "timestamp": "2018-07-18T01:23:30Z",
+      "version": 1,
+      "changeset": 60816906,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5767074384,
+      "lat": 10.7951766,
+      "lon": 106.6345051,
+      "timestamp": "2018-07-18T01:23:30Z",
+      "version": 1,
+      "changeset": 60816907,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5767074384,
+      "lat": 10.7951766,
+      "lon": 106.6345051,
+      "timestamp": "2019-06-04T03:38:10Z",
+      "version": 2,
+      "changeset": 70906736,
+      "user": "pizzagal",
+      "uid": 7772276
+    },
+    {
+      "type": "node",
+      "id": 5767074384,
+      "lat": 10.7951682,
+      "lon": 106.6345037,
+      "timestamp": "2023-12-17T19:10:14Z",
+      "version": 3,
+      "changeset": 145226172,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5767074384,
+      "lat": 10.7951682,
+      "lon": 106.6345037,
+      "timestamp": "2026-04-07T00:02:24Z",
+      "version": 4,
+      "changeset": 180973214,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 5767074385,
+      "lat": 10.7954885,
+      "lon": 106.6345715,
+      "timestamp": "2018-07-18T01:23:30Z",
+      "version": 1,
+      "changeset": 60816907,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5767074385,
+      "lat": 10.7955906,
+      "lon": 106.6345744,
+      "timestamp": "2023-03-17T09:06:58Z",
+      "version": 2,
+      "changeset": 133779472,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5767074385,
+      "lat": 10.7955143,
+      "lon": 106.6345811,
+      "timestamp": "2023-12-17T19:10:14Z",
+      "version": 3,
+      "changeset": 145226172,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5767074385,
+      "lat": 10.7955143,
+      "lon": 106.6345811,
+      "timestamp": "2026-04-07T00:02:24Z",
+      "version": 4,
+      "changeset": 180973214,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 5767074495,
+      "lat": 10.861831,
+      "lon": 106.6537784,
+      "timestamp": "2018-07-18T01:23:31Z",
+      "version": 1,
+      "changeset": 60816906,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5767074499,
+      "lat": 10.8618415,
+      "lon": 106.653529,
+      "timestamp": "2018-07-18T01:23:31Z",
+      "version": 1,
+      "changeset": 60816906,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5767074499,
+      "lat": 10.8619045,
+      "lon": 106.6534897,
+      "timestamp": "2023-04-29T05:56:35Z",
+      "version": 2,
+      "changeset": 135491421,
+      "user": "hoanganhlami33",
+      "uid": 14252795
+    },
+    {
+      "type": "node",
+      "id": 5767074499,
+      "lat": 10.8619095,
+      "lon": 106.65349,
+      "timestamp": "2025-08-10T15:22:38Z",
+      "version": 3,
+      "changeset": 170251107,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5767085845,
+      "lat": 10.8704157,
+      "lon": 106.7740001,
+      "timestamp": "2018-07-18T01:39:15Z",
+      "version": 1,
+      "changeset": 60817116,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767085845,
+      "lat": 10.8704197,
+      "lon": 106.7740068,
+      "timestamp": "2018-07-20T09:07:29Z",
+      "version": 2,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767087054,
+      "lat": 10.8720147,
+      "lon": 106.7691267,
+      "timestamp": "2018-07-18T01:39:15Z",
+      "version": 1,
+      "changeset": 60817116,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767087054,
+      "lat": 10.8720187,
+      "lon": 106.7691334,
+      "timestamp": "2018-07-20T09:07:29Z",
+      "version": 2,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767087078,
+      "lat": 10.8685076,
+      "lon": 106.7753878,
+      "timestamp": "2018-07-18T01:39:16Z",
+      "version": 1,
+      "changeset": 60817116,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767087078,
+      "lat": 10.8684885,
+      "lon": 106.7754142,
+      "timestamp": "2024-04-13T11:57:48Z",
+      "version": 2,
+      "changeset": 149948363,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5767087085,
+      "lat": 10.87033,
+      "lon": 106.7752998,
+      "timestamp": "2018-07-18T01:39:16Z",
+      "version": 1,
+      "changeset": 60817116,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767087085,
+      "lat": 10.8701417,
+      "lon": 106.7751711,
+      "timestamp": "2019-07-15T15:09:15Z",
+      "version": 2,
+      "changeset": 72270044,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    }
+  ]
+}

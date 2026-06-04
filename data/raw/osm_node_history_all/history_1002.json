@@ -1,0 +1,191 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5772260912,
+      "lat": 10.7639255,
+      "lon": 106.6269466,
+      "timestamp": "2018-07-20T05:59:34Z",
+      "version": 1,
+      "changeset": 60890732,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5772276159,
+      "lat": 10.867223,
+      "lon": 106.7893311,
+      "timestamp": "2018-07-20T06:05:15Z",
+      "version": 1,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276159,
+      "lat": 10.8671967,
+      "lon": 106.7893204,
+      "timestamp": "2018-07-20T07:46:17Z",
+      "version": 2,
+      "changeset": 60894870,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276159,
+      "lat": 10.8671836,
+      "lon": 106.7893237,
+      "timestamp": "2022-01-14T09:20:25Z",
+      "version": 3,
+      "changeset": 116139893,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 5772276162,
+      "lat": 10.8672456,
+      "lon": 106.7890092,
+      "timestamp": "2018-07-20T06:05:15Z",
+      "version": 1,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276162,
+      "lat": 10.8672206,
+      "lon": 106.7890105,
+      "timestamp": "2018-07-20T07:46:17Z",
+      "version": 2,
+      "changeset": 60894870,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276162,
+      "lat": 10.8671993,
+      "lon": 106.7890138,
+      "timestamp": "2022-01-14T09:20:25Z",
+      "version": 3,
+      "changeset": 116139893,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 5772276162,
+      "lat": 10.8672291,
+      "lon": 106.7890091,
+      "timestamp": "2022-01-20T13:18:16Z",
+      "version": 4,
+      "changeset": 116385662,
+      "user": "hoanganhlami33",
+      "uid": 14252795
+    },
+    {
+      "type": "node",
+      "id": 5772276210,
+      "lat": 10.8671118,
+      "lon": 106.7882495,
+      "timestamp": "2018-07-20T06:05:16Z",
+      "version": 1,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276210,
+      "lat": 10.867119,
+      "lon": 106.7882475,
+      "timestamp": "2018-07-20T09:07:30Z",
+      "version": 2,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276210,
+      "lat": 10.867119,
+      "lon": 106.7882851,
+      "timestamp": "2022-01-19T07:32:40Z",
+      "version": 3,
+      "changeset": 116328489,
+      "user": "hoanganhlami33",
+      "uid": 14252795
+    },
+    {
+      "type": "node",
+      "id": 5772276417,
+      "lat": 10.8660336,
+      "lon": 106.7816865,
+      "timestamp": "2018-07-20T06:05:17Z",
+      "version": 1,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276421,
+      "lat": 10.8643318,
+      "lon": 106.7808762,
+      "timestamp": "2018-07-20T06:05:17Z",
+      "version": 1,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276426,
+      "lat": 10.8636963,
+      "lon": 106.7805272,
+      "timestamp": "2018-07-20T06:05:17Z",
+      "version": 1,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772276446,
+      "lat": 10.8628729,
+      "lon": 106.7801092,
+      "timestamp": "2018-07-20T06:05:18Z",
+      "version": 1,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5772301784,
+      "lat": 10.77823,
+      "lon": 106.6498589,
+      "timestamp": "2018-07-20T06:17:52Z",
+      "version": 1,
+      "changeset": 60891327,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5772301804,
+      "lat": 10.7790549,
+      "lon": 106.6503541,
+      "timestamp": "2018-07-20T06:17:53Z",
+      "version": 1,
+      "changeset": 60891327,
+      "user": "neela1",
+      "uid": 7795604
+    }
+  ]
+}

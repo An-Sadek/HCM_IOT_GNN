@@ -1,0 +1,547 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4631057700,
+      "lat": 10.7567274,
+      "lon": 106.6696533,
+      "timestamp": "2017-01-25T02:29:21Z",
+      "version": 1,
+      "changeset": 45457887,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631057700,
+      "lat": 10.7567343,
+      "lon": 106.6696513,
+      "timestamp": "2018-08-02T06:12:10Z",
+      "version": 2,
+      "changeset": 61284704,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 4631057700,
+      "lat": 10.7567323,
+      "lon": 106.6696517,
+      "timestamp": "2019-08-20T14:19:50Z",
+      "version": 3,
+      "changeset": 73542686,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4631057700,
+      "lat": 10.7567323,
+      "lon": 106.6696517,
+      "timestamp": "2019-08-20T14:26:12Z",
+      "version": 4,
+      "changeset": 73543040,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4631057700,
+      "lat": 10.7567322,
+      "lon": 106.6696517,
+      "timestamp": "2019-08-20T14:37:30Z",
+      "version": 5,
+      "changeset": 73543606,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4631057700,
+      "lat": 10.7567319,
+      "lon": 106.6696503,
+      "timestamp": "2025-12-07T16:39:11Z",
+      "version": 6,
+      "changeset": 175631332,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 4631143713,
+      "lat": 10.7523848,
+      "lon": 106.6693562,
+      "timestamp": "2017-01-25T03:52:00Z",
+      "version": 1,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143713,
+      "lat": 10.752252,
+      "lon": 106.6693447,
+      "timestamp": "2017-01-25T09:00:27Z",
+      "version": 2,
+      "changeset": 45468009,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143713,
+      "lat": 10.7522444,
+      "lon": 106.6693616,
+      "timestamp": "2020-05-25T08:19:28Z",
+      "version": 3,
+      "changeset": 85708535,
+      "user": "GrabVNTommy",
+      "uid": 8421597
+    },
+    {
+      "type": "node",
+      "id": 4631143713,
+      "lat": 10.7522444,
+      "lon": 106.6693554,
+      "timestamp": "2022-01-09T08:48:42Z",
+      "version": 4,
+      "changeset": 115933471,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4631143713,
+      "lat": 10.7522475,
+      "lon": 106.6693448,
+      "timestamp": "2025-05-29T03:07:09Z",
+      "version": 5,
+      "changeset": 166899485,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631143713,
+      "lat": 10.7522526,
+      "lon": 106.6693389,
+      "timestamp": "2025-06-18T16:54:03Z",
+      "version": 6,
+      "changeset": 167791364,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631143714,
+      "lat": 10.7523729,
+      "lon": 106.6695094,
+      "timestamp": "2017-01-25T03:52:00Z",
+      "version": 1,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143714,
+      "lat": 10.7522326,
+      "lon": 106.6695017,
+      "timestamp": "2017-01-25T09:00:27Z",
+      "version": 2,
+      "changeset": 45468009,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143714,
+      "lat": 10.7522311,
+      "lon": 106.6695387,
+      "timestamp": "2020-05-25T08:19:28Z",
+      "version": 3,
+      "changeset": 85708535,
+      "user": "GrabVNTommy",
+      "uid": 8421597
+    },
+    {
+      "type": "node",
+      "id": 4631143714,
+      "lat": 10.7522331,
+      "lon": 106.6695295,
+      "timestamp": "2022-01-09T08:48:42Z",
+      "version": 4,
+      "changeset": 115933471,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4631143714,
+      "lat": 10.7522368,
+      "lon": 106.6695073,
+      "timestamp": "2025-05-29T03:07:09Z",
+      "version": 5,
+      "changeset": 166899485,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631143716,
+      "lat": 10.7523788,
+      "lon": 106.6694034,
+      "timestamp": "2017-01-25T03:52:00Z",
+      "version": 1,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143716,
+      "lat": 10.752246,
+      "lon": 106.669393,
+      "timestamp": "2017-01-25T09:00:27Z",
+      "version": 2,
+      "changeset": 45468009,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143716,
+      "lat": 10.7522388,
+      "lon": 106.6693883,
+      "timestamp": "2019-09-05T20:56:13Z",
+      "version": 3,
+      "changeset": 74150568,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 4631143716,
+      "lat": 10.7522433,
+      "lon": 106.6694253,
+      "timestamp": "2020-05-25T08:19:28Z",
+      "version": 4,
+      "changeset": 85708535,
+      "user": "GrabVNTommy",
+      "uid": 8421597
+    },
+    {
+      "type": "node",
+      "id": 4631143716,
+      "lat": 10.7522413,
+      "lon": 106.669414,
+      "timestamp": "2022-01-09T08:48:42Z",
+      "version": 5,
+      "changeset": 115933471,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4631143716,
+      "lat": 10.752246,
+      "lon": 106.6693969,
+      "timestamp": "2025-05-29T03:07:09Z",
+      "version": 6,
+      "changeset": 166899485,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631143716,
+      "lat": 10.7522529,
+      "lon": 106.6693893,
+      "timestamp": "2025-06-18T16:54:03Z",
+      "version": 7,
+      "changeset": 167791364,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631143718,
+      "lat": 10.7482559,
+      "lon": 106.6690982,
+      "timestamp": "2017-01-25T03:52:00Z",
+      "version": 1,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143718,
+      "lat": 10.7482243,
+      "lon": 106.6690955,
+      "timestamp": "2019-09-04T14:38:34Z",
+      "version": 2,
+      "changeset": 74091427,
+      "user": "Corban8",
+      "uid": 4240913
+    },
+    {
+      "type": "node",
+      "id": 4631143718,
+      "lat": 10.7482256,
+      "lon": 106.6691036,
+      "timestamp": "2019-09-04T19:26:27Z",
+      "version": 3,
+      "changeset": 74102409,
+      "user": "Corban8",
+      "uid": 4240913
+    },
+    {
+      "type": "node",
+      "id": 4631143721,
+      "lat": 10.7478825,
+      "lon": 106.6690524,
+      "timestamp": "2017-01-25T03:52:00Z",
+      "version": 1,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143721,
+      "lat": 10.7478713,
+      "lon": 106.6690786,
+      "timestamp": "2019-09-04T19:26:27Z",
+      "version": 2,
+      "changeset": 74102409,
+      "user": "Corban8",
+      "uid": 4240913
+    },
+    {
+      "type": "node",
+      "id": 4631143724,
+      "lat": 10.7524199,
+      "lon": 106.6693819,
+      "timestamp": "2017-01-25T03:52:00Z",
+      "version": 1,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143724,
+      "lat": 10.7522871,
+      "lon": 106.6693689,
+      "timestamp": "2017-01-25T09:00:27Z",
+      "version": 2,
+      "changeset": 45468009,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143724,
+      "lat": 10.7524112,
+      "lon": 106.6693905,
+      "timestamp": "2020-05-25T08:19:28Z",
+      "version": 3,
+      "changeset": 85708535,
+      "user": "GrabVNTommy",
+      "uid": 8421597
+    },
+    {
+      "type": "node",
+      "id": 4631143724,
+      "lat": 10.7524132,
+      "lon": 106.6693997,
+      "timestamp": "2022-01-09T08:48:42Z",
+      "version": 4,
+      "changeset": 115933471,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4631143724,
+      "lat": 10.7524168,
+      "lon": 106.6693837,
+      "timestamp": "2025-05-29T03:07:09Z",
+      "version": 5,
+      "changeset": 166899485,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631143724,
+      "lat": 10.7523505,
+      "lon": 106.6693686,
+      "timestamp": "2025-06-18T16:54:03Z",
+      "version": 6,
+      "changeset": 167791364,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631143725,
+      "lat": 10.7526239,
+      "lon": 106.6693916,
+      "timestamp": "2017-01-25T03:52:00Z",
+      "version": 1,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143725,
+      "lat": 10.7526407,
+      "lon": 106.6693876,
+      "timestamp": "2019-08-29T16:43:46Z",
+      "version": 2,
+      "changeset": 73892127,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4631143725,
+      "lat": 10.7525727,
+      "lon": 106.6694072,
+      "timestamp": "2022-01-09T08:48:42Z",
+      "version": 3,
+      "changeset": 115933471,
+      "user": "turtle-bienhoa",
+      "uid": 13865352,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4631143725,
+      "lat": 10.7525716,
+      "lon": 106.6693897,
+      "timestamp": "2025-05-29T03:07:09Z",
+      "version": 4,
+      "changeset": 166899485,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4631143725,
+      "lat": 10.7526878,
+      "lon": 106.6693172,
+      "timestamp": "2025-06-13T08:08:43Z",
+      "version": 5,
+      "changeset": 167563542,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631143725,
+      "lat": 10.7526878,
+      "lon": 106.6693172,
+      "timestamp": "2025-06-13T08:49:54Z",
+      "version": 6,
+      "changeset": 167564999,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4631143725,
+      "lat": 10.7526957,
+      "lon": 106.6693212,
+      "timestamp": "2026-03-09T18:27:48Z",
+      "version": 7,
+      "changeset": 179598899,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4631143728,
+      "lat": 10.7526979,
+      "lon": 106.6694499,
+      "timestamp": "2017-01-25T03:52:00Z",
+      "version": 1,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4631143728,
+      "lat": 10.7526926,
+      "lon": 106.6694472,
+      "timestamp": "2019-07-23T12:11:07Z",
+      "version": 2,
+      "changeset": 72554733,
+      "user": "grabtaxi2",
+      "uid": 10143748
+    },
+    {
+      "type": "node",
+      "id": 4631143728,
+      "lat": 10.7527294,
+      "lon": 106.669463,
+      "timestamp": "2022-01-09T08:48:42Z",
+      "version": 3,
+      "changeset": 115933471,
+      "user": "turtle-bienhoa",
+      "uid": 13865352,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4631143728,
+      "lat": 10.7527242,
+      "lon": 106.6694735,
+      "timestamp": "2025-06-13T08:08:43Z",
+      "version": 4,
+      "changeset": 167563542,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4631150865,
+      "lat": 10.7541562,
+      "lon": 106.6708177,
+      "timestamp": "2017-01-25T03:59:33Z",
+      "version": 1,
+      "changeset": 45459988,
+      "user": "dotnam",
+      "uid": 5030528
+    }
+  ]
+}

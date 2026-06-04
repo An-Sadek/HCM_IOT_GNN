@@ -1,0 +1,262 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 2036083419,
+      "lat": 10.7896339,
+      "lon": 106.7109842,
+      "timestamp": "2012-11-27T10:03:50Z",
+      "version": 1,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083437,
+      "lat": 10.7888553,
+      "lon": 106.7103378,
+      "timestamp": "2012-11-27T10:03:51Z",
+      "version": 1,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083441,
+      "lat": 10.7884833,
+      "lon": 106.7099355,
+      "timestamp": "2012-11-27T10:03:51Z",
+      "version": 1,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083449,
+      "lat": 10.785986,
+      "lon": 106.7087775,
+      "timestamp": "2012-11-27T10:03:51Z",
+      "version": 1,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083449,
+      "lat": 10.7859856,
+      "lon": 106.7087853,
+      "timestamp": "2013-07-11T03:55:17Z",
+      "version": 2,
+      "changeset": 16907872,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083465,
+      "lat": 10.7757639,
+      "lon": 106.7059855,
+      "timestamp": "2012-11-27T10:03:51Z",
+      "version": 1,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083465,
+      "lat": 10.7757481,
+      "lon": 106.7060163,
+      "timestamp": "2017-02-08T17:39:14Z",
+      "version": 2,
+      "changeset": 45924946,
+      "user": "FvGordon",
+      "uid": 161619
+    },
+    {
+      "type": "node",
+      "id": 2036083465,
+      "lat": 10.7758127,
+      "lon": 106.7059372,
+      "timestamp": "2019-08-26T20:47:44Z",
+      "version": 3,
+      "changeset": 73769583,
+      "user": "daFisch",
+      "uid": 8759590,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2036083465,
+      "lat": 10.7757923,
+      "lon": 106.7059156,
+      "timestamp": "2023-03-03T20:19:33Z",
+      "version": 4,
+      "changeset": 133269053,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2036083465,
+      "lat": 10.7758127,
+      "lon": 106.7059372,
+      "timestamp": "2023-03-03T23:41:06Z",
+      "version": 5,
+      "changeset": 133273716,
+      "user": "Tommybara",
+      "uid": 12198525,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2036083465,
+      "lat": 10.7757982,
+      "lon": 106.7059198,
+      "timestamp": "2023-03-22T19:48:36Z",
+      "version": 6,
+      "changeset": 133994412,
+      "user": "Tommybara",
+      "uid": 12198525,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2036083512,
+      "lat": 10.7848685,
+      "lon": 106.7082179,
+      "timestamp": "2012-11-27T10:03:51Z",
+      "version": 1,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083512,
+      "lat": 10.7848725,
+      "lon": 106.7082031,
+      "timestamp": "2023-12-04T09:14:03Z",
+      "version": 2,
+      "changeset": 144746575,
+      "user": "Cosmin_Matifalean",
+      "uid": 14046672
+    },
+    {
+      "type": "node",
+      "id": 2036083541,
+      "lat": 10.7854007,
+      "lon": 106.7084989,
+      "timestamp": "2012-11-27T10:03:52Z",
+      "version": 1,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083541,
+      "lat": 10.7854034,
+      "lon": 106.708541,
+      "timestamp": "2013-07-11T03:55:17Z",
+      "version": 2,
+      "changeset": 16907872,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036083541,
+      "lat": 10.7854238,
+      "lon": 106.7084937,
+      "timestamp": "2023-12-04T09:14:03Z",
+      "version": 3,
+      "changeset": 144746575,
+      "user": "Cosmin_Matifalean",
+      "uid": 14046672
+    },
+    {
+      "type": "node",
+      "id": 2036083584,
+      "lat": 10.7893606,
+      "lon": 106.7108938,
+      "timestamp": "2012-11-27T10:03:52Z",
+      "version": 1,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036141666,
+      "lat": 10.7851938,
+      "lon": 106.6890134,
+      "timestamp": "2012-11-27T10:35:10Z",
+      "version": 1,
+      "changeset": 14057075,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036141672,
+      "lat": 10.7834631,
+      "lon": 106.6906864,
+      "timestamp": "2012-11-27T10:35:10Z",
+      "version": 1,
+      "changeset": 14057075,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2036141672,
+      "lat": 10.7835201,
+      "lon": 106.6906432,
+      "timestamp": "2013-03-29T04:15:00Z",
+      "version": 2,
+      "changeset": 15533349,
+      "user": "plqbao",
+      "uid": 1283644
+    },
+    {
+      "type": "node",
+      "id": 2036141672,
+      "lat": 10.7835616,
+      "lon": 106.690574,
+      "timestamp": "2013-03-29T05:00:24Z",
+      "version": 3,
+      "changeset": 15533349,
+      "user": "plqbao",
+      "uid": 1283644
+    },
+    {
+      "type": "node",
+      "id": 2036141672,
+      "lat": 10.7835097,
+      "lon": 106.6905922,
+      "timestamp": "2014-12-15T04:41:17Z",
+      "version": 4,
+      "changeset": 27474092,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    }
+  ]
+}

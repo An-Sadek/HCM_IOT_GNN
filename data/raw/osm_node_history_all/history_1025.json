@@ -1,0 +1,232 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5778163104,
+      "lat": 10.7832808,
+      "lon": 106.6378876,
+      "timestamp": "2018-07-23T02:17:51Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163104,
+      "lat": 10.7832527,
+      "lon": 106.6379069,
+      "timestamp": "2023-12-27T19:37:35Z",
+      "version": 2,
+      "changeset": 145589947,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5778163104,
+      "lat": 10.7832001,
+      "lon": 106.6378339,
+      "timestamp": "2023-12-28T09:25:09Z",
+      "version": 3,
+      "changeset": 145608942,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5778163134,
+      "lat": 10.7821365,
+      "lon": 106.6364569,
+      "timestamp": "2018-07-23T02:17:51Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163134,
+      "lat": 10.7821356,
+      "lon": 106.6364605,
+      "timestamp": "2023-12-27T19:37:35Z",
+      "version": 2,
+      "changeset": 145589947,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5778163154,
+      "lat": 10.7814933,
+      "lon": 106.6358053,
+      "timestamp": "2018-07-23T02:17:52Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163154,
+      "lat": 10.7815003,
+      "lon": 106.6357929,
+      "timestamp": "2023-12-29T10:13:40Z",
+      "version": 2,
+      "changeset": 145653944,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5778163155,
+      "lat": 10.7815006,
+      "lon": 106.6357625,
+      "timestamp": "2018-07-23T02:17:52Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163156,
+      "lat": 10.7819876,
+      "lon": 106.6363142,
+      "timestamp": "2018-07-23T02:17:52Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163156,
+      "lat": 10.7820191,
+      "lon": 106.6363444,
+      "timestamp": "2023-12-27T19:37:35Z",
+      "version": 2,
+      "changeset": 145589947,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5778163157,
+      "lat": 10.7819873,
+      "lon": 106.636278,
+      "timestamp": "2018-07-23T02:17:52Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163157,
+      "lat": 10.7820004,
+      "lon": 106.6362816,
+      "timestamp": "2023-12-27T19:37:35Z",
+      "version": 2,
+      "changeset": 145589947,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5778163158,
+      "lat": 10.7820031,
+      "lon": 106.6361909,
+      "timestamp": "2018-07-23T02:17:52Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163158,
+      "lat": 10.7820031,
+      "lon": 106.6361909,
+      "timestamp": "2019-08-15T14:15:55Z",
+      "version": 2,
+      "changeset": 73381609,
+      "user": "MTBdude",
+      "uid": 9564561,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5778163158,
+      "lat": 10.7820229,
+      "lon": 106.6361748,
+      "timestamp": "2023-12-27T19:37:35Z",
+      "version": 3,
+      "changeset": 145589947,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5778163173,
+      "lat": 10.7832234,
+      "lon": 106.6378044,
+      "timestamp": "2018-07-23T02:17:52Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163173,
+      "lat": 10.7832026,
+      "lon": 106.6378313,
+      "timestamp": "2023-12-27T19:37:35Z",
+      "version": 2,
+      "changeset": 145589947,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5778163174,
+      "lat": 10.7846546,
+      "lon": 106.6364017,
+      "timestamp": "2018-07-23T02:17:52Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778163174,
+      "lat": 10.7846517,
+      "lon": 106.6364213,
+      "timestamp": "2023-12-27T19:37:35Z",
+      "version": 2,
+      "changeset": 145589947,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5778163180,
+      "lat": 10.7849788,
+      "lon": 106.6364544,
+      "timestamp": "2018-07-23T02:17:52Z",
+      "version": 1,
+      "changeset": 60966645,
+      "user": "akhil2",
+      "uid": 7795526
+    }
+  ]
+}

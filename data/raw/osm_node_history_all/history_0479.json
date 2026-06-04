@@ -1,0 +1,1116 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3160543548,
+      "lat": 10.7525383,
+      "lon": 106.6535003,
+      "timestamp": "2014-11-01T05:07:31Z",
+      "version": 1,
+      "changeset": 26475559,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "34 Phú Hữu"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160543548,
+      "lat": 10.7525266,
+      "lon": 106.6534845,
+      "timestamp": "2017-01-04T13:01:00Z",
+      "version": 2,
+      "changeset": 44897908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "34 Phú Hữu"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160543549,
+      "lat": 10.7528267,
+      "lon": 106.6547224,
+      "timestamp": "2014-11-01T05:07:31Z",
+      "version": 1,
+      "changeset": 26475559,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "951 Nguyễn Trãi",
+        "note": "951 Nguyễn Trãi"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160543549,
+      "lat": 10.7528092,
+      "lon": 106.6547248,
+      "timestamp": "2017-01-04T13:17:48Z",
+      "version": 2,
+      "changeset": 44898288,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "951 Nguyễn Trãi",
+        "note": "951 Nguyễn Trãi"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160543549,
+      "lat": 10.7528092,
+      "lon": 106.6547248,
+      "timestamp": "2022-05-09T04:14:06Z",
+      "version": 3,
+      "changeset": 120725846,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Số 951 Nguyễn Trãi",
+        "note": "951 Nguyễn Trãi",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160543549,
+      "lat": 10.7527056,
+      "lon": 106.6539917,
+      "timestamp": "2024-04-25T02:18:43Z",
+      "version": 4,
+      "changeset": 150472661,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nhà thờ Cha Tam",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160543549,
+      "lat": 10.7527201,
+      "lon": 106.65397,
+      "timestamp": "2026-02-23T15:19:46Z",
+      "version": 5,
+      "changeset": 178948551,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nhà thờ Cha Tam",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.75382,
+      "lon": 106.6547537,
+      "timestamp": "2014-11-01T05:23:58Z",
+      "version": 1,
+      "changeset": 26475635,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "note": "473 Hồng Bàng",
+        "name": "473 Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7537746,
+      "lon": 106.6547564,
+      "timestamp": "2017-01-17T11:09:12Z",
+      "version": 2,
+      "changeset": 45239835,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "note": "473 Hồng Bàng",
+        "name": "473 Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7537927,
+      "lon": 106.6547531,
+      "timestamp": "2017-01-18T10:04:16Z",
+      "version": 3,
+      "changeset": 45266250,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "note": "473 Hồng Bàng",
+        "name": "473 Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7537927,
+      "lon": 106.6547531,
+      "timestamp": "2022-01-05T01:55:03Z",
+      "version": 4,
+      "changeset": 115777106,
+      "user": "hoanganhlami33",
+      "uid": 14252795,
+      "tags": {
+        "name": "473 Hồng Bàng",
+        "note": "473 Hồng Bàng",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7537927,
+      "lon": 106.6547531,
+      "timestamp": "2022-05-09T03:33:45Z",
+      "version": 5,
+      "changeset": 120725003,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Số 473 Hồng Bàng",
+        "note": "473 Hồng Bàng",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7540503,
+      "lon": 106.65673,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 6,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Thuần Kiều Plaza",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7540503,
+      "lon": 106.65673,
+      "timestamp": "2026-02-08T03:25:51Z",
+      "version": 7,
+      "changeset": 178251260,
+      "user": "Windjana",
+      "uid": 10216103,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Thuần Kiều Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7540503,
+      "lon": 106.65673,
+      "timestamp": "2026-02-08T03:25:52Z",
+      "version": 8,
+      "changeset": 178251269,
+      "user": "Windjana",
+      "uid": 10216103,
+      "tags": {
+        "shelter": "no",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Thuần Kiều Plaza",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7540503,
+      "lon": 106.65673,
+      "timestamp": "2026-02-08T03:25:54Z",
+      "version": 9,
+      "changeset": 178251275,
+      "user": "Windjana",
+      "uid": 10216103,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Thuần Kiều Plaza",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545656,
+      "lat": 10.7541017,
+      "lon": 106.6567313,
+      "timestamp": "2026-03-11T16:02:40Z",
+      "version": 10,
+      "changeset": 179710947,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Thuần Kiều Plaza",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571835,
+      "lon": 106.6694354,
+      "timestamp": "2014-11-01T05:23:58Z",
+      "version": 1,
+      "changeset": 26475635,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571853,
+      "lon": 106.6694354,
+      "timestamp": "2017-01-20T11:34:47Z",
+      "version": 2,
+      "changeset": 45324614,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571853,
+      "lon": 106.6694394,
+      "timestamp": "2017-01-20T11:36:08Z",
+      "version": 3,
+      "changeset": 45324645,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571875,
+      "lon": 106.6694416,
+      "timestamp": "2017-01-20T11:38:06Z",
+      "version": 4,
+      "changeset": 45324689,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571866,
+      "lon": 106.6694374,
+      "timestamp": "2017-01-25T06:08:53Z",
+      "version": 5,
+      "changeset": 45463355,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571866,
+      "lon": 106.6694374,
+      "timestamp": "2017-01-25T06:26:44Z",
+      "version": 6,
+      "changeset": 45463784,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571864,
+      "lon": 106.6694366,
+      "timestamp": "2017-01-25T06:49:08Z",
+      "version": 7,
+      "changeset": 45464318,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571877,
+      "lon": 106.6694425,
+      "timestamp": "2017-01-25T07:12:27Z",
+      "version": 8,
+      "changeset": 45464855,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571877,
+      "lon": 106.6694425,
+      "timestamp": "2017-01-25T07:26:45Z",
+      "version": 9,
+      "changeset": 45465209,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571879,
+      "lon": 106.6694433,
+      "timestamp": "2017-01-25T07:37:19Z",
+      "version": 10,
+      "changeset": 45465497,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "132A Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Hùng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545657,
+      "lat": 10.7571879,
+      "lon": 106.6694433,
+      "timestamp": "2022-04-15T11:27:24Z",
+      "version": 11,
+      "changeset": 119747343,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nguyễn Tri Phương - Hùng Vương",
+        "note": "132A Nguyễn Tri Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545658,
+      "lat": 10.7520747,
+      "lon": 106.6617171,
+      "timestamp": "2014-11-01T05:23:58Z",
+      "version": 1,
+      "changeset": 26475635,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "346 Trần Hưng Đạo B",
+        "highway": "bus_stop",
+        "note": "346 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545658,
+      "lat": 10.7520521,
+      "lon": 106.6617243,
+      "timestamp": "2017-01-04T13:39:46Z",
+      "version": 2,
+      "changeset": 44898805,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "346 Trần Hưng Đạo B",
+        "highway": "bus_stop",
+        "note": "346 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545658,
+      "lat": 10.7520443,
+      "lon": 106.6617243,
+      "timestamp": "2017-01-04T13:42:09Z",
+      "version": 3,
+      "changeset": 44898871,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "346 Trần Hưng Đạo B",
+        "highway": "bus_stop",
+        "note": "346 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545658,
+      "lat": 10.7520473,
+      "lon": 106.661724,
+      "timestamp": "2017-01-25T04:23:01Z",
+      "version": 4,
+      "changeset": 45460652,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "346 Trần Hưng Đạo B",
+        "highway": "bus_stop",
+        "note": "346 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545658,
+      "lat": 10.7520473,
+      "lon": 106.661724,
+      "timestamp": "2017-01-25T04:45:12Z",
+      "version": 5,
+      "changeset": 45461330,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "346 Trần Hưng Đạo",
+        "note": "346 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545658,
+      "lat": 10.7520509,
+      "lon": 106.6617237,
+      "timestamp": "2019-08-29T22:52:37Z",
+      "version": 6,
+      "changeset": 73900710,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "346 Trần Hưng Đạo",
+        "note": "346 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7522464,
+      "lon": 106.6638983,
+      "timestamp": "2014-11-01T05:23:58Z",
+      "version": 1,
+      "changeset": 26475635,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "274 Trần hưng Đạo B",
+        "note": "274 Trần hưng Đạo B",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7522371,
+      "lon": 106.6639036,
+      "timestamp": "2017-01-04T13:39:46Z",
+      "version": 2,
+      "changeset": 44898805,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "274 Trần hưng Đạo B",
+        "note": "274 Trần hưng Đạo B",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7522301,
+      "lon": 106.6639113,
+      "timestamp": "2017-01-04T14:01:41Z",
+      "version": 3,
+      "changeset": 44899301,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "274 Trần hưng Đạo B",
+        "note": "274 Trần hưng Đạo B",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7522315,
+      "lon": 106.6639112,
+      "timestamp": "2017-01-25T04:23:01Z",
+      "version": 4,
+      "changeset": 45460652,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "274 Trần hưng Đạo B",
+        "note": "274 Trần hưng Đạo B",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7522305,
+      "lon": 106.6639113,
+      "timestamp": "2019-08-29T22:52:37Z",
+      "version": 5,
+      "changeset": 73900710,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "name": "274 Trần hưng Đạo B",
+        "note": "274 Trần hưng Đạo B",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7522305,
+      "lon": 106.6639113,
+      "timestamp": "2022-02-03T03:26:03Z",
+      "version": 6,
+      "changeset": 116942935,
+      "user": "vietnam321",
+      "uid": 11196308,
+      "tags": {
+        "note": "274 Trần Hưng Đạo",
+        "highway": "bus_stop",
+        "name": "Tản Đà"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7523306,
+      "lon": 106.6637343,
+      "timestamp": "2022-02-03T04:50:21Z",
+      "version": 7,
+      "changeset": 116944336,
+      "user": "vietnam321",
+      "uid": 11196308,
+      "tags": {
+        "name": "Tản Đà",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "274 Trần Hưng Đạo",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7523306,
+      "lon": 106.6637343,
+      "timestamp": "2022-04-21T05:54:53Z",
+      "version": 8,
+      "changeset": 119982212,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Tản Đà",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "274 Trần Hưng Đạo",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7523306,
+      "lon": 106.6637343,
+      "timestamp": "2024-12-20T08:46:01Z",
+      "version": 9,
+      "changeset": 160423428,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "name": "Tản Đà",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "274 Trần Hưng Đạo",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7522729,
+      "lon": 106.6637774,
+      "timestamp": "2026-01-20T07:45:36Z",
+      "version": 10,
+      "changeset": 177462267,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "name": "Tản Đà",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "274 Trần Hưng Đạo",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545659,
+      "lat": 10.7522729,
+      "lon": 106.6637774,
+      "timestamp": "2026-03-28T07:32:15Z",
+      "version": 11,
+      "changeset": 180531089,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đường Tản Đà",
+        "note": "274 Trần Hưng Đạo",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545660,
+      "lat": 10.7524053,
+      "lon": 106.666024,
+      "timestamp": "2014-11-01T05:23:58Z",
+      "version": 1,
+      "changeset": 26475635,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Y Học Cổ Truyền - CS2",
+        "note": "212 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545660,
+      "lat": 10.7523996,
+      "lon": 106.666024,
+      "timestamp": "2017-01-04T13:39:46Z",
+      "version": 2,
+      "changeset": 44898805,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Y Học Cổ Truyền - CS2",
+        "note": "212 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545660,
+      "lat": 10.7523989,
+      "lon": 106.6660291,
+      "timestamp": "2017-01-04T14:01:41Z",
+      "version": 3,
+      "changeset": 44899301,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Y Học Cổ Truyền - CS2",
+        "note": "212 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545660,
+      "lat": 10.7524098,
+      "lon": 106.6660282,
+      "timestamp": "2017-01-25T04:23:01Z",
+      "version": 4,
+      "changeset": 45460652,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Y Học Cổ Truyền - CS2",
+        "note": "212 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545660,
+      "lat": 10.7524045,
+      "lon": 106.6660282,
+      "timestamp": "2019-08-29T21:07:11Z",
+      "version": 5,
+      "changeset": 73898890,
+      "user": "_Poliwrath_",
+      "uid": 8759140,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Y Học Cổ Truyền - CS2",
+        "note": "212 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160545660,
+      "lat": 10.7524043,
+      "lon": 106.6660282,
+      "timestamp": "2019-08-29T22:52:37Z",
+      "version": 6,
+      "changeset": 73900710,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Y Học Cổ Truyền - CS2",
+        "note": "212 Trần Hưng Đạo B"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548762,
+      "lat": 10.7529138,
+      "lon": 106.6714076,
+      "timestamp": "2014-11-01T05:23:58Z",
+      "version": 1,
+      "changeset": 26475635,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Bệnh viện An Bình",
+        "highway": "bus_stop",
+        "note": "18 trần hưng đạo b"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548762,
+      "lat": 10.7529032,
+      "lon": 106.6714119,
+      "timestamp": "2017-01-25T04:23:02Z",
+      "version": 2,
+      "changeset": 45460652,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "Bệnh viện An Bình",
+        "highway": "bus_stop",
+        "note": "18 trần hưng đạo b"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548762,
+      "lat": 10.7529032,
+      "lon": 106.6714119,
+      "timestamp": "2022-02-03T03:26:03Z",
+      "version": 3,
+      "changeset": 116942935,
+      "user": "vietnam321",
+      "uid": 11196308,
+      "tags": {
+        "highway": "bus_stop",
+        "note": "18 trần hưng đạo b",
+        "name": "Đồng Khánh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548762,
+      "lat": 10.7529559,
+      "lon": 106.6714816,
+      "timestamp": "2022-02-03T04:50:21Z",
+      "version": 4,
+      "changeset": 116944336,
+      "user": "vietnam321",
+      "uid": 11196308,
+      "tags": {
+        "name": "Đồng Khánh",
+        "note": "18 Trần Hưng Đạo b",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548762,
+      "lat": 10.7529559,
+      "lon": 106.6714816,
+      "timestamp": "2022-04-21T05:54:53Z",
+      "version": 5,
+      "changeset": 119982212,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "note": "18 Trần Hưng Đạo b",
+        "name": "Trạm Xe Bus Đồng Khánh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548762,
+      "lat": 10.7529559,
+      "lon": 106.6714816,
+      "timestamp": "2024-07-05T09:05:19Z",
+      "version": 6,
+      "changeset": 153578603,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Trạm Xe Bus Đồng Khánh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548762,
+      "lat": 10.7529559,
+      "lon": 106.6714816,
+      "timestamp": "2024-12-20T08:46:01Z",
+      "version": 7,
+      "changeset": 160423428,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đồng Khánh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548763,
+      "lat": 10.7535065,
+      "lon": 106.6742269,
+      "timestamp": "2014-11-01T05:23:58Z",
+      "version": 1,
+      "changeset": 26475635,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "882 Trần Hưng Đạo",
+        "name": "Rạp Đống Đa",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548763,
+      "lat": 10.7534942,
+      "lon": 106.6742369,
+      "timestamp": "2017-01-25T04:23:02Z",
+      "version": 2,
+      "changeset": 45460652,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "882 Trần Hưng Đạo",
+        "name": "Rạp Đống Đa",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548763,
+      "lat": 10.7534948,
+      "lon": 106.6742368,
+      "timestamp": "2017-01-25T04:45:12Z",
+      "version": 3,
+      "changeset": 45461330,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "882 Trần Hưng Đạo",
+        "name": "Rạp Đống Đa",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548763,
+      "lat": 10.7535396,
+      "lon": 106.6742261,
+      "timestamp": "2022-02-03T04:50:21Z",
+      "version": 4,
+      "changeset": 116944336,
+      "user": "vietnam321",
+      "uid": 11196308,
+      "tags": {
+        "note": "882 Trần Hưng Đạo",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform",
+        "name": "Rạp Đống Đa"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548763,
+      "lat": 10.7536969,
+      "lon": 106.6742043,
+      "timestamp": "2022-03-18T05:09:04Z",
+      "version": 5,
+      "changeset": 118617798,
+      "user": "GrabVN_Tran Le Trinh Ly",
+      "uid": 15330087,
+      "tags": {
+        "name": "Rạp Đống Đa",
+        "amenity": "cinema",
+        "note": "882 Trần Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548763,
+      "lat": 10.7536969,
+      "lon": 106.6742043,
+      "timestamp": "2022-04-21T05:54:53Z",
+      "version": 6,
+      "changeset": 119982212,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "amenity": "cinema",
+        "name": "Rạp Phim Đống Đa",
+        "note": "882 Trần Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548764,
+      "lat": 10.7540948,
+      "lon": 106.6764463,
+      "timestamp": "2014-11-01T05:23:58Z",
+      "version": 1,
+      "changeset": 26475635,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Điện máy Gia Thành",
+        "note": "780 Trân Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548764,
+      "lat": 10.7540976,
+      "lon": 106.6764463,
+      "timestamp": "2017-01-25T04:23:02Z",
+      "version": 2,
+      "changeset": 45460652,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Điện máy Gia Thành",
+        "note": "780 Trân Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3160548764,
+      "lat": 10.7540899,
+      "lon": 106.6764485,
+      "timestamp": "2017-01-25T04:45:12Z",
+      "version": 3,
+      "changeset": 45461330,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Điện máy Gia Thành",
+        "note": "780 Trân Hưng Đạo"
+      }
+    }
+  ]
+}

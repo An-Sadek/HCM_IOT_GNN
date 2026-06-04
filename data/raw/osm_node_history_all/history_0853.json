@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5740397772,
+      "lat": 10.849868,
+      "lon": 106.632011,
+      "timestamp": "2018-07-05T06:04:21Z",
+      "version": 1,
+      "changeset": 60425262,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740397772,
+      "lat": 10.8498657,
+      "lon": 106.63201,
+      "timestamp": "2019-07-19T10:01:45Z",
+      "version": 2,
+      "changeset": 72422230,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5740397773,
+      "lat": 10.8498438,
+      "lon": 106.6320395,
+      "timestamp": "2018-07-05T06:04:21Z",
+      "version": 1,
+      "changeset": 60425262,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740423100,
+      "lat": 10.851854,
+      "lon": 106.6929352,
+      "timestamp": "2018-07-05T06:19:00Z",
+      "version": 1,
+      "changeset": 60425597,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740423103,
+      "lat": 10.8519858,
+      "lon": 106.6911887,
+      "timestamp": "2018-07-05T06:19:00Z",
+      "version": 1,
+      "changeset": 60425597,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740594857,
+      "lat": 10.8474634,
+      "lon": 106.6351522,
+      "timestamp": "2018-07-05T07:41:15Z",
+      "version": 1,
+      "changeset": 60427588,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740594858,
+      "lat": 10.8475959,
+      "lon": 106.6351545,
+      "timestamp": "2018-07-05T07:41:15Z",
+      "version": 1,
+      "changeset": 60427588,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740594858,
+      "lat": 10.8475893,
+      "lon": 106.6351599,
+      "timestamp": "2019-07-19T10:01:45Z",
+      "version": 2,
+      "changeset": 72422230,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5740594875,
+      "lat": 10.8501473,
+      "lon": 106.631134,
+      "timestamp": "2018-07-05T07:41:15Z",
+      "version": 1,
+      "changeset": 60427588,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740594877,
+      "lat": 10.8502828,
+      "lon": 106.6308139,
+      "timestamp": "2018-07-05T07:41:15Z",
+      "version": 1,
+      "changeset": 60427588,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740628070,
+      "lat": 10.8486768,
+      "lon": 106.6235678,
+      "timestamp": "2018-07-05T07:53:32Z",
+      "version": 1,
+      "changeset": 60427901,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5740628070,
+      "lat": 10.8486689,
+      "lon": 106.6235718,
+      "timestamp": "2019-07-19T10:01:45Z",
+      "version": 2,
+      "changeset": 72422230,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5740707055,
+      "lat": 10.826824,
+      "lon": 106.7174508,
+      "timestamp": "2018-07-05T08:23:37Z",
+      "version": 1,
+      "changeset": 60428812,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5740707055,
+      "lat": 10.8267713,
+      "lon": 106.7172765,
+      "timestamp": "2019-07-09T06:18:43Z",
+      "version": 2,
+      "changeset": 72039273,
+      "user": "GrabVNTommy",
+      "uid": 8421597
+    },
+    {
+      "type": "node",
+      "id": 5740707055,
+      "lat": 10.8268319,
+      "lon": 106.717475,
+      "timestamp": "2019-07-09T06:26:01Z",
+      "version": 3,
+      "changeset": 72039458,
+      "user": "GrabVNTommy",
+      "uid": 8421597
+    },
+    {
+      "type": "node",
+      "id": 5740707055,
+      "lat": 10.8268353,
+      "lon": 106.717467,
+      "timestamp": "2024-06-30T05:32:02Z",
+      "version": 4,
+      "changeset": 153355074,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    }
+  ]
+}

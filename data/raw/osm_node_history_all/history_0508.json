@@ -1,0 +1,350 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3226575467,
+      "lat": 10.8442111,
+      "lon": 106.6737395,
+      "timestamp": "2014-12-09T14:42:11Z",
+      "version": 1,
+      "changeset": 27357902,
+      "user": "Tu An",
+      "uid": 2307964
+    },
+    {
+      "type": "node",
+      "id": 3226575467,
+      "lat": 10.8441878,
+      "lon": 106.6737052,
+      "timestamp": "2014-12-19T14:09:12Z",
+      "version": 2,
+      "changeset": 27570062,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3226575467,
+      "lat": 10.8441536,
+      "lon": 106.6737186,
+      "timestamp": "2019-08-29T22:50:52Z",
+      "version": 3,
+      "changeset": 73900678,
+      "user": "El Pescador",
+      "uid": 7445879
+    },
+    {
+      "type": "node",
+      "id": 3226575468,
+      "lat": 10.8431413,
+      "lon": 106.6748786,
+      "timestamp": "2014-12-09T14:42:11Z",
+      "version": 1,
+      "changeset": 27357902,
+      "user": "Tu An",
+      "uid": 2307964
+    },
+    {
+      "type": "node",
+      "id": 3226575468,
+      "lat": 10.8431439,
+      "lon": 106.6747994,
+      "timestamp": "2014-12-19T14:09:12Z",
+      "version": 2,
+      "changeset": 27570062,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3226575468,
+      "lat": 10.8430359,
+      "lon": 106.6749389,
+      "timestamp": "2018-07-11T01:06:06Z",
+      "version": 3,
+      "changeset": 60592864,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 3226575468,
+      "lat": 10.8430451,
+      "lon": 106.6749179,
+      "timestamp": "2018-09-29T16:01:29Z",
+      "version": 4,
+      "changeset": 63041626,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 3226575470,
+      "lat": 10.8481649,
+      "lon": 106.6679193,
+      "timestamp": "2014-12-09T14:42:11Z",
+      "version": 1,
+      "changeset": 27357902,
+      "user": "Tu An",
+      "uid": 2307964
+    },
+    {
+      "type": "node",
+      "id": 3226575470,
+      "lat": 10.8481248,
+      "lon": 106.6679087,
+      "timestamp": "2014-12-19T14:09:12Z",
+      "version": 2,
+      "changeset": 27570062,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3226575470,
+      "lat": 10.8481129,
+      "lon": 106.667906,
+      "timestamp": "2019-07-19T05:26:48Z",
+      "version": 3,
+      "changeset": 72413834,
+      "user": "grabtaxi18",
+      "uid": 10141211
+    },
+    {
+      "type": "node",
+      "id": 3226575470,
+      "lat": 10.8481097,
+      "lon": 106.6679042,
+      "timestamp": "2023-10-26T10:13:25Z",
+      "version": 4,
+      "changeset": 143154650,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3226575471,
+      "lat": 10.8449926,
+      "lon": 106.6721753,
+      "timestamp": "2014-12-09T14:42:11Z",
+      "version": 1,
+      "changeset": 27357902,
+      "user": "Tu An",
+      "uid": 2307964
+    },
+    {
+      "type": "node",
+      "id": 3226575471,
+      "lat": 10.8449303,
+      "lon": 106.6721436,
+      "timestamp": "2014-12-19T14:09:12Z",
+      "version": 2,
+      "changeset": 27570062,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3226575473,
+      "lat": 10.8425969,
+      "lon": 106.6757645,
+      "timestamp": "2014-12-09T14:42:11Z",
+      "version": 1,
+      "changeset": 27357902,
+      "user": "Tu An",
+      "uid": 2307964
+    },
+    {
+      "type": "node",
+      "id": 3226575473,
+      "lat": 10.8424854,
+      "lon": 106.6758648,
+      "timestamp": "2014-12-19T14:09:12Z",
+      "version": 2,
+      "changeset": 27570062,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3226575473,
+      "lat": 10.8424654,
+      "lon": 106.6758648,
+      "timestamp": "2016-10-14T09:21:54Z",
+      "version": 3,
+      "changeset": 42890683,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 3226575475,
+      "lat": 10.8444776,
+      "lon": 106.672965,
+      "timestamp": "2014-12-09T14:42:11Z",
+      "version": 1,
+      "changeset": 27357902,
+      "user": "Tu An",
+      "uid": 2307964
+    },
+    {
+      "type": "node",
+      "id": 3226575475,
+      "lat": 10.8444102,
+      "lon": 106.6730521,
+      "timestamp": "2014-12-19T14:09:12Z",
+      "version": 2,
+      "changeset": 27570062,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3226575475,
+      "lat": 10.8444194,
+      "lon": 106.6730105,
+      "timestamp": "2019-09-06T16:00:12Z",
+      "version": 3,
+      "changeset": 74183821,
+      "user": "GhostEye",
+      "uid": 9633773
+    },
+    {
+      "type": "node",
+      "id": 3226575476,
+      "lat": 10.8467473,
+      "lon": 106.6702044,
+      "timestamp": "2014-12-09T14:42:11Z",
+      "version": 1,
+      "changeset": 27357902,
+      "user": "Tu An",
+      "uid": 2307964
+    },
+    {
+      "type": "node",
+      "id": 3226575476,
+      "lat": 10.8467183,
+      "lon": 106.6701789,
+      "timestamp": "2019-07-19T05:26:48Z",
+      "version": 2,
+      "changeset": 72413834,
+      "user": "grabtaxi18",
+      "uid": 10141211
+    },
+    {
+      "type": "node",
+      "id": 3226575477,
+      "lat": 10.8440162,
+      "lon": 106.6738591,
+      "timestamp": "2014-12-09T14:42:11Z",
+      "version": 1,
+      "changeset": 27357902,
+      "user": "Tu An",
+      "uid": 2307964
+    },
+    {
+      "type": "node",
+      "id": 3226575477,
+      "lat": 10.843941,
+      "lon": 106.6738829,
+      "timestamp": "2014-12-19T14:09:12Z",
+      "version": 2,
+      "changeset": 27570062,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3226575477,
+      "lat": 10.8439695,
+      "lon": 106.6738293,
+      "timestamp": "2018-09-29T16:01:29Z",
+      "version": 3,
+      "changeset": 63041626,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 3226575477,
+      "lat": 10.8439866,
+      "lon": 106.67384,
+      "timestamp": "2019-07-19T05:26:48Z",
+      "version": 4,
+      "changeset": 72413834,
+      "user": "grabtaxi18",
+      "uid": 10141211
+    },
+    {
+      "type": "node",
+      "id": 3233979651,
+      "lat": 10.7934516,
+      "lon": 106.8090753,
+      "timestamp": "2014-12-14T09:31:09Z",
+      "version": 1,
+      "changeset": 27453392,
+      "user": "q_hung",
+      "uid": 2427132
+    },
+    {
+      "type": "node",
+      "id": 3233979651,
+      "lat": 10.792934,
+      "lon": 106.8117098,
+      "timestamp": "2018-10-07T10:14:10Z",
+      "version": 2,
+      "changeset": 63274752,
+      "user": "Sal73x",
+      "uid": 1293386
+    },
+    {
+      "type": "node",
+      "id": 3233979651,
+      "lat": 10.7926511,
+      "lon": 106.8134766,
+      "timestamp": "2024-12-30T10:26:07Z",
+      "version": 3,
+      "changeset": 160783741,
+      "user": "ZioDragon",
+      "uid": 13799024
+    },
+    {
+      "type": "node",
+      "id": 3233979652,
+      "lat": 10.7944125,
+      "lon": 106.8031744,
+      "timestamp": "2014-12-14T09:31:09Z",
+      "version": 1,
+      "changeset": 27453392,
+      "user": "q_hung",
+      "uid": 2427132
+    },
+    {
+      "type": "node",
+      "id": 3233979652,
+      "lat": 10.794041,
+      "lon": 106.8052263,
+      "timestamp": "2018-10-07T01:11:39Z",
+      "version": 2,
+      "changeset": 63268839,
+      "user": "Sal73x",
+      "uid": 1293386
+    },
+    {
+      "type": "node",
+      "id": 3233979652,
+      "lat": 10.794041,
+      "lon": 106.8052263,
+      "timestamp": "2021-02-20T07:17:45Z",
+      "version": 3,
+      "changeset": 99628365,
+      "user": "ItsLouisAnderson",
+      "uid": 11691953,
+      "tags": {
+        "highway": "motorway_junction",
+        "name": "Vành đai 2",
+        "ref": "IC3"
+      }
+    }
+  ]
+}

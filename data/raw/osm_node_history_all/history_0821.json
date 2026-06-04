@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5725202085,
+      "lat": 10.827339,
+      "lon": 106.6247043,
+      "timestamp": "2018-06-28T09:29:47Z",
+      "version": 1,
+      "changeset": 60242516,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5725202085,
+      "lat": 10.827368,
+      "lon": 106.6247123,
+      "timestamp": "2018-07-05T08:21:35Z",
+      "version": 2,
+      "changeset": 60428740,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5725202085,
+      "lat": 10.8273258,
+      "lon": 106.6247686,
+      "timestamp": "2019-07-19T10:01:45Z",
+      "version": 3,
+      "changeset": 72422230,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5726962500,
+      "lat": 10.8307308,
+      "lon": 106.693106,
+      "timestamp": "2018-06-29T01:23:26Z",
+      "version": 1,
+      "changeset": 60263290,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5726962505,
+      "lat": 10.8265043,
+      "lon": 106.6890779,
+      "timestamp": "2018-06-29T01:23:26Z",
+      "version": 1,
+      "changeset": 60263290,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5726962507,
+      "lat": 10.8263787,
+      "lon": 106.6802287,
+      "timestamp": "2018-06-29T01:23:26Z",
+      "version": 1,
+      "changeset": 60263290,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5726962507,
+      "lat": 10.8263603,
+      "lon": 106.6802327,
+      "timestamp": "2019-09-03T21:04:21Z",
+      "version": 2,
+      "changeset": 74058194,
+      "user": "GhostEye",
+      "uid": 9633773
+    },
+    {
+      "type": "node",
+      "id": 5726962507,
+      "lat": 10.8263649,
+      "lon": 106.6802595,
+      "timestamp": "2019-09-04T14:02:59Z",
+      "version": 3,
+      "changeset": 74089151,
+      "user": "GhostEye",
+      "uid": 9633773
+    },
+    {
+      "type": "node",
+      "id": 5727024000,
+      "lat": 10.8087826,
+      "lon": 106.6687556,
+      "timestamp": "2018-06-29T02:28:50Z",
+      "version": 1,
+      "changeset": 60264028,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5727024000,
+      "lat": 10.8087489,
+      "lon": 106.6688071,
+      "timestamp": "2023-12-09T18:40:39Z",
+      "version": 2,
+      "changeset": 144944859,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5727024001,
+      "lat": 10.8059619,
+      "lon": 106.6682077,
+      "timestamp": "2018-06-29T02:28:51Z",
+      "version": 1,
+      "changeset": 60264028,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5727024002,
+      "lat": 10.8059484,
+      "lon": 106.6681832,
+      "timestamp": "2018-06-29T02:28:51Z",
+      "version": 1,
+      "changeset": 60264028,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5727024003,
+      "lat": 10.8059379,
+      "lon": 106.6681494,
+      "timestamp": "2018-06-29T02:28:51Z",
+      "version": 1,
+      "changeset": 60264028,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5727024003,
+      "lat": 10.8059305,
+      "lon": 106.6681558,
+      "timestamp": "2023-12-09T18:40:39Z",
+      "version": 2,
+      "changeset": 144944859,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5727064135,
+      "lat": 10.7999559,
+      "lon": 106.6710835,
+      "timestamp": "2018-06-29T03:05:21Z",
+      "version": 1,
+      "changeset": 60264342,
+      "user": "harishpuppala",
+      "uid": 7446646
+    },
+    {
+      "type": "node",
+      "id": 5727064151,
+      "lat": 10.8000104,
+      "lon": 106.6704717,
+      "timestamp": "2018-06-29T03:05:21Z",
+      "version": 1,
+      "changeset": 60264342,
+      "user": "harishpuppala",
+      "uid": 7446646
+    }
+  ]
+}

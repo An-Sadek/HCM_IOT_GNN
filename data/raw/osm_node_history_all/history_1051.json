@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5778872964,
+      "lat": 10.7685469,
+      "lon": 106.6667353,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872965,
+      "lat": 10.7682139,
+      "lon": 106.6668869,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872966,
+      "lat": 10.7681537,
+      "lon": 106.666916,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872966,
+      "lat": 10.7681721,
+      "lon": 106.666908,
+      "timestamp": "2018-09-08T04:55:43Z",
+      "version": 2,
+      "changeset": 62393526,
+      "user": "lavanya1",
+      "uid": 8170077
+    },
+    {
+      "type": "node",
+      "id": 5778872968,
+      "lat": 10.8028177,
+      "lon": 106.6949433,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872968,
+      "lat": 10.8028732,
+      "lon": 106.6949435,
+      "timestamp": "2023-09-14T03:04:10Z",
+      "version": 2,
+      "changeset": 141235925,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5778872968,
+      "lat": 10.80287,
+      "lon": 106.695011,
+      "timestamp": "2024-11-07T14:43:46Z",
+      "version": 3,
+      "changeset": 158859124,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5778872969,
+      "lat": 10.8028732,
+      "lon": 106.6949435,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872971,
+      "lat": 10.7810637,
+      "lon": 106.6782955,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872971,
+      "lat": 10.7811218,
+      "lon": 106.6783448,
+      "timestamp": "2022-09-23T08:52:52Z",
+      "version": 2,
+      "changeset": 126536299,
+      "user": "GrabVN_QThoai",
+      "uid": 15740602
+    },
+    {
+      "type": "node",
+      "id": 5778872972,
+      "lat": 10.7808242,
+      "lon": 106.678744,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872973,
+      "lat": 10.7805493,
+      "lon": 106.6792239,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872974,
+      "lat": 10.7803887,
+      "lon": 106.6794907,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872974,
+      "lat": 10.7803745,
+      "lon": 106.6795139,
+      "timestamp": "2024-07-22T10:01:12Z",
+      "version": 2,
+      "changeset": 154254481,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5778872983,
+      "lat": 10.7694983,
+      "lon": 106.6345371,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872983,
+      "lat": 10.7694759,
+      "lon": 106.6345559,
+      "timestamp": "2019-07-22T05:25:43Z",
+      "version": 2,
+      "changeset": 72498921,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    }
+  ]
+}

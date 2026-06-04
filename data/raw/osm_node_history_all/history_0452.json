@@ -1,0 +1,1403 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 2974077482,
+      "lat": 10.7867196,
+      "lon": 106.701687,
+      "timestamp": "2014-07-22T08:55:36Z",
+      "version": 1,
+      "changeset": 24288284,
+      "user": "TuanIfan",
+      "uid": 625303,
+      "tags": {
+        "highway": "crossing",
+        "crossing_ref": "zebra"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2974077482,
+      "lat": 10.7867331,
+      "lon": 106.7016759,
+      "timestamp": "2020-05-10T01:02:45Z",
+      "version": 2,
+      "changeset": 84955305,
+      "user": "TuanIfan",
+      "uid": 625303,
+      "tags": {
+        "highway": "crossing",
+        "crossing_ref": "zebra"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2974077482,
+      "lat": 10.786723,
+      "lon": 106.7016602,
+      "timestamp": "2023-11-06T18:01:38Z",
+      "version": 3,
+      "changeset": 143704506,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "yes",
+        "crossing_ref": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2975892377,
+      "lat": 10.7860005,
+      "lon": 106.8554803,
+      "timestamp": "2014-07-23T15:46:17Z",
+      "version": 1,
+      "changeset": 24314341,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2975892377,
+      "lat": 10.7858623,
+      "lon": 106.8547306,
+      "timestamp": "2014-09-03T03:00:58Z",
+      "version": 2,
+      "changeset": 25195419,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2975892377,
+      "lat": 10.7859231,
+      "lon": 106.8555036,
+      "timestamp": "2014-11-08T04:54:08Z",
+      "version": 3,
+      "changeset": 26634631,
+      "user": "q_hung",
+      "uid": 2427132
+    },
+    {
+      "type": "node",
+      "id": 2975892377,
+      "lat": 10.7858733,
+      "lon": 106.854739,
+      "timestamp": "2016-02-11T20:48:39Z",
+      "version": 4,
+      "changeset": 37155477,
+      "user": "ninafanya_kazi",
+      "uid": 3619022
+    },
+    {
+      "type": "node",
+      "id": 2975892377,
+      "lat": 10.7858687,
+      "lon": 106.8547544,
+      "timestamp": "2019-10-10T11:18:46Z",
+      "version": 5,
+      "changeset": 75507262,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 2975892377,
+      "lat": 10.7858449,
+      "lon": 106.8547453,
+      "timestamp": "2022-05-06T01:42:27Z",
+      "version": 6,
+      "changeset": 120609726,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 2975892377,
+      "lat": 10.7858236,
+      "lon": 106.8547521,
+      "timestamp": "2024-12-30T10:26:07Z",
+      "version": 7,
+      "changeset": 160783741,
+      "user": "ZioDragon",
+      "uid": 13799024
+    },
+    {
+      "type": "node",
+      "id": 2975892378,
+      "lat": 10.7862247,
+      "lon": 106.8554695,
+      "timestamp": "2014-07-23T15:46:17Z",
+      "version": 1,
+      "changeset": 24314341,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2975892378,
+      "lat": 10.7860114,
+      "lon": 106.8547499,
+      "timestamp": "2014-09-03T03:00:58Z",
+      "version": 2,
+      "changeset": 25195419,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2975892378,
+      "lat": 10.7859557,
+      "lon": 106.8547623,
+      "timestamp": "2016-02-11T20:48:39Z",
+      "version": 3,
+      "changeset": 37155477,
+      "user": "ninafanya_kazi",
+      "uid": 3619022
+    },
+    {
+      "type": "node",
+      "id": 2975892378,
+      "lat": 10.7859557,
+      "lon": 106.8547435,
+      "timestamp": "2019-10-10T11:18:46Z",
+      "version": 4,
+      "changeset": 75507262,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8584466,
+      "lon": 106.7887925,
+      "timestamp": "2014-07-28T15:46:41Z",
+      "version": 1,
+      "changeset": 24404662,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "name": "Khu Công nghệ cao quận 9",
+        "public_transport": "stop_position",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8583378,
+      "lon": 106.788699,
+      "timestamp": "2014-10-05T13:25:35Z",
+      "version": 2,
+      "changeset": 25875839,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "name": "Khu Công nghệ cao quận 9",
+        "public_transport": "stop_position",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8583728,
+      "lon": 106.7887047,
+      "timestamp": "2015-01-14T03:56:22Z",
+      "version": 3,
+      "changeset": 28127344,
+      "user": "Suki52",
+      "uid": 2470422,
+      "tags": {
+        "name": "Khu Công nghệ cao quận 9",
+        "public_transport": "stop_position",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8584202,
+      "lon": 106.7887744,
+      "timestamp": "2016-03-19T07:29:18Z",
+      "version": 4,
+      "changeset": 37933249,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "name": "Khu Công nghệ cao quận 9",
+        "public_transport": "stop_position",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8584028,
+      "lon": 106.7887514,
+      "timestamp": "2016-03-19T08:14:38Z",
+      "version": 5,
+      "changeset": 37933867,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "name": "Khu Công nghệ cao quận 9",
+        "public_transport": "stop_position",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8584028,
+      "lon": 106.7887514,
+      "timestamp": "2022-05-16T02:58:11Z",
+      "version": 6,
+      "changeset": 121030092,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Khu Công Nghệ Cao Quận 9",
+        "public_transport": "stop_position",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8583246,
+      "lon": 106.7888257,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 7,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Khu Công Nghệ Cao Quận 9",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8583246,
+      "lon": 106.7888257,
+      "timestamp": "2024-12-21T07:09:09Z",
+      "version": 8,
+      "changeset": 160459948,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "name": "Khu Công nghệ cao Quận 9",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8583246,
+      "lon": 106.7888257,
+      "timestamp": "2024-12-22T12:45:19Z",
+      "version": 9,
+      "changeset": 160500197,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Khu Công nghệ Cao Quận 9",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8583246,
+      "lon": 106.7888257,
+      "timestamp": "2026-03-13T01:49:41Z",
+      "version": 10,
+      "changeset": 179782601,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Khu Công nghệ Cao Quận 9"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8583246,
+      "lon": 106.7888257,
+      "timestamp": "2026-03-13T01:49:42Z",
+      "version": 11,
+      "changeset": 179782602,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "yes",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Khu Công nghệ Cao Quận 9",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984625915,
+      "lat": 10.8583246,
+      "lon": 106.7888257,
+      "timestamp": "2026-03-13T01:49:44Z",
+      "version": 12,
+      "changeset": 179782604,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Khu Công nghệ Cao Quận 9",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984626142,
+      "lat": 10.8331081,
+      "lon": 106.7269674,
+      "timestamp": "2014-07-28T15:46:41Z",
+      "version": 1,
+      "changeset": 24404662,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 2984626142,
+      "lat": 10.8329398,
+      "lon": 106.7268307,
+      "timestamp": "2023-03-21T15:46:47Z",
+      "version": 2,
+      "changeset": 133946368,
+      "user": "GHNeko",
+      "uid": 18769134
+    },
+    {
+      "type": "node",
+      "id": 2984717717,
+      "lat": 10.8497071,
+      "lon": 106.7722593,
+      "timestamp": "2014-07-28T17:04:37Z",
+      "version": 1,
+      "changeset": 24406202,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 2984717717,
+      "lat": 10.8497082,
+      "lon": 106.7722633,
+      "timestamp": "2014-07-30T06:20:55Z",
+      "version": 2,
+      "changeset": 24436220,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717717,
+      "lat": 10.8496912,
+      "lon": 106.7721802,
+      "timestamp": "2016-03-18T10:26:02Z",
+      "version": 3,
+      "changeset": 37915827,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717717,
+      "lat": 10.849707,
+      "lon": 106.7721963,
+      "timestamp": "2018-07-12T08:29:03Z",
+      "version": 4,
+      "changeset": 60641055,
+      "user": "mutpuri",
+      "uid": 7795551,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717717,
+      "lat": 10.849705,
+      "lon": 106.7722385,
+      "timestamp": "2019-07-16T13:50:57Z",
+      "version": 5,
+      "changeset": 72307058,
+      "user": "grabtaxi15",
+      "uid": 10143746,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717717,
+      "lat": 10.849705,
+      "lon": 106.7722385,
+      "timestamp": "2019-09-06T17:43:18Z",
+      "version": 6,
+      "changeset": 74187616,
+      "user": "UncoolGuyJake",
+      "uid": 7674729,
+      "tags": {
+        "highway": "crossing",
+        "crossing_ref": "zebra"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717717,
+      "lat": 10.849705,
+      "lon": 106.7722385,
+      "timestamp": "2022-10-25T13:11:52Z",
+      "version": 7,
+      "changeset": 128039864,
+      "user": "hoanganhlami33",
+      "uid": 14252795,
+      "tags": {
+        "highway": "crossing",
+        "crossing": "marked",
+        "crossing_ref": "zebra"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717717,
+      "lat": 10.849705,
+      "lon": 106.7722385,
+      "timestamp": "2025-04-28T11:07:36Z",
+      "version": 8,
+      "changeset": 165543903,
+      "user": "crgbsly",
+      "uid": 9093997,
+      "tags": {
+        "crossing": "marked",
+        "crossing:markings": "yes",
+        "crossing_ref": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8497105,
+      "lon": 106.7691091,
+      "timestamp": "2014-07-28T17:04:37Z",
+      "version": 1,
+      "changeset": 24406202,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8497476,
+      "lon": 106.7690261,
+      "timestamp": "2014-10-22T15:22:31Z",
+      "version": 2,
+      "changeset": 26258015,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Võ Văn Ngân - Đường số 6"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8497002,
+      "lon": 106.7690248,
+      "timestamp": "2020-05-11T03:07:30Z",
+      "version": 3,
+      "changeset": 84994264,
+      "user": "thevivotran",
+      "uid": 8955765,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Võ Văn Ngân - Đường số 6"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8497226,
+      "lon": 106.7690219,
+      "timestamp": "2023-08-30T09:16:11Z",
+      "version": 4,
+      "changeset": 140577651,
+      "user": "Grab_Cong",
+      "uid": 18820325,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Võ Văn Ngân - Đường số 6"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8496577,
+      "lon": 106.7691092,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 5,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Siêu thị Nguyễn Kim",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8496577,
+      "lon": 106.7691092,
+      "timestamp": "2025-09-01T09:24:26Z",
+      "version": 7,
+      "changeset": 171304820,
+      "user": "Peacock 7784",
+      "uid": 23013662,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Siêu thị Nguyễn Kim"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8496577,
+      "lon": 106.7691092,
+      "timestamp": "2025-09-01T09:24:27Z",
+      "version": 8,
+      "changeset": 171304821,
+      "user": "Peacock 7784",
+      "uid": 23013662,
+      "tags": {
+        "shelter": "no",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Siêu thị Nguyễn Kim",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8496577,
+      "lon": 106.7691092,
+      "timestamp": "2025-11-19T19:13:57Z",
+      "version": 9,
+      "changeset": 174874781,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "edit",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Siêu thị Nguyễn Kim",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8496577,
+      "lon": 106.7691092,
+      "timestamp": "2025-11-19T19:21:30Z",
+      "version": 10,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "test",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Siêu thị Nguyễn Kim",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8496577,
+      "lon": 106.7691092,
+      "timestamp": "2025-11-19T19:26:18Z",
+      "version": 11,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Siêu thị Nguyễn Kim",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717721,
+      "lat": 10.8496577,
+      "lon": 106.7691092,
+      "timestamp": "2025-11-20T09:12:36Z",
+      "version": 12,
+      "changeset": 174896884,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Siêu thị Nguyễn Kim",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506986,
+      "lon": 106.764166,
+      "timestamp": "2014-07-28T17:04:37Z",
+      "version": 1,
+      "changeset": 24406202,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "name": "Cao đẳng xây dựng số 2",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8507277,
+      "lon": 106.7640378,
+      "timestamp": "2014-10-07T10:43:19Z",
+      "version": 2,
+      "changeset": 25914667,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "name": "Cao đẳng xây dựng số 2",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8507531,
+      "lon": 106.764082,
+      "timestamp": "2014-10-22T15:22:31Z",
+      "version": 3,
+      "changeset": 26258015,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Cao đẳng xây dựng số 2 ( đi Q9)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8507531,
+      "lon": 106.764082,
+      "timestamp": "2022-05-10T04:18:28Z",
+      "version": 4,
+      "changeset": 120772224,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Cao Đẳng Xây Dựng Số 2",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 5,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Cao Đẳng Xây Dựng Số 2",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2024-12-21T07:09:09Z",
+      "version": 6,
+      "changeset": 160459948,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "name": "Trường Cao đẳng Xây dựng Số 2",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2024-12-21T18:30:05Z",
+      "version": 7,
+      "changeset": 160479379,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Trường Cao đẳng Xây dựng",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2025-11-19T19:13:57Z",
+      "version": 8,
+      "changeset": 174874781,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "edit",
+        "public_transport": "platform",
+        "name": "Trường Cao đẳng Xây dựng",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2025-11-19T19:21:30Z",
+      "version": 9,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "test",
+        "public_transport": "platform",
+        "name": "Trường Cao đẳng Xây dựng",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2025-11-19T19:26:18Z",
+      "version": 10,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Trường Cao đẳng Xây dựng",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2025-11-20T09:12:36Z",
+      "version": 11,
+      "changeset": 174896884,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Trường Cao đẳng Xây dựng",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2026-03-30T08:43:53Z",
+      "version": 12,
+      "changeset": 180618039,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "name": "Trường Cao đẳng Xây dựng",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2026-03-30T08:43:55Z",
+      "version": 13,
+      "changeset": 180618041,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Cao đẳng Xây dựng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2026-03-30T08:43:56Z",
+      "version": 14,
+      "changeset": 180618046,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "yes",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Cao đẳng Xây dựng",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717726,
+      "lat": 10.8506564,
+      "lon": 106.7644654,
+      "timestamp": "2026-03-30T08:43:57Z",
+      "version": 15,
+      "changeset": 180617912,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Trường Cao đẳng Xây dựng",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8505329,
+      "lon": 106.7599027,
+      "timestamp": "2014-07-28T17:04:38Z",
+      "version": 1,
+      "changeset": 24406202,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8505152,
+      "lon": 106.7600257,
+      "timestamp": "2014-09-01T12:20:32Z",
+      "version": 2,
+      "changeset": 25158550,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8505223,
+      "lon": 106.7599862,
+      "timestamp": "2014-10-07T10:43:19Z",
+      "version": 3,
+      "changeset": 25914667,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8505632,
+      "lon": 106.7599916,
+      "timestamp": "2014-10-22T15:22:31Z",
+      "version": 4,
+      "changeset": 26258015,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 3 Nhà Thờ (đi Thủ Đức)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8505632,
+      "lon": 106.7599916,
+      "timestamp": "2022-05-17T03:53:11Z",
+      "version": 5,
+      "changeset": 121076023,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Ngã 3 Nhà Thờ",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8504492,
+      "lon": 106.7608358,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 6,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Ngã ba Chương Dương",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8504492,
+      "lon": 106.7608358,
+      "timestamp": "2025-11-19T19:13:57Z",
+      "version": 7,
+      "changeset": 174874781,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "edit",
+        "public_transport": "platform",
+        "name": "Ngã ba Chương Dương",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8504492,
+      "lon": 106.7608358,
+      "timestamp": "2025-11-19T19:21:30Z",
+      "version": 8,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "test",
+        "public_transport": "platform",
+        "name": "Ngã ba Chương Dương",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8504492,
+      "lon": 106.7608358,
+      "timestamp": "2025-11-19T19:26:18Z",
+      "version": 9,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Ngã ba Chương Dương",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8504492,
+      "lon": 106.7608358,
+      "timestamp": "2025-11-20T09:12:36Z",
+      "version": 10,
+      "changeset": 174896884,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Ngã ba Chương Dương",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8504492,
+      "lon": 106.7608358,
+      "timestamp": "2026-03-13T01:40:05Z",
+      "version": 11,
+      "changeset": 179782601,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã ba Chương Dương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8504492,
+      "lon": 106.7608358,
+      "timestamp": "2026-03-13T01:40:07Z",
+      "version": 12,
+      "changeset": 179782602,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "no",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã ba Chương Dương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717727,
+      "lat": 10.8504492,
+      "lon": 106.7608358,
+      "timestamp": "2026-03-13T01:40:08Z",
+      "version": 13,
+      "changeset": 179782604,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã ba Chương Dương",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502257,
+      "lon": 106.7544224,
+      "timestamp": "2014-07-28T17:04:38Z",
+      "version": 1,
+      "changeset": 24406202,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8500934,
+      "lon": 106.7542817,
+      "timestamp": "2014-10-07T10:43:18Z",
+      "version": 2,
+      "changeset": 25914667,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502084,
+      "lon": 106.7543192,
+      "timestamp": "2014-10-22T15:22:30Z",
+      "version": 3,
+      "changeset": 26258015,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Chợ Thủ Đức"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502084,
+      "lon": 106.7543192,
+      "timestamp": "2022-05-10T10:23:56Z",
+      "version": 4,
+      "changeset": 120786397,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Chợ Thủ Đức",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502204,
+      "lon": 106.7544266,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 5,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Chợ Thủ Đức",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502204,
+      "lon": 106.7544266,
+      "timestamp": "2025-11-19T19:13:57Z",
+      "version": 6,
+      "changeset": 174874781,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "edit",
+        "public_transport": "platform",
+        "name": "Chợ Thủ Đức",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502204,
+      "lon": 106.7544266,
+      "timestamp": "2025-11-19T19:21:30Z",
+      "version": 7,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "test",
+        "public_transport": "platform",
+        "name": "Chợ Thủ Đức",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502204,
+      "lon": 106.7544266,
+      "timestamp": "2025-11-19T19:26:18Z",
+      "version": 8,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Chợ Thủ Đức",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502204,
+      "lon": 106.7544266,
+      "timestamp": "2025-11-20T09:12:36Z",
+      "version": 9,
+      "changeset": 174896884,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Chợ Thủ Đức",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502204,
+      "lon": 106.7544266,
+      "timestamp": "2026-03-13T01:37:29Z",
+      "version": 10,
+      "changeset": 179782601,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chợ Thủ Đức"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502204,
+      "lon": 106.7544266,
+      "timestamp": "2026-03-13T01:37:31Z",
+      "version": 11,
+      "changeset": 179782602,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "no",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chợ Thủ Đức",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2984717728,
+      "lat": 10.8502204,
+      "lon": 106.7544266,
+      "timestamp": "2026-03-13T01:37:32Z",
+      "version": 12,
+      "changeset": 179782604,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chợ Thủ Đức",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    }
+  ]
+}

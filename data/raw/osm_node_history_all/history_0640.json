@@ -1,0 +1,336 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4541470627,
+      "lat": 10.7978522,
+      "lon": 106.6583769,
+      "timestamp": "2016-12-06T15:32:11Z",
+      "version": 1,
+      "changeset": 44212605,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4541470627,
+      "lat": 10.7978852,
+      "lon": 106.6583668,
+      "timestamp": "2017-09-26T08:43:41Z",
+      "version": 2,
+      "changeset": 52377201,
+      "user": "HaiHo",
+      "uid": 6161284
+    },
+    {
+      "type": "node",
+      "id": 4541470627,
+      "lat": 10.7978852,
+      "lon": 106.6583668,
+      "timestamp": "2019-06-11T15:24:28Z",
+      "version": 3,
+      "changeset": 71146210,
+      "user": "Linh AT Huynh",
+      "uid": 10061701,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4541470634,
+      "lat": 10.7866907,
+      "lon": 106.6434241,
+      "timestamp": "2016-12-06T15:32:11Z",
+      "version": 1,
+      "changeset": 44212605,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4541470634,
+      "lat": 10.7866915,
+      "lon": 106.6434241,
+      "timestamp": "2017-01-19T14:39:27Z",
+      "version": 2,
+      "changeset": 45299014,
+      "user": "KimChinhTri",
+      "uid": 4892796,
+      "tags": {
+        "name": "Ngã tư Đồng Đen-Hồng Lạc(Nối với Thoại Ngọc Hầu)",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4541470634,
+      "lat": 10.7866572,
+      "lon": 106.6434268,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 3,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877,
+      "tags": {
+        "name": "Ngã tư Đồng Đen-Hồng Lạc(Nối với Thoại Ngọc Hầu)",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4541470634,
+      "lat": 10.7866572,
+      "lon": 106.6434268,
+      "timestamp": "2022-04-22T09:21:59Z",
+      "version": 4,
+      "changeset": 120039131,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Ngã tư Đồng Đen-Hồng Lạc",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4547949559,
+      "lat": 10.7829304,
+      "lon": 106.6263269,
+      "timestamp": "2016-12-10T14:04:46Z",
+      "version": 1,
+      "changeset": 44303958,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4547949559,
+      "lat": 10.78291,
+      "lon": 106.6263256,
+      "timestamp": "2018-07-23T03:54:08Z",
+      "version": 2,
+      "changeset": 60967904,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 4548017729,
+      "lat": 10.7512181,
+      "lon": 106.6306631,
+      "timestamp": "2016-12-10T15:07:26Z",
+      "version": 1,
+      "changeset": 44305145,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4548017729,
+      "lat": 10.7512407,
+      "lon": 106.6306525,
+      "timestamp": "2018-08-01T01:13:15Z",
+      "version": 2,
+      "changeset": 61245664,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 4548017733,
+      "lat": 10.7511204,
+      "lon": 106.6305393,
+      "timestamp": "2016-12-10T15:07:26Z",
+      "version": 1,
+      "changeset": 44305145,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4548017733,
+      "lat": 10.7511006,
+      "lon": 106.6304749,
+      "timestamp": "2018-08-01T01:53:01Z",
+      "version": 2,
+      "changeset": 61246114,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 4550470913,
+      "lat": 10.7691266,
+      "lon": 106.6405885,
+      "timestamp": "2016-12-12T08:32:37Z",
+      "version": 1,
+      "changeset": 44339706,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4550470913,
+      "lat": 10.7691266,
+      "lon": 106.6405885,
+      "timestamp": "2019-08-19T19:47:31Z",
+      "version": 2,
+      "changeset": 73513200,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550470913,
+      "lat": 10.7691049,
+      "lon": 106.640567,
+      "timestamp": "2019-08-26T15:05:41Z",
+      "version": 3,
+      "changeset": 73758744,
+      "user": "Kaarti_B",
+      "uid": 9029309,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550522868,
+      "lat": 10.7563721,
+      "lon": 106.6323129,
+      "timestamp": "2016-12-12T08:57:16Z",
+      "version": 1,
+      "changeset": 44340116,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4550522868,
+      "lat": 10.7563818,
+      "lon": 106.6323235,
+      "timestamp": "2018-07-20T08:12:48Z",
+      "version": 2,
+      "changeset": 60895975,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 4550522881,
+      "lat": 10.7716071,
+      "lon": 106.6278831,
+      "timestamp": "2016-12-12T08:57:16Z",
+      "version": 1,
+      "changeset": 44340116,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4550522881,
+      "lat": 10.771586,
+      "lon": 106.6278811,
+      "timestamp": "2019-07-23T11:26:36Z",
+      "version": 2,
+      "changeset": 72552796,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 4550522881,
+      "lat": 10.7715895,
+      "lon": 106.6278823,
+      "timestamp": "2019-08-23T14:54:47Z",
+      "version": 3,
+      "changeset": 73672325,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4550522883,
+      "lat": 10.7712584,
+      "lon": 106.6289111,
+      "timestamp": "2016-12-12T08:57:17Z",
+      "version": 1,
+      "changeset": 44340116,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4550522883,
+      "lat": 10.7712492,
+      "lon": 106.6289138,
+      "timestamp": "2019-07-23T11:26:36Z",
+      "version": 2,
+      "changeset": 72552796,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 4550522883,
+      "lat": 10.7712468,
+      "lon": 106.628913,
+      "timestamp": "2019-08-23T14:54:47Z",
+      "version": 3,
+      "changeset": 73672325,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4550522883,
+      "lat": 10.7712484,
+      "lon": 106.6289135,
+      "timestamp": "2019-08-23T17:02:55Z",
+      "version": 4,
+      "changeset": 73677077,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4550523297,
+      "lat": 10.7723265,
+      "lon": 106.6257122,
+      "timestamp": "2016-12-12T08:57:17Z",
+      "version": 1,
+      "changeset": 44340116,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4550523297,
+      "lat": 10.7723041,
+      "lon": 106.6257042,
+      "timestamp": "2019-07-23T11:26:36Z",
+      "version": 2,
+      "changeset": 72552796,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 4550523297,
+      "lat": 10.7723025,
+      "lon": 106.6257037,
+      "timestamp": "2019-08-23T15:09:54Z",
+      "version": 3,
+      "changeset": 73672889,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    }
+  ]
+}

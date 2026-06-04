@@ -1,0 +1,192 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5772159026,
+      "lat": 10.8592795,
+      "lon": 106.7043585,
+      "timestamp": "2018-07-20T04:19:18Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159026,
+      "lat": 10.8592789,
+      "lon": 106.7043584,
+      "timestamp": "2025-08-10T15:22:38Z",
+      "version": 2,
+      "changeset": 170251107,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5772159030,
+      "lat": 10.8594215,
+      "lon": 106.7032205,
+      "timestamp": "2018-07-20T04:19:18Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159030,
+      "lat": 10.8594232,
+      "lon": 106.7032207,
+      "timestamp": "2025-08-10T15:22:38Z",
+      "version": 2,
+      "changeset": 170251107,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5772159032,
+      "lat": 10.8596035,
+      "lon": 106.7017911,
+      "timestamp": "2018-07-20T04:19:18Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159040,
+      "lat": 10.8602442,
+      "lon": 106.698604,
+      "timestamp": "2018-07-20T04:19:18Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159041,
+      "lat": 10.8599936,
+      "lon": 106.6986463,
+      "timestamp": "2018-07-20T04:19:18Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159050,
+      "lat": 10.8605635,
+      "lon": 106.6924421,
+      "timestamp": "2018-07-20T04:19:19Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159060,
+      "lat": 10.8602375,
+      "lon": 106.6986571,
+      "timestamp": "2018-07-20T04:19:19Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159071,
+      "lat": 10.8593543,
+      "lon": 106.7052321,
+      "timestamp": "2018-07-20T04:19:19Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159072,
+      "lat": 10.859221,
+      "lon": 106.7052214,
+      "timestamp": "2018-07-20T04:19:19Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159072,
+      "lat": 10.859221,
+      "lon": 106.7052214,
+      "timestamp": "2019-09-04T21:59:10Z",
+      "version": 2,
+      "changeset": 74105640,
+      "user": "El Pescador",
+      "uid": 7445879,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5772159072,
+      "lat": 10.859221,
+      "lon": 106.7052214,
+      "timestamp": "2019-09-10T21:30:17Z",
+      "version": 3,
+      "changeset": 74329749,
+      "user": "GhostEye",
+      "uid": 9633773
+    },
+    {
+      "type": "node",
+      "id": 5772159073,
+      "lat": 10.8591858,
+      "lon": 106.705079,
+      "timestamp": "2018-07-20T04:19:19Z",
+      "version": 1,
+      "changeset": 60888872,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5772159073,
+      "lat": 10.8591844,
+      "lon": 106.7050983,
+      "timestamp": "2019-09-04T21:59:10Z",
+      "version": 2,
+      "changeset": 74105640,
+      "user": "El Pescador",
+      "uid": 7445879,
+      "tags": {
+        "highway": "traffic_signals",
+        "crossing": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5772159073,
+      "lat": 10.8591844,
+      "lon": 106.7050983,
+      "timestamp": "2022-01-12T02:30:41Z",
+      "version": 3,
+      "changeset": 116047066,
+      "user": "hoanganhlami33",
+      "uid": 14252795,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals",
+        "traffic_signals:direction": "forward"
+      }
+    }
+  ]
+}

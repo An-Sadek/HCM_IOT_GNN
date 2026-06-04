@@ -1,0 +1,210 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5778872954,
+      "lat": 10.7743403,
+      "lon": 106.6644187,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872955,
+      "lat": 10.7733936,
+      "lon": 106.6648097,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872955,
+      "lat": 10.7733936,
+      "lon": 106.6648097,
+      "timestamp": "2019-06-05T07:35:05Z",
+      "version": 2,
+      "changeset": 70946537,
+      "user": "pizzagal",
+      "uid": 7772276
+    },
+    {
+      "type": "node",
+      "id": 5778872955,
+      "lat": 10.773391,
+      "lon": 106.6647936,
+      "timestamp": "2019-08-27T17:59:44Z",
+      "version": 3,
+      "changeset": 73809500,
+      "user": "_Poliwrath_",
+      "uid": 8759140
+    },
+    {
+      "type": "node",
+      "id": 5778872955,
+      "lat": 10.773391,
+      "lon": 106.6647936,
+      "timestamp": "2019-08-27T22:10:51Z",
+      "version": 4,
+      "changeset": 73815724,
+      "user": "birdymaps",
+      "uid": 9319541,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5778872955,
+      "lat": 10.773391,
+      "lon": 106.6647936,
+      "timestamp": "2019-09-12T17:34:20Z",
+      "version": 5,
+      "changeset": 74402583,
+      "user": "UncoolGuyJake",
+      "uid": 7674729
+    },
+    {
+      "type": "node",
+      "id": 5778872956,
+      "lat": 10.7724864,
+      "lon": 106.6651369,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872957,
+      "lat": 10.7723902,
+      "lon": 106.6651748,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872958,
+      "lat": 10.7721412,
+      "lon": 106.6652711,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872958,
+      "lat": 10.7721412,
+      "lon": 106.6652711,
+      "timestamp": "2019-08-27T22:08:10Z",
+      "version": 2,
+      "changeset": 73815686,
+      "user": "birdymaps",
+      "uid": 9319541,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5778872958,
+      "lat": 10.7721412,
+      "lon": 106.6652711,
+      "timestamp": "2019-09-12T21:26:46Z",
+      "version": 3,
+      "changeset": 74409684,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5778872959,
+      "lat": 10.7718361,
+      "lon": 106.6653892,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872960,
+      "lat": 10.7718021,
+      "lon": 106.6654036,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872960,
+      "lat": 10.7717573,
+      "lon": 106.6654224,
+      "timestamp": "2019-08-27T17:59:44Z",
+      "version": 2,
+      "changeset": 73809500,
+      "user": "_Poliwrath_",
+      "uid": 8759140
+    },
+    {
+      "type": "node",
+      "id": 5778872961,
+      "lat": 10.7697668,
+      "lon": 106.6661869,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872962,
+      "lat": 10.7693743,
+      "lon": 106.666339,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778872962,
+      "lat": 10.7693703,
+      "lon": 106.6663511,
+      "timestamp": "2019-08-27T22:03:01Z",
+      "version": 2,
+      "changeset": 73815601,
+      "user": "birdymaps",
+      "uid": 9319541
+    },
+    {
+      "type": "node",
+      "id": 5778872963,
+      "lat": 10.7690723,
+      "lon": 106.6664924,
+      "timestamp": "2018-07-23T09:02:38Z",
+      "version": 1,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604
+    }
+  ]
+}

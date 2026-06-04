@@ -1,0 +1,266 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5757501786,
+      "lat": 10.7666125,
+      "lon": 106.6429098,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501787,
+      "lat": 10.7665527,
+      "lon": 106.6429996,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501787,
+      "lat": 10.7665392,
+      "lon": 106.643064,
+      "timestamp": "2019-08-19T18:14:46Z",
+      "version": 2,
+      "changeset": 73510570,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5757501787,
+      "lat": 10.766584,
+      "lon": 106.6429084,
+      "timestamp": "2019-08-19T19:27:53Z",
+      "version": 3,
+      "changeset": 73512631,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5757501788,
+      "lat": 10.7664078,
+      "lon": 106.6422822,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501788,
+      "lat": 10.7665001,
+      "lon": 106.6423186,
+      "timestamp": "2019-08-19T19:27:53Z",
+      "version": 2,
+      "changeset": 73512631,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5757501789,
+      "lat": 10.7665163,
+      "lon": 106.6423894,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501789,
+      "lat": 10.7665364,
+      "lon": 106.6423568,
+      "timestamp": "2019-08-19T19:27:53Z",
+      "version": 2,
+      "changeset": 73512631,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5757501790,
+      "lat": 10.7665809,
+      "lon": 106.6424672,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501790,
+      "lat": 10.7665532,
+      "lon": 106.642435,
+      "timestamp": "2019-08-19T18:14:46Z",
+      "version": 2,
+      "changeset": 73510570,
+      "user": "Kaarti_B",
+      "uid": 9029309,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5757501790,
+      "lat": 10.7665679,
+      "lon": 106.6423993,
+      "timestamp": "2019-08-19T19:27:53Z",
+      "version": 3,
+      "changeset": 73512631,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5757501791,
+      "lat": 10.7666072,
+      "lon": 106.6425812,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501791,
+      "lat": 10.766596,
+      "lon": 106.6425269,
+      "timestamp": "2019-08-19T18:14:46Z",
+      "version": 2,
+      "changeset": 73510570,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5757501791,
+      "lat": 10.7666286,
+      "lon": 106.6425455,
+      "timestamp": "2019-08-19T19:27:53Z",
+      "version": 3,
+      "changeset": 73512631,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5757501792,
+      "lat": 10.7666204,
+      "lon": 106.6426469,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501792,
+      "lat": 10.7666085,
+      "lon": 106.6425926,
+      "timestamp": "2019-08-19T18:14:46Z",
+      "version": 2,
+      "changeset": 73510570,
+      "user": "Kaarti_B",
+      "uid": 9029309,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5757501792,
+      "lat": 10.7666366,
+      "lon": 106.6425981,
+      "timestamp": "2019-08-19T19:27:53Z",
+      "version": 3,
+      "changeset": 73512631,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5757501793,
+      "lat": 10.7666288,
+      "lon": 106.6427319,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501793,
+      "lat": 10.7666454,
+      "lon": 106.6426797,
+      "timestamp": "2019-08-19T19:27:53Z",
+      "version": 2,
+      "changeset": 73512631,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5757501794,
+      "lat": 10.7666402,
+      "lon": 106.6422164,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5757501794,
+      "lat": 10.7666231,
+      "lon": 106.6422177,
+      "timestamp": "2019-08-19T18:14:46Z",
+      "version": 2,
+      "changeset": 73510570,
+      "user": "Kaarti_B",
+      "uid": 9029309,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5757501795,
+      "lat": 10.766569,
+      "lon": 106.6422178,
+      "timestamp": "2018-07-13T01:47:09Z",
+      "version": 1,
+      "changeset": 60668740,
+      "user": "neela1",
+      "uid": 7795604
+    }
+  ]
+}

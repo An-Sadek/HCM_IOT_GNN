@@ -1,0 +1,147 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4122537299,
+      "lat": 10.7049212,
+      "lon": 106.8335386,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537300,
+      "lat": 10.7047386,
+      "lon": 106.8353721,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537301,
+      "lat": 10.7041127,
+      "lon": 106.8398361,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537301,
+      "lat": 10.7041206,
+      "lon": 106.8398227,
+      "timestamp": "2020-08-17T06:49:26Z",
+      "version": 2,
+      "changeset": 89498795,
+      "user": "af_roz",
+      "uid": 10734585
+    },
+    {
+      "type": "node",
+      "id": 4122537302,
+      "lat": 10.7040409,
+      "lon": 106.8412818,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537302,
+      "lat": 10.7040435,
+      "lon": 106.8406863,
+      "timestamp": "2020-08-17T06:49:26Z",
+      "version": 2,
+      "changeset": 89498795,
+      "user": "af_roz",
+      "uid": 10734585
+    },
+    {
+      "type": "node",
+      "id": 4122537310,
+      "lat": 10.7100286,
+      "lon": 106.8475247,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537312,
+      "lat": 10.7095831,
+      "lon": 106.8475424,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537312,
+      "lat": 10.7094863,
+      "lon": 106.8475283,
+      "timestamp": "2023-10-24T07:19:05Z",
+      "version": 2,
+      "changeset": 143050270,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 4122537313,
+      "lat": 10.7153627,
+      "lon": 106.8244419,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537314,
+      "lat": 10.7130752,
+      "lon": 106.8244606,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537315,
+      "lat": 10.7055408,
+      "lon": 106.8255284,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    },
+    {
+      "type": "node",
+      "id": 4122537316,
+      "lat": 10.7054248,
+      "lon": 106.8259772,
+      "timestamp": "2016-04-15T04:54:34Z",
+      "version": 1,
+      "changeset": 38576612,
+      "user": "Russ McD",
+      "uid": 346601
+    }
+  ]
+}

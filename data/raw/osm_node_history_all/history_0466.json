@@ -1,0 +1,590 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3116883002,
+      "lat": 10.7970695,
+      "lon": 106.657431,
+      "timestamp": "2014-10-07T17:14:07Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Cao đẳng kỹ thuật Lý Tự Trọng",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883002,
+      "lat": 10.7970695,
+      "lon": 106.657431,
+      "timestamp": "2022-04-26T03:38:49Z",
+      "version": 2,
+      "changeset": 120190440,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Cao Đẳng Kỹ Thuật Lý Tự Trọng",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883002,
+      "lat": 10.7970252,
+      "lon": 106.65746,
+      "timestamp": "2023-11-19T13:43:10Z",
+      "version": 3,
+      "changeset": 144208654,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Cao Đẳng Kỹ Thuật Lý Tự Trọng",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883002,
+      "lat": 10.7970241,
+      "lon": 106.6574611,
+      "timestamp": "2023-12-02T16:33:33Z",
+      "version": 4,
+      "changeset": 144697449,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Cao Đẳng Kỹ Thuật Lý Tự Trọng",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883003,
+      "lat": 10.7969323,
+      "lon": 106.6574015,
+      "timestamp": "2014-10-07T17:14:07Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Cao đẳng kỹ thuật Lý Tự Trọng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883003,
+      "lat": 10.7969526,
+      "lon": 106.6573816,
+      "timestamp": "2017-09-26T08:43:40Z",
+      "version": 2,
+      "changeset": 52377201,
+      "user": "HaiHo",
+      "uid": 6161284,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Cao đẳng kỹ thuật Lý Tự Trọng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883003,
+      "lat": 10.7968999,
+      "lon": 106.6574071,
+      "timestamp": "2018-07-17T07:44:55Z",
+      "version": 3,
+      "changeset": 60787391,
+      "user": "akhil2",
+      "uid": 7795526,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Cao đẳng kỹ thuật Lý Tự Trọng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883003,
+      "lat": 10.7968999,
+      "lon": 106.6574071,
+      "timestamp": "2022-04-26T03:38:49Z",
+      "version": 4,
+      "changeset": 120190440,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Cao Đẳng Kỹ Thuật Lý Tự Trọng",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883003,
+      "lat": 10.7968884,
+      "lon": 106.6574185,
+      "timestamp": "2023-12-02T16:33:33Z",
+      "version": 5,
+      "changeset": 144697449,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Cao Đẳng Kỹ Thuật Lý Tự Trọng",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883004,
+      "lat": 10.7984641,
+      "lon": 106.6590178,
+      "timestamp": "2014-10-07T17:14:07Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Nhà hàng Đông Phương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883004,
+      "lat": 10.7984835,
+      "lon": 106.6589987,
+      "timestamp": "2017-09-26T08:43:41Z",
+      "version": 2,
+      "changeset": 52377201,
+      "user": "HaiHo",
+      "uid": 6161284,
+      "tags": {
+        "name": "Nhà hàng Đông Phương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883004,
+      "lat": 10.7984655,
+      "lon": 106.6589804,
+      "timestamp": "2019-09-16T17:43:49Z",
+      "version": 3,
+      "changeset": 74544471,
+      "user": "Corban8",
+      "uid": 4240913,
+      "tags": {
+        "name": "Nhà hàng Đông Phương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883004,
+      "lat": 10.7984655,
+      "lon": 106.6589804,
+      "timestamp": "2022-04-26T03:38:49Z",
+      "version": 4,
+      "changeset": 120190440,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nhà hàng Đông Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883004,
+      "lat": 10.7984413,
+      "lon": 106.6590029,
+      "timestamp": "2023-11-19T13:43:10Z",
+      "version": 5,
+      "changeset": 144208654,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà hàng Đông Phương",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883004,
+      "lat": 10.7984381,
+      "lon": 106.659005,
+      "timestamp": "2023-11-21T06:27:41Z",
+      "version": 6,
+      "changeset": 144272819,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà hàng Đông Phương",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883004,
+      "lat": 10.7985489,
+      "lon": 106.6592306,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 7,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nhà hàng Đông Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883005,
+      "lat": 10.798487,
+      "lon": 106.658914,
+      "timestamp": "2014-10-07T17:14:08Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Nhà hàng Đông Phương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883005,
+      "lat": 10.7984742,
+      "lon": 106.6589035,
+      "timestamp": "2019-09-16T17:43:49Z",
+      "version": 2,
+      "changeset": 74544471,
+      "user": "Corban8",
+      "uid": 4240913,
+      "tags": {
+        "name": "Nhà hàng Đông Phương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883005,
+      "lat": 10.7984742,
+      "lon": 106.6589035,
+      "timestamp": "2022-04-26T03:38:49Z",
+      "version": 3,
+      "changeset": 120190440,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà hàng Đông Phương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883005,
+      "lat": 10.7984837,
+      "lon": 106.65894,
+      "timestamp": "2023-11-19T13:43:10Z",
+      "version": 4,
+      "changeset": 144208654,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nhà hàng Đông Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883005,
+      "lat": 10.7984837,
+      "lon": 106.6589454,
+      "timestamp": "2023-11-21T06:27:41Z",
+      "version": 5,
+      "changeset": 144272819,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nhà hàng Đông Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883006,
+      "lat": 10.7997025,
+      "lon": 106.6602991,
+      "timestamp": "2014-10-07T17:14:08Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Vòng xoay Lăng Cha Cả"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883006,
+      "lat": 10.7997088,
+      "lon": 106.6602929,
+      "timestamp": "2017-09-26T08:43:41Z",
+      "version": 2,
+      "changeset": 52377201,
+      "user": "HaiHo",
+      "uid": 6161284,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Vòng xoay Lăng Cha Cả"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883006,
+      "lat": 10.7997088,
+      "lon": 106.6602929,
+      "timestamp": "2022-04-26T04:46:54Z",
+      "version": 3,
+      "changeset": 120192081,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Vòng xoay Lăng Cha Cả",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883006,
+      "lat": 10.7996818,
+      "lon": 106.6603345,
+      "timestamp": "2023-11-21T06:27:41Z",
+      "version": 4,
+      "changeset": 144272819,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Vòng xoay Lăng Cha Cả",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883007,
+      "lat": 10.7996919,
+      "lon": 106.6601644,
+      "timestamp": "2014-10-07T17:14:08Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Vòng xoay Lăng Cha Cả"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883007,
+      "lat": 10.7996919,
+      "lon": 106.6601644,
+      "timestamp": "2022-04-26T04:46:54Z",
+      "version": 2,
+      "changeset": 120192081,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Vòng xoay Lăng Cha Cả",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116883007,
+      "lat": 10.7996636,
+      "lon": 106.6601919,
+      "timestamp": "2023-11-21T06:27:41Z",
+      "version": 3,
+      "changeset": 144272819,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Vòng xoay Lăng Cha Cả",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116902314,
+      "lat": 10.8000454,
+      "lon": 106.6700598,
+      "timestamp": "2014-10-07T17:20:46Z",
+      "version": 1,
+      "changeset": 25921871,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Big C Hoàng Văn Thụ",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116902314,
+      "lat": 10.8000454,
+      "lon": 106.6700598,
+      "timestamp": "2022-04-26T03:38:49Z",
+      "version": 2,
+      "changeset": 120190440,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Siêu thị Big C"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116902314,
+      "lat": 10.8000454,
+      "lon": 106.6700598,
+      "timestamp": "2023-09-07T20:21:53Z",
+      "version": 3,
+      "changeset": 140957122,
+      "user": "wvdp",
+      "uid": 436419,
+      "tags": {
+        "name": "Trạm Xe Bus Siêu thị Big C",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116902314,
+      "lat": 10.8001274,
+      "lon": 106.6695561,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 4,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Siêu thị Big C - 202 Hoàng Văn Thụ",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116902315,
+      "lat": 10.7998065,
+      "lon": 106.6727632,
+      "timestamp": "2014-10-07T17:20:46Z",
+      "version": 1,
+      "changeset": 25921871,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Khách sạn Tân Sơn Nhất"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116902315,
+      "lat": 10.7998065,
+      "lon": 106.6727632,
+      "timestamp": "2022-04-27T03:42:04Z",
+      "version": 2,
+      "changeset": 120237265,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Khách Sạn Tân Sơn Nhất",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3117081298,
+      "lat": 10.8508571,
+      "lon": 106.7627924,
+      "timestamp": "2014-10-07T19:04:47Z",
+      "version": 1,
+      "changeset": 25924477,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3117088028,
+      "lat": 10.8583492,
+      "lon": 106.7519901,
+      "timestamp": "2014-10-07T19:04:50Z",
+      "version": 1,
+      "changeset": 25924477,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3117088028,
+      "lat": 10.8582767,
+      "lon": 106.752034,
+      "timestamp": "2015-02-14T13:12:08Z",
+      "version": 2,
+      "changeset": 28840793,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3117088028,
+      "lat": 10.8583144,
+      "lon": 106.7520244,
+      "timestamp": "2016-10-14T08:49:29Z",
+      "version": 3,
+      "changeset": 42890020,
+      "user": "mrjoba",
+      "uid": 4677744
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3342060872,
+      "lat": 10.7674905,
+      "lon": 106.6748898,
+      "timestamp": "2015-02-10T14:29:26Z",
+      "version": 1,
+      "changeset": 28751507,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342060872,
+      "lat": 10.7674852,
+      "lon": 106.6748881,
+      "timestamp": "2019-09-11T20:35:01Z",
+      "version": 2,
+      "changeset": 74371188,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 3342113625,
+      "lat": 10.8735069,
+      "lon": 106.8035503,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113633,
+      "lat": 10.8735479,
+      "lon": 106.8028761,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113633,
+      "lat": 10.8735558,
+      "lon": 106.802852,
+      "timestamp": "2018-07-16T05:59:06Z",
+      "version": 2,
+      "changeset": 60747358,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3342113634,
+      "lat": 10.8735496,
+      "lon": 106.8030103,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113634,
+      "lat": 10.8735575,
+      "lon": 106.8029862,
+      "timestamp": "2018-07-16T05:59:06Z",
+      "version": 2,
+      "changeset": 60747358,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3342113637,
+      "lat": 10.8735553,
+      "lon": 106.8039237,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113640,
+      "lat": 10.8735701,
+      "lon": 106.8025014,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113640,
+      "lat": 10.873578,
+      "lon": 106.8024773,
+      "timestamp": "2018-07-16T05:59:06Z",
+      "version": 2,
+      "changeset": 60747358,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3342113641,
+      "lat": 10.8735804,
+      "lon": 106.8034512,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113641,
+      "lat": 10.8735883,
+      "lon": 106.8034271,
+      "timestamp": "2018-07-16T05:59:06Z",
+      "version": 2,
+      "changeset": 60747358,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3342113642,
+      "lat": 10.8735813,
+      "lon": 106.801843,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113644,
+      "lat": 10.8735964,
+      "lon": 106.8017822,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113645,
+      "lat": 10.8736078,
+      "lon": 106.8021563,
+      "timestamp": "2015-02-10T15:05:34Z",
+      "version": 1,
+      "changeset": 28752161,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3342113645,
+      "lat": 10.8736157,
+      "lon": 106.8021322,
+      "timestamp": "2018-07-16T05:59:06Z",
+      "version": 2,
+      "changeset": 60747358,
+      "user": "Malka7",
+      "uid": 7671604
+    }
+  ]
+}

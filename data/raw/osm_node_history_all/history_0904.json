@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5755399611,
+      "lat": 10.8060457,
+      "lon": 106.6785457,
+      "timestamp": "2018-07-12T06:05:30Z",
+      "version": 1,
+      "changeset": 60635369,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5755399611,
+      "lat": 10.8060457,
+      "lon": 106.6785457,
+      "timestamp": "2024-07-23T06:36:58Z",
+      "version": 3,
+      "changeset": 154290594,
+      "user": "GrabVN_Ánh Linh Lê",
+      "uid": 13749044
+    },
+    {
+      "type": "node",
+      "id": 5755401028,
+      "lat": 10.8058862,
+      "lon": 106.6773752,
+      "timestamp": "2018-07-12T06:05:31Z",
+      "version": 1,
+      "changeset": 60635369,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5755401030,
+      "lat": 10.8061313,
+      "lon": 106.6769916,
+      "timestamp": "2018-07-12T06:05:31Z",
+      "version": 1,
+      "changeset": 60635369,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5755430588,
+      "lat": 10.8094515,
+      "lon": 106.6744306,
+      "timestamp": "2018-07-12T06:26:55Z",
+      "version": 1,
+      "changeset": 60636201,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5755430603,
+      "lat": 10.8087347,
+      "lon": 106.6738582,
+      "timestamp": "2018-07-12T06:26:55Z",
+      "version": 1,
+      "changeset": 60636201,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5755430603,
+      "lat": 10.8087348,
+      "lon": 106.6738581,
+      "timestamp": "2023-12-09T19:03:49Z",
+      "version": 2,
+      "changeset": 144945332,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5755430608,
+      "lat": 10.8086874,
+      "lon": 106.6703612,
+      "timestamp": "2018-07-12T06:26:55Z",
+      "version": 1,
+      "changeset": 60636201,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5755430610,
+      "lat": 10.8087011,
+      "lon": 106.6700198,
+      "timestamp": "2018-07-12T06:26:55Z",
+      "version": 1,
+      "changeset": 60636201,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5755527857,
+      "lat": 10.8524153,
+      "lon": 106.7790531,
+      "timestamp": "2018-07-12T07:25:18Z",
+      "version": 1,
+      "changeset": 60638554,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5755527857,
+      "lat": 10.8523732,
+      "lon": 106.7790826,
+      "timestamp": "2023-02-27T08:31:33Z",
+      "version": 2,
+      "changeset": 133076345,
+      "user": "GrabVN_Ánh Linh Lê",
+      "uid": 13749044
+    },
+    {
+      "type": "node",
+      "id": 5755527868,
+      "lat": 10.8518342,
+      "lon": 106.778079,
+      "timestamp": "2018-07-12T07:25:18Z",
+      "version": 1,
+      "changeset": 60638554,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5755527868,
+      "lat": 10.8517921,
+      "lon": 106.7781058,
+      "timestamp": "2023-02-27T08:31:33Z",
+      "version": 2,
+      "changeset": 133076345,
+      "user": "GrabVN_Ánh Linh Lê",
+      "uid": 13749044
+    },
+    {
+      "type": "node",
+      "id": 5755527886,
+      "lat": 10.8527,
+      "lon": 106.7795325,
+      "timestamp": "2018-07-12T07:25:18Z",
+      "version": 1,
+      "changeset": 60638554,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5755527886,
+      "lat": 10.852675,
+      "lon": 106.7794963,
+      "timestamp": "2019-09-06T17:02:11Z",
+      "version": 2,
+      "changeset": 74186203,
+      "user": "UncoolGuyJake",
+      "uid": 7674729
+    },
+    {
+      "type": "node",
+      "id": 5755527886,
+      "lat": 10.8526372,
+      "lon": 106.7795194,
+      "timestamp": "2023-02-27T08:31:33Z",
+      "version": 3,
+      "changeset": 133076345,
+      "user": "GrabVN_Ánh Linh Lê",
+      "uid": 13749044
+    }
+  ]
+}

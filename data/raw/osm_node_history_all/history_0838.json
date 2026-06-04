@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5737956399,
+      "lat": 10.815413,
+      "lon": 106.67973,
+      "timestamp": "2018-07-04T03:49:07Z",
+      "version": 1,
+      "changeset": 60395680,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5737956399,
+      "lat": 10.8154218,
+      "lon": 106.6797249,
+      "timestamp": "2024-03-31T04:07:32Z",
+      "version": 2,
+      "changeset": 149375488,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5737956402,
+      "lat": 10.8147237,
+      "lon": 106.6799914,
+      "timestamp": "2018-07-04T03:49:07Z",
+      "version": 1,
+      "changeset": 60395680,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5737956404,
+      "lat": 10.8143903,
+      "lon": 106.6785067,
+      "timestamp": "2018-07-04T03:49:07Z",
+      "version": 1,
+      "changeset": 60395680,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5737956405,
+      "lat": 10.8144404,
+      "lon": 106.6784343,
+      "timestamp": "2018-07-04T03:49:07Z",
+      "version": 1,
+      "changeset": 60395680,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5737980828,
+      "lat": 10.7965394,
+      "lon": 106.7031573,
+      "timestamp": "2018-07-04T04:03:29Z",
+      "version": 1,
+      "changeset": 60395856,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5737980912,
+      "lat": 10.7917368,
+      "lon": 106.7026825,
+      "timestamp": "2018-07-04T04:03:31Z",
+      "version": 1,
+      "changeset": 60395856,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5737984540,
+      "lat": 10.7274138,
+      "lon": 106.6060172,
+      "timestamp": "2018-07-04T04:06:22Z",
+      "version": 1,
+      "changeset": 60395897,
+      "user": "marupally",
+      "uid": 7795534
+    },
+    {
+      "type": "node",
+      "id": 5737984540,
+      "lat": 10.7274428,
+      "lon": 106.6059904,
+      "timestamp": "2019-08-20T15:06:36Z",
+      "version": 2,
+      "changeset": 73545045,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5737984610,
+      "lat": 10.7276957,
+      "lon": 106.6064392,
+      "timestamp": "2018-07-04T04:06:23Z",
+      "version": 1,
+      "changeset": 60395897,
+      "user": "marupally",
+      "uid": 7795534
+    },
+    {
+      "type": "node",
+      "id": 5737984610,
+      "lat": 10.7277247,
+      "lon": 106.6064124,
+      "timestamp": "2019-08-20T15:06:36Z",
+      "version": 2,
+      "changeset": 73545045,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5737984613,
+      "lat": 10.7267939,
+      "lon": 106.6050893,
+      "timestamp": "2018-07-04T04:06:23Z",
+      "version": 1,
+      "changeset": 60395897,
+      "user": "marupally",
+      "uid": 7795534
+    },
+    {
+      "type": "node",
+      "id": 5737984613,
+      "lat": 10.7268123,
+      "lon": 106.6050705,
+      "timestamp": "2019-08-20T15:06:36Z",
+      "version": 2,
+      "changeset": 73545045,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5737984613,
+      "lat": 10.7267794,
+      "lon": 106.6050276,
+      "timestamp": "2019-08-23T15:48:16Z",
+      "version": 3,
+      "changeset": 73674420,
+      "user": "daFisch",
+      "uid": 8759590
+    },
+    {
+      "type": "node",
+      "id": 5737984619,
+      "lat": 10.7272025,
+      "lon": 106.605701,
+      "timestamp": "2018-07-04T04:06:23Z",
+      "version": 1,
+      "changeset": 60395897,
+      "user": "marupally",
+      "uid": 7795534
+    },
+    {
+      "type": "node",
+      "id": 5737984619,
+      "lat": 10.7272328,
+      "lon": 106.6056809,
+      "timestamp": "2019-08-20T15:06:36Z",
+      "version": 2,
+      "changeset": 73545045,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    }
+  ]
+}

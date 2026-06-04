@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5753152995,
+      "lat": 10.8448989,
+      "lon": 106.7716298,
+      "timestamp": "2018-07-11T05:22:58Z",
+      "version": 1,
+      "changeset": 60596274,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5753152995,
+      "lat": 10.8449213,
+      "lon": 106.7716472,
+      "timestamp": "2018-08-06T04:49:29Z",
+      "version": 2,
+      "changeset": 61389511,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5753161659,
+      "lat": 10.8809133,
+      "lon": 106.7960112,
+      "timestamp": "2018-07-11T05:34:45Z",
+      "version": 1,
+      "changeset": 60596468,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5753161660,
+      "lat": 10.8806086,
+      "lon": 106.7951103,
+      "timestamp": "2018-07-11T05:34:45Z",
+      "version": 1,
+      "changeset": 60596468,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5753161684,
+      "lat": 10.8807051,
+      "lon": 106.7951671,
+      "timestamp": "2018-07-11T05:34:45Z",
+      "version": 1,
+      "changeset": 60596468,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5753161685,
+      "lat": 10.8802415,
+      "lon": 106.7933053,
+      "timestamp": "2018-07-11T05:34:45Z",
+      "version": 1,
+      "changeset": 60596468,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5753161685,
+      "lat": 10.8802074,
+      "lon": 106.7932815,
+      "timestamp": "2024-07-01T09:19:55Z",
+      "version": 2,
+      "changeset": 153402291,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5753170097,
+      "lat": 10.8788557,
+      "lon": 106.8000739,
+      "timestamp": "2018-07-11T05:42:32Z",
+      "version": 1,
+      "changeset": 60596634,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5753172764,
+      "lat": 10.8384062,
+      "lon": 106.6967887,
+      "timestamp": "2018-07-11T05:43:56Z",
+      "version": 1,
+      "changeset": 60596660,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5753172764,
+      "lat": 10.838418,
+      "lon": 106.6967747,
+      "timestamp": "2023-09-15T10:25:26Z",
+      "version": 2,
+      "changeset": 141296076,
+      "user": "Grab_Cong",
+      "uid": 18820325
+    },
+    {
+      "type": "node",
+      "id": 5753172781,
+      "lat": 10.8413276,
+      "lon": 106.6947421,
+      "timestamp": "2018-07-11T05:43:56Z",
+      "version": 1,
+      "changeset": 60596660,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5753172781,
+      "lat": 10.8413115,
+      "lon": 106.6947572,
+      "timestamp": "2024-01-17T15:05:07Z",
+      "version": 2,
+      "changeset": 146369072,
+      "user": "CristinaSabau",
+      "uid": 16542258
+    },
+    {
+      "type": "node",
+      "id": 5753172785,
+      "lat": 10.8391807,
+      "lon": 106.6960698,
+      "timestamp": "2018-07-11T05:43:56Z",
+      "version": 1,
+      "changeset": 60596660,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5753172785,
+      "lat": 10.8391726,
+      "lon": 106.696073,
+      "timestamp": "2024-01-17T14:36:00Z",
+      "version": 2,
+      "changeset": 146367737,
+      "user": "CristinaSabau",
+      "uid": 16542258
+    },
+    {
+      "type": "node",
+      "id": 5753180987,
+      "lat": 10.8599063,
+      "lon": 106.6039586,
+      "timestamp": "2018-07-11T05:51:09Z",
+      "version": 1,
+      "changeset": 60596853,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5753180987,
+      "lat": 10.8598764,
+      "lon": 106.6039116,
+      "timestamp": "2018-07-12T04:37:21Z",
+      "version": 2,
+      "changeset": 60633056,
+      "user": "neela1",
+      "uid": 7795604
+    }
+  ]
+}

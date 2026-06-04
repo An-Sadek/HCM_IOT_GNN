@@ -1,0 +1,933 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3150112490,
+      "lat": 10.7710849,
+      "lon": 106.6535725,
+      "timestamp": "2014-10-26T04:28:25Z",
+      "version": 1,
+      "changeset": 26335000,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coopmart Lữ Gia",
+        "operator": "69,38",
+        "note": "70 Lữ Gia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112490,
+      "lat": 10.7710711,
+      "lon": 106.6535703,
+      "timestamp": "2017-01-24T09:18:10Z",
+      "version": 2,
+      "changeset": 45426032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coopmart Lữ Gia",
+        "operator": "69,38",
+        "note": "70 Lữ Gia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112490,
+      "lat": 10.7710711,
+      "lon": 106.6535703,
+      "timestamp": "2022-04-18T10:02:09Z",
+      "version": 3,
+      "changeset": 119849359,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Coopmart Lữ Gia",
+        "note": "70 Lữ Gia",
+        "operator": "69,38",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112490,
+      "lat": 10.7711576,
+      "lon": 106.653285,
+      "timestamp": "2024-03-31T11:37:10Z",
+      "version": 4,
+      "changeset": 149386147,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Coopmart Phú Thọ",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112491,
+      "lat": 10.770213,
+      "lon": 106.6526249,
+      "timestamp": "2014-10-26T04:28:25Z",
+      "version": 1,
+      "changeset": 26335000,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "operator": "69,38",
+        "name": "Nguyễn Thị Nhỏ - Coopmart Lữ Gia",
+        "note": "67 Nguyễn Thị Nhỏ",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112491,
+      "lat": 10.770236,
+      "lon": 106.6526036,
+      "timestamp": "2015-08-28T11:31:23Z",
+      "version": 2,
+      "changeset": 33641594,
+      "user": "phucdoan1973",
+      "uid": 2821292,
+      "tags": {
+        "operator": "69,38",
+        "name": "Nguyễn Thị Nhỏ - Coopmart Lữ Gia",
+        "note": "67 Nguyễn Thị Nhỏ",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112491,
+      "lat": 10.7702086,
+      "lon": 106.6526075,
+      "timestamp": "2017-01-24T09:18:10Z",
+      "version": 3,
+      "changeset": 45426032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "operator": "69,38",
+        "name": "Nguyễn Thị Nhỏ - Coopmart Lữ Gia",
+        "note": "67 Nguyễn Thị Nhỏ",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112491,
+      "lat": 10.7702073,
+      "lon": 106.6526149,
+      "timestamp": "2018-07-17T07:43:48Z",
+      "version": 4,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604,
+      "tags": {
+        "operator": "69,38",
+        "name": "Nguyễn Thị Nhỏ - Coopmart Lữ Gia",
+        "note": "67 Nguyễn Thị Nhỏ",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112491,
+      "lat": 10.7702073,
+      "lon": 106.6526149,
+      "timestamp": "2022-04-18T08:36:27Z",
+      "version": 5,
+      "changeset": 119845577,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nguyễn Thị Nhỏ - Coopmart Lữ Gia",
+        "note": "67 Nguyễn Thị Nhỏ",
+        "operator": "69,38",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623832,
+      "lat": 10.7653693,
+      "lon": 106.6549135,
+      "timestamp": "2014-10-26T14:17:56Z",
+      "version": 1,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "operator": "27",
+        "name": "Lê Đại Hành - Flemington",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623832,
+      "lat": 10.7653693,
+      "lon": 106.6549135,
+      "timestamp": "2022-04-19T08:38:05Z",
+      "version": 2,
+      "changeset": 119894548,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Lê Đại Hành - Flemington",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623832,
+      "lat": 10.7653568,
+      "lon": 106.6548982,
+      "timestamp": "2024-02-05T16:57:16Z",
+      "version": 3,
+      "changeset": 147101699,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Lê Đại Hành - Flemington",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623832,
+      "lat": 10.7655873,
+      "lon": 106.6547924,
+      "timestamp": "2024-03-28T04:27:32Z",
+      "version": 4,
+      "changeset": 149250484,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Tôn Thất Hiệp",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623833,
+      "lat": 10.7679619,
+      "lon": 106.6531443,
+      "timestamp": "2014-10-26T14:17:57Z",
+      "version": 1,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "operator": "27",
+        "name": "Lê Đại Hành - Sân vận động Phú Thọ",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623833,
+      "lat": 10.7679619,
+      "lon": 106.6531443,
+      "timestamp": "2022-04-18T10:02:09Z",
+      "version": 2,
+      "changeset": 119849359,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Lê Đại Hành - Sân vận động Phú Thọ",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623833,
+      "lat": 10.7676742,
+      "lon": 106.6532763,
+      "timestamp": "2024-02-05T16:57:16Z",
+      "version": 3,
+      "changeset": 147101699,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Lê Đại Hành - Sân vận động Phú Thọ",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623833,
+      "lat": 10.7673398,
+      "lon": 106.6535431,
+      "timestamp": "2024-03-28T04:27:32Z",
+      "version": 4,
+      "changeset": 149250484,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường đua Phú Thọ",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623834,
+      "lat": 10.7676857,
+      "lon": 106.6531852,
+      "timestamp": "2014-10-26T14:17:57Z",
+      "version": 1,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "operator": "27",
+        "name": "Lê Đại Hành - Đối diện Sân vận động Phú Thọ",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623834,
+      "lat": 10.7676857,
+      "lon": 106.6531852,
+      "timestamp": "2022-04-18T10:02:09Z",
+      "version": 2,
+      "changeset": 119849359,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Lê Đại Hành - Sân vận động Phú Thọ",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623834,
+      "lat": 10.767614,
+      "lon": 106.6531951,
+      "timestamp": "2024-02-05T16:57:16Z",
+      "version": 3,
+      "changeset": 147101699,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Lê Đại Hành - Sân vận động Phú Thọ",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623834,
+      "lat": 10.7672684,
+      "lon": 106.6533586,
+      "timestamp": "2024-03-28T04:27:32Z",
+      "version": 4,
+      "changeset": 149250484,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường đua Phú Thọ",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623835,
+      "lat": 10.7648824,
+      "lon": 106.6551268,
+      "timestamp": "2014-10-26T14:17:57Z",
+      "version": 1,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "operator": "27",
+        "name": "Lê Đại Hành - Đối diện Flemington",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623835,
+      "lat": 10.7648824,
+      "lon": 106.6551268,
+      "timestamp": "2022-04-19T08:38:05Z",
+      "version": 2,
+      "changeset": 119894548,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Lê Đại Hành - Đối diện Flemington",
+        "operator": "27",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7633529,
+      "lon": 106.6589164,
+      "timestamp": "2014-10-26T14:17:57Z",
+      "version": 1,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nhà Sách Phương Nam",
+        "operator": "2,14,27,103"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7633224,
+      "lon": 106.6589282,
+      "timestamp": "2017-01-24T07:48:33Z",
+      "version": 2,
+      "changeset": 45423908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nhà Sách Phương Nam",
+        "operator": "2,14,27,103"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7633103,
+      "lon": 106.6589347,
+      "timestamp": "2017-01-24T15:22:29Z",
+      "version": 3,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nhà Sách Phương Nam",
+        "operator": "2,14,27,103"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7633076,
+      "lon": 106.6589306,
+      "timestamp": "2017-01-25T12:31:45Z",
+      "version": 4,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nhà Sách Phương Nam",
+        "operator": "2,14,27,103"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7633207,
+      "lon": 106.6589231,
+      "timestamp": "2017-01-25T14:25:41Z",
+      "version": 5,
+      "changeset": 45477481,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nhà Sách Phương Nam",
+        "operator": "2,14,27,103"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7633207,
+      "lon": 106.6589231,
+      "timestamp": "2017-01-25T15:26:03Z",
+      "version": 6,
+      "changeset": 45479376,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nhà Sách Phương Nam",
+        "operator": "2,14,27,103"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7633451,
+      "lon": 106.6588636,
+      "timestamp": "2019-09-04T20:50:44Z",
+      "version": 7,
+      "changeset": 74104364,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nhà Sách Phương Nam",
+        "operator": "2,14,27,103"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7633451,
+      "lon": 106.6588636,
+      "timestamp": "2022-04-15T02:39:52Z",
+      "version": 8,
+      "changeset": 119734040,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà Sách Phương Nam",
+        "operator": "2,14,27,103",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7631383,
+      "lon": 106.658512,
+      "timestamp": "2024-03-24T08:37:15Z",
+      "version": 9,
+      "changeset": 149078752,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Nhà Sách Phương Nam",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7631383,
+      "lon": 106.658512,
+      "timestamp": "2024-12-24T01:06:32Z",
+      "version": 10,
+      "changeset": 160559322,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nhà sách Phương Nam"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623836,
+      "lat": 10.7631383,
+      "lon": 106.658512,
+      "timestamp": "2025-03-16T05:02:46Z",
+      "version": 11,
+      "changeset": 163674633,
+      "user": "bảo-an",
+      "uid": 22134485,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nhà sách Phương Nam",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623837,
+      "lat": 10.7630664,
+      "lon": 106.6585897,
+      "timestamp": "2014-10-26T14:17:57Z",
+      "version": 1,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "operator": "2,14,27,103",
+        "name": "3/2 - Đối diện Nhà sách Phương Nam",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623837,
+      "lat": 10.7630253,
+      "lon": 106.6585997,
+      "timestamp": "2017-01-24T07:48:33Z",
+      "version": 2,
+      "changeset": 45423908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "operator": "2,14,27,103",
+        "name": "3/2 - Đối diện Nhà sách Phương Nam",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623837,
+      "lat": 10.7630426,
+      "lon": 106.6585999,
+      "timestamp": "2017-01-24T15:22:28Z",
+      "version": 3,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "operator": "2,14,27,103",
+        "name": "3/2 - Đối diện Nhà sách Phương Nam",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623837,
+      "lat": 10.7630489,
+      "lon": 106.6586013,
+      "timestamp": "2017-01-25T12:31:45Z",
+      "version": 4,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "operator": "2,14,27,103",
+        "name": "3/2 - Đối diện Nhà sách Phương Nam",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623837,
+      "lat": 10.7630366,
+      "lon": 106.6586083,
+      "timestamp": "2017-01-25T14:25:41Z",
+      "version": 5,
+      "changeset": 45477481,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "operator": "2,14,27,103",
+        "name": "3/2 - Đối diện Nhà sách Phương Nam",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623837,
+      "lat": 10.7630396,
+      "lon": 106.6586066,
+      "timestamp": "2017-01-25T15:26:03Z",
+      "version": 6,
+      "changeset": 45479376,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "operator": "2,14,27,103",
+        "name": "3/2 - Đối diện Nhà sách Phương Nam",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623837,
+      "lat": 10.7629788,
+      "lon": 106.6586128,
+      "timestamp": "2019-09-04T20:50:44Z",
+      "version": 7,
+      "changeset": 74104364,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "operator": "2,14,27,103",
+        "name": "3/2 - Đối diện Nhà sách Phương Nam",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623837,
+      "lat": 10.7629788,
+      "lon": 106.6586128,
+      "timestamp": "2022-04-15T02:39:52Z",
+      "version": 8,
+      "changeset": 119734040,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nhà Sách Phương Nam",
+        "operator": "2,14,27,103",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623838,
+      "lat": 10.7645729,
+      "lon": 106.661273,
+      "timestamp": "2014-10-26T14:17:57Z",
+      "version": 1,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nguyễn Kim",
+        "operator": "2,14,27"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623838,
+      "lat": 10.7645014,
+      "lon": 106.6612912,
+      "timestamp": "2017-01-22T06:31:49Z",
+      "version": 2,
+      "changeset": 45363871,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nguyễn Kim",
+        "operator": "2,14,27"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623838,
+      "lat": 10.7645148,
+      "lon": 106.6613138,
+      "timestamp": "2017-01-24T15:22:28Z",
+      "version": 3,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nguyễn Kim",
+        "operator": "2,14,27"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623838,
+      "lat": 10.764505,
+      "lon": 106.6613192,
+      "timestamp": "2017-01-25T12:31:45Z",
+      "version": 4,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nguyễn Kim",
+        "operator": "2,14,27"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623838,
+      "lat": 10.764505,
+      "lon": 106.6613192,
+      "timestamp": "2022-04-15T02:39:52Z",
+      "version": 5,
+      "changeset": 119734040,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nguyễn Kim - Đường 3 Tháng 2",
+        "operator": "2,14,27",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623838,
+      "lat": 10.7643299,
+      "lon": 106.6610573,
+      "timestamp": "2024-03-24T08:37:15Z",
+      "version": 6,
+      "changeset": 149078752,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã ba Nguyễn Kim",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623839,
+      "lat": 10.7648621,
+      "lon": 106.6616588,
+      "timestamp": "2014-10-26T14:17:57Z",
+      "version": 1,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nguyễn Kim",
+        "operator": "2,14,27"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623839,
+      "lat": 10.7648434,
+      "lon": 106.6616621,
+      "timestamp": "2017-01-24T07:48:33Z",
+      "version": 2,
+      "changeset": 45423908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nguyễn Kim",
+        "operator": "2,14,27"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623839,
+      "lat": 10.7648123,
+      "lon": 106.6616723,
+      "timestamp": "2017-01-24T15:22:29Z",
+      "version": 3,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nguyễn Kim",
+        "operator": "2,14,27"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623839,
+      "lat": 10.7648017,
+      "lon": 106.6616782,
+      "timestamp": "2017-01-25T12:31:45Z",
+      "version": 4,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "3/2 - Nguyễn Kim",
+        "operator": "2,14,27"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623839,
+      "lat": 10.7648017,
+      "lon": 106.6616782,
+      "timestamp": "2022-04-15T02:39:52Z",
+      "version": 5,
+      "changeset": 119734040,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nguyễn Kim - Đường 3 Tháng 2",
+        "operator": "2,14,27",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623839,
+      "lat": 10.7649041,
+      "lon": 106.6618098,
+      "timestamp": "2024-03-24T08:37:15Z",
+      "version": 6,
+      "changeset": 149078752,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã ba Nguyễn Kim"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150623839,
+      "lat": 10.7649041,
+      "lon": 106.6618098,
+      "timestamp": "2025-03-16T05:01:55Z",
+      "version": 7,
+      "changeset": 163674633,
+      "user": "bảo-an",
+      "uid": 22134485,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã ba Nguyễn Kim",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    }
+  ]
+}

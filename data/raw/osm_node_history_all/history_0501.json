@@ -1,0 +1,675 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3185767538,
+      "lat": 10.871629,
+      "lon": 106.7639897,
+      "timestamp": "2014-11-14T03:08:32Z",
+      "version": 1,
+      "changeset": 26769261,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bưu điện Linh Trung"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185767538,
+      "lat": 10.871651,
+      "lon": 106.7639856,
+      "timestamp": "2016-03-19T08:53:04Z",
+      "version": 2,
+      "changeset": 37934383,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bưu điện Linh Trung"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185767538,
+      "lat": 10.8716589,
+      "lon": 106.7639776,
+      "timestamp": "2018-07-18T02:20:21Z",
+      "version": 3,
+      "changeset": 60817597,
+      "user": "Malka7",
+      "uid": 7671604,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bưu điện Linh Trung"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778720,
+      "lat": 10.7606198,
+      "lon": 106.6740502,
+      "timestamp": "2014-11-14T03:28:05Z",
+      "version": 1,
+      "changeset": 26769394,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Công viên Hòa Bình"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778720,
+      "lat": 10.7606274,
+      "lon": 106.6740502,
+      "timestamp": "2017-01-21T10:54:57Z",
+      "version": 2,
+      "changeset": 45347032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Công viên Hòa Bình"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778720,
+      "lat": 10.7606274,
+      "lon": 106.6740502,
+      "timestamp": "2022-04-15T11:27:24Z",
+      "version": 3,
+      "changeset": 119747343,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Công viên Hòa Bình",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778720,
+      "lat": 10.7605844,
+      "lon": 106.6738491,
+      "timestamp": "2024-04-25T02:18:43Z",
+      "version": 4,
+      "changeset": 150472661,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Công viên Hòa Bình",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778720,
+      "lat": 10.7605765,
+      "lon": 106.6738263,
+      "timestamp": "2025-02-02T19:33:35Z",
+      "version": 5,
+      "changeset": 162060216,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Công viên Hòa Bình",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778720,
+      "lat": 10.7605765,
+      "lon": 106.6738263,
+      "timestamp": "2025-03-29T07:47:37Z",
+      "version": 6,
+      "changeset": 164237228,
+      "user": "tversteeg",
+      "uid": 12695849,
+      "tags": {
+        "shelter": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Công viên Hòa Bình",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778720,
+      "lat": 10.7605765,
+      "lon": 106.6738263,
+      "timestamp": "2025-03-29T07:47:38Z",
+      "version": 7,
+      "changeset": 164237231,
+      "user": "tversteeg",
+      "uid": 12695849,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Công viên Hòa Bình",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778721,
+      "lat": 10.7583968,
+      "lon": 106.6706592,
+      "timestamp": "2014-11-14T03:28:05Z",
+      "version": 1,
+      "changeset": 26769394,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao Lộ Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778721,
+      "lat": 10.7584152,
+      "lon": 106.6706592,
+      "timestamp": "2017-01-17T12:47:18Z",
+      "version": 2,
+      "changeset": 45241916,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao Lộ Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778721,
+      "lat": 10.7584241,
+      "lon": 106.6706502,
+      "timestamp": "2017-01-21T13:08:12Z",
+      "version": 3,
+      "changeset": 45349337,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao Lộ Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778721,
+      "lat": 10.7584261,
+      "lon": 106.6706489,
+      "timestamp": "2019-08-27T14:32:20Z",
+      "version": 4,
+      "changeset": 73801988,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao Lộ Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778722,
+      "lat": 10.7570204,
+      "lon": 106.6682412,
+      "timestamp": "2014-11-14T03:28:06Z",
+      "version": 1,
+      "changeset": 26769394,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Công viên Văn Lang"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778722,
+      "lat": 10.757002,
+      "lon": 106.6682449,
+      "timestamp": "2017-01-17T12:47:18Z",
+      "version": 2,
+      "changeset": 45241916,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Công viên Văn Lang"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778722,
+      "lat": 10.757002,
+      "lon": 106.6682449,
+      "timestamp": "2022-04-15T11:27:24Z",
+      "version": 3,
+      "changeset": 119747343,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Công viên Văn Lang",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3185778722,
+      "lat": 10.7572374,
+      "lon": 106.6685619,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 4,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Công viên Văn Lang",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186096228,
+      "lat": 10.7470924,
+      "lon": 106.6690205,
+      "timestamp": "2014-11-14T07:35:16Z",
+      "version": 1,
+      "changeset": 26771238,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao lộ Hưng Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186096228,
+      "lat": 10.7470912,
+      "lon": 106.6689942,
+      "timestamp": "2015-07-24T07:46:57Z",
+      "version": 2,
+      "changeset": 32842993,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao lộ Hưng Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186096228,
+      "lat": 10.7470912,
+      "lon": 106.668998,
+      "timestamp": "2017-01-25T03:52:01Z",
+      "version": 3,
+      "changeset": 45459787,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao lộ Hưng Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186096228,
+      "lat": 10.7470892,
+      "lon": 106.6690195,
+      "timestamp": "2019-09-04T19:26:27Z",
+      "version": 4,
+      "changeset": 74102409,
+      "user": "Corban8",
+      "uid": 4240913,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao lộ Hưng Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186096228,
+      "lat": 10.7474763,
+      "lon": 106.6690121,
+      "timestamp": "2024-04-07T05:09:41Z",
+      "version": 5,
+      "changeset": 149678035,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chùa An Phú",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191727,
+      "lat": 10.787178,
+      "lon": 106.6433031,
+      "timestamp": "2014-11-14T09:20:36Z",
+      "version": 1,
+      "changeset": 26772746,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đồng Đen - Hồng Lạc"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191727,
+      "lat": 10.787178,
+      "lon": 106.6433031,
+      "timestamp": "2022-04-22T09:21:59Z",
+      "version": 2,
+      "changeset": 120039131,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Đồng Đen - Hồng Lạc",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191727,
+      "lat": 10.7871777,
+      "lon": 106.6433017,
+      "timestamp": "2023-12-26T20:55:49Z",
+      "version": 3,
+      "changeset": 145549398,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Đồng Đen - Hồng Lạc",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191729,
+      "lat": 10.7764709,
+      "lon": 106.6387794,
+      "timestamp": "2014-11-14T09:20:36Z",
+      "version": 1,
+      "changeset": 26772746,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Kênh Tân Hóa - Trịnh Đình Trọng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191729,
+      "lat": 10.7765256,
+      "lon": 106.6387205,
+      "timestamp": "2015-08-28T14:40:15Z",
+      "version": 2,
+      "changeset": 33645516,
+      "user": "phucdoan1973",
+      "uid": 2821292,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Kênh Tân Hóa - Trịnh Đình Trọng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191729,
+      "lat": 10.7765355,
+      "lon": 106.6387011,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 3,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Kênh Tân Hóa - Trịnh Đình Trọng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191729,
+      "lat": 10.7765355,
+      "lon": 106.6387011,
+      "timestamp": "2022-04-18T08:36:27Z",
+      "version": 4,
+      "changeset": 119845577,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Kênh Tân Hóa - Trịnh Đình Trọng",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191730,
+      "lat": 10.7737289,
+      "lon": 106.6364207,
+      "timestamp": "2014-11-14T09:20:36Z",
+      "version": 1,
+      "changeset": 26772746,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Kênh Tân Hóa - Trịnh Đình Thảo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191730,
+      "lat": 10.7737487,
+      "lon": 106.6363724,
+      "timestamp": "2018-07-19T02:19:41Z",
+      "version": 2,
+      "changeset": 60853181,
+      "user": "neela1",
+      "uid": 7795604,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Kênh Tân Hóa - Trịnh Đình Thảo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191730,
+      "lat": 10.7737461,
+      "lon": 106.6363516,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 3,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Kênh Tân Hóa - Trịnh Đình Thảo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186191730,
+      "lat": 10.7737461,
+      "lon": 106.6363516,
+      "timestamp": "2022-04-18T08:36:27Z",
+      "version": 4,
+      "changeset": 119845577,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Kênh Tân Hóa - Trịnh Đình Thảo",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186257042,
+      "lat": 10.7570708,
+      "lon": 106.6778381,
+      "timestamp": "2014-11-14T10:22:31Z",
+      "version": 1,
+      "changeset": 26773729,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Chung Cư Phan Văn Trị"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186257042,
+      "lat": 10.7570583,
+      "lon": 106.6778455,
+      "timestamp": "2019-08-27T16:39:33Z",
+      "version": 2,
+      "changeset": 73806927,
+      "user": "_Poliwrath_",
+      "uid": 8759140,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Chung Cư Phan Văn Trị"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186257042,
+      "lat": 10.7570602,
+      "lon": 106.6778447,
+      "timestamp": "2019-09-05T22:52:42Z",
+      "version": 3,
+      "changeset": 74152579,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Chung Cư Phan Văn Trị"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186257042,
+      "lat": 10.7576041,
+      "lon": 106.6792114,
+      "timestamp": "2024-04-12T09:31:16Z",
+      "version": 4,
+      "changeset": 149901076,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Tiểu học Bầu Sen",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186257042,
+      "lat": 10.7575725,
+      "lon": 106.6791859,
+      "timestamp": "2025-12-31T08:07:35Z",
+      "version": 5,
+      "changeset": 176661020,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Tiểu học Bầu Sen",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186257043,
+      "lat": 10.7584956,
+      "lon": 106.6813263,
+      "timestamp": "2014-11-14T10:22:31Z",
+      "version": 1,
+      "changeset": 26773729,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Đại học Sài Gòn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186257043,
+      "lat": 10.7584994,
+      "lon": 106.6815295,
+      "timestamp": "2024-04-12T09:31:16Z",
+      "version": 2,
+      "changeset": 149901076,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Đại học Sài Gòn",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3186257043,
+      "lat": 10.7584994,
+      "lon": 106.6815295,
+      "timestamp": "2025-04-22T14:04:18Z",
+      "version": 3,
+      "changeset": 165287988,
+      "user": "kebablasagna",
+      "uid": 22820033,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "name": "Đại học Sài Gòn",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    }
+  ]
+}

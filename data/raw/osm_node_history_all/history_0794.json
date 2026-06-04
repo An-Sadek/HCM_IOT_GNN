@@ -1,0 +1,354 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5467431348,
+      "lat": 10.7927137,
+      "lon": 106.6533342,
+      "timestamp": "2018-03-09T14:24:20Z",
+      "version": 1,
+      "changeset": 57033828,
+      "user": "8221",
+      "uid": 7649715,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5467431348,
+      "lat": 10.7927612,
+      "lon": 106.6533658,
+      "timestamp": "2023-06-07T02:28:43Z",
+      "version": 2,
+      "changeset": 137036699,
+      "user": "hoanganhlami33",
+      "uid": 14252795,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5467448201,
+      "lat": 10.8018935,
+      "lon": 106.6366359,
+      "timestamp": "2018-03-09T14:28:28Z",
+      "version": 1,
+      "changeset": 57033967,
+      "user": "8221",
+      "uid": 7649715,
+      "tags": {
+        "traffic_signals": "signal",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5467448201,
+      "lat": 10.8019351,
+      "lon": 106.6365897,
+      "timestamp": "2023-12-20T18:57:30Z",
+      "version": 2,
+      "changeset": 145342638,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5467459897,
+      "lat": 10.8193178,
+      "lon": 106.6900437,
+      "timestamp": "2018-03-09T14:35:41Z",
+      "version": 1,
+      "changeset": 57034125,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467459897,
+      "lat": 10.8193084,
+      "lon": 106.6900639,
+      "timestamp": "2018-06-27T01:40:09Z",
+      "version": 2,
+      "changeset": 60197569,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5467459897,
+      "lat": 10.819261,
+      "lon": 106.6900484,
+      "timestamp": "2019-09-16T17:06:11Z",
+      "version": 3,
+      "changeset": 74543079,
+      "user": "MTBdude",
+      "uid": 9564561,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5467459898,
+      "lat": 10.8193398,
+      "lon": 106.6900915,
+      "timestamp": "2018-03-09T14:35:41Z",
+      "version": 1,
+      "changeset": 57034125,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467459898,
+      "lat": 10.8193177,
+      "lon": 106.6900951,
+      "timestamp": "2018-06-27T01:40:09Z",
+      "version": 2,
+      "changeset": 60197569,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5467459898,
+      "lat": 10.8192771,
+      "lon": 106.6901211,
+      "timestamp": "2019-09-16T17:06:11Z",
+      "version": 3,
+      "changeset": 74543079,
+      "user": "MTBdude",
+      "uid": 9564561
+    },
+    {
+      "type": "node",
+      "id": 5467459903,
+      "lat": 10.8195687,
+      "lon": 106.6898861,
+      "timestamp": "2018-03-09T14:35:41Z",
+      "version": 1,
+      "changeset": 57034125,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467459903,
+      "lat": 10.8195596,
+      "lon": 106.6899222,
+      "timestamp": "2018-06-27T01:40:09Z",
+      "version": 2,
+      "changeset": 60197569,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5467459903,
+      "lat": 10.8195874,
+      "lon": 106.6898777,
+      "timestamp": "2019-09-16T17:06:11Z",
+      "version": 3,
+      "changeset": 74543079,
+      "user": "MTBdude",
+      "uid": 9564561
+    },
+    {
+      "type": "node",
+      "id": 5467459908,
+      "lat": 10.8196175,
+      "lon": 106.6900275,
+      "timestamp": "2018-03-09T14:35:41Z",
+      "version": 1,
+      "changeset": 57034125,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467459908,
+      "lat": 10.8196154,
+      "lon": 106.6900515,
+      "timestamp": "2018-06-27T01:40:09Z",
+      "version": 2,
+      "changeset": 60197569,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5467459908,
+      "lat": 10.8196651,
+      "lon": 106.6900521,
+      "timestamp": "2019-09-16T17:06:11Z",
+      "version": 3,
+      "changeset": 74543079,
+      "user": "MTBdude",
+      "uid": 9564561
+    },
+    {
+      "type": "node",
+      "id": 5467459909,
+      "lat": 10.8196171,
+      "lon": 106.6899747,
+      "timestamp": "2018-03-09T14:35:41Z",
+      "version": 1,
+      "changeset": 57034125,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467459909,
+      "lat": 10.8196099,
+      "lon": 106.6900009,
+      "timestamp": "2018-06-27T01:40:09Z",
+      "version": 2,
+      "changeset": 60197569,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5467459909,
+      "lat": 10.8196581,
+      "lon": 106.6899853,
+      "timestamp": "2019-09-16T17:06:11Z",
+      "version": 3,
+      "changeset": 74543079,
+      "user": "MTBdude",
+      "uid": 9564561
+    },
+    {
+      "type": "node",
+      "id": 5467459910,
+      "lat": 10.8193126,
+      "lon": 106.6899939,
+      "timestamp": "2018-03-09T14:35:41Z",
+      "version": 1,
+      "changeset": 57034125,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467459910,
+      "lat": 10.8193092,
+      "lon": 106.6900175,
+      "timestamp": "2018-06-27T01:40:09Z",
+      "version": 2,
+      "changeset": 60197569,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5467459910,
+      "lat": 10.8192714,
+      "lon": 106.6899745,
+      "timestamp": "2019-09-16T17:06:11Z",
+      "version": 3,
+      "changeset": 74543079,
+      "user": "MTBdude",
+      "uid": 9564561
+    },
+    {
+      "type": "node",
+      "id": 5467463646,
+      "lat": 10.8193079,
+      "lon": 106.6898067,
+      "timestamp": "2018-03-09T14:33:15Z",
+      "version": 1,
+      "changeset": 57034067,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467463646,
+      "lat": 10.8193481,
+      "lon": 106.689902,
+      "timestamp": "2018-03-09T14:35:41Z",
+      "version": 2,
+      "changeset": 57034125,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467463646,
+      "lat": 10.8193532,
+      "lon": 106.6899314,
+      "timestamp": "2018-06-27T01:40:09Z",
+      "version": 3,
+      "changeset": 60197569,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5467463646,
+      "lat": 10.8193425,
+      "lon": 106.6898749,
+      "timestamp": "2019-09-16T17:06:11Z",
+      "version": 4,
+      "changeset": 74543079,
+      "user": "MTBdude",
+      "uid": 9564561
+    },
+    {
+      "type": "node",
+      "id": 5467463648,
+      "lat": 10.8195905,
+      "lon": 106.6897737,
+      "timestamp": "2018-03-09T14:33:15Z",
+      "version": 1,
+      "changeset": 57034067,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467463648,
+      "lat": 10.8195995,
+      "lon": 106.6899251,
+      "timestamp": "2018-03-09T14:35:41Z",
+      "version": 2,
+      "changeset": 57034125,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 5467463648,
+      "lat": 10.8195896,
+      "lon": 106.689956,
+      "timestamp": "2018-06-27T01:40:09Z",
+      "version": 3,
+      "changeset": 60197569,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5467463648,
+      "lat": 10.8196315,
+      "lon": 106.689926,
+      "timestamp": "2019-09-16T17:06:11Z",
+      "version": 4,
+      "changeset": 74543079,
+      "user": "MTBdude",
+      "uid": 9564561
+    }
+  ]
+}

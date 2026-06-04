@@ -1,0 +1,169 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5894559587,
+      "lat": 10.8514842,
+      "lon": 106.6622726,
+      "timestamp": "2018-09-09T14:27:28Z",
+      "version": 1,
+      "changeset": 62426424,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5894559596,
+      "lat": 10.8511142,
+      "lon": 106.6628597,
+      "timestamp": "2018-09-09T14:27:28Z",
+      "version": 1,
+      "changeset": 62426424,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5894559596,
+      "lat": 10.8511049,
+      "lon": 106.662875,
+      "timestamp": "2023-11-20T13:39:40Z",
+      "version": 2,
+      "changeset": 144247838,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5894559596,
+      "lat": 10.8511048,
+      "lon": 106.662875,
+      "timestamp": "2025-08-12T03:44:37Z",
+      "version": 3,
+      "changeset": 170319904,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5894559843,
+      "lat": 10.8540101,
+      "lon": 106.665042,
+      "timestamp": "2018-09-09T14:27:31Z",
+      "version": 1,
+      "changeset": 62426424,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5894559884,
+      "lat": 10.8502712,
+      "lon": 106.6642345,
+      "timestamp": "2018-09-09T14:27:32Z",
+      "version": 1,
+      "changeset": 62426424,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5898691855,
+      "lat": 10.8446822,
+      "lon": 106.6395559,
+      "timestamp": "2018-09-11T08:09:35Z",
+      "version": 1,
+      "changeset": 62478343,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5898691855,
+      "lat": 10.8446559,
+      "lon": 106.6395894,
+      "timestamp": "2023-03-10T02:00:40Z",
+      "version": 2,
+      "changeset": 133500178,
+      "user": "GrabVN_QThoai",
+      "uid": 15740602
+    },
+    {
+      "type": "node",
+      "id": 5898691885,
+      "lat": 10.8460619,
+      "lon": 106.6375449,
+      "timestamp": "2018-09-11T08:09:35Z",
+      "version": 1,
+      "changeset": 62478343,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5898691901,
+      "lat": 10.8454044,
+      "lon": 106.6385563,
+      "timestamp": "2018-09-11T08:09:36Z",
+      "version": 1,
+      "changeset": 62478343,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5906595907,
+      "lat": 10.8495992,
+      "lon": 106.6653346,
+      "timestamp": "2018-09-14T15:34:53Z",
+      "version": 1,
+      "changeset": 62586738,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5906595907,
+      "lat": 10.8495999,
+      "lon": 106.6653312,
+      "timestamp": "2019-07-19T05:26:48Z",
+      "version": 2,
+      "changeset": 72413834,
+      "user": "grabtaxi18",
+      "uid": 10141211
+    },
+    {
+      "type": "node",
+      "id": 5906595912,
+      "lat": 10.8494589,
+      "lon": 106.6655624,
+      "timestamp": "2018-09-14T15:34:53Z",
+      "version": 1,
+      "changeset": 62586738,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5906742203,
+      "lat": 10.8483759,
+      "lon": 106.6674013,
+      "timestamp": "2018-09-14T16:41:01Z",
+      "version": 1,
+      "changeset": 62588526,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5906742203,
+      "lat": 10.848364,
+      "lon": 106.6674067,
+      "timestamp": "2019-07-19T05:26:48Z",
+      "version": 2,
+      "changeset": 72413834,
+      "user": "grabtaxi18",
+      "uid": 10141211
+    }
+  ]
+}

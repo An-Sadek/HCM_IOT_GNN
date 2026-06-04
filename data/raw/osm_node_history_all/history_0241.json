@@ -1,0 +1,630 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 1774952135,
+      "lat": 10.7895297,
+      "lon": 106.71679,
+      "timestamp": "2012-09-02T13:20:21Z",
+      "version": 2,
+      "changeset": 12953976,
+      "user": "Dymo12",
+      "uid": 509465
+    },
+    {
+      "type": "node",
+      "id": 1774952135,
+      "lat": 10.7895371,
+      "lon": 106.7167652,
+      "timestamp": "2012-11-27T10:04:01Z",
+      "version": 3,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1774952135,
+      "lat": 10.789516,
+      "lon": 106.7167867,
+      "timestamp": "2014-12-15T11:12:52Z",
+      "version": 4,
+      "changeset": 27478798,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1774952135,
+      "lat": 10.7895142,
+      "lon": 106.7167804,
+      "timestamp": "2024-10-17T18:44:36Z",
+      "version": 5,
+      "changeset": 158022076,
+      "user": "map2goPro",
+      "uid": 20077207
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8009461,
+      "lon": 106.6667129,
+      "timestamp": "2012-06-03T15:54:04Z",
+      "version": 1,
+      "changeset": 11788086,
+      "user": "TuanIfan",
+      "uid": 625303,
+      "tags": {
+        "amenity": "bus_station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8009113,
+      "lon": 106.6665747,
+      "timestamp": "2014-11-04T17:59:09Z",
+      "version": 2,
+      "changeset": 26553803,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "SVD Quân Khu 7"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8009113,
+      "lon": 106.6665747,
+      "timestamp": "2022-01-04T12:03:06Z",
+      "version": 3,
+      "changeset": 115751888,
+      "user": "hoanganhlami33",
+      "uid": 14252795,
+      "tags": {
+        "public_transport": "platform",
+        "name": "SVD Quân Khu 7",
+        "ref": "109",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8008567,
+      "lon": 106.6667596,
+      "timestamp": "2022-01-09T07:03:35Z",
+      "version": 4,
+      "changeset": 115931694,
+      "user": "turtle-bienhoa",
+      "uid": 13865352,
+      "tags": {
+        "name": "Sân vận động Quân Khu 7",
+        "shelter": "yes",
+        "public_transport": "platform",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8008567,
+      "lon": 106.6667596,
+      "timestamp": "2022-04-27T03:42:04Z",
+      "version": 5,
+      "changeset": 120237265,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Sân Vận Động Quân Khu 7",
+        "shelter": "yes",
+        "public_transport": "platform",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8008567,
+      "lon": 106.6667596,
+      "timestamp": "2024-03-22T15:54:59Z",
+      "version": 6,
+      "changeset": 149020015,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Sân Vận Động Quân Khu 7",
+        "shelter": "yes",
+        "public_transport": "platform",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8008567,
+      "lon": 106.6667596,
+      "timestamp": "2024-12-20T13:41:12Z",
+      "version": 7,
+      "changeset": 160434215,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sân vận động Quân khu 7"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8008567,
+      "lon": 106.6667596,
+      "timestamp": "2026-03-28T15:20:09Z",
+      "version": 8,
+      "changeset": 180546589,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "shelter": "yes",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sân vận động Quân khu 7",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1774952214,
+      "lat": 10.8008567,
+      "lon": 106.6667596,
+      "timestamp": "2026-03-28T15:20:10Z",
+      "version": 9,
+      "changeset": 180546373,
+      "user": "naoNao89",
+      "uid": 22352952,
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Sân vận động Quân khu 7",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1777960204,
+      "lat": 10.7574455,
+      "lon": 106.7015379,
+      "timestamp": "2012-06-06T12:05:45Z",
+      "version": 1,
+      "changeset": 11815149,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1777960204,
+      "lat": 10.757461,
+      "lon": 106.7015563,
+      "timestamp": "2012-11-01T17:38:18Z",
+      "version": 2,
+      "changeset": 13713550,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1777960232,
+      "lat": 10.7565846,
+      "lon": 106.7008237,
+      "timestamp": "2012-06-06T12:05:46Z",
+      "version": 1,
+      "changeset": 11815149,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1777960232,
+      "lat": 10.756607,
+      "lon": 106.7008519,
+      "timestamp": "2013-04-07T02:27:53Z",
+      "version": 2,
+      "changeset": 15634538,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1777960232,
+      "lat": 10.7565916,
+      "lon": 106.7008416,
+      "timestamp": "2013-06-22T02:14:21Z",
+      "version": 3,
+      "changeset": 16651085,
+      "user": "hchituong",
+      "uid": 1412571
+    },
+    {
+      "type": "node",
+      "id": 1779408275,
+      "lat": 10.755867,
+      "lon": 106.6939103,
+      "timestamp": "2012-06-07T16:28:19Z",
+      "version": 1,
+      "changeset": 11826779,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1779408275,
+      "lat": 10.7558779,
+      "lon": 106.6939259,
+      "timestamp": "2012-11-22T07:30:13Z",
+      "version": 2,
+      "changeset": 13982101,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1779408275,
+      "lat": 10.7558808,
+      "lon": 106.6939315,
+      "timestamp": "2025-12-20T23:50:52Z",
+      "version": 3,
+      "changeset": 176200382,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 1779408275,
+      "lat": 10.7558808,
+      "lon": 106.6939315,
+      "timestamp": "2026-04-07T00:02:12Z",
+      "version": 4,
+      "changeset": 180973214,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 1780010853,
+      "lat": 10.7541206,
+      "lon": 106.6948938,
+      "timestamp": "2012-06-08T03:18:50Z",
+      "version": 1,
+      "changeset": 11831492,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1780010853,
+      "lat": 10.7541151,
+      "lon": 106.6948831,
+      "timestamp": "2025-12-20T23:50:52Z",
+      "version": 2,
+      "changeset": 176200382,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 1780010853,
+      "lat": 10.7541151,
+      "lon": 106.6948831,
+      "timestamp": "2026-04-07T00:02:12Z",
+      "version": 3,
+      "changeset": 180973214,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 1780010887,
+      "lat": 10.7565119,
+      "lon": 106.7008797,
+      "timestamp": "2012-06-08T03:18:51Z",
+      "version": 1,
+      "changeset": 11831492,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1780010887,
+      "lat": 10.7565265,
+      "lon": 106.7009129,
+      "timestamp": "2013-04-07T02:27:54Z",
+      "version": 2,
+      "changeset": 15634538,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1780010887,
+      "lat": 10.7565111,
+      "lon": 106.7009026,
+      "timestamp": "2013-06-22T02:14:21Z",
+      "version": 3,
+      "changeset": 16651085,
+      "user": "hchituong",
+      "uid": 1412571
+    },
+    {
+      "type": "node",
+      "id": 1780010887,
+      "lat": 10.7565141,
+      "lon": 106.7009062,
+      "timestamp": "2023-06-30T04:36:27Z",
+      "version": 4,
+      "changeset": 137940622,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 1784329627,
+      "lat": 10.771257,
+      "lon": 106.6808522,
+      "timestamp": "2012-06-12T04:13:32Z",
+      "version": 1,
+      "changeset": 11870750,
+      "user": "tiesama",
+      "uid": 683528
+    },
+    {
+      "type": "node",
+      "id": 1784329627,
+      "lat": 10.7711951,
+      "lon": 106.6807895,
+      "timestamp": "2013-03-29T08:21:47Z",
+      "version": 2,
+      "changeset": 15534538,
+      "user": "plqbao",
+      "uid": 1283644
+    },
+    {
+      "type": "node",
+      "id": 1784329627,
+      "lat": 10.7711982,
+      "lon": 106.6807922,
+      "timestamp": "2013-06-28T06:17:00Z",
+      "version": 3,
+      "changeset": 16735196,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1784329627,
+      "lat": 10.771198,
+      "lon": 106.6807913,
+      "timestamp": "2018-07-17T02:27:33Z",
+      "version": 4,
+      "changeset": 60779973,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 1784329627,
+      "lat": 10.7712,
+      "lon": 106.6807953,
+      "timestamp": "2019-09-10T21:14:09Z",
+      "version": 5,
+      "changeset": 74329401,
+      "user": "_Poliwrath_",
+      "uid": 8759140
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.7281954,
+      "lon": 106.7033063,
+      "timestamp": "2012-06-18T18:55:15Z",
+      "version": 1,
+      "changeset": 11940476,
+      "user": "Dymo12",
+      "uid": 509465
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.728324,
+      "lon": 106.7033474,
+      "timestamp": "2012-11-04T17:02:27Z",
+      "version": 2,
+      "changeset": 13748970,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.7283265,
+      "lon": 106.7033149,
+      "timestamp": "2013-02-13T13:07:51Z",
+      "version": 3,
+      "changeset": 15017886,
+      "user": "Dymo12",
+      "uid": 509465
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.7282954,
+      "lon": 106.7033139,
+      "timestamp": "2013-03-21T03:33:08Z",
+      "version": 4,
+      "changeset": 15438713,
+      "user": "plqbao",
+      "uid": 1283644
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.7282743,
+      "lon": 106.7032817,
+      "timestamp": "2013-06-16T08:19:17Z",
+      "version": 5,
+      "changeset": 16571789,
+      "user": "hchituong",
+      "uid": 1412571
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.7282743,
+      "lon": 106.7033166,
+      "timestamp": "2013-06-16T13:55:32Z",
+      "version": 6,
+      "changeset": 16576027,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.7282718,
+      "lon": 106.7032963,
+      "timestamp": "2013-06-18T06:05:14Z",
+      "version": 7,
+      "changeset": 16599119,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.7282721,
+      "lon": 106.7033089,
+      "timestamp": "2023-09-05T01:07:08Z",
+      "version": 8,
+      "changeset": 140827291,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 1793489510,
+      "lat": 10.7282728,
+      "lon": 106.7032959,
+      "timestamp": "2024-02-19T09:46:25Z",
+      "version": 9,
+      "changeset": 147641908,
+      "user": "Arkskyle",
+      "uid": 17344224
+    },
+    {
+      "type": "node",
+      "id": 1793489516,
+      "lat": 10.7387588,
+      "lon": 106.6894003,
+      "timestamp": "2012-06-18T18:55:15Z",
+      "version": 1,
+      "changeset": 11940476,
+      "user": "Dymo12",
+      "uid": 509465
+    },
+    {
+      "type": "node",
+      "id": 1793489516,
+      "lat": 10.7388147,
+      "lon": 106.6893738,
+      "timestamp": "2013-02-15T16:16:18Z",
+      "version": 2,
+      "changeset": 15041860,
+      "user": "Dymo12",
+      "uid": 509465
+    },
+    {
+      "type": "node",
+      "id": 1793489516,
+      "lat": 10.7388165,
+      "lon": 106.6893792,
+      "timestamp": "2013-06-18T03:33:56Z",
+      "version": 3,
+      "changeset": 16598406,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1793489516,
+      "lat": 10.7388194,
+      "lon": 106.6893884,
+      "timestamp": "2013-06-18T03:36:35Z",
+      "version": 4,
+      "changeset": 16598406,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1793489516,
+      "lat": 10.7388161,
+      "lon": 106.6893731,
+      "timestamp": "2013-07-23T14:21:51Z",
+      "version": 5,
+      "changeset": 17062860,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1793489516,
+      "lat": 10.7387997,
+      "lon": 106.6893425,
+      "timestamp": "2018-03-07T14:36:05Z",
+      "version": 6,
+      "changeset": 56970803,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 1793489516,
+      "lat": 10.7387993,
+      "lon": 106.6893413,
+      "timestamp": "2018-10-07T14:37:27Z",
+      "version": 7,
+      "changeset": 63280926,
+      "user": "Sal73x",
+      "uid": 1293386
+    },
+    {
+      "type": "node",
+      "id": 1793489516,
+      "lat": 10.7387997,
+      "lon": 106.6893425,
+      "timestamp": "2019-05-23T19:59:01Z",
+      "version": 8,
+      "changeset": 70564798,
+      "user": "mama_bear",
+      "uid": 6980194
+    }
+  ]
+}

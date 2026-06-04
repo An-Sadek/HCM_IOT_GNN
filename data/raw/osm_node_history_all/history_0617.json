@@ -1,0 +1,323 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4102230935,
+      "lat": 10.773195,
+      "lon": 106.649039,
+      "timestamp": "2016-04-06T11:28:39Z",
+      "version": 1,
+      "changeset": 38348384,
+      "user": "Đức Lê Minh",
+      "uid": 3728734
+    },
+    {
+      "type": "node",
+      "id": 4102230935,
+      "lat": 10.7731904,
+      "lon": 106.6490297,
+      "timestamp": "2016-04-06T11:43:04Z",
+      "version": 2,
+      "changeset": 38348701,
+      "user": "Đức Lê Minh",
+      "uid": 3728734
+    },
+    {
+      "type": "node",
+      "id": 4102230935,
+      "lat": 10.7732036,
+      "lon": 106.6490773,
+      "timestamp": "2019-08-15T19:54:36Z",
+      "version": 3,
+      "changeset": 73390547,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 4102230938,
+      "lat": 10.7851088,
+      "lon": 106.6419392,
+      "timestamp": "2016-04-06T11:28:39Z",
+      "version": 1,
+      "changeset": 38348384,
+      "user": "Đức Lê Minh",
+      "uid": 3728734
+    },
+    {
+      "type": "node",
+      "id": 4102230938,
+      "lat": 10.7851134,
+      "lon": 106.6419318,
+      "timestamp": "2016-04-06T11:43:05Z",
+      "version": 2,
+      "changeset": 38348701,
+      "user": "Đức Lê Minh",
+      "uid": 3728734
+    },
+    {
+      "type": "node",
+      "id": 4102230938,
+      "lat": 10.7851047,
+      "lon": 106.6419318,
+      "timestamp": "2016-04-07T13:15:46Z",
+      "version": 3,
+      "changeset": 38380492,
+      "user": "Đức Lê Minh",
+      "uid": 3728734
+    },
+    {
+      "type": "node",
+      "id": 4102230938,
+      "lat": 10.785106,
+      "lon": 106.64196,
+      "timestamp": "2019-07-19T11:27:22Z",
+      "version": 4,
+      "changeset": 72426382,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 4102230938,
+      "lat": 10.7850953,
+      "lon": 106.6419799,
+      "timestamp": "2023-12-26T20:55:49Z",
+      "version": 5,
+      "changeset": 145549398,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 4104381381,
+      "lat": 10.7523207,
+      "lon": 106.7022384,
+      "timestamp": "2016-04-07T07:28:47Z",
+      "version": 1,
+      "changeset": 38372394,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4109044949,
+      "lat": 10.8484967,
+      "lon": 106.6672368,
+      "timestamp": "2016-04-09T05:03:29Z",
+      "version": 1,
+      "changeset": 38421851,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4109044949,
+      "lat": 10.8484994,
+      "lon": 106.6671519,
+      "timestamp": "2018-07-04T05:39:17Z",
+      "version": 2,
+      "changeset": 60397452,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 4109114262,
+      "lat": 10.848863,
+      "lon": 106.6665806,
+      "timestamp": "2016-04-09T06:46:18Z",
+      "version": 1,
+      "changeset": 38422740,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4109114262,
+      "lat": 10.849,
+      "lon": 106.6663446,
+      "timestamp": "2016-09-16T03:30:04Z",
+      "version": 2,
+      "changeset": 42193384,
+      "user": "lepetitchu",
+      "uid": 4583379
+    },
+    {
+      "type": "node",
+      "id": 4109114262,
+      "lat": 10.8489763,
+      "lon": 106.6663285,
+      "timestamp": "2018-07-04T08:37:31Z",
+      "version": 3,
+      "changeset": 60401639,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 4109114262,
+      "lat": 10.8489593,
+      "lon": 106.6663539,
+      "timestamp": "2020-08-07T07:56:56Z",
+      "version": 4,
+      "changeset": 89078128,
+      "user": "wvdp",
+      "uid": 436419
+    },
+    {
+      "type": "node",
+      "id": 4109444339,
+      "lat": 10.7702821,
+      "lon": 106.6316939,
+      "timestamp": "2016-04-09T12:02:11Z",
+      "version": 1,
+      "changeset": 38427474,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4109444339,
+      "lat": 10.7702887,
+      "lon": 106.6317328,
+      "timestamp": "2018-07-19T03:33:11Z",
+      "version": 2,
+      "changeset": 60853948,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 4109444339,
+      "lat": 10.7702334,
+      "lon": 106.6317382,
+      "timestamp": "2019-07-19T11:27:22Z",
+      "version": 3,
+      "changeset": 72426382,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 4109444339,
+      "lat": 10.7702499,
+      "lon": 106.6317362,
+      "timestamp": "2019-07-23T11:26:36Z",
+      "version": 4,
+      "changeset": 72552796,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 4109444339,
+      "lat": 10.7702489,
+      "lon": 106.6317406,
+      "timestamp": "2019-08-15T14:54:34Z",
+      "version": 5,
+      "changeset": 73382329,
+      "user": "GhostEye",
+      "uid": 9633773
+    },
+    {
+      "type": "node",
+      "id": 4109444339,
+      "lat": 10.7702553,
+      "lon": 106.6317429,
+      "timestamp": "2019-08-23T14:54:47Z",
+      "version": 6,
+      "changeset": 73672325,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4109444339,
+      "lat": 10.7702554,
+      "lon": 106.6317419,
+      "timestamp": "2019-08-23T16:24:21Z",
+      "version": 7,
+      "changeset": 73675618,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4109605261,
+      "lat": 10.7810827,
+      "lon": 106.6427508,
+      "timestamp": "2016-04-09T14:22:44Z",
+      "version": 1,
+      "changeset": 38429795,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4109605261,
+      "lat": 10.7810375,
+      "lon": 106.6427253,
+      "timestamp": "2023-12-29T13:27:35Z",
+      "version": 2,
+      "changeset": 145661467,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 4109605262,
+      "lat": 10.7813805,
+      "lon": 106.6432772,
+      "timestamp": "2016-04-09T14:22:44Z",
+      "version": 1,
+      "changeset": 38429795,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4109605262,
+      "lat": 10.7813924,
+      "lon": 106.6433121,
+      "timestamp": "2018-07-20T04:19:06Z",
+      "version": 2,
+      "changeset": 60888867,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 4109605262,
+      "lat": 10.7813908,
+      "lon": 106.6433395,
+      "timestamp": "2023-12-29T13:27:35Z",
+      "version": 3,
+      "changeset": 145661467,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 4109614279,
+      "lat": 10.7256409,
+      "lon": 106.6033048,
+      "timestamp": "2016-04-09T14:30:05Z",
+      "version": 1,
+      "changeset": 38429918,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4109614280,
+      "lat": 10.7250151,
+      "lon": 106.6026024,
+      "timestamp": "2016-04-09T14:30:05Z",
+      "version": 1,
+      "changeset": 38429918,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    }
+  ]
+}

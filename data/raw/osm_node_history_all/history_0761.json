@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5063701342,
+      "lat": 10.7782697,
+      "lon": 106.6718545,
+      "timestamp": "2017-08-28T09:12:23Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701342,
+      "lat": 10.7784204,
+      "lon": 106.67229,
+      "timestamp": "2018-07-23T01:25:30Z",
+      "version": 2,
+      "changeset": 60966012,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5063701342,
+      "lat": 10.7782834,
+      "lon": 106.6718743,
+      "timestamp": "2018-07-23T01:59:35Z",
+      "version": 3,
+      "changeset": 60966404,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5063701342,
+      "lat": 10.7782836,
+      "lon": 106.6718702,
+      "timestamp": "2024-07-22T09:54:45Z",
+      "version": 4,
+      "changeset": 154254209,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5063701342,
+      "lat": 10.7782724,
+      "lon": 106.6718688,
+      "timestamp": "2024-07-22T09:58:14Z",
+      "version": 5,
+      "changeset": 154254341,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5063701380,
+      "lat": 10.7821785,
+      "lon": 106.6734807,
+      "timestamp": "2017-08-28T09:12:24Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701380,
+      "lat": 10.7821696,
+      "lon": 106.6734948,
+      "timestamp": "2024-01-29T00:04:05Z",
+      "version": 2,
+      "changeset": 146798971,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5063701402,
+      "lat": 10.782487,
+      "lon": 106.6729096,
+      "timestamp": "2017-08-28T09:12:24Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701408,
+      "lat": 10.7827246,
+      "lon": 106.6724641,
+      "timestamp": "2017-08-28T09:12:25Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701411,
+      "lat": 10.7825973,
+      "lon": 106.6716762,
+      "timestamp": "2017-08-28T09:12:25Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701421,
+      "lat": 10.7823281,
+      "lon": 106.6713208,
+      "timestamp": "2017-08-28T09:12:25Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701421,
+      "lat": 10.782292,
+      "lon": 106.6712731,
+      "timestamp": "2024-03-20T03:43:20Z",
+      "version": 2,
+      "changeset": 148890828,
+      "user": "Grab_Cong",
+      "uid": 18820325
+    },
+    {
+      "type": "node",
+      "id": 5063701425,
+      "lat": 10.7818565,
+      "lon": 106.6707042,
+      "timestamp": "2017-08-28T09:12:25Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701430,
+      "lat": 10.7821688,
+      "lon": 106.6711112,
+      "timestamp": "2017-08-28T09:12:25Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701433,
+      "lat": 10.7815833,
+      "lon": 106.670348,
+      "timestamp": "2017-08-28T09:12:25Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5063701441,
+      "lat": 10.7808937,
+      "lon": 106.6698201,
+      "timestamp": "2017-08-28T09:12:25Z",
+      "version": 1,
+      "changeset": 51502171,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    }
+  ]
+}

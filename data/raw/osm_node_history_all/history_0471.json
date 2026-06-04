@@ -1,0 +1,944 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3149104932,
+      "lat": 10.8786319,
+      "lon": 106.8015171,
+      "timestamp": "2014-10-25T13:45:46Z",
+      "version": 1,
+      "changeset": 26321659,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3149104932,
+      "lat": 10.8786688,
+      "lon": 106.8015171,
+      "timestamp": "2018-07-11T04:43:47Z",
+      "version": 2,
+      "changeset": 60595594,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3149104932,
+      "lat": 10.8785899,
+      "lon": 106.8016834,
+      "timestamp": "2025-09-06T02:21:50Z",
+      "version": 3,
+      "changeset": 171522940,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 3149104933,
+      "lat": 10.878592,
+      "lon": 106.8017773,
+      "timestamp": "2014-10-25T13:45:46Z",
+      "version": 1,
+      "changeset": 26321659,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3149104933,
+      "lat": 10.8786289,
+      "lon": 106.8017773,
+      "timestamp": "2018-07-11T04:43:47Z",
+      "version": 2,
+      "changeset": 60595594,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3149104933,
+      "lat": 10.8786069,
+      "lon": 106.8019622,
+      "timestamp": "2025-09-06T02:21:50Z",
+      "version": 3,
+      "changeset": 171522940,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 3149179742,
+      "lat": 10.7802623,
+      "lon": 106.5677006,
+      "timestamp": "2014-10-25T14:28:51Z",
+      "version": 1,
+      "changeset": 26322461,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3149179742,
+      "lat": 10.7802702,
+      "lon": 106.5677328,
+      "timestamp": "2018-07-13T01:57:46Z",
+      "version": 2,
+      "changeset": 60668822,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 3150110707,
+      "lat": 10.7640266,
+      "lon": 106.6680431,
+      "timestamp": "2014-10-26T04:23:28Z",
+      "version": 1,
+      "changeset": 26334932,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "336 Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Vĩnh Viễn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110707,
+      "lat": 10.7640148,
+      "lon": 106.6680251,
+      "timestamp": "2017-01-17T12:03:05Z",
+      "version": 2,
+      "changeset": 45240998,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "336 Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Vĩnh Viễn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110707,
+      "lat": 10.7640095,
+      "lon": 106.6680006,
+      "timestamp": "2017-01-22T06:39:32Z",
+      "version": 3,
+      "changeset": 45363927,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "336 Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Vĩnh Viễn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110707,
+      "lat": 10.7640095,
+      "lon": 106.6680006,
+      "timestamp": "2022-04-16T02:15:24Z",
+      "version": 4,
+      "changeset": 119769674,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nguyễn Tri Phương - Vĩnh Viễn",
+        "note": "336 Nguyễn Tri Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7635569,
+      "lon": 106.6680344,
+      "timestamp": "2014-10-26T04:23:28Z",
+      "version": 1,
+      "changeset": 26334932,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "399 Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Vĩnh Viễn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7635598,
+      "lon": 106.6680284,
+      "timestamp": "2017-01-17T12:03:05Z",
+      "version": 2,
+      "changeset": 45240998,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "399 Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Vĩnh Viễn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7635598,
+      "lon": 106.6680254,
+      "timestamp": "2017-01-17T12:24:32Z",
+      "version": 3,
+      "changeset": 45241423,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "399 Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Vĩnh Viễn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7635516,
+      "lon": 106.6679884,
+      "timestamp": "2017-01-22T06:39:31Z",
+      "version": 4,
+      "changeset": 45363927,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "399 Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Vĩnh Viễn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7635516,
+      "lon": 106.6679882,
+      "timestamp": "2017-01-24T15:22:30Z",
+      "version": 5,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "note": "399 Nguyễn Tri Phương",
+        "name": "Nguyễn Tri Phương - Vĩnh Viễn",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7635516,
+      "lon": 106.6679882,
+      "timestamp": "2022-04-16T02:15:24Z",
+      "version": 6,
+      "changeset": 119769674,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nguyễn Tri Phương - Vĩnh Viễn",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "399 Nguyễn Tri Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7633262,
+      "lon": 106.6680077,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 7,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Trường Hoàng Văn Thụ",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "399 Nguyễn Tri Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7633262,
+      "lon": 106.6680077,
+      "timestamp": "2024-04-07T05:09:41Z",
+      "version": 8,
+      "changeset": 149678035,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Trường THCS Hoàng Văn Thụ",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "399 Nguyễn Tri Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110708,
+      "lat": 10.7633262,
+      "lon": 106.6680077,
+      "timestamp": "2024-12-21T18:03:56Z",
+      "version": 9,
+      "changeset": 160478715,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Trung học Cơ sở Hoàng Văn Thụ",
+        "note": "399 Nguyễn Tri Phương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110709,
+      "lat": 10.7610742,
+      "lon": 106.6685822,
+      "timestamp": "2014-10-26T04:23:28Z",
+      "version": 1,
+      "changeset": 26334932,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đại Học Kinh Tế TPHCM ( Cơ sở Nguyễn Tri Phương)",
+        "note": "279 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110709,
+      "lat": 10.7610742,
+      "lon": 106.668564,
+      "timestamp": "2017-01-17T12:03:05Z",
+      "version": 2,
+      "changeset": 45240998,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đại Học Kinh Tế TPHCM ( Cơ sở Nguyễn Tri Phương)",
+        "note": "279 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110709,
+      "lat": 10.7610716,
+      "lon": 106.6685521,
+      "timestamp": "2017-01-22T06:39:31Z",
+      "version": 3,
+      "changeset": 45363927,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đại Học Kinh Tế TPHCM ( Cơ sở Nguyễn Tri Phương)",
+        "note": "279 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110709,
+      "lat": 10.7610716,
+      "lon": 106.6685521,
+      "timestamp": "2017-01-24T15:22:30Z",
+      "version": 4,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đại Học Kinh Tế TPHCM ( Cơ sở Nguyễn Tri Phương)",
+        "note": "279 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110710,
+      "lat": 10.7590341,
+      "lon": 106.6690425,
+      "timestamp": "2014-10-26T04:23:28Z",
+      "version": 1,
+      "changeset": 26334932,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110710,
+      "lat": 10.759032,
+      "lon": 106.6690355,
+      "timestamp": "2017-01-20T11:34:47Z",
+      "version": 2,
+      "changeset": 45324614,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110710,
+      "lat": 10.7590304,
+      "lon": 106.669028,
+      "timestamp": "2017-01-25T06:08:53Z",
+      "version": 3,
+      "changeset": 45463355,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110710,
+      "lat": 10.7590304,
+      "lon": 106.669028,
+      "timestamp": "2017-01-25T06:26:44Z",
+      "version": 4,
+      "changeset": 45463784,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110710,
+      "lat": 10.7590304,
+      "lon": 106.6690278,
+      "timestamp": "2017-01-25T06:49:08Z",
+      "version": 5,
+      "changeset": 45464318,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110710,
+      "lat": 10.7590307,
+      "lon": 106.6690293,
+      "timestamp": "2017-01-25T07:12:27Z",
+      "version": 6,
+      "changeset": 45464855,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110710,
+      "lat": 10.7590307,
+      "lon": 106.6690293,
+      "timestamp": "2017-01-25T07:26:45Z",
+      "version": 7,
+      "changeset": 45465209,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110710,
+      "lat": 10.7590308,
+      "lon": 106.6690295,
+      "timestamp": "2017-01-25T07:37:19Z",
+      "version": 8,
+      "changeset": 45465497,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592092,
+      "lon": 106.6691161,
+      "timestamp": "2014-10-26T04:23:28Z",
+      "version": 1,
+      "changeset": 26334932,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592038,
+      "lon": 106.6690907,
+      "timestamp": "2017-01-17T12:03:05Z",
+      "version": 2,
+      "changeset": 45240998,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592022,
+      "lon": 106.6690836,
+      "timestamp": "2017-01-25T02:03:01Z",
+      "version": 3,
+      "changeset": 45457328,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592023,
+      "lon": 106.6690842,
+      "timestamp": "2017-01-25T02:10:55Z",
+      "version": 4,
+      "changeset": 45457488,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592023,
+      "lon": 106.6690842,
+      "timestamp": "2017-01-25T02:11:46Z",
+      "version": 5,
+      "changeset": 45457508,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592023,
+      "lon": 106.6690843,
+      "timestamp": "2017-01-25T06:09:36Z",
+      "version": 6,
+      "changeset": 45463375,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592023,
+      "lon": 106.6690843,
+      "timestamp": "2017-01-25T06:26:44Z",
+      "version": 7,
+      "changeset": 45463784,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592023,
+      "lon": 106.6690843,
+      "timestamp": "2017-01-25T06:49:08Z",
+      "version": 8,
+      "changeset": 45464318,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592023,
+      "lon": 106.6690843,
+      "timestamp": "2017-01-25T07:12:27Z",
+      "version": 9,
+      "changeset": 45464855,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592023,
+      "lon": 106.6690843,
+      "timestamp": "2017-01-25T07:26:45Z",
+      "version": 10,
+      "changeset": 45465209,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110711,
+      "lat": 10.7592023,
+      "lon": 106.6690843,
+      "timestamp": "2017-01-25T07:37:19Z",
+      "version": 11,
+      "changeset": 45465497,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 6 Nguyễn Tri Phương",
+        "note": "225 Nguyễn Tri Phương"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7529727,
+      "lon": 106.668592,
+      "timestamp": "2014-10-26T04:23:28Z",
+      "version": 1,
+      "changeset": 26334932,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Trân Phú - Trân Hưng Đạo",
+        "operator": "01,59,17",
+        "note": "388 Trần Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7529727,
+      "lon": 106.668592,
+      "timestamp": "2018-02-22T09:11:21Z",
+      "version": 2,
+      "changeset": 56573193,
+      "user": "Jaypep1",
+      "uid": 6591908,
+      "tags": {
+        "name": "Trân Phú - Trân Hưng Đạo",
+        "highway": "bus_stop",
+        "operator": "01,59,17",
+        "name:en": "Bus 1",
+        "note": "388 Trần Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7529599,
+      "lon": 106.6685992,
+      "timestamp": "2019-08-29T16:19:41Z",
+      "version": 3,
+      "changeset": 73891284,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "name": "Trân Phú - Trân Hưng Đạo",
+        "highway": "bus_stop",
+        "operator": "01,59,17",
+        "name:en": "Bus 1",
+        "note": "388 Trần Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7529516,
+      "lon": 106.6686042,
+      "timestamp": "2019-08-29T18:42:14Z",
+      "version": 4,
+      "changeset": 73895811,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "name": "Trân Phú - Trân Hưng Đạo",
+        "highway": "bus_stop",
+        "operator": "01,59,17",
+        "name:en": "Bus 1",
+        "note": "388 Trần Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7529516,
+      "lon": 106.6686042,
+      "timestamp": "2022-02-03T03:26:03Z",
+      "version": 5,
+      "changeset": 116942935,
+      "user": "vietnam321",
+      "uid": 11196308,
+      "tags": {
+        "highway": "bus_stop",
+        "operator": "01,59,17",
+        "name": "Nhà Văn hoá Quận 5",
+        "name:en": "Bus 1",
+        "note": "388 Trần Phú"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7530122,
+      "lon": 106.6685881,
+      "timestamp": "2022-02-03T04:50:21Z",
+      "version": 6,
+      "changeset": 116944336,
+      "user": "vietnam321",
+      "uid": 11196308,
+      "tags": {
+        "name": "Nhà Văn hoá Quận 5",
+        "name:en": "Bus 1",
+        "note": "388 Trần Phú",
+        "operator": "01,59,17",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7530168,
+      "lon": 106.6685648,
+      "timestamp": "2022-02-11T03:55:26Z",
+      "version": 7,
+      "changeset": 117270084,
+      "user": "turtle-bienhoa",
+      "uid": 13865352,
+      "tags": {
+        "name": "Há cảo Trần Quang",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7530168,
+      "lon": 106.6685648,
+      "timestamp": "2024-03-22T15:54:59Z",
+      "version": 8,
+      "changeset": 149020015,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Nhà văn hóa Quận 5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150110712,
+      "lat": 10.7530168,
+      "lon": 106.6685648,
+      "timestamp": "2024-12-20T08:46:01Z",
+      "version": 9,
+      "changeset": 160423428,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nhà Văn hóa Quận 5",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112489,
+      "lat": 10.7705268,
+      "lon": 106.6571722,
+      "timestamp": "2014-10-26T04:28:25Z",
+      "version": 1,
+      "changeset": 26335000,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lữ Gia - Sân vận động Phú Thọ",
+        "operator": "69,38",
+        "note": "14 Lữ Gia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112489,
+      "lat": 10.7705262,
+      "lon": 106.6571761,
+      "timestamp": "2014-10-26T14:17:57Z",
+      "version": 2,
+      "changeset": 26341605,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lữ Gia - Sân vận động Phú Thọ",
+        "operator": "69,38",
+        "note": "14 Lữ Gia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112489,
+      "lat": 10.7705227,
+      "lon": 106.6571756,
+      "timestamp": "2017-01-24T09:18:10Z",
+      "version": 3,
+      "changeset": 45426032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lữ Gia - Sân vận động Phú Thọ",
+        "operator": "69,38",
+        "note": "14 Lữ Gia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112489,
+      "lat": 10.7705227,
+      "lon": 106.6571756,
+      "timestamp": "2022-05-16T08:17:24Z",
+      "version": 4,
+      "changeset": 121039151,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Lữ Gia - Sân Vận Động Phú Thọ",
+        "note": "14 Lữ Gia",
+        "operator": "69,38",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112489,
+      "lat": 10.7705135,
+      "lon": 106.6571746,
+      "timestamp": "2024-02-04T17:37:17Z",
+      "version": 5,
+      "changeset": 147063077,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Lữ Gia - Sân Vận Động Phú Thọ",
+        "note": "14 Lữ Gia",
+        "operator": "69,38",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3150112489,
+      "lat": 10.7706289,
+      "lon": 106.6567257,
+      "timestamp": "2024-03-31T11:37:10Z",
+      "version": 6,
+      "changeset": 149386147,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nhà thi đấu Phú Thọ",
+        "public_transport": "platform"
+      }
+    }
+  ]
+}

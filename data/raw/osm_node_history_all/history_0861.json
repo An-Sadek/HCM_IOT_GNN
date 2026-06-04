@@ -1,0 +1,202 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5748444577,
+      "lat": 10.839434,
+      "lon": 106.7685415,
+      "timestamp": "2018-07-09T05:43:43Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748444620,
+      "lat": 10.8391534,
+      "lon": 106.7683847,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748444620,
+      "lat": 10.8391414,
+      "lon": 106.7684294,
+      "timestamp": "2024-04-12T10:20:45Z",
+      "version": 2,
+      "changeset": 149903082,
+      "user": "Grab_Cong",
+      "uid": 18820325
+    },
+    {
+      "type": "node",
+      "id": 5748445121,
+      "lat": 10.8264327,
+      "lon": 106.7606306,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748445122,
+      "lat": 10.8261219,
+      "lon": 106.7604375,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748445122,
+      "lat": 10.8261166,
+      "lon": 106.7604683,
+      "timestamp": "2019-08-28T21:54:29Z",
+      "version": 2,
+      "changeset": 73858619,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5748445123,
+      "lat": 10.8257425,
+      "lon": 106.7602283,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748445124,
+      "lat": 10.8253948,
+      "lon": 106.7600244,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748445124,
+      "lat": 10.8253737,
+      "lon": 106.7600552,
+      "timestamp": "2019-08-28T21:54:29Z",
+      "version": 2,
+      "changeset": 73858619,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5748445124,
+      "lat": 10.8253526,
+      "lon": 106.7600445,
+      "timestamp": "2019-09-05T17:47:30Z",
+      "version": 3,
+      "changeset": 74145869,
+      "user": "UncoolGuyJake",
+      "uid": 7674729
+    },
+    {
+      "type": "node",
+      "id": 5748445124,
+      "lat": 10.8248912,
+      "lon": 106.7597835,
+      "timestamp": "2023-04-05T11:10:41Z",
+      "version": 4,
+      "changeset": 134533997,
+      "user": "Arkskyle",
+      "uid": 17344224
+    },
+    {
+      "type": "node",
+      "id": 5748445125,
+      "lat": 10.8249153,
+      "lon": 106.7597535,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748445125,
+      "lat": 10.8249034,
+      "lon": 106.7597964,
+      "timestamp": "2019-08-28T21:54:29Z",
+      "version": 2,
+      "changeset": 73858619,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5748445126,
+      "lat": 10.824699,
+      "lon": 106.7597602,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748445128,
+      "lat": 10.8244138,
+      "lon": 106.7598089,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748445128,
+      "lat": 10.8244362,
+      "lon": 106.7598465,
+      "timestamp": "2019-08-28T22:22:01Z",
+      "version": 2,
+      "changeset": 73859035,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5748445129,
+      "lat": 10.8244542,
+      "lon": 106.7599332,
+      "timestamp": "2018-07-09T05:43:44Z",
+      "version": 1,
+      "changeset": 60524350,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 5748445129,
+      "lat": 10.8244792,
+      "lon": 106.7599667,
+      "timestamp": "2019-08-28T22:22:01Z",
+      "version": 2,
+      "changeset": 73859035,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    }
+  ]
+}

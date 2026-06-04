@@ -1,0 +1,356 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7508302,
+      "lon": 106.6547106,
+      "timestamp": "2013-04-03T09:39:04Z",
+      "version": 1,
+      "changeset": 15591939,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7508302,
+      "lon": 106.6547106,
+      "timestamp": "2014-11-01T05:46:55Z",
+      "version": 2,
+      "changeset": 26475759,
+      "user": "Phat Nguyen",
+      "uid": 2428348,
+      "tags": {
+        "note": "11-12 Hải Thượng Lãn Ông",
+        "highway": "bus_stop",
+        "name": "Chợ Kim Biên"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7508302,
+      "lon": 106.6547106,
+      "timestamp": "2016-11-01T00:48:33Z",
+      "version": 3,
+      "changeset": 43317031,
+      "user": "Duc Quy",
+      "uid": 4670849,
+      "tags": {
+        "name:en": "nha tui",
+        "name": "Chợ Kim Biên",
+        "name:vi": "287 hải thượng lãn ông",
+        "operator": "287 hải thượng lãn ông",
+        "highway": "bus_stop",
+        "note": "11-12 Hải Thượng Lãn Ông"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7508302,
+      "lon": 106.6547106,
+      "timestamp": "2016-11-10T12:20:34Z",
+      "version": 4,
+      "changeset": 43532933,
+      "user": "Duc Quy",
+      "uid": 4670849,
+      "tags": {
+        "name:en": "287 hả thượng lãn ông",
+        "name": "Chợ Kim Biên",
+        "name:vi": "287 hải thượng lãn ông",
+        "operator": "287 hải thượng lãn ông",
+        "highway": "bus_stop",
+        "note": "11-12 Hải Thượng Lãn Ông"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7508302,
+      "lon": 106.6547106,
+      "timestamp": "2016-11-11T00:48:10Z",
+      "version": 5,
+      "changeset": 43548572,
+      "user": "Duc Quy",
+      "uid": 4670849,
+      "tags": {
+        "name": "Chợ Kim Biên",
+        "name:en": "287 hải thượng lãn ông",
+        "name:vi": "287 hải thượng lãn ông",
+        "operator": "287 hải thượng lãn ông",
+        "highway": "bus_stop",
+        "note": "11-12 Hải Thượng Lãn Ông"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7508065,
+      "lon": 106.6547455,
+      "timestamp": "2017-01-03T11:10:28Z",
+      "version": 6,
+      "changeset": 44868137,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "Chợ Kim Biên",
+        "name:en": "287 hải thượng lãn ông",
+        "name:vi": "287 hải thượng lãn ông",
+        "operator": "287 hải thượng lãn ông",
+        "highway": "bus_stop",
+        "note": "11-12 Hải Thượng Lãn Ông"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7507987,
+      "lon": 106.6547297,
+      "timestamp": "2017-01-04T14:35:35Z",
+      "version": 7,
+      "changeset": 44900059,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "Chợ Kim Biên",
+        "name:en": "287 hải thượng lãn ông",
+        "name:vi": "287 hải thượng lãn ông",
+        "operator": "287 hải thượng lãn ông",
+        "highway": "bus_stop",
+        "note": "11-12 Hải Thượng Lãn Ông"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7507987,
+      "lon": 106.6547297,
+      "timestamp": "2017-01-20T11:50:57Z",
+      "version": 8,
+      "changeset": 45324882,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "287 Hải Thượng Lãn Ông",
+        "note": "11-12 Hải Thượng Lãn Ông"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2246167633,
+      "lat": 10.7508065,
+      "lon": 106.6547743,
+      "timestamp": "2017-01-24T06:03:17Z",
+      "version": 9,
+      "changeset": 45421902,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "287 Hải Thượng Lãn Ông",
+        "note": "11-12 Hải Thượng Lãn Ông"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2246634670,
+      "lat": 10.704562,
+      "lon": 106.5974071,
+      "timestamp": "2013-04-03T14:00:09Z",
+      "version": 1,
+      "changeset": 15594963,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2246634670,
+      "lat": 10.7045783,
+      "lon": 106.5973319,
+      "timestamp": "2016-03-18T15:34:08Z",
+      "version": 2,
+      "changeset": 37922152,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 2247540971,
+      "lat": 10.8215436,
+      "lon": 106.6304424,
+      "timestamp": "2013-04-04T02:53:41Z",
+      "version": 1,
+      "changeset": 15602690,
+      "user": "plqbao",
+      "uid": 1283644
+    },
+    {
+      "type": "node",
+      "id": 2247549198,
+      "lat": 10.8152248,
+      "lon": 106.6323883,
+      "timestamp": "2013-04-04T02:59:20Z",
+      "version": 1,
+      "changeset": 15602690,
+      "user": "plqbao",
+      "uid": 1283644
+    },
+    {
+      "type": "node",
+      "id": 2247549202,
+      "lat": 10.8170578,
+      "lon": 106.6318036,
+      "timestamp": "2013-04-04T02:59:20Z",
+      "version": 1,
+      "changeset": 15602690,
+      "user": "plqbao",
+      "uid": 1283644
+    },
+    {
+      "type": "node",
+      "id": 2247569946,
+      "lat": 10.8235367,
+      "lon": 106.6292602,
+      "timestamp": "2013-04-04T03:04:27Z",
+      "version": 1,
+      "changeset": 15602716,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2247569946,
+      "lat": 10.8235301,
+      "lon": 106.6292522,
+      "timestamp": "2016-03-20T06:18:21Z",
+      "version": 2,
+      "changeset": 37950178,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 2247570697,
+      "lat": 10.8026367,
+      "lon": 106.6396712,
+      "timestamp": "2013-04-04T03:04:53Z",
+      "version": 1,
+      "changeset": 15602690,
+      "user": "plqbao",
+      "uid": 1283644
+    },
+    {
+      "type": "node",
+      "id": 2247570697,
+      "lat": 10.8026105,
+      "lon": 106.6397742,
+      "timestamp": "2023-12-07T10:52:17Z",
+      "version": 2,
+      "changeset": 144862203,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 2247570697,
+      "lat": 10.8026374,
+      "lon": 106.6397654,
+      "timestamp": "2026-05-11T09:47:51Z",
+      "version": 3,
+      "changeset": 182502914,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 2247590938,
+      "lat": 10.8478683,
+      "lon": 106.6220307,
+      "timestamp": "2013-04-04T03:17:18Z",
+      "version": 1,
+      "changeset": 15602716,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2247590948,
+      "lat": 10.8481287,
+      "lon": 106.6225901,
+      "timestamp": "2013-04-04T03:17:18Z",
+      "version": 1,
+      "changeset": 15602716,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2251527151,
+      "lat": 10.8189129,
+      "lon": 106.6382543,
+      "timestamp": "2013-04-06T03:05:39Z",
+      "version": 1,
+      "changeset": 15627294,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2251527151,
+      "lat": 10.820794,
+      "lon": 106.6389919,
+      "timestamp": "2013-10-17T05:50:54Z",
+      "version": 2,
+      "changeset": 18397235,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2251527151,
+      "lat": 10.8208091,
+      "lon": 106.63941,
+      "timestamp": "2015-07-07T05:08:25Z",
+      "version": 3,
+      "changeset": 32462956,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2251527151,
+      "lat": 10.820793,
+      "lon": 106.6394296,
+      "timestamp": "2015-07-08T04:04:12Z",
+      "version": 4,
+      "changeset": 32486860,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 2251527151,
+      "lat": 10.820815,
+      "lon": 106.6393828,
+      "timestamp": "2017-09-18T09:19:39Z",
+      "version": 5,
+      "changeset": 52137960,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 2251527151,
+      "lat": 10.820811,
+      "lon": 106.6394217,
+      "timestamp": "2018-06-28T08:32:48Z",
+      "version": 6,
+      "changeset": 60240672,
+      "user": "harishpuppala",
+      "uid": 7446646
+    }
+  ]
+}

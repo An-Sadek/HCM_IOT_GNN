@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4676724670,
+      "lat": 10.783029,
+      "lon": 106.626361,
+      "timestamp": "2017-02-09T14:44:13Z",
+      "version": 1,
+      "changeset": 45949020,
+      "user": "Imp_GL",
+      "uid": 2268702
+    },
+    {
+      "type": "node",
+      "id": 4676724670,
+      "lat": 10.7829618,
+      "lon": 106.6263409,
+      "timestamp": "2018-07-23T03:54:08Z",
+      "version": 2,
+      "changeset": 60967904,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 4676724672,
+      "lat": 10.7834765,
+      "lon": 106.6249282,
+      "timestamp": "2017-02-09T14:44:13Z",
+      "version": 1,
+      "changeset": 45949020,
+      "user": "Imp_GL",
+      "uid": 2268702
+    },
+    {
+      "type": "node",
+      "id": 4676724672,
+      "lat": 10.7834192,
+      "lon": 106.6249141,
+      "timestamp": "2018-07-23T03:54:08Z",
+      "version": 2,
+      "changeset": 60967904,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 4684287069,
+      "lat": 10.7810287,
+      "lon": 106.6332492,
+      "timestamp": "2017-02-13T21:46:14Z",
+      "version": 1,
+      "changeset": 46062778,
+      "user": "RichRico",
+      "uid": 2219338
+    },
+    {
+      "type": "node",
+      "id": 4684287069,
+      "lat": 10.7809747,
+      "lon": 106.63328,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 2,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 4684287069,
+      "lat": 10.7809495,
+      "lon": 106.6332997,
+      "timestamp": "2024-01-01T17:58:37Z",
+      "version": 3,
+      "changeset": 145770606,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 4690647097,
+      "lat": 10.681555,
+      "lon": 106.5381687,
+      "timestamp": "2017-02-17T15:10:10Z",
+      "version": 1,
+      "changeset": 46167346,
+      "user": "the Sandinator",
+      "uid": 950776
+    },
+    {
+      "type": "node",
+      "id": 4697194514,
+      "lat": 10.7745043,
+      "lon": 106.6934466,
+      "timestamp": "2017-02-21T11:59:28Z",
+      "version": 1,
+      "changeset": 46272596,
+      "user": "mike140",
+      "uid": 2471547
+    },
+    {
+      "type": "node",
+      "id": 4697194515,
+      "lat": 10.7760265,
+      "lon": 106.6916681,
+      "timestamp": "2017-02-21T11:59:28Z",
+      "version": 1,
+      "changeset": 46272596,
+      "user": "mike140",
+      "uid": 2471547
+    },
+    {
+      "type": "node",
+      "id": 4706741309,
+      "lat": 10.7910172,
+      "lon": 106.6658935,
+      "timestamp": "2017-02-26T15:34:17Z",
+      "version": 1,
+      "changeset": 46418359,
+      "user": "lonvia",
+      "uid": 26726
+    },
+    {
+      "type": "node",
+      "id": 4706741309,
+      "lat": 10.7910161,
+      "lon": 106.6658935,
+      "timestamp": "2018-07-17T07:14:44Z",
+      "version": 2,
+      "changeset": 60786271,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 4706741309,
+      "lat": 10.7909992,
+      "lon": 106.6658989,
+      "timestamp": "2023-11-20T12:15:09Z",
+      "version": 3,
+      "changeset": 144244651,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 4719951850,
+      "lat": 10.801349,
+      "lon": 106.7109178,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951851,
+      "lat": 10.8014173,
+      "lon": 106.711928,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951854,
+      "lat": 10.8014107,
+      "lon": 106.7123463,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    }
+  ]
+}

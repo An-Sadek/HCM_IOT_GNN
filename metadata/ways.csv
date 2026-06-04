@@ -1,0 +1,20 @@
+fill:
+  surface: '"paved" if tags.surface != "unclassified" else "unpaved"'
+  bridge: 'no'
+  oneway: 'no'
+  lanes: 0
+  max_velocity: 120 if tags.highway == "motorway" else (50 if tags.oneway == "yes"
+    else 60)
+onehot:
+  features:
+  - tags.surface
+  - tags.bridge
+  - tags.oneway
+  onehot_feature_names:
+  - tags.surface_concrete
+  - tags.surface_dirt
+  - tags.surface_paved
+  - tags.surface_unpaved
+  - tags.bridge_yes
+  - tags.oneway_no
+  - tags.oneway_yes

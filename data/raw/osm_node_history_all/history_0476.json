@@ -1,0 +1,1025 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3153973656,
+      "lat": 10.8346485,
+      "lon": 106.6202361,
+      "timestamp": "2014-10-28T09:57:14Z",
+      "version": 1,
+      "changeset": 26383625,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "257 Trường Chinh",
+        "name": "Giáo xứ Lạc Quang",
+        "highway": "bus_stop",
+        "addr:street": "Trường Chinh",
+        "addr:housenumber": "257"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973656,
+      "lat": 10.8346245,
+      "lon": 106.6202158,
+      "timestamp": "2016-03-20T06:18:20Z",
+      "version": 2,
+      "changeset": 37950178,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "note": "257 Trường Chinh",
+        "name": "Giáo xứ Lạc Quang",
+        "highway": "bus_stop",
+        "addr:street": "Trường Chinh",
+        "addr:housenumber": "257"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973656,
+      "lat": 10.8346245,
+      "lon": 106.6202158,
+      "timestamp": "2022-05-04T06:53:10Z",
+      "version": 3,
+      "changeset": 120527058,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà Thờ Lạc Quang",
+        "public_transport": "platform",
+        "note": "257 Trường Chinh",
+        "highway": "bus_stop",
+        "bus": "yes",
+        "addr:housenumber": "257",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973656,
+      "lat": 10.8345148,
+      "lon": 106.6202115,
+      "timestamp": "2024-03-23T03:55:19Z",
+      "version": 4,
+      "changeset": 149037423,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "note": "257 Trường Chinh",
+        "name": "Chùa Lạc Quang",
+        "highway": "bus_stop",
+        "addr:housenumber": "257",
+        "addr:street": "Trường Chinh",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973656,
+      "lat": 10.8345148,
+      "lon": 106.6202115,
+      "timestamp": "2025-10-24T05:29:01Z",
+      "version": 5,
+      "changeset": 173700331,
+      "user": "VuNH_SGN",
+      "uid": 17268923,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "note": "257 Trường Chinh",
+        "addr:housenumber": "257",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chùa Lạc Quang"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973656,
+      "lat": 10.8345148,
+      "lon": 106.6202115,
+      "timestamp": "2025-10-24T05:29:04Z",
+      "version": 6,
+      "changeset": 173700332,
+      "user": "VuNH_SGN",
+      "uid": 17268923,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "addr:housenumber": "257",
+        "addr:street": "Trường Chinh",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chùa Lạc Quang",
+        "note": "257 Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973656,
+      "lat": 10.8345148,
+      "lon": 106.6202115,
+      "timestamp": "2025-10-24T05:29:06Z",
+      "version": 7,
+      "changeset": 173700335,
+      "user": "VuNH_SGN",
+      "uid": 17268923,
+      "tags": {
+        "shelter": "no",
+        "addr:housenumber": "257",
+        "addr:street": "Trường Chinh",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chùa Lạc Quang",
+        "note": "257 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973656,
+      "lat": 10.8345148,
+      "lon": 106.6202115,
+      "timestamp": "2025-10-24T05:29:09Z",
+      "version": 8,
+      "changeset": 173700336,
+      "user": "VuNH_SGN",
+      "uid": 17268923,
+      "tags": {
+        "addr:housenumber": "257",
+        "addr:street": "Trường Chinh",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Chùa Lạc Quang",
+        "note": "257 Trường Chinh",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973658,
+      "lat": 10.8390832,
+      "lon": 106.6173845,
+      "timestamp": "2014-10-28T09:57:14Z",
+      "version": 1,
+      "changeset": 26383625,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "487 Trường Chinh",
+        "name": "487 Trường Chinh",
+        "highway": "bus_stop",
+        "addr:housenumber": "487",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973658,
+      "lat": 10.8390513,
+      "lon": 106.6173601,
+      "timestamp": "2016-03-20T06:18:18Z",
+      "version": 2,
+      "changeset": 37950178,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "note": "487 Trường Chinh",
+        "name": "487 Trường Chinh",
+        "highway": "bus_stop",
+        "addr:housenumber": "487",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973658,
+      "lat": 10.8390513,
+      "lon": 106.6173601,
+      "timestamp": "2022-05-04T06:53:10Z",
+      "version": 3,
+      "changeset": 120527058,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Số 487 Trường Chinh",
+        "addr:housenumber": "487",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "487 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973658,
+      "lat": 10.8388614,
+      "lon": 106.6173816,
+      "timestamp": "2024-03-23T03:55:19Z",
+      "version": 4,
+      "changeset": 149037423,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "487",
+        "addr:street": "Trường Chinh",
+        "name": "Bitis",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "487 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973658,
+      "lat": 10.8388681,
+      "lon": 106.6173816,
+      "timestamp": "2024-03-28T04:27:32Z",
+      "version": 5,
+      "changeset": 149250484,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "487",
+        "addr:street": "Trường Chinh",
+        "name": "Bitis",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "487 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973658,
+      "lat": 10.838872,
+      "lon": 106.6173816,
+      "timestamp": "2024-03-31T14:45:58Z",
+      "version": 6,
+      "changeset": 149393649,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "487",
+        "addr:street": "Trường Chinh",
+        "name": "Bitis",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "487 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973658,
+      "lat": 10.838872,
+      "lon": 106.6173816,
+      "timestamp": "2024-12-24T00:50:26Z",
+      "version": 7,
+      "changeset": 160559093,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Biti's",
+        "note": "487 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153992147,
+      "lat": 10.8417177,
+      "lon": 106.616179,
+      "timestamp": "2014-10-28T10:13:12Z",
+      "version": 1,
+      "changeset": 26383883,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 4 An Sương",
+        "note": "Đối diện 601 Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153992147,
+      "lat": 10.8416778,
+      "lon": 106.6161241,
+      "timestamp": "2016-03-20T06:18:18Z",
+      "version": 2,
+      "changeset": 37950178,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 4 An Sương",
+        "note": "Đối diện 601 Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153992147,
+      "lat": 10.8406114,
+      "lon": 106.6167662,
+      "timestamp": "2018-02-26T01:11:50Z",
+      "version": 3,
+      "changeset": 56674479,
+      "user": "8221",
+      "uid": 7649715,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 4 An Sương",
+        "note": "Đối diện 601 Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.8191963,
+      "lon": 106.6289315,
+      "timestamp": "2014-10-29T10:27:45Z",
+      "version": 1,
+      "changeset": 26408490,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "name": "Công ty Dầu thực vật Tân Bình",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.8192719,
+      "lon": 106.6289096,
+      "timestamp": "2015-01-06T02:13:35Z",
+      "version": 2,
+      "changeset": 27946577,
+      "user": "NguyenNguyen@TMA",
+      "uid": 2328670,
+      "tags": {
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "name": "Công ty Dầu thực vật Tân Bình",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.819308,
+      "lon": 106.6288873,
+      "timestamp": "2015-07-17T04:56:25Z",
+      "version": 3,
+      "changeset": 32688673,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "name": "Công ty Dầu thực vật Tân Bình",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.8193005,
+      "lon": 106.6289004,
+      "timestamp": "2015-07-17T04:57:37Z",
+      "version": 4,
+      "changeset": 32688673,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "name": "Công ty Dầu thực vật Tân Bình",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.8193005,
+      "lon": 106.6289004,
+      "timestamp": "2022-05-04T03:24:37Z",
+      "version": 5,
+      "changeset": 120521770,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "public_transport": "platform",
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "highway": "bus_stop",
+        "bus": "yes",
+        "name": "Trạm Xe Bus Công Ty Dầu Thực Vật Tân Bình"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.8193005,
+      "lon": 106.6289004,
+      "timestamp": "2023-04-20T05:44:39Z",
+      "version": 6,
+      "changeset": 135131242,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "name": "Trạm Xe Bus Công Ty Dầu Thực Vật Tân Bình",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.8193005,
+      "lon": 106.6289004,
+      "timestamp": "2023-04-20T05:44:42Z",
+      "version": 7,
+      "changeset": 135131245,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "name": "Trạm Xe Bus Công Ty Dầu Thực Vật Tân Bình",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.8193005,
+      "lon": 106.6289004,
+      "timestamp": "2023-04-20T05:44:45Z",
+      "version": 8,
+      "changeset": 135131246,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "no",
+        "name": "Trạm Xe Bus Công Ty Dầu Thực Vật Tân Bình",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.8193005,
+      "lon": 106.6289004,
+      "timestamp": "2023-04-20T05:44:48Z",
+      "version": 9,
+      "changeset": 135131248,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "name": "Trạm Xe Bus Công Ty Dầu Thực Vật Tân Bình",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007493,
+      "lat": 10.819549,
+      "lon": 106.629204,
+      "timestamp": "2024-03-28T04:27:32Z",
+      "version": 10,
+      "changeset": 149250484,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Cổng Khu công nghiệp Tân Bình",
+        "note": "Công ty Dầu thực vật Tân Bình Tây Thạnh",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007494,
+      "lat": 10.8188847,
+      "lon": 106.628744,
+      "timestamp": "2014-10-29T10:27:45Z",
+      "version": 1,
+      "changeset": 26408490,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "29/26 Tây Thạnh",
+        "name": "Tây Thạnh - Trường Chinh",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007494,
+      "lat": 10.8204582,
+      "lon": 106.630489,
+      "timestamp": "2015-01-06T02:13:34Z",
+      "version": 2,
+      "changeset": 27946577,
+      "user": "NguyenNguyen@TMA",
+      "uid": 2328670,
+      "tags": {
+        "note": "29/26 Tây Thạnh",
+        "name": "Tây Thạnh - Trường Chinh",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007494,
+      "lat": 10.8204582,
+      "lon": 106.630489,
+      "timestamp": "2022-05-04T03:24:37Z",
+      "version": 3,
+      "changeset": 120521770,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "public_transport": "platform",
+        "note": "29/26 Tây Thạnh",
+        "name": "Trạm Xe Bus Tây Thạnh - Trường Chinh",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007494,
+      "lat": 10.8204582,
+      "lon": 106.630489,
+      "timestamp": "2023-04-20T05:48:27Z",
+      "version": 4,
+      "changeset": 135131242,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "note": "29/26 Tây Thạnh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Tây Thạnh - Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007494,
+      "lat": 10.8204582,
+      "lon": 106.630489,
+      "timestamp": "2023-04-20T05:48:29Z",
+      "version": 5,
+      "changeset": 135131245,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Tây Thạnh - Trường Chinh",
+        "note": "29/26 Tây Thạnh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007494,
+      "lat": 10.8204582,
+      "lon": 106.630489,
+      "timestamp": "2023-04-20T05:48:32Z",
+      "version": 6,
+      "changeset": 135131246,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "no",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Tây Thạnh - Trường Chinh",
+        "note": "29/26 Tây Thạnh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007494,
+      "lat": 10.8204582,
+      "lon": 106.630489,
+      "timestamp": "2023-04-20T05:48:35Z",
+      "version": 7,
+      "changeset": 135131248,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Trạm Xe Bus Tây Thạnh - Trường Chinh",
+        "note": "29/26 Tây Thạnh",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007496,
+      "lat": 10.8124061,
+      "lon": 106.6219676,
+      "timestamp": "2014-10-29T10:27:45Z",
+      "version": 1,
+      "changeset": 26408490,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "Trường Lê Lai Tây Thạnh",
+        "name": "Trường Lê Lai Tây Thạnh",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007496,
+      "lat": 10.8124061,
+      "lon": 106.6219676,
+      "timestamp": "2022-05-04T02:41:16Z",
+      "version": 2,
+      "changeset": 120521369,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "name": "Trạm Xe Bus Trường Lê Lai Tây Thạnh",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "note": "Trường Lê Lai Tây Thạnh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007496,
+      "lat": 10.8124061,
+      "lon": 106.6219676,
+      "timestamp": "2022-10-21T05:02:55Z",
+      "version": 3,
+      "changeset": 127862964,
+      "user": "Tommybara",
+      "uid": 12198525,
+      "tags": {
+        "note": "Trường Lê Lai Tây Thạnh",
+        "name": "Trường Lê Lai Tây Thạnh",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007496,
+      "lat": 10.8124211,
+      "lon": 106.6219536,
+      "timestamp": "2023-02-25T17:36:10Z",
+      "version": 4,
+      "changeset": 133015688,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "note": "Trường Lê Lai Tây Thạnh",
+        "name": "Trường Lê Lai Tây Thạnh",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007496,
+      "lat": 10.8126749,
+      "lon": 106.6221109,
+      "timestamp": "2024-03-28T04:27:32Z",
+      "version": 5,
+      "changeset": 149250484,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Tiểu học Lê Lai",
+        "note": "Trường Lê Lai Tây Thạnh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007497,
+      "lat": 10.809626,
+      "lon": 106.6193887,
+      "timestamp": "2014-10-29T10:27:45Z",
+      "version": 1,
+      "changeset": 26408490,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "298 Tây Thạnh",
+        "name": "Bưu điện Tây Thạnh",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007497,
+      "lat": 10.809626,
+      "lon": 106.6193887,
+      "timestamp": "2022-04-22T10:27:16Z",
+      "version": 2,
+      "changeset": 120042801,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Bưu điện Tây Thạnh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "298 Tây Thạnh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007497,
+      "lat": 10.8096461,
+      "lon": 106.6193747,
+      "timestamp": "2023-02-25T17:36:10Z",
+      "version": 3,
+      "changeset": 133015688,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Bưu điện Tây Thạnh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "298 Tây Thạnh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156007497,
+      "lat": 10.8093427,
+      "lon": 106.6190433,
+      "timestamp": "2024-03-28T04:27:32Z",
+      "version": 4,
+      "changeset": 149250484,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lê Trọng Tấn",
+        "note": "298 Tây Thạnh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156045475,
+      "lat": 10.7991656,
+      "lon": 106.6185711,
+      "timestamp": "2014-10-29T11:16:53Z",
+      "version": 1,
+      "changeset": 26409393,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "AEON Mall",
+        "highway": "bus_stop",
+        "note": "459 Tân Kỳ Tân Quý"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156045475,
+      "lat": 10.79913,
+      "lon": 106.6185838,
+      "timestamp": "2018-07-13T05:34:15Z",
+      "version": 2,
+      "changeset": 60671856,
+      "user": "akhil2",
+      "uid": 7795526,
+      "tags": {
+        "name": "AEON Mall",
+        "highway": "bus_stop",
+        "note": "459 Tân Kỳ Tân Quý"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156045475,
+      "lat": 10.79913,
+      "lon": 106.6185838,
+      "timestamp": "2019-12-02T13:52:34Z",
+      "version": 3,
+      "changeset": 77825344,
+      "user": "Frank Carn-Pryor",
+      "uid": 9912700,
+      "tags": {
+        "name": "AEON Mall -  bus 69",
+        "name:en": "AEON Mall - bus 69",
+        "highway": "bus_stop",
+        "note": "459 Tân Kỳ Tân Quý"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156045475,
+      "lat": 10.79913,
+      "lon": 106.6185838,
+      "timestamp": "2022-04-22T09:21:59Z",
+      "version": 4,
+      "changeset": 120039131,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus AEON Mall",
+        "note": "459 Tân Kỳ Tân Quý"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3156045475,
+      "lat": 10.7984623,
+      "lon": 106.6169005,
+      "timestamp": "2024-03-24T14:39:22Z",
+      "version": 5,
+      "changeset": 149091947,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Tiểu học Tân Quý",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3158933737,
+      "lat": 10.7951375,
+      "lon": 106.6203627,
+      "timestamp": "2014-10-31T07:26:19Z",
+      "version": 1,
+      "changeset": 26455318,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "88 Tân Quý",
+        "name": "Tân Quý - Gò Dầu",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3158933737,
+      "lat": 10.7951375,
+      "lon": 106.6203627,
+      "timestamp": "2022-04-22T09:21:59Z",
+      "version": 2,
+      "changeset": 120039131,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Tân Quý - Gò Dầu",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "88 Tân Quý",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3158933737,
+      "lat": 10.7953058,
+      "lon": 106.6203649,
+      "timestamp": "2024-03-30T09:52:31Z",
+      "version": 3,
+      "changeset": 149343568,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã tư Gò Dầu - Tân Quý",
+        "note": "88 Tân Quý",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3158936122,
+      "lat": 10.7877779,
+      "lon": 106.6335906,
+      "timestamp": "2014-10-31T07:30:28Z",
+      "version": 1,
+      "changeset": 26455356,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nệm Vạn Thành",
+        "note": "49 Vườn Lài"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3158936122,
+      "lat": 10.787693,
+      "lon": 106.6336568,
+      "timestamp": "2015-10-04T08:13:28Z",
+      "version": 2,
+      "changeset": 34421468,
+      "user": "phucdoan1973",
+      "uid": 2821292,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nệm Vạn Thành",
+        "note": "49 Vườn Lài"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3158936122,
+      "lat": 10.787693,
+      "lon": 106.6336568,
+      "timestamp": "2022-04-22T09:21:59Z",
+      "version": 3,
+      "changeset": 120039131,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nệm Vạn Thành",
+        "note": "49 Vườn Lài",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3158936122,
+      "lat": 10.7877244,
+      "lon": 106.6336824,
+      "timestamp": "2024-04-12T09:31:16Z",
+      "version": 4,
+      "changeset": 149901076,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "100 Vườn Lài",
+        "public_transport": "platform"
+      }
+    }
+  ]
+}

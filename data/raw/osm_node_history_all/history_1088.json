@@ -1,0 +1,179 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5802716334,
+      "lat": 10.7580377,
+      "lon": 106.6496262,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716335,
+      "lat": 10.7580968,
+      "lon": 106.6496173,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716335,
+      "lat": 10.7580968,
+      "lon": 106.6496173,
+      "timestamp": "2019-08-19T20:11:16Z",
+      "version": 2,
+      "changeset": 73513596,
+      "user": "El Pescador",
+      "uid": 7445879,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing_ref": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5802716336,
+      "lat": 10.7581583,
+      "lon": 106.6496128,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716337,
+      "lat": 10.7579819,
+      "lon": 106.6503703,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716338,
+      "lat": 10.7580658,
+      "lon": 106.6494435,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716338,
+      "lat": 10.7580467,
+      "lon": 106.6494059,
+      "timestamp": "2019-08-19T20:11:16Z",
+      "version": 2,
+      "changeset": 73513596,
+      "user": "El Pescador",
+      "uid": 7445879
+    },
+    {
+      "type": "node",
+      "id": 5802716339,
+      "lat": 10.7579582,
+      "lon": 106.6506862,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716340,
+      "lat": 10.7579683,
+      "lon": 106.6505518,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716341,
+      "lat": 10.757963,
+      "lon": 106.6489515,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716341,
+      "lat": 10.7579913,
+      "lon": 106.6489589,
+      "timestamp": "2019-08-19T20:11:16Z",
+      "version": 2,
+      "changeset": 73513596,
+      "user": "El Pescador",
+      "uid": 7445879
+    },
+    {
+      "type": "node",
+      "id": 5802716342,
+      "lat": 10.7580428,
+      "lon": 106.648904,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5802716342,
+      "lat": 10.7580533,
+      "lon": 106.6489302,
+      "timestamp": "2019-08-19T20:11:16Z",
+      "version": 2,
+      "changeset": 73513596,
+      "user": "El Pescador",
+      "uid": 7445879,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing_ref": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5802716342,
+      "lat": 10.7580533,
+      "lon": 106.6489302,
+      "timestamp": "2019-08-21T21:24:15Z",
+      "version": 3,
+      "changeset": 73597595,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5802716344,
+      "lat": 10.7594532,
+      "lon": 106.6517926,
+      "timestamp": "2018-08-02T03:28:55Z",
+      "version": 1,
+      "changeset": 61281944,
+      "user": "Neethu5",
+      "uid": 7671607
+    }
+  ]
+}

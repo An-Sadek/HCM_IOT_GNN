@@ -1,0 +1,147 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5765289881,
+      "lat": 10.7722202,
+      "lon": 106.6528451,
+      "timestamp": "2018-07-17T07:43:47Z",
+      "version": 1,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5765289884,
+      "lat": 10.7730043,
+      "lon": 106.6529393,
+      "timestamp": "2018-07-17T07:43:47Z",
+      "version": 1,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5765289885,
+      "lat": 10.7736501,
+      "lon": 106.6530442,
+      "timestamp": "2018-07-17T07:43:47Z",
+      "version": 1,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5765289886,
+      "lat": 10.7738429,
+      "lon": 106.6530687,
+      "timestamp": "2018-07-17T07:43:47Z",
+      "version": 1,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5765289887,
+      "lat": 10.7743016,
+      "lon": 106.6531054,
+      "timestamp": "2018-07-17T07:43:47Z",
+      "version": 1,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5765289887,
+      "lat": 10.7743025,
+      "lon": 106.6531016,
+      "timestamp": "2023-01-12T10:18:11Z",
+      "version": 2,
+      "changeset": 131180571,
+      "user": "Arkskyle",
+      "uid": 17344224
+    },
+    {
+      "type": "node",
+      "id": 5765289888,
+      "lat": 10.7748003,
+      "lon": 106.6531487,
+      "timestamp": "2018-07-17T07:43:47Z",
+      "version": 1,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5765289905,
+      "lat": 10.770869,
+      "lon": 106.6548989,
+      "timestamp": "2018-07-17T07:43:47Z",
+      "version": 1,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5765289905,
+      "lat": 10.7708608,
+      "lon": 106.6548976,
+      "timestamp": "2024-02-04T17:37:17Z",
+      "version": 2,
+      "changeset": 147063077,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5765289906,
+      "lat": 10.775419,
+      "lon": 106.6531998,
+      "timestamp": "2018-07-17T07:43:47Z",
+      "version": 1,
+      "changeset": 60787344,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5765292355,
+      "lat": 10.7957657,
+      "lon": 106.6554207,
+      "timestamp": "2018-07-17T07:44:54Z",
+      "version": 1,
+      "changeset": 60787391,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5765292355,
+      "lat": 10.7957617,
+      "lon": 106.6554147,
+      "timestamp": "2019-07-23T10:48:08Z",
+      "version": 2,
+      "changeset": 72550951,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5765292370,
+      "lat": 10.7974232,
+      "lon": 106.6577972,
+      "timestamp": "2018-07-17T07:44:54Z",
+      "version": 1,
+      "changeset": 60787391,
+      "user": "akhil2",
+      "uid": 7795526
+    }
+  ]
+}

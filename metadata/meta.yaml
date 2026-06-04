@@ -1,0 +1,86 @@
+one-hot encoding:
+  method: one-hot encoding k-1
+  node:
+    col:
+    - tags.railway
+    - tags.junction
+    - tags.crossing
+    - tags.highway
+    - tags.bus
+    features:
+    - tags.railway_level_crossing
+    - tags.railway_no
+    - tags.railway_station
+    - tags.junction_yes
+    - tags.crossing_traffic_signals
+    - tags.crossing_zebra
+    - tags.highway_crossing
+    - tags.highway_no
+    - tags.highway_traffic_signals
+    - tags.bus_yes
+  way:
+    col:
+    - tags.surface
+    - tags.oneway
+    - tags.motorroad
+    - type
+    features:
+    - tags.surface_concrete
+    - tags.surface_dirt
+    - tags.surface_paved
+    - tags.surface_unpaved
+    - tags.oneway_yes
+    - tags.motorroad_yes
+    - type_motorway_link
+    - type_primary
+    - type_primary_link
+    - type_secondary
+    - type_secondary_link
+    - type_tertiary
+    - type_tertiary_link
+    - type_trunk
+    - type_trunk_link
+    - type_unclassified
+  segment:
+    col:
+    - segment_type
+    features:
+    - segment_type_bus_station
+    - segment_type_car
+    - segment_type_cinema
+    - segment_type_clothes
+    - segment_type_company
+    - segment_type_convenience
+    - segment_type_fuel
+    - segment_type_government
+    - segment_type_house
+    - segment_type_marketplace
+    - segment_type_motorway
+    - segment_type_motorway_link
+    - segment_type_pitch
+    - segment_type_primary
+    - segment_type_primary_link
+    - segment_type_residential
+    - segment_type_school
+    - segment_type_secondary
+    - segment_type_secondary_link
+    - segment_type_tertiary
+    - segment_type_tertiary_link
+    - segment_type_trunk
+    - segment_type_trunk_link
+    - segment_type_unclassified
+    - segment_type_university
+fill null:
+  node:
+    tags.railway: 'no'
+    tags.junction: 'no'
+    tags.crossing: 'no'
+    tags.highway: 'no'
+    tags.bus: 'no'
+  way:
+    tags.lanes: '(street_type == "unclassified") ? 1 : 2'
+    tags.maxspeed: '(street_type == "motorway") ? 120 : ((oneway == "yes") ? 50 :
+      60)'
+    tags.minspeed: 0
+    tags.layer: 0
+    tags.surface: '(street_type == "unclassified") ? "unpaved" : "paved"'

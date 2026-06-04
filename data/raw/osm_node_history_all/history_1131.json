@@ -1,0 +1,48 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 6175931668,
+      "lat": 10.7711645,
+      "lon": 106.6454974,
+      "timestamp": "2019-01-01T04:30:29Z",
+      "version": 1,
+      "changeset": 65925720,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175932025,
+      "lat": 10.7687266,
+      "lon": 106.6462985,
+      "timestamp": "2019-01-01T04:30:30Z",
+      "version": 1,
+      "changeset": 65925720,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175932032,
+      "lat": 10.7696411,
+      "lon": 106.6468344,
+      "timestamp": "2019-01-01T04:30:31Z",
+      "version": 1,
+      "changeset": 65925720,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175932046,
+      "lat": 10.7659998,
+      "lon": 106.6446207,
+      "timestamp": "2019-01-01T04:30:31Z",
+      "version": 1,
+      "changeset": 65925720,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    }
+  ]
+}

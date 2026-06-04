@@ -1,0 +1,1400 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3116339967,
+      "lat": 10.8108877,
+      "lon": 106.7124561,
+      "timestamp": "2014-10-07T10:31:19Z",
+      "version": 1,
+      "changeset": 25914486,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116339967,
+      "lat": 10.8109578,
+      "lon": 106.7123819,
+      "timestamp": "2014-10-21T10:28:47Z",
+      "version": 2,
+      "changeset": 26231487,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Xô Viết Nghệ Tĩnh ( Nguyễn Xí)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116339969,
+      "lat": 10.8134341,
+      "lon": 106.7127711,
+      "timestamp": "2014-10-07T10:31:19Z",
+      "version": 1,
+      "changeset": 25914486,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116339969,
+      "lat": 10.8134774,
+      "lon": 106.7126952,
+      "timestamp": "2014-10-21T10:28:47Z",
+      "version": 2,
+      "changeset": 26231487,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Xô Viết Nghệ Tĩnh (Bến Xe Miền Đông)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353276,
+      "lat": 10.8407603,
+      "lon": 106.7445026,
+      "timestamp": "2014-10-07T10:43:18Z",
+      "version": 1,
+      "changeset": 25914667,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353276,
+      "lat": 10.8407852,
+      "lon": 106.7445736,
+      "timestamp": "2014-10-22T15:22:30Z",
+      "version": 2,
+      "changeset": 26258015,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Cầu Gò Dưa"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353276,
+      "lat": 10.8407852,
+      "lon": 106.7445736,
+      "timestamp": "2022-05-10T04:51:59Z",
+      "version": 3,
+      "changeset": 120772929,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Cầu Gò Dưa",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353276,
+      "lat": 10.8407745,
+      "lon": 106.7441006,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 4,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Cao đẳng Vinatex"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353276,
+      "lat": 10.8407745,
+      "lon": 106.7441006,
+      "timestamp": "2025-11-19T19:13:59Z",
+      "version": 5,
+      "changeset": 174874781,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "edit",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Cao đẳng Vinatex",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353276,
+      "lat": 10.8407745,
+      "lon": 106.7441006,
+      "timestamp": "2025-11-19T19:21:32Z",
+      "version": 6,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "test",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Cao đẳng Vinatex",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353276,
+      "lat": 10.8407745,
+      "lon": 106.7441006,
+      "timestamp": "2025-11-19T19:26:19Z",
+      "version": 7,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Cao đẳng Vinatex",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353276,
+      "lat": 10.8407745,
+      "lon": 106.7441006,
+      "timestamp": "2025-11-20T09:12:36Z",
+      "version": 8,
+      "changeset": 174896884,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trường Cao đẳng Vinatex",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353277,
+      "lat": 10.8412307,
+      "lon": 106.7462708,
+      "timestamp": "2014-10-07T10:43:18Z",
+      "version": 1,
+      "changeset": 25914667,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353277,
+      "lat": 10.8413672,
+      "lon": 106.7463168,
+      "timestamp": "2014-10-22T15:22:30Z",
+      "version": 2,
+      "changeset": 26258015,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đường Số 2"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353277,
+      "lat": 10.8413672,
+      "lon": 106.7463168,
+      "timestamp": "2022-05-12T07:53:55Z",
+      "version": 3,
+      "changeset": 120873603,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Đường Số 2",
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353277,
+      "lat": 10.8412457,
+      "lon": 106.7462659,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 4,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm xăng 27-7"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353277,
+      "lat": 10.8412457,
+      "lon": 106.7462659,
+      "timestamp": "2025-11-19T19:13:59Z",
+      "version": 5,
+      "changeset": 174874781,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "edit",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm xăng 27-7",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353277,
+      "lat": 10.8412457,
+      "lon": 106.7462659,
+      "timestamp": "2025-11-19T19:21:32Z",
+      "version": 6,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "dummy": "test",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm xăng 27-7",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353277,
+      "lat": 10.8412457,
+      "lon": 106.7462659,
+      "timestamp": "2025-11-19T19:26:19Z",
+      "version": 7,
+      "changeset": 174875155,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm xăng 27-7",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116353277,
+      "lat": 10.8412457,
+      "lon": 106.7462659,
+      "timestamp": "2025-11-20T09:12:36Z",
+      "version": 8,
+      "changeset": 174896884,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm xăng 27-7",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882967,
+      "lat": 10.7465993,
+      "lon": 106.6595601,
+      "timestamp": "2014-10-07T17:14:06Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "QL50-LA(5)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882967,
+      "lat": 10.7465993,
+      "lon": 106.6595601,
+      "timestamp": "2022-04-19T09:37:37Z",
+      "version": 2,
+      "changeset": 119897224,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus QL50-LA Số 5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882967,
+      "lat": 10.7465993,
+      "lon": 106.6595601,
+      "timestamp": "2022-04-26T08:35:19Z",
+      "version": 3,
+      "changeset": 120200253,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus QL50 Long An Số 5",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563508,
+      "lon": 106.662104,
+      "timestamp": "2014-10-07T17:14:06Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563246,
+      "lon": 106.6620587,
+      "timestamp": "2017-01-20T06:14:00Z",
+      "version": 2,
+      "changeset": 45318577,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563197,
+      "lon": 106.6620402,
+      "timestamp": "2017-01-24T07:48:34Z",
+      "version": 3,
+      "changeset": 45423908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563197,
+      "lon": 106.6620402,
+      "timestamp": "2017-01-24T07:57:09Z",
+      "version": 4,
+      "changeset": 45424079,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563182,
+      "lon": 106.6620347,
+      "timestamp": "2017-01-24T08:42:29Z",
+      "version": 5,
+      "changeset": 45425143,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563182,
+      "lon": 106.6620348,
+      "timestamp": "2017-01-24T09:18:10Z",
+      "version": 6,
+      "changeset": 45426032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563181,
+      "lon": 106.6620346,
+      "timestamp": "2017-01-24T09:26:23Z",
+      "version": 7,
+      "changeset": 45426223,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563181,
+      "lon": 106.6620346,
+      "timestamp": "2017-01-24T10:08:12Z",
+      "version": 8,
+      "changeset": 45427157,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563181,
+      "lon": 106.6620346,
+      "timestamp": "2017-01-24T15:22:30Z",
+      "version": 9,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563181,
+      "lon": 106.6620346,
+      "timestamp": "2017-01-25T12:31:47Z",
+      "version": 10,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7563183,
+      "lon": 106.6620353,
+      "timestamp": "2017-01-27T05:35:29Z",
+      "version": 11,
+      "changeset": 45543401,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.756322,
+      "lon": 106.6621088,
+      "timestamp": "2019-09-04T17:10:25Z",
+      "version": 12,
+      "changeset": 74098263,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7559933,
+      "lon": 106.6621184,
+      "timestamp": "2019-09-12T22:21:55Z",
+      "version": 13,
+      "changeset": 74410849,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Lý Thường Kiệt - Hồng Bàng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7559933,
+      "lon": 106.6621184,
+      "timestamp": "2022-04-15T00:55:19Z",
+      "version": 14,
+      "changeset": 119733107,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Lý Thường Kiệt - Hồng Bàng",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7557288,
+      "lon": 106.662173,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 15,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bệnh viện Hùng Vương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882974,
+      "lat": 10.7557328,
+      "lon": 106.662165,
+      "timestamp": "2025-02-02T19:33:35Z",
+      "version": 16,
+      "changeset": 162060216,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bệnh viện Hùng Vương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564431,
+      "lon": 106.6621597,
+      "timestamp": "2014-10-07T17:14:06Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564381,
+      "lon": 106.6621389,
+      "timestamp": "2017-01-20T06:14:00Z",
+      "version": 2,
+      "changeset": 45318577,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564301,
+      "lon": 106.6621082,
+      "timestamp": "2017-01-24T07:48:34Z",
+      "version": 3,
+      "changeset": 45423908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564301,
+      "lon": 106.6621082,
+      "timestamp": "2017-01-24T07:57:08Z",
+      "version": 4,
+      "changeset": 45424079,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564287,
+      "lon": 106.6621031,
+      "timestamp": "2017-01-24T08:42:29Z",
+      "version": 5,
+      "changeset": 45425143,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564287,
+      "lon": 106.6621032,
+      "timestamp": "2017-01-24T09:18:13Z",
+      "version": 6,
+      "changeset": 45426032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564287,
+      "lon": 106.6621032,
+      "timestamp": "2017-01-24T10:08:11Z",
+      "version": 7,
+      "changeset": 45427157,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564287,
+      "lon": 106.6621032,
+      "timestamp": "2017-01-24T15:22:29Z",
+      "version": 8,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564287,
+      "lon": 106.6621032,
+      "timestamp": "2017-01-25T12:31:47Z",
+      "version": 9,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7564285,
+      "lon": 106.6621023,
+      "timestamp": "2017-01-27T05:35:29Z",
+      "version": 10,
+      "changeset": 45543401,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.756429,
+      "lon": 106.6620786,
+      "timestamp": "2019-09-04T17:10:25Z",
+      "version": 11,
+      "changeset": 74098263,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hồng Bàng - Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7568223,
+      "lon": 106.6620298,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 12,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bệnh viện Hùng Vương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7560739,
+      "lon": 106.6622256,
+      "timestamp": "2024-10-08T13:39:17Z",
+      "version": 13,
+      "changeset": 157627489,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bệnh viện Hùng Vương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882975,
+      "lat": 10.7575239,
+      "lon": 106.6618809,
+      "timestamp": "2025-10-31T05:21:58Z",
+      "version": 14,
+      "changeset": 174004013,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bệnh viện Hùng Vương",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7597017,
+      "lon": 106.6612577,
+      "timestamp": "2014-10-07T17:14:06Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7597063,
+      "lon": 106.6612664,
+      "timestamp": "2017-01-20T06:14:00Z",
+      "version": 2,
+      "changeset": 45318577,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7596939,
+      "lon": 106.6612188,
+      "timestamp": "2017-01-24T07:48:34Z",
+      "version": 3,
+      "changeset": 45423908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7596939,
+      "lon": 106.6612188,
+      "timestamp": "2017-01-24T07:57:08Z",
+      "version": 4,
+      "changeset": 45424079,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7596873,
+      "lon": 106.6611943,
+      "timestamp": "2017-01-24T08:42:29Z",
+      "version": 5,
+      "changeset": 45425143,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7596873,
+      "lon": 106.6611943,
+      "timestamp": "2017-01-24T09:18:13Z",
+      "version": 6,
+      "changeset": 45426032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7596873,
+      "lon": 106.6611943,
+      "timestamp": "2017-01-24T10:08:11Z",
+      "version": 7,
+      "changeset": 45427157,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7596873,
+      "lon": 106.6611943,
+      "timestamp": "2017-01-24T15:22:29Z",
+      "version": 8,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7596873,
+      "lon": 106.6611943,
+      "timestamp": "2017-01-25T12:31:47Z",
+      "version": 9,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7596862,
+      "lon": 106.6611901,
+      "timestamp": "2017-01-27T05:35:29Z",
+      "version": 10,
+      "changeset": 45543401,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.759663,
+      "lon": 106.6611642,
+      "timestamp": "2019-09-04T17:10:25Z",
+      "version": 11,
+      "changeset": 74098263,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.759663,
+      "lon": 106.6611642,
+      "timestamp": "2022-04-15T00:55:19Z",
+      "version": 12,
+      "changeset": 119733107,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Coop - Mart Lý Thường Kiệt",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882976,
+      "lat": 10.7595951,
+      "lon": 106.661237,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 13,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "CoopMart Lý Thường Kiệt",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597941,
+      "lon": 106.661153,
+      "timestamp": "2014-10-07T17:14:06Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597831,
+      "lon": 106.661122,
+      "timestamp": "2017-01-20T06:14:00Z",
+      "version": 2,
+      "changeset": 45318577,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597763,
+      "lon": 106.661096,
+      "timestamp": "2017-01-24T07:48:34Z",
+      "version": 3,
+      "changeset": 45423908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597763,
+      "lon": 106.661096,
+      "timestamp": "2017-01-24T07:57:09Z",
+      "version": 4,
+      "changeset": 45424079,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597685,
+      "lon": 106.6610671,
+      "timestamp": "2017-01-24T08:42:29Z",
+      "version": 5,
+      "changeset": 45425143,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597685,
+      "lon": 106.6610671,
+      "timestamp": "2017-01-24T09:18:10Z",
+      "version": 6,
+      "changeset": 45426032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597683,
+      "lon": 106.6610662,
+      "timestamp": "2017-01-24T09:26:23Z",
+      "version": 7,
+      "changeset": 45426223,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597683,
+      "lon": 106.6610662,
+      "timestamp": "2017-01-24T10:08:12Z",
+      "version": 8,
+      "changeset": 45427157,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597683,
+      "lon": 106.6610662,
+      "timestamp": "2017-01-24T15:22:30Z",
+      "version": 9,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597683,
+      "lon": 106.6610662,
+      "timestamp": "2017-01-25T12:31:47Z",
+      "version": 10,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882977,
+      "lat": 10.7597693,
+      "lon": 106.6610698,
+      "timestamp": "2017-01-27T05:35:29Z",
+      "version": 11,
+      "changeset": 45543401,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Coop Mart Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614965,
+      "lon": 106.6607475,
+      "timestamp": "2014-10-07T17:14:06Z",
+      "version": 1,
+      "changeset": 25921707,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614915,
+      "lon": 106.6607347,
+      "timestamp": "2017-01-20T06:14:00Z",
+      "version": 2,
+      "changeset": 45318577,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614874,
+      "lon": 106.6607301,
+      "timestamp": "2017-01-24T07:48:34Z",
+      "version": 3,
+      "changeset": 45423908,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614874,
+      "lon": 106.6607301,
+      "timestamp": "2017-01-24T07:57:08Z",
+      "version": 4,
+      "changeset": 45424079,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614779,
+      "lon": 106.6606948,
+      "timestamp": "2017-01-24T08:42:29Z",
+      "version": 5,
+      "changeset": 45425143,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614779,
+      "lon": 106.6606948,
+      "timestamp": "2017-01-24T09:18:13Z",
+      "version": 6,
+      "changeset": 45426032,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614779,
+      "lon": 106.6606948,
+      "timestamp": "2017-01-24T10:08:11Z",
+      "version": 7,
+      "changeset": 45427157,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614779,
+      "lon": 106.6606948,
+      "timestamp": "2017-01-24T15:22:29Z",
+      "version": 8,
+      "changeset": 45439188,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614779,
+      "lon": 106.6606948,
+      "timestamp": "2017-01-25T12:31:47Z",
+      "version": 9,
+      "changeset": 45473839,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7614763,
+      "lon": 106.6606888,
+      "timestamp": "2017-01-27T05:35:29Z",
+      "version": 10,
+      "changeset": 45543401,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7613438,
+      "lon": 106.6608658,
+      "timestamp": "2019-08-28T21:34:34Z",
+      "version": 11,
+      "changeset": 73858262,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7613589,
+      "lon": 106.6607257,
+      "timestamp": "2019-08-28T21:42:10Z",
+      "version": 12,
+      "changeset": 73858394,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "CC Lý Thường Kiệt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3116882978,
+      "lat": 10.7613589,
+      "lon": 106.6607257,
+      "timestamp": "2022-04-15T02:39:52Z",
+      "version": 13,
+      "changeset": 119734040,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Chung Cư Lý Thường Kiệt",
+        "public_transport": "platform"
+      }
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4019534788,
+      "lat": 10.7912261,
+      "lon": 106.6983007,
+      "timestamp": "2016-02-22T11:27:22Z",
+      "version": 1,
+      "changeset": 37364547,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4022967378,
+      "lat": 10.797322,
+      "lon": 106.6787104,
+      "timestamp": "2016-02-24T04:14:53Z",
+      "version": 1,
+      "changeset": 37404042,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4023206285,
+      "lat": 10.7870177,
+      "lon": 106.6440265,
+      "timestamp": "2016-02-24T08:45:18Z",
+      "version": 1,
+      "changeset": 37407278,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4023206285,
+      "lat": 10.7870203,
+      "lon": 106.6440305,
+      "timestamp": "2016-12-12T17:17:00Z",
+      "version": 2,
+      "changeset": 44351782,
+      "user": "piligab",
+      "uid": 3877019
+    },
+    {
+      "type": "node",
+      "id": 4023206285,
+      "lat": 10.7869966,
+      "lon": 106.6440573,
+      "timestamp": "2018-07-19T01:50:35Z",
+      "version": 3,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 4023206285,
+      "lat": 10.7869972,
+      "lon": 106.6440684,
+      "timestamp": "2023-12-26T20:55:49Z",
+      "version": 4,
+      "changeset": 145549398,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 4023226548,
+      "lat": 10.8019372,
+      "lon": 106.6474468,
+      "timestamp": "2016-02-24T09:00:45Z",
+      "version": 1,
+      "changeset": 37407552,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4023226548,
+      "lat": 10.801899,
+      "lon": 106.6474374,
+      "timestamp": "2019-07-19T11:27:22Z",
+      "version": 2,
+      "changeset": 72426382,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 4023236582,
+      "lat": 10.7844016,
+      "lon": 106.651794,
+      "timestamp": "2016-02-24T09:11:08Z",
+      "version": 1,
+      "changeset": 37407694,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4023236582,
+      "lat": 10.7842014,
+      "lon": 106.6517216,
+      "timestamp": "2016-09-23T21:25:11Z",
+      "version": 2,
+      "changeset": 42391573,
+      "user": "calfarome",
+      "uid": 2511706
+    },
+    {
+      "type": "node",
+      "id": 4023236582,
+      "lat": 10.7841856,
+      "lon": 106.6517538,
+      "timestamp": "2018-07-19T02:17:12Z",
+      "version": 3,
+      "changeset": 60853156,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 4023236582,
+      "lat": 10.7841856,
+      "lon": 106.6517538,
+      "timestamp": "2019-06-27T04:39:46Z",
+      "version": 4,
+      "changeset": 71658034,
+      "user": "GrabVNTommy",
+      "uid": 8421597,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4023236582,
+      "lat": 10.7841856,
+      "lon": 106.6517538,
+      "timestamp": "2019-08-22T15:09:28Z",
+      "version": 5,
+      "changeset": 73630083,
+      "user": "Corban8",
+      "uid": 4240913,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4031006190,
+      "lat": 10.871165,
+      "lon": 106.741456,
+      "timestamp": "2016-02-28T10:34:02Z",
+      "version": 1,
+      "changeset": 37495647,
+      "user": "Pizza Hut VN",
+      "uid": 3628881
+    },
+    {
+      "type": "node",
+      "id": 4035870279,
+      "lat": 10.8082605,
+      "lon": 106.6645821,
+      "timestamp": "2016-03-02T03:41:06Z",
+      "version": 1,
+      "changeset": 37558823,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 4035870280,
+      "lat": 10.8082494,
+      "lon": 106.6647004,
+      "timestamp": "2016-03-02T03:41:06Z",
+      "version": 1,
+      "changeset": 37558823,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 4035870280,
+      "lat": 10.8082283,
+      "lon": 106.664797,
+      "timestamp": "2017-02-07T12:46:58Z",
+      "version": 2,
+      "changeset": 45884477,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4035870280,
+      "lat": 10.8082336,
+      "lon": 106.6647273,
+      "timestamp": "2017-07-03T12:50:01Z",
+      "version": 3,
+      "changeset": 50008394,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4035870280,
+      "lat": 10.8082208,
+      "lon": 106.6647077,
+      "timestamp": "2018-03-07T12:59:45Z",
+      "version": 4,
+      "changeset": 56968016,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4045610077,
+      "lat": 10.7585955,
+      "lon": 106.6679861,
+      "timestamp": "2016-03-07T12:18:57Z",
+      "version": 1,
+      "changeset": 37664632,
+      "user": "Tung Nguyen Truc",
+      "uid": 3691935
+    },
+    {
+      "type": "node",
+      "id": 4045610077,
+      "lat": 10.7585417,
+      "lon": 106.66804,
+      "timestamp": "2017-01-18T11:00:01Z",
+      "version": 2,
+      "changeset": 45267307,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4053262290,
+      "lat": 10.8236901,
+      "lon": 106.7061056,
+      "timestamp": "2016-03-10T16:12:27Z",
+      "version": 1,
+      "changeset": 37738250,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 4053262290,
+      "lat": 10.8236137,
+      "lon": 106.7061209,
+      "timestamp": "2016-03-18T16:29:28Z",
+      "version": 2,
+      "changeset": 37923205,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4053262290,
+      "lat": 10.8236137,
+      "lon": 106.7061209,
+      "timestamp": "2016-04-09T05:51:33Z",
+      "version": 3,
+      "changeset": 38422242,
+      "user": "Pizza Hut VN",
+      "uid": 3628881,
+      "tags": {
+        "name": "Phạm Văn Đồng",
+        "addr:city": "Hồ Chí Minh",
+        "addr:district": "BÌnh Thạnh",
+        "name:en": "Pham Van Dong"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4053262290,
+      "lat": 10.8239945,
+      "lon": 106.70752,
+      "timestamp": "2016-10-14T08:36:50Z",
+      "version": 4,
+      "changeset": 42889798,
+      "user": "mrjoba",
+      "uid": 4677744,
+      "tags": {
+        "name": "Phạm Văn Đồng",
+        "addr:city": "Hồ Chí Minh",
+        "addr:district": "BÌnh Thạnh",
+        "name:en": "Pham Van Dong"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4053262290,
+      "lat": 10.8239945,
+      "lon": 106.70752,
+      "timestamp": "2018-03-09T14:53:31Z",
+      "version": 5,
+      "changeset": 57034546,
+      "user": "8221",
+      "uid": 7649715,
+      "tags": {
+        "addr:city": "Hồ Chí Minh",
+        "addr:district": "BÌnh Thạnh",
+        "name:en": "Pham Van Dong"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4053262290,
+      "lat": 10.8239945,
+      "lon": 106.70752,
+      "timestamp": "2019-09-13T19:36:53Z",
+      "version": 6,
+      "changeset": 74453070,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 4053262290,
+      "lat": 10.824982,
+      "lon": 106.7111165,
+      "timestamp": "2024-06-30T05:32:02Z",
+      "version": 7,
+      "changeset": 153355074,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4594381213,
+      "lat": 10.7660765,
+      "lon": 106.6444389,
+      "timestamp": "2017-01-07T14:13:47Z",
+      "version": 1,
+      "changeset": 44979655,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 4594381213,
+      "lat": 10.7660646,
+      "lon": 106.6444382,
+      "timestamp": "2018-07-23T03:45:37Z",
+      "version": 2,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 4594506059,
+      "lat": 10.7624549,
+      "lon": 106.690007,
+      "timestamp": "2017-01-07T15:47:15Z",
+      "version": 1,
+      "changeset": 44981813,
+      "user": "Gã Trùm",
+      "uid": 5083656,
+      "tags": {
+        "amenity": "bank",
+        "name": "Ngân hàng BIDV"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4594506059,
+      "lat": 10.7622299,
+      "lon": 106.6901572,
+      "timestamp": "2017-06-23T11:58:30Z",
+      "version": 2,
+      "changeset": 49768849,
+      "user": "Gã Trùm",
+      "uid": 5083656,
+      "tags": {
+        "amenity": "bank",
+        "name": "Ngân hàng BIDV"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4594506059,
+      "lat": 10.7622574,
+      "lon": 106.6901134,
+      "timestamp": "2019-04-09T15:41:40Z",
+      "version": 3,
+      "changeset": 69051271,
+      "user": "FvGordon",
+      "uid": 161619,
+      "tags": {
+        "amenity": "bank",
+        "name": "Ngân hàng BIDV"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4594580084,
+      "lat": 10.7599948,
+      "lon": 106.6960563,
+      "timestamp": "2017-01-07T16:50:49Z",
+      "version": 1,
+      "changeset": 44983205,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4594693802,
+      "lat": 10.7636383,
+      "lon": 106.699189,
+      "timestamp": "2017-01-07T17:36:20Z",
+      "version": 1,
+      "changeset": 44984327,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4594693804,
+      "lat": 10.7635848,
+      "lon": 106.69908,
+      "timestamp": "2017-01-07T17:36:20Z",
+      "version": 1,
+      "changeset": 44984327,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4594693806,
+      "lat": 10.7632685,
+      "lon": 106.6986625,
+      "timestamp": "2017-01-07T17:36:20Z",
+      "version": 1,
+      "changeset": 44984327,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4594693806,
+      "lat": 10.7633094,
+      "lon": 106.6987087,
+      "timestamp": "2024-08-15T03:37:05Z",
+      "version": 2,
+      "changeset": 155265126,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4594693809,
+      "lat": 10.7609162,
+      "lon": 106.6968032,
+      "timestamp": "2017-01-07T17:36:20Z",
+      "version": 1,
+      "changeset": 44984327,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4594693810,
+      "lat": 10.7611026,
+      "lon": 106.6969465,
+      "timestamp": "2017-01-07T17:36:20Z",
+      "version": 1,
+      "changeset": 44984327,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4594693811,
+      "lat": 10.7618338,
+      "lon": 106.6975135,
+      "timestamp": "2017-01-07T17:36:20Z",
+      "version": 1,
+      "changeset": 44984327,
+      "user": "dotnam",
+      "uid": 5030528
+    },
+    {
+      "type": "node",
+      "id": 4594693814,
+      "lat": 10.7628512,
+      "lon": 106.6982919,
+      "timestamp": "2017-01-07T17:36:20Z",
+      "version": 1,
+      "changeset": 44984327,
+      "user": "dotnam",
+      "uid": 5030528
+    }
+  ]
+}

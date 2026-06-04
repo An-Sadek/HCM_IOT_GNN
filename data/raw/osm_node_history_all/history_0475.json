@@ -1,0 +1,1000 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3152632056,
+      "lat": 10.7978814,
+      "lon": 106.6441599,
+      "timestamp": "2014-10-27T15:58:25Z",
+      "version": 1,
+      "changeset": 26366983,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "298 Trường Chinh",
+        "name": "Trường Chinh - Nguyễn Hồng Đào",
+        "highway": "bus_stop",
+        "addr:housenumber": "298",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632056,
+      "lat": 10.7978814,
+      "lon": 106.6441599,
+      "timestamp": "2022-04-24T13:12:36Z",
+      "version": 2,
+      "changeset": 120123834,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "addr:housenumber": "298",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Trường Chinh - Nguyễn Hồng Đào",
+        "note": "298 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632056,
+      "lat": 10.797875,
+      "lon": 106.6441564,
+      "timestamp": "2023-12-22T17:21:52Z",
+      "version": 3,
+      "changeset": 145414403,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637748,
+      "lat": 10.799742,
+      "lon": 106.6407099,
+      "timestamp": "2014-10-27T16:03:58Z",
+      "version": 1,
+      "changeset": 26367078,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "366A Trường Chinh",
+        "name": "Trường Chinh - Ấp Bắc",
+        "highway": "bus_stop",
+        "addr:housenumber": "366A",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637748,
+      "lat": 10.799742,
+      "lon": 106.6407099,
+      "timestamp": "2022-05-25T05:57:05Z",
+      "version": 2,
+      "changeset": 121456229,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "addr:housenumber": "366A",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Trường Chinh - Ấp Bắc",
+        "note": "366A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637748,
+      "lat": 10.7997194,
+      "lon": 106.6406971,
+      "timestamp": "2023-12-21T10:49:48Z",
+      "version": 3,
+      "changeset": 145365984,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "addr:housenumber": "366A",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Trường Chinh - Ấp Bắc",
+        "note": "366A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637749,
+      "lat": 10.8016056,
+      "lon": 106.6370773,
+      "timestamp": "2014-10-27T16:03:58Z",
+      "version": 1,
+      "changeset": 26367078,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "4/16 Trường Chinh",
+        "highway": "bus_stop",
+        "name": "Bệnh viện Tân Bình",
+        "addr:housenumber": "4/16",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637749,
+      "lat": 10.801801,
+      "lon": 106.6366822,
+      "timestamp": "2018-03-09T14:28:28Z",
+      "version": 2,
+      "changeset": 57033967,
+      "user": "8221",
+      "uid": 7649715,
+      "tags": {
+        "note": "4/16 Trường Chinh",
+        "highway": "bus_stop",
+        "name": "Bệnh viện Tân Bình",
+        "addr:housenumber": "4/16",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637749,
+      "lat": 10.801801,
+      "lon": 106.6366822,
+      "timestamp": "2019-08-26T05:09:37Z",
+      "version": 3,
+      "changeset": 73733490,
+      "user": "GrabVNTommy",
+      "uid": 8421597,
+      "tags": {
+        "name": "Bệnh viện Tân Bình",
+        "addr:housenumber": "4/16",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "4/16 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637749,
+      "lat": 10.801801,
+      "lon": 106.6366822,
+      "timestamp": "2022-05-09T09:37:43Z",
+      "version": 4,
+      "changeset": 120738606,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Bệnh Viện Tân Bình",
+        "addr:housenumber": "4/16",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "4/16 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637749,
+      "lat": 10.8017969,
+      "lon": 106.6367198,
+      "timestamp": "2023-12-20T18:57:30Z",
+      "version": 5,
+      "changeset": 145342638,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Bệnh Viện Tân Bình",
+        "addr:housenumber": "4/16",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "4/16 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637749,
+      "lat": 10.8014473,
+      "lon": 106.6376354,
+      "timestamp": "2024-03-25T13:57:41Z",
+      "version": 6,
+      "changeset": 149132693,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "4/16",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chợ Võ Thành Trang",
+        "note": "4/16 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637750,
+      "lat": 10.8017077,
+      "lon": 106.6370535,
+      "timestamp": "2014-10-27T16:03:58Z",
+      "version": 1,
+      "changeset": 26367078,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "480 Trường Chinh",
+        "name": "Bệnh viện Tân Bình",
+        "highway": "bus_stop",
+        "addr:housenumber": "480",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637750,
+      "lat": 10.8016939,
+      "lon": 106.6370453,
+      "timestamp": "2018-03-09T14:28:28Z",
+      "version": 2,
+      "changeset": 57033967,
+      "user": "8221",
+      "uid": 7649715,
+      "tags": {
+        "note": "480 Trường Chinh",
+        "name": "Bệnh viện Tân Bình",
+        "highway": "bus_stop",
+        "addr:housenumber": "480",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637750,
+      "lat": 10.8016939,
+      "lon": 106.6370453,
+      "timestamp": "2022-05-09T09:37:43Z",
+      "version": 3,
+      "changeset": 120738606,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Bệnh Viện Tân Bình",
+        "addr:housenumber": "480",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "480 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637750,
+      "lat": 10.8016898,
+      "lon": 106.637043,
+      "timestamp": "2023-12-21T10:49:48Z",
+      "version": 4,
+      "changeset": 145365984,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Bệnh Viện Tân Bình",
+        "addr:housenumber": "480",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "480 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152637750,
+      "lat": 10.8012641,
+      "lon": 106.6376031,
+      "timestamp": "2024-03-24T08:37:15Z",
+      "version": 5,
+      "changeset": 149078752,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "480",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chợ Võ Thành Trang",
+        "note": "480 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700068,
+      "lat": 10.8042145,
+      "lon": 106.635712,
+      "timestamp": "2014-10-27T16:50:57Z",
+      "version": 1,
+      "changeset": 26368133,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Trường Chinh - Tân Kỳ Tân Quý",
+        "addr:street": "Trường Chinh",
+        "note": "638 Trường Chinh",
+        "addr:housenumber": "638"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700068,
+      "lat": 10.8042145,
+      "lon": 106.635712,
+      "timestamp": "2022-05-25T05:57:05Z",
+      "version": 2,
+      "changeset": 121456229,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Trường Chinh - Tân Kỳ Tân Quý",
+        "note": "638 Trường Chinh",
+        "addr:housenumber": "638",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700068,
+      "lat": 10.8042097,
+      "lon": 106.6356958,
+      "timestamp": "2023-12-25T16:49:58Z",
+      "version": 3,
+      "changeset": 145504961,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Trường Chinh - Tân Kỳ Tân Quý",
+        "note": "638 Trường Chinh",
+        "addr:housenumber": "638",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700068,
+      "lat": 10.804763,
+      "lon": 106.6355732,
+      "timestamp": "2024-03-24T08:37:15Z",
+      "version": 4,
+      "changeset": 149078752,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "638",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã tư Tân Kỳ Tân Quý",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700070,
+      "lat": 10.8063065,
+      "lon": 106.635077,
+      "timestamp": "2014-10-27T16:50:57Z",
+      "version": 1,
+      "changeset": 26368133,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "680A Trường Chinh",
+        "name": "Ngã 3 Bà Quẹo",
+        "highway": "bus_stop",
+        "addr:housenumber": "680A",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700070,
+      "lat": 10.8063065,
+      "lon": 106.635077,
+      "timestamp": "2022-05-17T03:53:11Z",
+      "version": 2,
+      "changeset": 121076023,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Ngã 3 Bà Quẹo",
+        "addr:housenumber": "680A",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "680A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700070,
+      "lat": 10.8063016,
+      "lon": 106.6350644,
+      "timestamp": "2023-12-25T16:49:58Z",
+      "version": 3,
+      "changeset": 145504961,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Ngã 3 Bà Quẹo",
+        "addr:housenumber": "680A",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "680A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700070,
+      "lat": 10.8063016,
+      "lon": 106.6350741,
+      "timestamp": "2024-01-06T10:37:57Z",
+      "version": 4,
+      "changeset": 145951403,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343,
+      "tags": {
+        "name": "Trạm Xe Bus Ngã 3 Bà Quẹo",
+        "addr:housenumber": "680A",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "680A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700070,
+      "lat": 10.8060668,
+      "lon": 106.6351822,
+      "timestamp": "2024-03-25T13:57:41Z",
+      "version": 5,
+      "changeset": 149132693,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "680A",
+        "addr:street": "Trường Chinh",
+        "name": "Siêu thị Big C - 680 Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "680A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700070,
+      "lat": 10.8060668,
+      "lon": 106.6351822,
+      "timestamp": "2024-12-24T00:50:26Z",
+      "version": 6,
+      "changeset": 160559093,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "name": "Big C Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "680A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700070,
+      "lat": 10.8060668,
+      "lon": 106.6351822,
+      "timestamp": "2025-01-29T15:42:43Z",
+      "version": 7,
+      "changeset": 161902628,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "GO! Trường Chinh",
+        "note": "680A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8064017,
+      "lon": 106.6349212,
+      "timestamp": "2014-10-27T16:50:57Z",
+      "version": 1,
+      "changeset": 26368133,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "1/1 Trường Chinh",
+        "name": "Ngã 3 Bà Quẹo",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8064017,
+      "lon": 106.6349212,
+      "timestamp": "2022-05-17T03:53:11Z",
+      "version": 2,
+      "changeset": 121076023,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Ngã 3 Bà Quẹo",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8064071,
+      "lon": 106.6349361,
+      "timestamp": "2023-12-25T16:49:58Z",
+      "version": 3,
+      "changeset": 145504961,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Ngã 3 Bà Quẹo",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.806356,
+      "lon": 106.634886,
+      "timestamp": "2024-01-06T10:37:57Z",
+      "version": 4,
+      "changeset": 145951403,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343,
+      "tags": {
+        "name": "Trạm Xe Bus Ngã 3 Bà Quẹo",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8063621,
+      "lon": 106.6348995,
+      "timestamp": "2024-01-06T11:09:28Z",
+      "version": 5,
+      "changeset": 145952362,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Ngã 3 Bà Quẹo",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8062278,
+      "lon": 106.6348849,
+      "timestamp": "2024-03-25T13:57:41Z",
+      "version": 6,
+      "changeset": 149132693,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Siêu thị Big C - 1/1 Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8063153,
+      "lon": 106.6347712,
+      "timestamp": "2024-07-22T09:25:32Z",
+      "version": 7,
+      "changeset": 154252963,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Siêu thị Big C - 1/1 Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8063153,
+      "lon": 106.6347712,
+      "timestamp": "2024-12-24T00:50:26Z",
+      "version": 8,
+      "changeset": 160559093,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "name": "Big C Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8063153,
+      "lon": 106.6347712,
+      "timestamp": "2025-01-29T15:42:43Z",
+      "version": 9,
+      "changeset": 161902628,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "name": "GO! Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152700071,
+      "lat": 10.8063153,
+      "lon": 106.6347712,
+      "timestamp": "2025-06-03T15:59:38Z",
+      "version": 10,
+      "changeset": 167142046,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Siêu thị BigC",
+        "note": "1/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152711998,
+      "lat": 10.8082205,
+      "lon": 106.6345665,
+      "timestamp": "2014-10-27T17:01:23Z",
+      "version": 1,
+      "changeset": 26368340,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện đài tưởng niệm Trường Chinh",
+        "addr:street": "Trường Chinh",
+        "note": "19B1 Trường Chinh",
+        "addr:housenumber": "19B1"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152711998,
+      "lat": 10.8082205,
+      "lon": 106.6345665,
+      "timestamp": "2022-05-12T05:04:52Z",
+      "version": 2,
+      "changeset": 120867217,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Đài Tưởng Niệm Trường Chinh",
+        "note": "19B1 Trường Chinh",
+        "addr:housenumber": "19B1",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152711998,
+      "lat": 10.8081911,
+      "lon": 106.6346364,
+      "timestamp": "2024-03-22T15:54:59Z",
+      "version": 3,
+      "changeset": 149020015,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "19B1",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mũi tàu Cộng Hòa",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973652,
+      "lat": 10.8264571,
+      "lon": 106.6262662,
+      "timestamp": "2014-10-28T09:57:14Z",
+      "version": 1,
+      "changeset": 26383625,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "1/17A Trường Chinh",
+        "name": "Trường Chinh - Nguyễn Văn Quá",
+        "highway": "bus_stop",
+        "addr:street": "Trường Chinh",
+        "addr:housenumber": "1/17A"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973652,
+      "lat": 10.8264571,
+      "lon": 106.6262429,
+      "timestamp": "2016-03-20T06:18:21Z",
+      "version": 2,
+      "changeset": 37950178,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "note": "1/17A Trường Chinh",
+        "name": "Trường Chinh - Nguyễn Văn Quá",
+        "highway": "bus_stop",
+        "addr:street": "Trường Chinh",
+        "addr:housenumber": "1/17A"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973652,
+      "lat": 10.8264571,
+      "lon": 106.6262429,
+      "timestamp": "2022-05-04T04:27:57Z",
+      "version": 3,
+      "changeset": 120522899,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "public_transport": "platform",
+        "note": "1/17A Trường Chinh",
+        "highway": "bus_stop",
+        "bus": "yes",
+        "name": "Trạm Xe Bus Trường Chinh - Nguyễn Văn Quá",
+        "addr:housenumber": "1/17A",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973652,
+      "lat": 10.8264571,
+      "lon": 106.6262429,
+      "timestamp": "2023-03-12T06:47:23Z",
+      "version": 4,
+      "changeset": 133575231,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "note": "1/17A Trường Chinh",
+        "name": "Trạm Xe Bus Trường Chinh - Nguyễn Văn Quá",
+        "addr:housenumber": "1/17A",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973652,
+      "lat": 10.8264571,
+      "lon": 106.6262429,
+      "timestamp": "2023-03-12T06:47:31Z",
+      "version": 5,
+      "changeset": 133575233,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "name": "Trạm Xe Bus Trường Chinh - Nguyễn Văn Quá",
+        "addr:housenumber": "1/17A",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/17A Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973652,
+      "lat": 10.8264571,
+      "lon": 106.6262429,
+      "timestamp": "2023-03-12T06:47:44Z",
+      "version": 6,
+      "changeset": 133575238,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "yes",
+        "name": "Trạm Xe Bus Trường Chinh - Nguyễn Văn Quá",
+        "addr:housenumber": "1/17A",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "1/17A Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973652,
+      "lat": 10.8264571,
+      "lon": 106.6262429,
+      "timestamp": "2023-03-12T07:47:40Z",
+      "version": 7,
+      "changeset": 133576339,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "name": "Trạm Xe Bus Trường Chinh - Nguyễn Văn Quá",
+        "addr:housenumber": "1/17A",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "note": "1/17A Trường Chinh",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973652,
+      "lat": 10.8268731,
+      "lon": 106.6259108,
+      "timestamp": "2024-03-22T15:54:59Z",
+      "version": 8,
+      "changeset": 149020015,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "1/17A",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Cầu Tham Lương - Siêu thị Thiên Hòa",
+        "note": "1/17A Trường Chinh",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973653,
+      "lat": 10.8295054,
+      "lon": 106.6235546,
+      "timestamp": "2014-10-28T09:57:14Z",
+      "version": 1,
+      "changeset": 26383625,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "113 Trường Chinh",
+        "name": "Điện máy Chợ Lớn",
+        "highway": "bus_stop",
+        "addr:housenumber": "113",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973653,
+      "lat": 10.829463,
+      "lon": 106.6235423,
+      "timestamp": "2016-03-20T06:18:20Z",
+      "version": 2,
+      "changeset": 37950178,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "note": "113 Trường Chinh",
+        "name": "Điện máy Chợ Lớn",
+        "highway": "bus_stop",
+        "addr:housenumber": "113",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3153973653,
+      "lat": 10.829463,
+      "lon": 106.6235423,
+      "timestamp": "2022-05-04T04:27:57Z",
+      "version": 3,
+      "changeset": 120522899,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "addr:housenumber": "113",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Điện Máy Chợ Lớn",
+        "note": "113 Trường Chinh",
+        "public_transport": "platform"
+      }
+    }
+  ]
+}

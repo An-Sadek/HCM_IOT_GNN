@@ -1,0 +1,726 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3169684690,
+      "lat": 10.8070116,
+      "lon": 106.664483,
+      "timestamp": "2014-11-06T01:38:08Z",
+      "version": 1,
+      "changeset": 26584026,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "ĐH Hoa Sen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684690,
+      "lat": 10.8070071,
+      "lon": 106.6644611,
+      "timestamp": "2016-02-22T06:58:31Z",
+      "version": 2,
+      "changeset": 37360053,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "ĐH Hoa Sen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684691,
+      "lat": 10.8134125,
+      "lon": 106.666407,
+      "timestamp": "2014-11-06T01:38:08Z",
+      "version": 1,
+      "changeset": 26584026,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Sân Bay Tân Sơn Nhất"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684691,
+      "lat": 10.8134125,
+      "lon": 106.666407,
+      "timestamp": "2022-05-05T03:19:27Z",
+      "version": 2,
+      "changeset": 120566622,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Sân Bay Tân Sơn Nhất",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684691,
+      "lat": 10.8134106,
+      "lon": 106.6664069,
+      "timestamp": "2023-12-11T12:38:20Z",
+      "version": 3,
+      "changeset": 144998197,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Sân Bay Tân Sơn Nhất",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684691,
+      "lat": 10.8130989,
+      "lon": 106.6690577,
+      "timestamp": "2024-04-28T01:37:49Z",
+      "version": 4,
+      "changeset": 150601520,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Đoàn tiếp viên - 76-78 Hồng Hà",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684691,
+      "lat": 10.8130989,
+      "lon": 106.6690577,
+      "timestamp": "2026-01-15T09:25:16Z",
+      "version": 5,
+      "changeset": 177250379,
+      "user": "ron5190",
+      "uid": 1804846,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "name": "Đoàn tiếp viên - 76-78 Hồng Hà",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684691,
+      "lat": 10.8130989,
+      "lon": 106.6690577,
+      "timestamp": "2026-01-15T09:25:17Z",
+      "version": 6,
+      "changeset": 177250396,
+      "user": "ron5190",
+      "uid": 1804846,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đoàn tiếp viên - 76-78 Hồng Hà"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684691,
+      "lat": 10.8130989,
+      "lon": 106.6690577,
+      "timestamp": "2026-01-15T09:25:19Z",
+      "version": 7,
+      "changeset": 177250409,
+      "user": "ron5190",
+      "uid": 1804846,
+      "tags": {
+        "shelter": "no",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đoàn tiếp viên - 76-78 Hồng Hà",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684691,
+      "lat": 10.8130989,
+      "lon": 106.6690577,
+      "timestamp": "2026-01-15T09:25:23Z",
+      "version": 8,
+      "changeset": 177250615,
+      "user": "ron5190",
+      "uid": 1804846,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Đoàn tiếp viên - 76-78 Hồng Hà",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684692,
+      "lat": 10.8143351,
+      "lon": 106.6706523,
+      "timestamp": "2014-11-06T01:38:08Z",
+      "version": 1,
+      "changeset": 26584026,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nguyễn Thái Sơn - Hồng Hà"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684692,
+      "lat": 10.814349,
+      "lon": 106.6706523,
+      "timestamp": "2017-06-26T04:20:22Z",
+      "version": 2,
+      "changeset": 49827004,
+      "user": "mrjoba",
+      "uid": 4677744,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nguyễn Thái Sơn - Hồng Hà"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684692,
+      "lat": 10.8143411,
+      "lon": 106.6706282,
+      "timestamp": "2018-07-04T02:10:43Z",
+      "version": 3,
+      "changeset": 60394724,
+      "user": "naik4",
+      "uid": 7671613,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nguyễn Thái Sơn - Hồng Hà"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169684692,
+      "lat": 10.8143411,
+      "lon": 106.6706282,
+      "timestamp": "2022-05-05T03:25:56Z",
+      "version": 4,
+      "changeset": 120566671,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nguyễn Thái Sơn - Hồng Hà",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694166,
+      "lat": 10.8300219,
+      "lon": 106.6706946,
+      "timestamp": "2014-11-06T01:43:40Z",
+      "version": 1,
+      "changeset": 26584075,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nhà Thờ Xóm Thuốc"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694166,
+      "lat": 10.8299958,
+      "lon": 106.6706701,
+      "timestamp": "2015-07-08T04:24:12Z",
+      "version": 2,
+      "changeset": 32486860,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nhà Thờ Xóm Thuốc"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694166,
+      "lat": 10.8299958,
+      "lon": 106.6706701,
+      "timestamp": "2020-08-07T07:56:56Z",
+      "version": 3,
+      "changeset": 89078128,
+      "user": "wvdp",
+      "uid": 436419,
+      "tags": {
+        "name": "Nhà Thờ Xóm Thuốc",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694166,
+      "lat": 10.8299958,
+      "lon": 106.6706701,
+      "timestamp": "2022-05-05T04:14:23Z",
+      "version": 4,
+      "changeset": 120567493,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Nhà Thờ Xóm Thuốc",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694168,
+      "lat": 10.8353009,
+      "lon": 106.6629108,
+      "timestamp": "2014-11-06T01:43:40Z",
+      "version": 1,
+      "changeset": 26584075,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Chùa Huỳnh Kim"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694168,
+      "lat": 10.8353009,
+      "lon": 106.6629108,
+      "timestamp": "2020-08-07T07:56:56Z",
+      "version": 2,
+      "changeset": 89078128,
+      "user": "wvdp",
+      "uid": 436419,
+      "tags": {
+        "name": "Chùa Huỳnh Kim",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694168,
+      "lat": 10.8353009,
+      "lon": 106.6629108,
+      "timestamp": "2022-05-11T03:12:40Z",
+      "version": 3,
+      "changeset": 120816882,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Chùa Huỳnh Kim",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694169,
+      "lat": 10.8351316,
+      "lon": 106.6631196,
+      "timestamp": "2014-11-06T01:43:40Z",
+      "version": 1,
+      "changeset": 26584075,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Chùa Huỳnh Kim"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694169,
+      "lat": 10.8351316,
+      "lon": 106.6631196,
+      "timestamp": "2020-08-07T07:56:56Z",
+      "version": 2,
+      "changeset": 89078128,
+      "user": "wvdp",
+      "uid": 436419,
+      "tags": {
+        "name": "Chùa Huỳnh Kim",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694169,
+      "lat": 10.8351316,
+      "lon": 106.6631196,
+      "timestamp": "2022-05-11T03:12:40Z",
+      "version": 3,
+      "changeset": 120816882,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Chùa Huỳnh Kim",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694169,
+      "lat": 10.8350641,
+      "lon": 106.6631358,
+      "timestamp": "2024-03-24T14:39:22Z",
+      "version": 4,
+      "changeset": 149091947,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chùa Huỳnh Kim",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694170,
+      "lat": 10.8367681,
+      "lon": 106.6573173,
+      "timestamp": "2014-11-06T01:43:40Z",
+      "version": 1,
+      "changeset": 26584075,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nhà Thờ Hạnh Thông Tây"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694170,
+      "lat": 10.8367583,
+      "lon": 106.6573097,
+      "timestamp": "2015-07-08T04:15:39Z",
+      "version": 2,
+      "changeset": 32486860,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nhà Thờ Hạnh Thông Tây"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694170,
+      "lat": 10.8367583,
+      "lon": 106.6573097,
+      "timestamp": "2022-05-18T04:25:33Z",
+      "version": 3,
+      "changeset": 121124178,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà Thờ Hạnh Thông Tây",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694170,
+      "lat": 10.8368656,
+      "lon": 106.6571176,
+      "timestamp": "2024-03-24T14:39:22Z",
+      "version": 4,
+      "changeset": 149091947,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chợ Hạnh Thông Tây",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694171,
+      "lat": 10.8368615,
+      "lon": 106.6566554,
+      "timestamp": "2014-11-06T01:43:40Z",
+      "version": 1,
+      "changeset": 26584075,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nhà Thờ Hạnh Thông Tây"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694171,
+      "lat": 10.836848,
+      "lon": 106.6566444,
+      "timestamp": "2015-07-08T04:15:39Z",
+      "version": 2,
+      "changeset": 32486860,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nhà Thờ Hạnh Thông Tây"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694171,
+      "lat": 10.836848,
+      "lon": 106.6566444,
+      "timestamp": "2022-05-18T04:25:33Z",
+      "version": 3,
+      "changeset": 121124178,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà Thờ Hạnh Thông Tây",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694171,
+      "lat": 10.8365939,
+      "lon": 106.6574207,
+      "timestamp": "2024-03-24T14:39:22Z",
+      "version": 4,
+      "changeset": 149091947,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chợ Hạnh Thông Tây",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694172,
+      "lat": 10.8385264,
+      "lon": 106.650326,
+      "timestamp": "2014-11-06T01:43:40Z",
+      "version": 1,
+      "changeset": 26584075,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Xăng dầu 96 Quang Trung"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694172,
+      "lat": 10.8385162,
+      "lon": 106.6503181,
+      "timestamp": "2015-07-08T04:15:39Z",
+      "version": 2,
+      "changeset": 32486860,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Xăng dầu 96 Quang Trung"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694172,
+      "lat": 10.8385162,
+      "lon": 106.6503181,
+      "timestamp": "2022-05-04T07:26:40Z",
+      "version": 3,
+      "changeset": 120528317,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Xăng Dầu 96 Quang Trung",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694172,
+      "lat": 10.8384948,
+      "lon": 106.650511,
+      "timestamp": "2024-03-24T14:39:22Z",
+      "version": 4,
+      "changeset": 149091947,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dệt may Phương Đông",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694174,
+      "lat": 10.8400228,
+      "lon": 106.6463196,
+      "timestamp": "2014-11-06T01:43:40Z",
+      "version": 1,
+      "changeset": 26584075,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Làng SOS"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694174,
+      "lat": 10.840036,
+      "lon": 106.6462684,
+      "timestamp": "2015-07-07T04:51:07Z",
+      "version": 2,
+      "changeset": 32462956,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Làng SOS"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694174,
+      "lat": 10.840036,
+      "lon": 106.6462684,
+      "timestamp": "2022-05-04T08:02:37Z",
+      "version": 3,
+      "changeset": 120529776,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Làng Trẻ Em SOS",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694174,
+      "lat": 10.8399431,
+      "lon": 106.6464594,
+      "timestamp": "2024-03-24T14:39:22Z",
+      "version": 4,
+      "changeset": 149091947,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Làng Trẻ em SOS",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694174,
+      "lat": 10.8399431,
+      "lon": 106.6464594,
+      "timestamp": "2024-04-16T02:57:34Z",
+      "version": 5,
+      "changeset": 150063669,
+      "user": "VLD534",
+      "uid": 16022719,
+      "tags": {
+        "name": "Trạm Xe Bus Làng Trẻ Em SOS",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694174,
+      "lat": 10.8399431,
+      "lon": 106.6464594,
+      "timestamp": "2024-12-28T20:02:11Z",
+      "version": 6,
+      "changeset": 160728270,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "name": "Làng Trẻ Em SOS",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3169694174,
+      "lat": 10.8399431,
+      "lon": 106.6464594,
+      "timestamp": "2024-12-29T09:03:01Z",
+      "version": 7,
+      "changeset": 160741156,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Làng Trẻ em SOS",
+        "public_transport": "platform"
+      }
+    }
+  ]
+}

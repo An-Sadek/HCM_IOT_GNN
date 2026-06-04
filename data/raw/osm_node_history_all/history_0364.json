@@ -1,0 +1,114 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 2340083147,
+      "lat": 10.839597,
+      "lon": 106.6991167,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083150,
+      "lat": 10.8426976,
+      "lon": 106.6965847,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083154,
+      "lat": 10.8491648,
+      "lon": 106.696949,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083155,
+      "lat": 10.8430373,
+      "lon": 106.6964828,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083156,
+      "lat": 10.8423341,
+      "lon": 106.6967993,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083158,
+      "lat": 10.851346,
+      "lon": 106.6980031,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083159,
+      "lat": 10.8510167,
+      "lon": 106.6977858,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083164,
+      "lat": 10.8416439,
+      "lon": 106.6973808,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083165,
+      "lat": 10.8498392,
+      "lon": 106.6972815,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    },
+    {
+      "type": "node",
+      "id": 2340083166,
+      "lat": 10.8476237,
+      "lon": 106.6962435,
+      "timestamp": "2013-06-11T03:45:59Z",
+      "version": 1,
+      "changeset": 16504586,
+      "user": "DuongQua",
+      "uid": 423184
+    }
+  ]
+}

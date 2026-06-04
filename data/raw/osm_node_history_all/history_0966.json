@@ -1,0 +1,231 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5767128968,
+      "lat": 10.8681229,
+      "lon": 106.7629024,
+      "timestamp": "2018-07-18T02:20:15Z",
+      "version": 1,
+      "changeset": 60817597,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128968,
+      "lat": 10.8681163,
+      "lon": 106.7629279,
+      "timestamp": "2018-07-18T03:15:42Z",
+      "version": 2,
+      "changeset": 60818334,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128969,
+      "lat": 10.8689487,
+      "lon": 106.7631224,
+      "timestamp": "2018-07-18T02:20:15Z",
+      "version": 1,
+      "changeset": 60817597,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128969,
+      "lat": 10.8689553,
+      "lon": 106.7631398,
+      "timestamp": "2018-07-18T03:15:42Z",
+      "version": 2,
+      "changeset": 60818334,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128969,
+      "lat": 10.8689355,
+      "lon": 106.7631264,
+      "timestamp": "2018-07-18T04:20:26Z",
+      "version": 3,
+      "changeset": 60819305,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128970,
+      "lat": 10.8692477,
+      "lon": 106.763231,
+      "timestamp": "2018-07-18T02:20:15Z",
+      "version": 1,
+      "changeset": 60817597,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128970,
+      "lat": 10.8692543,
+      "lon": 106.7632484,
+      "timestamp": "2018-07-18T03:15:42Z",
+      "version": 2,
+      "changeset": 60818334,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128970,
+      "lat": 10.8692398,
+      "lon": 106.7632216,
+      "timestamp": "2018-07-18T04:20:26Z",
+      "version": 3,
+      "changeset": 60819305,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128971,
+      "lat": 10.8694307,
+      "lon": 106.7632686,
+      "timestamp": "2018-07-18T02:20:15Z",
+      "version": 1,
+      "changeset": 60817597,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128971,
+      "lat": 10.8694373,
+      "lon": 106.763286,
+      "timestamp": "2018-07-18T03:15:42Z",
+      "version": 2,
+      "changeset": 60818334,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767128971,
+      "lat": 10.8694518,
+      "lon": 106.7632632,
+      "timestamp": "2018-07-18T04:20:26Z",
+      "version": 3,
+      "changeset": 60819305,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767129000,
+      "lat": 10.8672473,
+      "lon": 106.761072,
+      "timestamp": "2018-07-18T02:20:15Z",
+      "version": 1,
+      "changeset": 60817597,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767129000,
+      "lat": 10.867271,
+      "lon": 106.7610707,
+      "timestamp": "2018-07-20T03:56:26Z",
+      "version": 2,
+      "changeset": 60888540,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767129009,
+      "lat": 10.8671226,
+      "lon": 106.7606166,
+      "timestamp": "2018-07-18T02:20:16Z",
+      "version": 1,
+      "changeset": 60817597,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767129040,
+      "lat": 10.866907,
+      "lon": 106.7597224,
+      "timestamp": "2018-07-18T02:20:16Z",
+      "version": 1,
+      "changeset": 60817597,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5767129040,
+      "lat": 10.866907,
+      "lon": 106.7597224,
+      "timestamp": "2021-02-24T14:25:20Z",
+      "version": 2,
+      "changeset": 99911899,
+      "user": "Viet Sat",
+      "uid": 12731982,
+      "tags": {
+        "name": "Cửa hàng kỹ nghệ sắt - inox"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5767129040,
+      "lat": 10.8667785,
+      "lon": 106.759746,
+      "timestamp": "2022-05-12T02:12:57Z",
+      "version": 3,
+      "changeset": 120863847,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Cửa Hàng Kỹ Nghệ Sắt - Inox",
+        "shop": "repair"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5767136149,
+      "lat": 10.8615468,
+      "lon": 106.6663509,
+      "timestamp": "2018-07-18T02:27:56Z",
+      "version": 1,
+      "changeset": 60817682,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5767136159,
+      "lat": 10.8615534,
+      "lon": 106.6666406,
+      "timestamp": "2018-07-18T02:27:56Z",
+      "version": 1,
+      "changeset": 60817682,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5767136176,
+      "lat": 10.8617459,
+      "lon": 106.6667721,
+      "timestamp": "2018-07-18T02:27:56Z",
+      "version": 1,
+      "changeset": 60817682,
+      "user": "lakkarssu",
+      "uid": 8196672
+    }
+  ]
+}

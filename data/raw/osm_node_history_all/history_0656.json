@@ -1,0 +1,545 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4609802777,
+      "lat": 10.768169,
+      "lon": 106.6956216,
+      "timestamp": "2017-01-15T14:26:00Z",
+      "version": 1,
+      "changeset": 45191624,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4609802777,
+      "lat": 10.7681795,
+      "lon": 106.6955036,
+      "timestamp": "2017-01-15T14:45:22Z",
+      "version": 2,
+      "changeset": 45192060,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4609802777,
+      "lat": 10.7671192,
+      "lon": 106.694555,
+      "timestamp": "2017-01-15T14:54:47Z",
+      "version": 3,
+      "changeset": 45192278,
+      "user": "Gã Trùm",
+      "uid": 5083656,
+      "tags": {
+        "note": "12 Trần Hưng Đạo",
+        "highway": "bus_stop",
+        "name": "Đối diện Ký Túc Xá"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4609802777,
+      "lat": 10.7671192,
+      "lon": 106.694555,
+      "timestamp": "2017-09-22T06:29:25Z",
+      "version": 4,
+      "changeset": 52265259,
+      "user": "Jaypep1",
+      "uid": 6591908,
+      "tags": {
+        "name:en": "Route 152",
+        "highway": "bus_stop",
+        "name": "Đối diện Ký Túc Xá",
+        "note": "12 Trần Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4609802777,
+      "lat": 10.7671192,
+      "lon": 106.694555,
+      "timestamp": "2017-09-22T06:35:58Z",
+      "version": 5,
+      "changeset": 52265455,
+      "user": "Jaypep1",
+      "uid": 6591908,
+      "tags": {
+        "name:en": "Bus Route 152 from Airport",
+        "highway": "bus_stop",
+        "name": "Đối diện Ký Túc Xá",
+        "note": "12 Trần Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4609802777,
+      "lat": 10.7671192,
+      "lon": 106.694555,
+      "timestamp": "2017-09-22T06:41:12Z",
+      "version": 6,
+      "changeset": 52265623,
+      "user": "Jaypep1",
+      "uid": 6591908,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện Ký Túc Xá",
+        "name:en": "Bus 152 from Airport",
+        "note": "12 Trần Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4609802777,
+      "lat": 10.7671317,
+      "lon": 106.6945409,
+      "timestamp": "2019-09-11T14:35:19Z",
+      "version": 7,
+      "changeset": 74358854,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện Ký Túc Xá",
+        "name:en": "Bus 152 from Airport",
+        "note": "12 Trần Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4609802777,
+      "lat": 10.7671324,
+      "lon": 106.6945416,
+      "timestamp": "2019-09-11T15:27:43Z",
+      "version": 8,
+      "changeset": 74361356,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện Ký Túc Xá",
+        "name:en": "Bus 152 from Airport",
+        "note": "12 Trần Hưng Đạo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4609836317,
+      "lat": 10.7564312,
+      "lon": 106.6852821,
+      "timestamp": "2017-01-15T14:35:26Z",
+      "version": 1,
+      "changeset": 45191827,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4609836317,
+      "lat": 10.7564246,
+      "lon": 106.6852647,
+      "timestamp": "2017-01-16T22:12:58Z",
+      "version": 2,
+      "changeset": 45228659,
+      "user": "samely",
+      "uid": 2512300
+    },
+    {
+      "type": "node",
+      "id": 4609836317,
+      "lat": 10.7564206,
+      "lon": 106.6852687,
+      "timestamp": "2018-08-03T06:11:42Z",
+      "version": 3,
+      "changeset": 61317107,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 4609836317,
+      "lat": 10.7564208,
+      "lon": 106.6852712,
+      "timestamp": "2019-09-12T15:57:14Z",
+      "version": 4,
+      "changeset": 74399827,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 4609836317,
+      "lat": 10.7564245,
+      "lon": 106.6852661,
+      "timestamp": "2022-02-11T03:55:26Z",
+      "version": 5,
+      "changeset": 117270084,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4609836317,
+      "lat": 10.7564168,
+      "lon": 106.6852863,
+      "timestamp": "2023-07-01T00:44:26Z",
+      "version": 6,
+      "changeset": 137977373,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4609877991,
+      "lat": 10.7695381,
+      "lon": 106.6965492,
+      "timestamp": "2017-01-15T14:45:22Z",
+      "version": 1,
+      "changeset": 45192060,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4609877991,
+      "lat": 10.7701547,
+      "lon": 106.6971125,
+      "timestamp": "2017-01-15T14:54:47Z",
+      "version": 2,
+      "changeset": 45192278,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4609877991,
+      "lat": 10.7701733,
+      "lon": 106.6971338,
+      "timestamp": "2017-01-15T14:59:43Z",
+      "version": 3,
+      "changeset": 45192371,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4609917916,
+      "lat": 10.7702264,
+      "lon": 106.6972736,
+      "timestamp": "2017-01-15T14:59:43Z",
+      "version": 1,
+      "changeset": 45192371,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4609969792,
+      "lat": 10.7640445,
+      "lon": 106.6904443,
+      "timestamp": "2017-01-15T15:28:04Z",
+      "version": 1,
+      "changeset": 45192994,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4609969792,
+      "lat": 10.7640503,
+      "lon": 106.6904512,
+      "timestamp": "2018-07-24T05:49:01Z",
+      "version": 2,
+      "changeset": 61006481,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 4609969792,
+      "lat": 10.7640457,
+      "lon": 106.6904572,
+      "timestamp": "2019-07-23T08:46:37Z",
+      "version": 3,
+      "changeset": 72545846,
+      "user": "grabtaxi18",
+      "uid": 10141211
+    },
+    {
+      "type": "node",
+      "id": 4609969792,
+      "lat": 10.7640631,
+      "lon": 106.6904484,
+      "timestamp": "2023-09-11T06:42:11Z",
+      "version": 4,
+      "changeset": 141093835,
+      "user": "Arkskyle",
+      "uid": 17344224
+    },
+    {
+      "type": "node",
+      "id": 4610019123,
+      "lat": 10.7718767,
+      "lon": 106.6986499,
+      "timestamp": "2017-01-15T15:55:06Z",
+      "version": 1,
+      "changeset": 45193546,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4610019123,
+      "lat": 10.7716724,
+      "lon": 106.6983975,
+      "timestamp": "2022-01-09T09:14:22Z",
+      "version": 2,
+      "changeset": 115934028,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4610019123,
+      "lat": 10.7717782,
+      "lon": 106.698731,
+      "timestamp": "2022-06-19T22:45:37Z",
+      "version": 3,
+      "changeset": 122595898,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 4610019123,
+      "lat": 10.7717707,
+      "lon": 106.6987219,
+      "timestamp": "2022-07-17T22:44:00Z",
+      "version": 4,
+      "changeset": 123737262,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 4610019123,
+      "lat": 10.7717705,
+      "lon": 106.6987217,
+      "timestamp": "2022-07-17T22:47:33Z",
+      "version": 5,
+      "changeset": 123737319,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 4610019130,
+      "lat": 10.7712673,
+      "lon": 106.6986589,
+      "timestamp": "2017-01-15T15:55:06Z",
+      "version": 1,
+      "changeset": 45193546,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4610019131,
+      "lat": 10.7717741,
+      "lon": 106.6987406,
+      "timestamp": "2017-01-15T15:55:06Z",
+      "version": 1,
+      "changeset": 45193546,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4610019131,
+      "lat": 10.7717807,
+      "lon": 106.6987486,
+      "timestamp": "2019-08-27T21:30:38Z",
+      "version": 2,
+      "changeset": 73815018,
+      "user": "daFisch",
+      "uid": 8759590
+    },
+    {
+      "type": "node",
+      "id": 4610019131,
+      "lat": 10.771621,
+      "lon": 106.6984551,
+      "timestamp": "2022-01-09T09:14:22Z",
+      "version": 3,
+      "changeset": 115934028,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4610019131,
+      "lat": 10.7715682,
+      "lon": 106.6985059,
+      "timestamp": "2022-05-14T19:05:42Z",
+      "version": 4,
+      "changeset": 120990061,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 4610621999,
+      "lat": 10.771376,
+      "lon": 106.6931323,
+      "timestamp": "2017-01-15T21:40:34Z",
+      "version": 1,
+      "changeset": 45200342,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4610621999,
+      "lat": 10.7713732,
+      "lon": 106.693141,
+      "timestamp": "2017-01-15T21:46:29Z",
+      "version": 2,
+      "changeset": 45200478,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4610621999,
+      "lat": 10.7712723,
+      "lon": 106.6930696,
+      "timestamp": "2017-02-05T21:14:58Z",
+      "version": 3,
+      "changeset": 45840220,
+      "user": "Oreg",
+      "uid": 1926670
+    },
+    {
+      "type": "node",
+      "id": 4610621999,
+      "lat": 10.7712796,
+      "lon": 106.6930681,
+      "timestamp": "2017-11-19T22:44:55Z",
+      "version": 4,
+      "changeset": 53935179,
+      "user": "gpesquero",
+      "uid": 3584
+    },
+    {
+      "type": "node",
+      "id": 4610621999,
+      "lat": 10.7713389,
+      "lon": 106.6930668,
+      "timestamp": "2018-03-01T02:19:37Z",
+      "version": 5,
+      "changeset": 56772721,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4610621999,
+      "lat": 10.771339,
+      "lon": 106.6930676,
+      "timestamp": "2018-03-24T02:17:25Z",
+      "version": 6,
+      "changeset": 57473857,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4610621999,
+      "lat": 10.771339,
+      "lon": 106.693069,
+      "timestamp": "2018-07-16T08:18:47Z",
+      "version": 7,
+      "changeset": 60752890,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 4610622005,
+      "lat": 10.7714208,
+      "lon": 106.6932154,
+      "timestamp": "2017-01-15T21:40:34Z",
+      "version": 1,
+      "changeset": 45200342,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4610622005,
+      "lat": 10.7713922,
+      "lon": 106.6933358,
+      "timestamp": "2017-01-15T21:46:30Z",
+      "version": 2,
+      "changeset": 45200478,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 4610622005,
+      "lat": 10.7714596,
+      "lon": 106.6933423,
+      "timestamp": "2017-02-05T21:14:58Z",
+      "version": 3,
+      "changeset": 45840220,
+      "user": "Oreg",
+      "uid": 1926670
+    },
+    {
+      "type": "node",
+      "id": 4610622005,
+      "lat": 10.7714597,
+      "lon": 106.6933425,
+      "timestamp": "2017-11-19T22:44:55Z",
+      "version": 4,
+      "changeset": 53935179,
+      "user": "gpesquero",
+      "uid": 3584
+    },
+    {
+      "type": "node",
+      "id": 4610622005,
+      "lat": 10.771519,
+      "lon": 106.6933412,
+      "timestamp": "2018-03-01T02:19:38Z",
+      "version": 5,
+      "changeset": 56772721,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4610622005,
+      "lat": 10.7714954,
+      "lon": 106.6933671,
+      "timestamp": "2018-03-24T02:17:25Z",
+      "version": 6,
+      "changeset": 57473857,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4610622005,
+      "lat": 10.7715109,
+      "lon": 106.6933534,
+      "timestamp": "2018-07-16T08:18:47Z",
+      "version": 7,
+      "changeset": 60752890,
+      "user": "neela1",
+      "uid": 7795604
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5778236988,
+      "lat": 10.7822622,
+      "lon": 106.6283186,
+      "timestamp": "2018-07-23T03:33:56Z",
+      "version": 1,
+      "changeset": 60967531,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778236988,
+      "lat": 10.7822701,
+      "lon": 106.628324,
+      "timestamp": "2018-07-23T03:54:08Z",
+      "version": 2,
+      "changeset": 60967904,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778236989,
+      "lat": 10.7823466,
+      "lon": 106.6283487,
+      "timestamp": "2018-07-23T03:33:56Z",
+      "version": 1,
+      "changeset": 60967531,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778236989,
+      "lat": 10.7823288,
+      "lon": 106.6283386,
+      "timestamp": "2018-07-23T03:54:08Z",
+      "version": 2,
+      "changeset": 60967904,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778236991,
+      "lat": 10.7821283,
+      "lon": 106.6288258,
+      "timestamp": "2018-07-23T03:33:56Z",
+      "version": 1,
+      "changeset": 60967531,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5778245678,
+      "lat": 10.776852,
+      "lon": 106.6821788,
+      "timestamp": "2018-07-23T03:39:28Z",
+      "version": 1,
+      "changeset": 60967633,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778245684,
+      "lat": 10.7775782,
+      "lon": 106.6817035,
+      "timestamp": "2018-07-23T03:39:28Z",
+      "version": 1,
+      "changeset": 60967633,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5778245684,
+      "lat": 10.7775496,
+      "lon": 106.6817624,
+      "timestamp": "2019-09-13T16:21:21Z",
+      "version": 2,
+      "changeset": 74445972,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5778245684,
+      "lat": 10.7775377,
+      "lon": 106.6817654,
+      "timestamp": "2019-09-13T16:21:49Z",
+      "version": 3,
+      "changeset": 74445993,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5778245684,
+      "lat": 10.7775377,
+      "lon": 106.6817655,
+      "timestamp": "2019-09-13T16:22:02Z",
+      "version": 4,
+      "changeset": 74446005,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5778245684,
+      "lat": 10.7775382,
+      "lon": 106.6817654,
+      "timestamp": "2019-09-14T06:16:54Z",
+      "version": 5,
+      "changeset": 74463544,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5778252019,
+      "lat": 10.7665422,
+      "lon": 106.6430415,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252026,
+      "lat": 10.7636884,
+      "lon": 106.643989,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252026,
+      "lat": 10.7637141,
+      "lon": 106.6439387,
+      "timestamp": "2019-08-20T15:40:15Z",
+      "version": 2,
+      "changeset": 73546428,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5778252030,
+      "lat": 10.7631451,
+      "lon": 106.6430425,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252031,
+      "lat": 10.7630572,
+      "lon": 106.6428323,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252031,
+      "lat": 10.7630644,
+      "lon": 106.6428249,
+      "timestamp": "2019-08-20T15:40:15Z",
+      "version": 2,
+      "changeset": 73546428,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5778252031,
+      "lat": 10.7630414,
+      "lon": 106.6427606,
+      "timestamp": "2019-08-20T15:50:17Z",
+      "version": 3,
+      "changeset": 73546779,
+      "user": "Whimsical Otter",
+      "uid": 7466823,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5778252032,
+      "lat": 10.7629301,
+      "lon": 106.6424994,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252032,
+      "lat": 10.7629518,
+      "lon": 106.6425215,
+      "timestamp": "2019-08-20T15:40:15Z",
+      "version": 2,
+      "changeset": 73546428,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    }
+  ]
+}

@@ -1,0 +1,586 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 1271148311,
+      "lat": 10.8005955,
+      "lon": 106.7365077,
+      "timestamp": "2011-05-07T13:43:51Z",
+      "version": 2,
+      "changeset": 8073612,
+      "user": "Mạnh",
+      "uid": 147582
+    },
+    {
+      "type": "node",
+      "id": 1271148311,
+      "lat": 10.8005723,
+      "lon": 106.7365643,
+      "timestamp": "2012-11-21T16:23:04Z",
+      "version": 3,
+      "changeset": 13960720,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1271148311,
+      "lat": 10.8006171,
+      "lon": 106.7365643,
+      "timestamp": "2012-11-23T17:36:17Z",
+      "version": 4,
+      "changeset": 14001999,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1271148311,
+      "lat": 10.8006067,
+      "lon": 106.7365389,
+      "timestamp": "2012-11-28T17:27:28Z",
+      "version": 5,
+      "changeset": 14076227,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1271148311,
+      "lat": 10.8005679,
+      "lon": 106.7365319,
+      "timestamp": "2016-03-18T07:42:33Z",
+      "version": 6,
+      "changeset": 37913030,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 1271240159,
+      "lat": 10.8321284,
+      "lon": 106.6218809,
+      "timestamp": "2011-05-03T16:24:51Z",
+      "version": 1,
+      "changeset": 8041090,
+      "user": "Mạnh",
+      "uid": 147582,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240159,
+      "lat": 10.8321383,
+      "lon": 106.6218517,
+      "timestamp": "2014-10-28T09:57:14Z",
+      "version": 2,
+      "changeset": 26383625,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "19/1 Trường Chinh",
+        "name": "Bệnh viện An Phước",
+        "highway": "bus_stop",
+        "addr:housenumber": "19/1",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240159,
+      "lat": 10.8321183,
+      "lon": 106.621809,
+      "timestamp": "2016-03-20T06:18:20Z",
+      "version": 3,
+      "changeset": 37950178,
+      "user": "totim",
+      "uid": 562188,
+      "tags": {
+        "note": "19/1 Trường Chinh",
+        "name": "Bệnh viện An Phước",
+        "highway": "bus_stop",
+        "addr:housenumber": "19/1",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240159,
+      "lat": 10.8321183,
+      "lon": 106.621809,
+      "timestamp": "2022-05-04T03:24:37Z",
+      "version": 4,
+      "changeset": 120521770,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Bệnh Viện An Phước",
+        "addr:housenumber": "19/1",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "19/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240159,
+      "lat": 10.8319835,
+      "lon": 106.6218512,
+      "timestamp": "2024-03-23T03:55:19Z",
+      "version": 5,
+      "changeset": 149037423,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "19/1",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chùa Vĩnh Phước",
+        "note": "19/1 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240415,
+      "lat": 10.8038983,
+      "lon": 106.63764,
+      "timestamp": "2011-05-03T16:25:01Z",
+      "version": 1,
+      "changeset": 8041090,
+      "user": "Mạnh",
+      "uid": 147582,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240415,
+      "lat": 10.8039728,
+      "lon": 106.6376785,
+      "timestamp": "2014-11-05T07:36:02Z",
+      "version": 2,
+      "changeset": 26565133,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao Lộ Tân Kỳ Tân Quý"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240415,
+      "lat": 10.8039728,
+      "lon": 106.6376785,
+      "timestamp": "2022-05-12T09:50:57Z",
+      "version": 3,
+      "changeset": 120879295,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Giao Lộ Tân Kỳ Tân Quý",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240415,
+      "lat": 10.8039645,
+      "lon": 106.6376797,
+      "timestamp": "2023-12-07T10:52:17Z",
+      "version": 4,
+      "changeset": 144862203,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Giao Lộ Tân Kỳ Tân Quý",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240415,
+      "lat": 10.8035281,
+      "lon": 106.6379043,
+      "timestamp": "2024-03-23T03:55:19Z",
+      "version": 5,
+      "changeset": 149037423,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã tư Tân Kỳ Tân Quý",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8222839,
+      "lon": 106.6298984,
+      "timestamp": "2011-05-03T16:25:02Z",
+      "version": 1,
+      "changeset": 8041090,
+      "user": "Mạnh",
+      "uid": 147582,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8222724,
+      "lon": 106.629903,
+      "timestamp": "2014-10-27T17:01:24Z",
+      "version": 2,
+      "changeset": 26368340,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "8 Trường Chinh",
+        "name": "Cầu Tham Lương",
+        "highway": "bus_stop",
+        "addr:street": "Trường Chinh",
+        "addr:housenumber": "8"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8222724,
+      "lon": 106.629903,
+      "timestamp": "2022-05-04T03:24:37Z",
+      "version": 3,
+      "changeset": 120521770,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "public_transport": "platform",
+        "note": "8 Trường Chinh",
+        "highway": "bus_stop",
+        "bus": "yes",
+        "name": "Trạm Xe Bus Cầu Tham Lương",
+        "addr:housenumber": "8",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8222724,
+      "lon": 106.629903,
+      "timestamp": "2023-03-14T07:33:56Z",
+      "version": 5,
+      "changeset": 133653097,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "name": "Trạm Xe Bus Cầu Tham Lương",
+        "addr:housenumber": "8",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "8 Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8222724,
+      "lon": 106.629903,
+      "timestamp": "2023-03-14T07:33:57Z",
+      "version": 6,
+      "changeset": 133653098,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "shelter": "yes",
+        "name": "Trạm Xe Bus Cầu Tham Lương",
+        "addr:housenumber": "8",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "8 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8222724,
+      "lon": 106.629903,
+      "timestamp": "2023-04-20T05:51:42Z",
+      "version": 7,
+      "changeset": 135131248,
+      "user": "El cerdo",
+      "uid": 6126088,
+      "tags": {
+        "name": "Trạm Xe Bus Cầu Tham Lương",
+        "addr:housenumber": "8",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "note": "8 Trường Chinh",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8220446,
+      "lon": 106.629927,
+      "timestamp": "2024-03-23T03:55:19Z",
+      "version": 8,
+      "changeset": 149037423,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Trạm dệt Thành Công",
+        "addr:housenumber": "8",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "note": "8 Trường Chinh",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8220446,
+      "lon": 106.629927,
+      "timestamp": "2024-12-20T13:41:12Z",
+      "version": 9,
+      "changeset": 160434215,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "addr:housenumber": "8",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Dệt Thành Công",
+        "note": "8 Trường Chinh",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1271240445,
+      "lat": 10.8220446,
+      "lon": 106.629927,
+      "timestamp": "2026-01-30T22:19:17Z",
+      "version": 10,
+      "changeset": 177908593,
+      "user": "Tommybara",
+      "uid": 12198525,
+      "tags": {
+        "addr:housenumber": "8",
+        "addr:street": "Trường Chinh",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Dệt Thành Công",
+        "note": "8 Trường Chinh",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1274090837,
+      "lat": 10.8343155,
+      "lon": 106.7650727,
+      "timestamp": "2011-05-06T08:30:45Z",
+      "version": 1,
+      "changeset": 8063463,
+      "user": "Mạnh",
+      "uid": 147582,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1274090837,
+      "lat": 10.8344236,
+      "lon": 106.7650407,
+      "timestamp": "2014-10-07T09:49:30Z",
+      "version": 2,
+      "changeset": 25913847,
+      "user": "528491",
+      "uid": 1377843,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1274090837,
+      "lat": 10.8344344,
+      "lon": 106.7650905,
+      "timestamp": "2014-11-02T11:08:17Z",
+      "version": 3,
+      "changeset": 26500602,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Ngã 4 Bình Thái"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1275842549,
+      "lat": 10.799006,
+      "lon": 106.73343,
+      "timestamp": "2011-11-10T15:17:09Z",
+      "version": 2,
+      "changeset": 9789494,
+      "user": "ninomax",
+      "uid": 47976
+    },
+    {
+      "type": "node",
+      "id": 1275842584,
+      "lat": 10.7988723,
+      "lon": 106.7333728,
+      "timestamp": "2011-11-10T15:17:09Z",
+      "version": 2,
+      "changeset": 9789494,
+      "user": "ninomax",
+      "uid": 47976
+    },
+    {
+      "type": "node",
+      "id": 1276696958,
+      "lat": 10.8088827,
+      "lon": 106.7092678,
+      "timestamp": "2011-05-08T06:22:12Z",
+      "version": 1,
+      "changeset": 8079230,
+      "user": "Mạnh",
+      "uid": 147582
+    },
+    {
+      "type": "node",
+      "id": 1276696958,
+      "lat": 10.8088223,
+      "lon": 106.7092607,
+      "timestamp": "2018-07-23T14:44:11Z",
+      "version": 2,
+      "changeset": 60990143,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 1278052498,
+      "lat": 10.7962785,
+      "lon": 106.719196,
+      "timestamp": "2012-06-03T03:17:20Z",
+      "version": 3,
+      "changeset": 11782349,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1278052498,
+      "lat": 10.7964701,
+      "lon": 106.7194913,
+      "timestamp": "2024-10-18T05:31:28Z",
+      "version": 4,
+      "changeset": 158034550,
+      "user": "GrabVN_HHanh",
+      "uid": 21825758
+    },
+    {
+      "type": "node",
+      "id": 1278052498,
+      "lat": 10.7964859,
+      "lon": 106.7194967,
+      "timestamp": "2024-12-22T14:19:43Z",
+      "version": 5,
+      "changeset": 160503187,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 1278052507,
+      "lat": 10.7896381,
+      "lon": 106.7169947,
+      "timestamp": "2012-09-02T13:16:19Z",
+      "version": 3,
+      "changeset": 12953976,
+      "user": "Dymo12",
+      "uid": 509465
+    },
+    {
+      "type": "node",
+      "id": 1278052507,
+      "lat": 10.7896459,
+      "lon": 106.7169839,
+      "timestamp": "2012-11-27T10:04:03Z",
+      "version": 4,
+      "changeset": 14056747,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 1278052507,
+      "lat": 10.7896189,
+      "lon": 106.7169972,
+      "timestamp": "2014-12-15T11:12:52Z",
+      "version": 5,
+      "changeset": 27478798,
+      "user": "QuangDBui@TMA",
+      "uid": 1276367
+    },
+    {
+      "type": "node",
+      "id": 1278052507,
+      "lat": 10.7896182,
+      "lon": 106.716995,
+      "timestamp": "2024-10-17T18:44:36Z",
+      "version": 6,
+      "changeset": 158022076,
+      "user": "map2goPro",
+      "uid": 20077207
+    }
+  ]
+}

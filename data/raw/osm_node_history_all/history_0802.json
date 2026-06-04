@@ -1,0 +1,191 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5614661175,
+      "lat": 10.8124799,
+      "lon": 106.7566136,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661176,
+      "lat": 10.8124483,
+      "lon": 106.7565519,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661179,
+      "lat": 10.8117633,
+      "lon": 106.7564231,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661180,
+      "lat": 10.810641,
+      "lon": 106.7562488,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661180,
+      "lat": 10.8111139,
+      "lon": 106.7563293,
+      "timestamp": "2019-07-18T07:22:36Z",
+      "version": 2,
+      "changeset": 72375721,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    },
+    {
+      "type": "node",
+      "id": 5614661183,
+      "lat": 10.8055101,
+      "lon": 106.7537872,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661184,
+      "lat": 10.8059106,
+      "lon": 106.7541922,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661185,
+      "lat": 10.8064111,
+      "lon": 106.7545838,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661185,
+      "lat": 10.8064295,
+      "lon": 106.7546267,
+      "timestamp": "2019-09-05T18:19:30Z",
+      "version": 2,
+      "changeset": 74147109,
+      "user": "UncoolGuyJake",
+      "uid": 7674729
+    },
+    {
+      "type": "node",
+      "id": 5614661185,
+      "lat": 10.8065461,
+      "lon": 106.7546771,
+      "timestamp": "2025-08-15T02:17:03Z",
+      "version": 3,
+      "changeset": 170460916,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5614661186,
+      "lat": 10.8068552,
+      "lon": 106.7549337,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661186,
+      "lat": 10.8067893,
+      "lon": 106.7549082,
+      "timestamp": "2019-07-18T07:22:36Z",
+      "version": 2,
+      "changeset": 72375721,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    },
+    {
+      "type": "node",
+      "id": 5614661187,
+      "lat": 10.8060607,
+      "lon": 106.7544067,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661187,
+      "lat": 10.8060716,
+      "lon": 106.7543894,
+      "timestamp": "2025-08-14T16:15:53Z",
+      "version": 2,
+      "changeset": 170445176,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5614661188,
+      "lat": 10.8064992,
+      "lon": 106.7547982,
+      "timestamp": "2018-05-13T07:21:11Z",
+      "version": 1,
+      "changeset": 58917336,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5614661188,
+      "lat": 10.8064083,
+      "lon": 106.7547499,
+      "timestamp": "2019-07-18T07:22:36Z",
+      "version": 2,
+      "changeset": 72375721,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    },
+    {
+      "type": "node",
+      "id": 5614661188,
+      "lat": 10.8064446,
+      "lon": 106.7547413,
+      "timestamp": "2025-08-14T16:15:53Z",
+      "version": 3,
+      "changeset": 170445176,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    }
+  ]
+}

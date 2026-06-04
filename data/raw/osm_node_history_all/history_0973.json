@@ -1,0 +1,265 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5769301527,
+      "lat": 10.7866149,
+      "lon": 106.6362298,
+      "timestamp": "2018-07-19T01:20:09Z",
+      "version": 1,
+      "changeset": 60852606,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769301527,
+      "lat": 10.7865966,
+      "lon": 106.6363099,
+      "timestamp": "2023-12-27T19:37:35Z",
+      "version": 2,
+      "changeset": 145589947,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5769327051,
+      "lat": 10.7717298,
+      "lon": 106.6415726,
+      "timestamp": "2018-07-19T01:48:46Z",
+      "version": 1,
+      "changeset": 60852901,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5769329442,
+      "lat": 10.78599,
+      "lon": 106.6416689,
+      "timestamp": "2018-07-19T01:50:33Z",
+      "version": 1,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769329442,
+      "lat": 10.7860104,
+      "lon": 106.6417339,
+      "timestamp": "2019-08-16T01:23:26Z",
+      "version": 2,
+      "changeset": 73395909,
+      "user": "Whimsical Otter",
+      "uid": 7466823,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals:direction": "backward",
+        "crossing": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5769329442,
+      "lat": 10.7860104,
+      "lon": 106.6417339,
+      "timestamp": "2019-08-22T22:22:14Z",
+      "version": 3,
+      "changeset": 73643484,
+      "user": "UncoolGuyJake",
+      "uid": 7674729,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5769329442,
+      "lat": 10.7860223,
+      "lon": 106.6417757,
+      "timestamp": "2023-12-26T20:55:49Z",
+      "version": 4,
+      "changeset": 145549398,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5769329443,
+      "lat": 10.7871271,
+      "lon": 106.6443152,
+      "timestamp": "2018-07-19T01:50:33Z",
+      "version": 1,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769329443,
+      "lat": 10.7871235,
+      "lon": 106.6443171,
+      "timestamp": "2023-12-26T20:55:49Z",
+      "version": 2,
+      "changeset": 145549398,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 5769329448,
+      "lat": 10.7867363,
+      "lon": 106.6435067,
+      "timestamp": "2018-07-19T01:50:33Z",
+      "version": 1,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769329448,
+      "lat": 10.786702,
+      "lon": 106.6435201,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 2,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5769329449,
+      "lat": 10.7887267,
+      "lon": 106.642942,
+      "timestamp": "2018-07-19T01:50:33Z",
+      "version": 1,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769329449,
+      "lat": 10.7887168,
+      "lon": 106.6429132,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 2,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5769329854,
+      "lat": 10.7866431,
+      "lon": 106.643305,
+      "timestamp": "2018-07-19T01:50:33Z",
+      "version": 1,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769329854,
+      "lat": 10.7865944,
+      "lon": 106.6433157,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 2,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5769329854,
+      "lat": 10.7866188,
+      "lon": 106.6433058,
+      "timestamp": "2023-12-26T20:55:49Z",
+      "version": 3,
+      "changeset": 145549398,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5769329871,
+      "lat": 10.7909948,
+      "lon": 106.6436111,
+      "timestamp": "2018-07-19T01:50:34Z",
+      "version": 1,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769329882,
+      "lat": 10.7881291,
+      "lon": 106.6430855,
+      "timestamp": "2018-07-19T01:50:34Z",
+      "version": 1,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769329882,
+      "lat": 10.7881205,
+      "lon": 106.6430345,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 2,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5769329883,
+      "lat": 10.7889094,
+      "lon": 106.6428981,
+      "timestamp": "2018-07-19T01:50:34Z",
+      "version": 1,
+      "changeset": 60852918,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5769329883,
+      "lat": 10.7889193,
+      "lon": 106.6428592,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 2,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5769329883,
+      "lat": 10.7888852,
+      "lon": 106.6428731,
+      "timestamp": "2023-12-26T20:55:49Z",
+      "version": 3,
+      "changeset": 145549398,
+      "user": "Khakha01",
+      "uid": 17678394
+    }
+  ]
+}

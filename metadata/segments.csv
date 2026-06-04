@@ -1,0 +1,35 @@
+fill: {}
+onehot:
+  features:
+  - type
+  onehot_feature_names:
+  - type_bus_station
+  - type_car
+  - type_cinema
+  - type_clothes
+  - type_company
+  - type_convenience
+  - type_fuel
+  - type_government
+  - type_house
+  - type_marketplace
+  - type_motorway
+  - type_motorway_link
+  - type_pitch
+  - type_primary
+  - type_primary_link
+  - type_residential
+  - type_school
+  - type_secondary
+  - type_secondary_link
+  - type_tertiary
+  - type_tertiary_link
+  - type_trunk
+  - type_trunk_link
+  - type_unclassified
+  - type_university
+rename:
+  _id: id
+  street_name: name
+  street_type: type
+normalize: length / 1000

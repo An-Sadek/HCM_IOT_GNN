@@ -1,0 +1,408 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5151366701,
+      "lat": 10.8386733,
+      "lon": 106.6671174,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366701,
+      "lat": 10.8387033,
+      "lon": 106.6671177,
+      "timestamp": "2025-07-24T10:36:06Z",
+      "version": 2,
+      "changeset": 169390547,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5151366702,
+      "lat": 10.8386548,
+      "lon": 106.6652417,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366702,
+      "lat": 10.8386877,
+      "lon": 106.6652424,
+      "timestamp": "2018-06-25T07:46:55Z",
+      "version": 2,
+      "changeset": 60139450,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5151366702,
+      "lat": 10.8386897,
+      "lon": 106.6652578,
+      "timestamp": "2018-07-16T01:38:55Z",
+      "version": 3,
+      "changeset": 60743787,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5151366702,
+      "lat": 10.8387019,
+      "lon": 106.6652029,
+      "timestamp": "2018-09-08T02:42:04Z",
+      "version": 4,
+      "changeset": 62392316,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5151366702,
+      "lat": 10.8387026,
+      "lon": 106.6652042,
+      "timestamp": "2019-08-28T21:37:57Z",
+      "version": 5,
+      "changeset": 73858317,
+      "user": "El Pescador",
+      "uid": 7445879
+    },
+    {
+      "type": "node",
+      "id": 5151366702,
+      "lat": 10.8387227,
+      "lon": 106.6652632,
+      "timestamp": "2020-08-07T07:56:56Z",
+      "version": 6,
+      "changeset": 89078128,
+      "user": "wvdp",
+      "uid": 436419
+    },
+    {
+      "type": "node",
+      "id": 5151366704,
+      "lat": 10.8385513,
+      "lon": 106.6722917,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hẻm 270 Nguyễn Văn Lượng"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5151366704,
+      "lat": 10.8385513,
+      "lon": 106.6722917,
+      "timestamp": "2020-08-07T07:56:56Z",
+      "version": 2,
+      "changeset": 89078128,
+      "user": "wvdp",
+      "uid": 436419,
+      "tags": {
+        "name": "Hẻm 270 Nguyễn Văn Lượng",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5151366704,
+      "lat": 10.8385513,
+      "lon": 106.6722917,
+      "timestamp": "2022-05-13T04:54:40Z",
+      "version": 3,
+      "changeset": 120913843,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Hẻm 270 Nguyễn Văn Lượng",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5151366704,
+      "lat": 10.8385679,
+      "lon": 106.6722919,
+      "timestamp": "2025-07-24T10:36:06Z",
+      "version": 4,
+      "changeset": 169390547,
+      "user": "Trần Xuân",
+      "uid": 23012452,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Hẻm 270 Nguyễn Văn Lượng",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5151366707,
+      "lat": 10.8386103,
+      "lon": 106.665347,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366707,
+      "lat": 10.8386337,
+      "lon": 106.6652363,
+      "timestamp": "2018-06-25T07:46:55Z",
+      "version": 2,
+      "changeset": 60139450,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5151366707,
+      "lat": 10.8386357,
+      "lon": 106.6652517,
+      "timestamp": "2018-07-16T01:38:55Z",
+      "version": 3,
+      "changeset": 60743787,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5151366707,
+      "lat": 10.8386357,
+      "lon": 106.6651951,
+      "timestamp": "2018-09-08T02:42:04Z",
+      "version": 4,
+      "changeset": 62392316,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5151366707,
+      "lat": 10.838637,
+      "lon": 106.6651938,
+      "timestamp": "2019-08-28T21:16:51Z",
+      "version": 5,
+      "changeset": 73857904,
+      "user": "El Pescador",
+      "uid": 7445879
+    },
+    {
+      "type": "node",
+      "id": 5151366707,
+      "lat": 10.8386381,
+      "lon": 106.6652446,
+      "timestamp": "2020-08-07T07:56:56Z",
+      "version": 6,
+      "changeset": 89078128,
+      "user": "wvdp",
+      "uid": 436419
+    },
+    {
+      "type": "node",
+      "id": 5151366709,
+      "lat": 10.8386842,
+      "lon": 106.6659911,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366709,
+      "lat": 10.8387151,
+      "lon": 106.6659914,
+      "timestamp": "2025-07-24T10:36:06Z",
+      "version": 2,
+      "changeset": 169390547,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5151366711,
+      "lat": 10.8386658,
+      "lon": 106.6678852,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366711,
+      "lat": 10.8386579,
+      "lon": 106.6679415,
+      "timestamp": "2018-07-10T07:22:35Z",
+      "version": 2,
+      "changeset": 60562952,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5151366711,
+      "lat": 10.8386946,
+      "lon": 106.6679419,
+      "timestamp": "2025-07-24T10:36:06Z",
+      "version": 3,
+      "changeset": 169390547,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5151366713,
+      "lat": 10.8384914,
+      "lon": 106.6799748,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366713,
+      "lat": 10.8384914,
+      "lon": 106.6799748,
+      "timestamp": "2019-08-30T14:09:43Z",
+      "version": 2,
+      "changeset": 73925629,
+      "user": "GhostEye",
+      "uid": 9633773,
+      "tags": {
+        "highway": "crossing",
+        "crossing": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5151366713,
+      "lat": 10.8384914,
+      "lon": 106.6799748,
+      "timestamp": "2019-08-30T15:49:35Z",
+      "version": 3,
+      "changeset": 73930096,
+      "user": "GhostEye",
+      "uid": 9633773,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5151366714,
+      "lat": 10.8385868,
+      "lon": 106.6755789,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366714,
+      "lat": 10.8385868,
+      "lon": 106.6755698,
+      "timestamp": "2017-10-06T09:57:54Z",
+      "version": 2,
+      "changeset": 52678152,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366714,
+      "lat": 10.8385921,
+      "lon": 106.6756047,
+      "timestamp": "2019-07-19T06:38:37Z",
+      "version": 3,
+      "changeset": 72415320,
+      "user": "grabtaxi18",
+      "uid": 10141211
+    },
+    {
+      "type": "node",
+      "id": 5151366714,
+      "lat": 10.8386142,
+      "lon": 106.6756049,
+      "timestamp": "2025-07-24T10:36:06Z",
+      "version": 4,
+      "changeset": 169390547,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5151366715,
+      "lat": 10.8385798,
+      "lon": 106.6770208,
+      "timestamp": "2017-10-06T09:55:39Z",
+      "version": 1,
+      "changeset": 52678110,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 5151366715,
+      "lat": 10.8385994,
+      "lon": 106.677021,
+      "timestamp": "2025-07-24T10:36:06Z",
+      "version": 2,
+      "changeset": 169390547,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5156614480,
+      "lat": 10.8777821,
+      "lon": 106.591356,
+      "timestamp": "2017-10-09T08:27:35Z",
+      "version": 1,
+      "changeset": 52751407,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5156614480,
+      "lat": 10.8777781,
+      "lon": 106.5913701,
+      "timestamp": "2018-07-05T03:25:42Z",
+      "version": 2,
+      "changeset": 60422850,
+      "user": "neela1",
+      "uid": 7795604
+    }
+  ]
+}

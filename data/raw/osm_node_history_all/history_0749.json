@@ -1,0 +1,173 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5045756805,
+      "lat": 10.7618189,
+      "lon": 106.6702758,
+      "timestamp": "2017-08-20T06:44:25Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045756810,
+      "lat": 10.7608106,
+      "lon": 106.6695783,
+      "timestamp": "2017-08-20T06:44:25Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045757038,
+      "lat": 10.7640654,
+      "lon": 106.6717887,
+      "timestamp": "2017-08-20T06:44:26Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045757038,
+      "lat": 10.764067,
+      "lon": 106.6717864,
+      "timestamp": "2019-09-09T21:47:52Z",
+      "version": 2,
+      "changeset": 74282350,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5045757038,
+      "lat": 10.7640647,
+      "lon": 106.6717875,
+      "timestamp": "2019-09-10T14:24:17Z",
+      "version": 3,
+      "changeset": 74314399,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5045757038,
+      "lat": 10.7640491,
+      "lon": 106.671809,
+      "timestamp": "2024-06-21T06:51:14Z",
+      "version": 4,
+      "changeset": 152978162,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5045757043,
+      "lat": 10.7639203,
+      "lon": 106.6716918,
+      "timestamp": "2017-08-20T06:44:26Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045757053,
+      "lat": 10.7633941,
+      "lon": 106.6713405,
+      "timestamp": "2017-08-20T06:44:26Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045757076,
+      "lat": 10.7631562,
+      "lon": 106.6711817,
+      "timestamp": "2017-08-20T06:44:27Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045757093,
+      "lat": 10.7629193,
+      "lon": 106.6710235,
+      "timestamp": "2017-08-20T06:44:27Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045757093,
+      "lat": 10.7629193,
+      "lon": 106.6710235,
+      "timestamp": "2019-09-10T15:31:43Z",
+      "version": 2,
+      "changeset": 74318103,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5045757139,
+      "lat": 10.7622838,
+      "lon": 106.6683856,
+      "timestamp": "2017-08-20T06:44:28Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045757139,
+      "lat": 10.762326,
+      "lon": 106.6683762,
+      "timestamp": "2019-09-12T21:26:46Z",
+      "version": 2,
+      "changeset": 74409684,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5045757151,
+      "lat": 10.7621196,
+      "lon": 106.6684223,
+      "timestamp": "2017-08-20T06:44:28Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5045757162,
+      "lat": 10.7615444,
+      "lon": 106.670086,
+      "timestamp": "2017-08-20T06:44:28Z",
+      "version": 1,
+      "changeset": 51270011,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    }
+  ]
+}

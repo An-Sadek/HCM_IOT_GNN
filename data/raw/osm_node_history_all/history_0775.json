@@ -1,0 +1,483 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5238045561,
+      "lat": 10.76937,
+      "lon": 106.71738,
+      "timestamp": "2017-11-19T16:06:04Z",
+      "version": 1,
+      "changeset": 53926519,
+      "user": "gpesquero",
+      "uid": 3584
+    },
+    {
+      "type": "node",
+      "id": 5238614065,
+      "lat": 10.7727396,
+      "lon": 106.6911111,
+      "timestamp": "2017-11-19T22:44:55Z",
+      "version": 1,
+      "changeset": 53935179,
+      "user": "gpesquero",
+      "uid": 3584
+    },
+    {
+      "type": "node",
+      "id": 5238614065,
+      "lat": 10.7727356,
+      "lon": 106.6911178,
+      "timestamp": "2019-09-11T15:17:00Z",
+      "version": 2,
+      "changeset": 74360871,
+      "user": "_Poliwrath_",
+      "uid": 8759140
+    },
+    {
+      "type": "node",
+      "id": 5238614065,
+      "lat": 10.7727178,
+      "lon": 106.6911514,
+      "timestamp": "2020-06-22T09:13:00Z",
+      "version": 3,
+      "changeset": 86969756,
+      "user": "GrabVNTommy",
+      "uid": 8421597
+    },
+    {
+      "type": "node",
+      "id": 5238614065,
+      "lat": 10.7727238,
+      "lon": 106.6911548,
+      "timestamp": "2024-10-26T11:50:03Z",
+      "version": 4,
+      "changeset": 158372987,
+      "user": "AntBurnett",
+      "uid": 32394
+    },
+    {
+      "type": "node",
+      "id": 5240703919,
+      "lat": 10.7726397,
+      "lon": 106.6575627,
+      "timestamp": "2017-11-21T08:58:43Z",
+      "version": 1,
+      "changeset": 53969923,
+      "user": "Duc Minh Le",
+      "uid": 6712625
+    },
+    {
+      "type": "node",
+      "id": 5240703919,
+      "lat": 10.7725501,
+      "lon": 106.6576051,
+      "timestamp": "2024-05-25T04:40:26Z",
+      "version": 2,
+      "changeset": 151794109,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5240704521,
+      "lat": 10.7725909,
+      "lon": 106.6575763,
+      "timestamp": "2017-11-21T08:58:43Z",
+      "version": 1,
+      "changeset": 53969923,
+      "user": "Duc Minh Le",
+      "uid": 6712625
+    },
+    {
+      "type": "node",
+      "id": 5240704522,
+      "lat": 10.7726939,
+      "lon": 106.6575467,
+      "timestamp": "2017-11-21T08:58:43Z",
+      "version": 1,
+      "changeset": 53969923,
+      "user": "Duc Minh Le",
+      "uid": 6712625
+    },
+    {
+      "type": "node",
+      "id": 5240704522,
+      "lat": 10.7728194,
+      "lon": 106.6575337,
+      "timestamp": "2024-05-25T04:40:26Z",
+      "version": 2,
+      "changeset": 151794109,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5240704523,
+      "lat": 10.7703883,
+      "lon": 106.6581461,
+      "timestamp": "2017-11-21T08:58:43Z",
+      "version": 1,
+      "changeset": 53969923,
+      "user": "Duc Minh Le",
+      "uid": 6712625,
+      "tags": {
+        "traffic_signals": "signal",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5240704523,
+      "lat": 10.7704754,
+      "lon": 106.6582775,
+      "timestamp": "2019-08-28T17:57:10Z",
+      "version": 2,
+      "changeset": 73852930,
+      "user": "birdymaps",
+      "uid": 9319541,
+      "tags": {
+        "traffic_signals": "signal",
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5240704523,
+      "lat": 10.7704754,
+      "lon": 106.6582775,
+      "timestamp": "2019-08-28T18:00:51Z",
+      "version": 3,
+      "changeset": 73853058,
+      "user": "birdymaps",
+      "uid": 9319541,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5240704523,
+      "lat": 10.7705343,
+      "lon": 106.6583197,
+      "timestamp": "2024-02-04T17:37:17Z",
+      "version": 4,
+      "changeset": 147063077,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5240704523,
+      "lat": 10.7705236,
+      "lon": 106.6583754,
+      "timestamp": "2024-05-25T04:40:26Z",
+      "version": 5,
+      "changeset": 151794109,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5242148773,
+      "lat": 10.7725104,
+      "lon": 106.6575988,
+      "timestamp": "2017-11-22T04:40:03Z",
+      "version": 1,
+      "changeset": 53990929,
+      "user": "Duc Minh Le",
+      "uid": 6712625,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đại Học Bách Khoa"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5242148773,
+      "lat": 10.7725104,
+      "lon": 106.6575988,
+      "timestamp": "2022-05-12T02:38:40Z",
+      "version": 2,
+      "changeset": 120864234,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Đại Học Bách Khoa",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5242148773,
+      "lat": 10.772539,
+      "lon": 106.6576534,
+      "timestamp": "2024-03-23T14:21:57Z",
+      "version": 3,
+      "changeset": 149052917,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "name": "Đại Học Bách Khoa",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5242148773,
+      "lat": 10.772539,
+      "lon": 106.6576534,
+      "timestamp": "2024-12-21T18:30:05Z",
+      "version": 4,
+      "changeset": 160479379,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đại học Bách Khoa",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5243849435,
+      "lat": 10.7727257,
+      "lon": 106.6607494,
+      "timestamp": "2017-11-23T07:28:29Z",
+      "version": 1,
+      "changeset": 54019105,
+      "user": "Duc Minh Le",
+      "uid": 6712625
+    },
+    {
+      "type": "node",
+      "id": 5243849435,
+      "lat": 10.7727257,
+      "lon": 106.6607494,
+      "timestamp": "2019-08-28T17:57:10Z",
+      "version": 2,
+      "changeset": 73852930,
+      "user": "birdymaps",
+      "uid": 9319541,
+      "tags": {
+        "highway": "crossing",
+        "crossing": "uncontrolled"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5243849435,
+      "lat": 10.7727257,
+      "lon": 106.6607494,
+      "timestamp": "2026-02-12T07:25:57Z",
+      "version": 3,
+      "changeset": 178439191,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing",
+        "kerb": "lowered"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.7719977,
+      "lon": 106.7061791,
+      "timestamp": "2017-11-25T19:30:48Z",
+      "version": 1,
+      "changeset": 54080318,
+      "user": "gpesquero",
+      "uid": 3584
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.772032,
+      "lon": 106.7061871,
+      "timestamp": "2019-06-09T04:59:39Z",
+      "version": 2,
+      "changeset": 71063076,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.7720215,
+      "lon": 106.7061978,
+      "timestamp": "2019-08-26T19:52:55Z",
+      "version": 3,
+      "changeset": 73768406,
+      "user": "daFisch",
+      "uid": 8759590,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.7719991,
+      "lon": 106.706183,
+      "timestamp": "2020-05-13T01:18:29Z",
+      "version": 4,
+      "changeset": 85110849,
+      "user": "TuanIfan",
+      "uid": 625303,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.7719696,
+      "lon": 106.7061884,
+      "timestamp": "2022-05-06T22:56:59Z",
+      "version": 5,
+      "changeset": 120649445,
+      "user": "Tommybara",
+      "uid": 12198525,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.7719705,
+      "lon": 106.7061892,
+      "timestamp": "2022-12-07T00:14:07Z",
+      "version": 6,
+      "changeset": 129802155,
+      "user": "Tommybara",
+      "uid": 12198525,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.77197,
+      "lon": 106.7061825,
+      "timestamp": "2023-03-02T11:13:20Z",
+      "version": 7,
+      "changeset": 133207181,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.7719701,
+      "lon": 106.7061792,
+      "timestamp": "2023-03-02T15:36:45Z",
+      "version": 8,
+      "changeset": 133217056,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.771975,
+      "lon": 106.7061794,
+      "timestamp": "2023-03-02T19:20:59Z",
+      "version": 9,
+      "changeset": 133225239,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.7719705,
+      "lon": 106.7061892,
+      "timestamp": "2023-03-03T23:41:06Z",
+      "version": 10,
+      "changeset": 133273716,
+      "user": "Tommybara",
+      "uid": 12198525,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5247691966,
+      "lat": 10.7719307,
+      "lon": 106.7062328,
+      "timestamp": "2026-01-12T09:05:55Z",
+      "version": 11,
+      "changeset": 177127878,
+      "user": "Heo Tham An",
+      "uid": 23305067,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5267645661,
+      "lat": 10.7924274,
+      "lon": 106.7128264,
+      "timestamp": "2017-12-06T09:53:54Z",
+      "version": 1,
+      "changeset": 54395636,
+      "user": "Phuctap",
+      "uid": 5196602
+    },
+    {
+      "type": "node",
+      "id": 5267645661,
+      "lat": 10.7924353,
+      "lon": 106.7127835,
+      "timestamp": "2018-07-04T05:00:41Z",
+      "version": 2,
+      "changeset": 60396753,
+      "user": "lakkarssu",
+      "uid": 8196672
+    }
+  ]
+}

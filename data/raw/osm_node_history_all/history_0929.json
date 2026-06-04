@@ -1,0 +1,202 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5762721229,
+      "lat": 10.8736394,
+      "lon": 106.7774485,
+      "timestamp": "2018-07-16T03:48:20Z",
+      "version": 1,
+      "changeset": 60744978,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762721229,
+      "lat": 10.8736144,
+      "lon": 106.777482,
+      "timestamp": "2019-07-15T15:09:15Z",
+      "version": 2,
+      "changeset": 72270044,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    },
+    {
+      "type": "node",
+      "id": 5762721240,
+      "lat": 10.8750791,
+      "lon": 106.7782945,
+      "timestamp": "2018-07-16T03:48:20Z",
+      "version": 1,
+      "changeset": 60744978,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762723856,
+      "lat": 10.875509,
+      "lon": 106.778038,
+      "timestamp": "2018-07-16T03:48:21Z",
+      "version": 1,
+      "changeset": 60744978,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762723886,
+      "lat": 10.8732845,
+      "lon": 106.7772354,
+      "timestamp": "2018-07-16T03:48:22Z",
+      "version": 1,
+      "changeset": 60744978,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762723886,
+      "lat": 10.8732713,
+      "lon": 106.7772528,
+      "timestamp": "2019-07-15T15:09:15Z",
+      "version": 2,
+      "changeset": 72270044,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    },
+    {
+      "type": "node",
+      "id": 5762723886,
+      "lat": 10.8732805,
+      "lon": 106.7772582,
+      "timestamp": "2024-07-25T11:00:38Z",
+      "version": 3,
+      "changeset": 154388005,
+      "user": "openmap-vn",
+      "uid": 21213273
+    },
+    {
+      "type": "node",
+      "id": 5762723907,
+      "lat": 10.8734121,
+      "lon": 106.7773059,
+      "timestamp": "2018-07-16T03:48:22Z",
+      "version": 1,
+      "changeset": 60744978,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762723907,
+      "lat": 10.8733963,
+      "lon": 106.7773287,
+      "timestamp": "2019-07-15T15:09:15Z",
+      "version": 2,
+      "changeset": 72270044,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    },
+    {
+      "type": "node",
+      "id": 5762723907,
+      "lat": 10.8733805,
+      "lon": 106.777322,
+      "timestamp": "2024-07-25T11:00:38Z",
+      "version": 3,
+      "changeset": 154388005,
+      "user": "openmap-vn",
+      "uid": 21213273
+    },
+    {
+      "type": "node",
+      "id": 5762724085,
+      "lat": 10.8732002,
+      "lon": 106.7773707,
+      "timestamp": "2018-07-16T03:48:23Z",
+      "version": 1,
+      "changeset": 60744978,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762724085,
+      "lat": 10.8732081,
+      "lon": 106.7773613,
+      "timestamp": "2019-07-15T15:09:15Z",
+      "version": 2,
+      "changeset": 72270044,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    },
+    {
+      "type": "node",
+      "id": 5762725488,
+      "lat": 10.870743,
+      "lon": 106.6363553,
+      "timestamp": "2018-07-16T03:48:58Z",
+      "version": 1,
+      "changeset": 60744996,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762725509,
+      "lat": 10.8711171,
+      "lon": 106.6357646,
+      "timestamp": "2018-07-16T03:48:59Z",
+      "version": 1,
+      "changeset": 60744996,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762725607,
+      "lat": 10.8709518,
+      "lon": 106.6360204,
+      "timestamp": "2018-07-16T03:49:00Z",
+      "version": 1,
+      "changeset": 60744996,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762725656,
+      "lat": 10.870441,
+      "lon": 106.6368389,
+      "timestamp": "2018-07-16T03:49:01Z",
+      "version": 1,
+      "changeset": 60744996,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762725656,
+      "lat": 10.8704226,
+      "lon": 106.6368738,
+      "timestamp": "2018-07-17T05:20:58Z",
+      "version": 2,
+      "changeset": 60782619,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762725656,
+      "lat": 10.8704358,
+      "lon": 106.6368463,
+      "timestamp": "2019-07-18T07:51:09Z",
+      "version": 3,
+      "changeset": 72376866,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 6174054767,
+      "lat": 10.7574605,
+      "lon": 106.6512145,
+      "timestamp": "2018-12-31T02:38:16Z",
+      "version": 1,
+      "changeset": 65902626,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175905324,
+      "lat": 10.7735089,
+      "lon": 106.6470484,
+      "timestamp": "2019-01-01T03:12:13Z",
+      "version": 1,
+      "changeset": 65925313,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175905327,
+      "lat": 10.7739614,
+      "lon": 106.647363,
+      "timestamp": "2019-01-01T03:12:13Z",
+      "version": 1,
+      "changeset": 65925313,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175905336,
+      "lat": 10.774072,
+      "lon": 106.6474449,
+      "timestamp": "2019-01-01T03:12:13Z",
+      "version": 1,
+      "changeset": 65925313,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175905346,
+      "lat": 10.7751344,
+      "lon": 106.6477062,
+      "timestamp": "2019-01-01T03:12:13Z",
+      "version": 1,
+      "changeset": 65925313,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175905346,
+      "lat": 10.7751324,
+      "lon": 106.6477042,
+      "timestamp": "2019-07-19T11:27:22Z",
+      "version": 2,
+      "changeset": 72426382,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 6175905349,
+      "lat": 10.774817,
+      "lon": 106.6478427,
+      "timestamp": "2019-01-01T03:12:13Z",
+      "version": 1,
+      "changeset": 65925313,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175905349,
+      "lat": 10.774821,
+      "lon": 106.6478675,
+      "timestamp": "2019-07-19T11:27:22Z",
+      "version": 2,
+      "changeset": 72426382,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 6175905349,
+      "lat": 10.774821,
+      "lon": 106.6478675,
+      "timestamp": "2019-08-26T15:46:21Z",
+      "version": 3,
+      "changeset": 73760546,
+      "user": "AnonJason",
+      "uid": 9151615,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6175905349,
+      "lat": 10.7748483,
+      "lon": 106.6478638,
+      "timestamp": "2019-08-26T17:31:34Z",
+      "version": 4,
+      "changeset": 73764298,
+      "user": "AnonJason",
+      "uid": 9151615
+    },
+    {
+      "type": "node",
+      "id": 6175905353,
+      "lat": 10.7744354,
+      "lon": 106.6477113,
+      "timestamp": "2019-01-01T03:12:13Z",
+      "version": 1,
+      "changeset": 65925313,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175931648,
+      "lat": 10.7707438,
+      "lon": 106.6468675,
+      "timestamp": "2019-01-01T04:30:28Z",
+      "version": 1,
+      "changeset": 65925720,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175931648,
+      "lat": 10.7707438,
+      "lon": 106.6468675,
+      "timestamp": "2019-08-21T00:43:46Z",
+      "version": 2,
+      "changeset": 73559814,
+      "user": "GhostEye",
+      "uid": 9633773
+    },
+    {
+      "type": "node",
+      "id": 6175931660,
+      "lat": 10.7707968,
+      "lon": 106.646762,
+      "timestamp": "2019-01-01T04:30:29Z",
+      "version": 1,
+      "changeset": 65925720,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 6175931663,
+      "lat": 10.7709276,
+      "lon": 106.6453294,
+      "timestamp": "2019-01-01T04:30:29Z",
+      "version": 1,
+      "changeset": 65925720,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5778252033,
+      "lat": 10.7629749,
+      "lon": 106.6424096,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252033,
+      "lat": 10.7629723,
+      "lon": 106.642417,
+      "timestamp": "2019-08-20T15:40:15Z",
+      "version": 2,
+      "changeset": 73546428,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5778252034,
+      "lat": 10.7630249,
+      "lon": 106.6423076,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252034,
+      "lat": 10.7630065,
+      "lon": 106.6423351,
+      "timestamp": "2019-08-20T15:40:15Z",
+      "version": 2,
+      "changeset": 73546428,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5778252035,
+      "lat": 10.7630776,
+      "lon": 106.6422594,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252035,
+      "lat": 10.7631092,
+      "lon": 106.6422265,
+      "timestamp": "2019-08-20T15:40:15Z",
+      "version": 2,
+      "changeset": 73546428,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5778252036,
+      "lat": 10.7632226,
+      "lon": 106.6421549,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252036,
+      "lat": 10.7632476,
+      "lon": 106.6421576,
+      "timestamp": "2019-08-20T15:40:15Z",
+      "version": 2,
+      "changeset": 73546428,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 5778252036,
+      "lat": 10.7632465,
+      "lon": 106.6421672,
+      "timestamp": "2024-10-28T02:45:29Z",
+      "version": 3,
+      "changeset": 158437577,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5778252044,
+      "lat": 10.7646491,
+      "lon": 106.6454601,
+      "timestamp": "2018-07-23T03:45:34Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252051,
+      "lat": 10.764132,
+      "lon": 106.6446393,
+      "timestamp": "2018-07-23T03:45:35Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252057,
+      "lat": 10.765951,
+      "lon": 106.6447584,
+      "timestamp": "2018-07-23T03:45:35Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252119,
+      "lat": 10.7633306,
+      "lon": 106.6421561,
+      "timestamp": "2018-07-23T03:45:35Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252119,
+      "lat": 10.7633965,
+      "lon": 106.6421568,
+      "timestamp": "2019-08-20T15:50:17Z",
+      "version": 2,
+      "changeset": 73546779,
+      "user": "Whimsical Otter",
+      "uid": 7466823,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5778252119,
+      "lat": 10.7633936,
+      "lon": 106.6421699,
+      "timestamp": "2024-10-28T02:45:29Z",
+      "version": 3,
+      "changeset": 158437577,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5778252122,
+      "lat": 10.763847,
+      "lon": 106.6421647,
+      "timestamp": "2018-07-23T03:45:35Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5778252126,
+      "lat": 10.7641091,
+      "lon": 106.6421734,
+      "timestamp": "2018-07-23T03:45:35Z",
+      "version": 1,
+      "changeset": 60967747,
+      "user": "Neethu5",
+      "uid": 7671607
+    }
+  ]
+}

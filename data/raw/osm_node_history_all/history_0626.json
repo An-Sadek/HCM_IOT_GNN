@@ -1,0 +1,197 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4217007875,
+      "lat": 10.77293,
+      "lon": 106.6467359,
+      "timestamp": "2016-05-31T08:56:32Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217008012,
+      "lat": 10.773404,
+      "lon": 106.6469761,
+      "timestamp": "2016-05-31T08:56:32Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217008032,
+      "lat": 10.7736844,
+      "lon": 106.6471694,
+      "timestamp": "2016-05-31T08:56:33Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217008048,
+      "lat": 10.7737869,
+      "lon": 106.6473591,
+      "timestamp": "2016-05-31T08:56:33Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217008061,
+      "lat": 10.7739101,
+      "lon": 106.647325,
+      "timestamp": "2016-05-31T08:56:33Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217008067,
+      "lat": 10.7741088,
+      "lon": 106.6475856,
+      "timestamp": "2016-05-31T08:56:33Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4225472861,
+      "lat": 10.8120387,
+      "lon": 106.6216268,
+      "timestamp": "2016-06-04T14:29:19Z",
+      "version": 1,
+      "changeset": 39798351,
+      "user": "Khánh Hà",
+      "uid": 4063824
+    },
+    {
+      "type": "node",
+      "id": 4225472861,
+      "lat": 10.8120575,
+      "lon": 106.6216153,
+      "timestamp": "2023-02-25T17:36:10Z",
+      "version": 2,
+      "changeset": 133015688,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 4226120126,
+      "lat": 10.8236363,
+      "lon": 106.7139058,
+      "timestamp": "2016-06-05T01:51:01Z",
+      "version": 1,
+      "changeset": 39807693,
+      "user": "Siêu Thị SaLa",
+      "uid": 4066007
+    },
+    {
+      "type": "node",
+      "id": 4226120126,
+      "lat": 10.8236323,
+      "lon": 106.7139058,
+      "timestamp": "2019-09-06T21:06:13Z",
+      "version": 2,
+      "changeset": 74193283,
+      "user": "El Pescador",
+      "uid": 7445879
+    },
+    {
+      "type": "node",
+      "id": 4226120126,
+      "lat": 10.823634,
+      "lon": 106.7139239,
+      "timestamp": "2024-11-08T10:14:42Z",
+      "version": 3,
+      "changeset": 158889090,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4226120126,
+      "lat": 10.823632,
+      "lon": 106.7139417,
+      "timestamp": "2025-11-25T19:21:22Z",
+      "version": 4,
+      "changeset": 175124889,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 4235815134,
+      "lat": 10.7990597,
+      "lon": 106.7223375,
+      "timestamp": "2016-06-10T16:18:15Z",
+      "version": 1,
+      "changeset": 39933923,
+      "user": "Hoang Tony",
+      "uid": 4097743
+    },
+    {
+      "type": "node",
+      "id": 4235815134,
+      "lat": 10.7990368,
+      "lon": 106.7223398,
+      "timestamp": "2019-10-04T14:38:05Z",
+      "version": 2,
+      "changeset": 75290245,
+      "user": "BaooK",
+      "uid": 10087122
+    },
+    {
+      "type": "node",
+      "id": 4302891987,
+      "lat": 10.7637782,
+      "lon": 106.6916265,
+      "timestamp": "2016-07-14T15:03:22Z",
+      "version": 1,
+      "changeset": 40741375,
+      "user": "Bruce_Le",
+      "uid": 3890518
+    },
+    {
+      "type": "node",
+      "id": 4302891987,
+      "lat": 10.7637753,
+      "lon": 106.6916239,
+      "timestamp": "2016-07-18T08:25:51Z",
+      "version": 2,
+      "changeset": 40813251,
+      "user": "Bruce_Le",
+      "uid": 3890518,
+      "tags": {
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4302891987,
+      "lat": 10.7637621,
+      "lon": 106.6916427,
+      "timestamp": "2017-01-15T14:15:12Z",
+      "version": 3,
+      "changeset": 45191381,
+      "user": "Gã Trùm",
+      "uid": 5083656,
+      "tags": {
+        "highway": "crossing"
+      }
+    }
+  ]
+}

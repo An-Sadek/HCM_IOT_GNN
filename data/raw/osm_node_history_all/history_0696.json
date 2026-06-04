@@ -1,0 +1,268 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4719951857,
+      "lat": 10.8013633,
+      "lon": 106.7110105,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951860,
+      "lat": 10.8010524,
+      "lon": 106.7094146,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951861,
+      "lat": 10.8111343,
+      "lon": 106.665039,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951861,
+      "lat": 10.8105147,
+      "lon": 106.6649692,
+      "timestamp": "2018-02-25T14:39:07Z",
+      "version": 2,
+      "changeset": 56662571,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4719951861,
+      "lat": 10.8105118,
+      "lon": 106.6649765,
+      "timestamp": "2022-01-09T07:03:35Z",
+      "version": 3,
+      "changeset": 115931694,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4719951865,
+      "lat": 10.813339,
+      "lon": 106.6648618,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951865,
+      "lat": 10.8132349,
+      "lon": 106.6648028,
+      "timestamp": "2017-07-03T12:50:01Z",
+      "version": 2,
+      "changeset": 50008394,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4719951865,
+      "lat": 10.8132019,
+      "lon": 106.6647409,
+      "timestamp": "2018-03-12T13:09:27Z",
+      "version": 3,
+      "changeset": 57110821,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4719951866,
+      "lat": 10.814053,
+      "lon": 106.6652078,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951866,
+      "lat": 10.814104,
+      "lon": 106.6652562,
+      "timestamp": "2022-01-09T07:03:35Z",
+      "version": 2,
+      "changeset": 115931694,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4719951867,
+      "lat": 10.8144166,
+      "lon": 106.6652668,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951867,
+      "lat": 10.8143587,
+      "lon": 106.6652928,
+      "timestamp": "2022-01-09T07:03:35Z",
+      "version": 2,
+      "changeset": 115931694,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 4719951867,
+      "lat": 10.8143528,
+      "lon": 106.6652911,
+      "timestamp": "2023-12-11T12:38:20Z",
+      "version": 3,
+      "changeset": 144998197,
+      "user": "Khakha01",
+      "uid": 17678394
+    },
+    {
+      "type": "node",
+      "id": 4719951871,
+      "lat": 10.8142203,
+      "lon": 106.6785791,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951871,
+      "lat": 10.8142732,
+      "lon": 106.6785557,
+      "timestamp": "2019-07-30T06:26:02Z",
+      "version": 2,
+      "changeset": 72796286,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4719951871,
+      "lat": 10.8142648,
+      "lon": 106.6785647,
+      "timestamp": "2024-04-01T06:46:04Z",
+      "version": 3,
+      "changeset": 149418179,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4719951872,
+      "lat": 10.81681,
+      "lon": 106.6786706,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951872,
+      "lat": 10.8169747,
+      "lon": 106.6787175,
+      "timestamp": "2018-03-09T12:48:53Z",
+      "version": 2,
+      "changeset": 57031447,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4719951874,
+      "lat": 10.8146655,
+      "lon": 106.6786944,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951874,
+      "lat": 10.8146336,
+      "lon": 106.678677,
+      "timestamp": "2019-07-30T06:26:02Z",
+      "version": 2,
+      "changeset": 72796286,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4719951874,
+      "lat": 10.8146322,
+      "lon": 106.6787015,
+      "timestamp": "2024-04-01T06:46:04Z",
+      "version": 3,
+      "changeset": 149418179,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 4719951875,
+      "lat": 10.8144468,
+      "lon": 106.6786461,
+      "timestamp": "2017-03-06T08:44:45Z",
+      "version": 1,
+      "changeset": 46616741,
+      "user": "PlaneMad",
+      "uid": 1306
+    },
+    {
+      "type": "node",
+      "id": 4719951875,
+      "lat": 10.8144394,
+      "lon": 106.6786406,
+      "timestamp": "2019-07-30T06:26:02Z",
+      "version": 2,
+      "changeset": 72796286,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4719951875,
+      "lat": 10.8144333,
+      "lon": 106.6786591,
+      "timestamp": "2024-04-01T06:46:04Z",
+      "version": 3,
+      "changeset": 149418179,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    }
+  ]
+}

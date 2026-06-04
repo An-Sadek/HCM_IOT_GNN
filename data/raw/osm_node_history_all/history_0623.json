@@ -1,0 +1,114 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4217007505,
+      "lat": 10.7671981,
+      "lon": 106.6425593,
+      "timestamp": "2016-05-31T08:56:26Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007510,
+      "lat": 10.7672675,
+      "lon": 106.6454434,
+      "timestamp": "2016-05-31T08:56:27Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007513,
+      "lat": 10.7673139,
+      "lon": 106.6454663,
+      "timestamp": "2016-05-31T08:56:27Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007525,
+      "lat": 10.7675387,
+      "lon": 106.642788,
+      "timestamp": "2016-05-31T08:56:27Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007537,
+      "lat": 10.767743,
+      "lon": 106.6430498,
+      "timestamp": "2016-05-31T08:56:27Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007538,
+      "lat": 10.7677476,
+      "lon": 106.6429399,
+      "timestamp": "2016-05-31T08:56:27Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007541,
+      "lat": 10.767772,
+      "lon": 106.6429576,
+      "timestamp": "2016-05-31T08:56:27Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007547,
+      "lat": 10.7679072,
+      "lon": 106.6457837,
+      "timestamp": "2016-05-31T08:56:27Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007550,
+      "lat": 10.7680309,
+      "lon": 106.6458624,
+      "timestamp": "2016-05-31T08:56:27Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 4217007556,
+      "lat": 10.7682154,
+      "lon": 106.64328,
+      "timestamp": "2016-05-31T08:56:28Z",
+      "version": 1,
+      "changeset": 39683633,
+      "user": "TuanIfan",
+      "uid": 625303
+    }
+  ]
+}

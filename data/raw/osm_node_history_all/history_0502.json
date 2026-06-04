@@ -1,0 +1,260 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3187126779,
+      "lat": 10.7862059,
+      "lon": 106.7294531,
+      "timestamp": "2014-11-14T18:13:56Z",
+      "version": 1,
+      "changeset": 26782888,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Giao lộ Lương Định Của"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3187126779,
+      "lat": 10.7862059,
+      "lon": 106.7294531,
+      "timestamp": "2022-05-12T09:01:52Z",
+      "version": 2,
+      "changeset": 120876871,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Giao Lộ Lương Định Của",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3187126785,
+      "lat": 10.7958112,
+      "lon": 106.7310584,
+      "timestamp": "2014-11-14T18:13:56Z",
+      "version": 1,
+      "changeset": 26782888,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Cư xá Điện lực"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3187126785,
+      "lat": 10.7958112,
+      "lon": 106.7310584,
+      "timestamp": "2022-05-12T02:12:57Z",
+      "version": 2,
+      "changeset": 120863847,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Cư Xá Điện Lực",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3187128368,
+      "lat": 10.7923392,
+      "lon": 106.7304854,
+      "timestamp": "2014-11-14T18:14:27Z",
+      "version": 1,
+      "changeset": 26782902,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "KTX Đại học GTVT"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3187128368,
+      "lat": 10.7923392,
+      "lon": 106.7304854,
+      "timestamp": "2022-05-16T04:01:26Z",
+      "version": 2,
+      "changeset": 121030982,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus KTX Đại học GTVT",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3187128368,
+      "lat": 10.7924295,
+      "lon": 106.7304534,
+      "timestamp": "2024-03-31T14:45:58Z",
+      "version": 3,
+      "changeset": 149393649,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kí túc xá Đại học Giao thông Vận tải",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3188369566,
+      "lat": 10.7360738,
+      "lon": 106.8162514,
+      "timestamp": "2014-11-15T13:44:46Z",
+      "version": 1,
+      "changeset": 26798432,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3188369572,
+      "lat": 10.751064,
+      "lon": 106.7912072,
+      "timestamp": "2014-11-15T13:44:46Z",
+      "version": 1,
+      "changeset": 26798432,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3188369572,
+      "lat": 10.7510469,
+      "lon": 106.7911683,
+      "timestamp": "2018-07-02T03:47:58Z",
+      "version": 2,
+      "changeset": 60334192,
+      "user": "sabiyana",
+      "uid": 7795574
+    },
+    {
+      "type": "node",
+      "id": 3188369572,
+      "lat": 10.7510311,
+      "lon": 106.7911924,
+      "timestamp": "2020-08-17T08:50:38Z",
+      "version": 3,
+      "changeset": 89506153,
+      "user": "Akhil_vas",
+      "uid": 10044794
+    },
+    {
+      "type": "node",
+      "id": 3188369596,
+      "lat": 10.7506396,
+      "lon": 106.7913451,
+      "timestamp": "2014-11-15T13:44:46Z",
+      "version": 1,
+      "changeset": 26798432,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3188369596,
+      "lat": 10.7506027,
+      "lon": 106.7913008,
+      "timestamp": "2018-07-02T03:47:58Z",
+      "version": 2,
+      "changeset": 60334192,
+      "user": "sabiyana",
+      "uid": 7795574
+    },
+    {
+      "type": "node",
+      "id": 3188369596,
+      "lat": 10.7505843,
+      "lon": 106.7913357,
+      "timestamp": "2020-08-17T08:50:38Z",
+      "version": 3,
+      "changeset": 89506153,
+      "user": "Akhil_vas",
+      "uid": 10044794
+    },
+    {
+      "type": "node",
+      "id": 3188369597,
+      "lat": 10.7468812,
+      "lon": 106.7929498,
+      "timestamp": "2014-11-15T13:44:46Z",
+      "version": 1,
+      "changeset": 26798432,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3188369597,
+      "lat": 10.7468469,
+      "lon": 106.7929002,
+      "timestamp": "2018-07-02T03:47:58Z",
+      "version": 2,
+      "changeset": 60334192,
+      "user": "sabiyana",
+      "uid": 7795574
+    },
+    {
+      "type": "node",
+      "id": 3188369633,
+      "lat": 10.7391294,
+      "lon": 106.8121657,
+      "timestamp": "2014-11-15T13:44:47Z",
+      "version": 1,
+      "changeset": 26798432,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3188376571,
+      "lat": 10.7376092,
+      "lon": 106.8141974,
+      "timestamp": "2014-11-15T13:52:35Z",
+      "version": 1,
+      "changeset": 26798576,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3188376571,
+      "lat": 10.7376276,
+      "lon": 106.8141759,
+      "timestamp": "2020-09-22T08:56:50Z",
+      "version": 2,
+      "changeset": 91277826,
+      "user": "divya_reddy",
+      "uid": 11830231
+    },
+    {
+      "type": "node",
+      "id": 3188376599,
+      "lat": 10.7443127,
+      "lon": 106.8027109,
+      "timestamp": "2014-11-15T13:52:35Z",
+      "version": 1,
+      "changeset": 26798576,
+      "user": "TuanIfan",
+      "uid": 625303
+    }
+  ]
+}

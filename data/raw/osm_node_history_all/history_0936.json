@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5762893322,
+      "lat": 10.7705119,
+      "lon": 106.6992532,
+      "timestamp": "2018-07-16T06:00:36Z",
+      "version": 1,
+      "changeset": 60747419,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762893326,
+      "lat": 10.770666,
+      "lon": 106.6991525,
+      "timestamp": "2018-07-16T06:00:36Z",
+      "version": 1,
+      "changeset": 60747419,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762893331,
+      "lat": 10.7699124,
+      "lon": 106.6976851,
+      "timestamp": "2018-07-16T06:00:36Z",
+      "version": 1,
+      "changeset": 60747419,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762893331,
+      "lat": 10.7699229,
+      "lon": 106.6976997,
+      "timestamp": "2022-01-09T08:48:42Z",
+      "version": 2,
+      "changeset": 115933471,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 5762893331,
+      "lat": 10.7699703,
+      "lon": 106.697756,
+      "timestamp": "2022-10-07T11:39:33Z",
+      "version": 3,
+      "changeset": 127148124,
+      "user": "TRIPICAL VIETNAM LLC",
+      "uid": 16194959
+    },
+    {
+      "type": "node",
+      "id": 5762893332,
+      "lat": 10.769368,
+      "lon": 106.6967057,
+      "timestamp": "2018-07-16T06:00:36Z",
+      "version": 1,
+      "changeset": 60747419,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5763097069,
+      "lat": 10.7996654,
+      "lon": 106.6743591,
+      "timestamp": "2018-07-16T07:19:11Z",
+      "version": 1,
+      "changeset": 60750450,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5763097069,
+      "lat": 10.7996674,
+      "lon": 106.6743497,
+      "timestamp": "2019-07-22T08:42:13Z",
+      "version": 2,
+      "changeset": 72504335,
+      "user": "grabtaxi18",
+      "uid": 10141211
+    },
+    {
+      "type": "node",
+      "id": 5763097069,
+      "lat": 10.7996621,
+      "lon": 106.6744033,
+      "timestamp": "2023-10-03T03:05:48Z",
+      "version": 3,
+      "changeset": 142075886,
+      "user": "Arkskyle",
+      "uid": 17344224
+    },
+    {
+      "type": "node",
+      "id": 5763097093,
+      "lat": 10.7996466,
+      "lon": 106.6736085,
+      "timestamp": "2018-07-16T07:19:11Z",
+      "version": 1,
+      "changeset": 60750450,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5763097096,
+      "lat": 10.7986865,
+      "lon": 106.6728531,
+      "timestamp": "2018-07-16T07:19:11Z",
+      "version": 1,
+      "changeset": 60750450,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5763116001,
+      "lat": 10.8759361,
+      "lon": 106.8046747,
+      "timestamp": "2018-07-16T07:29:19Z",
+      "version": 1,
+      "changeset": 60750882,
+      "user": "kawle",
+      "uid": 7446620
+    },
+    {
+      "type": "node",
+      "id": 5763135323,
+      "lat": 10.7761801,
+      "lon": 106.7002195,
+      "timestamp": "2018-07-16T07:35:07Z",
+      "version": 1,
+      "changeset": 60751155,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5763135323,
+      "lat": 10.776175,
+      "lon": 106.7002132,
+      "timestamp": "2020-05-08T17:07:21Z",
+      "version": 2,
+      "changeset": 84907115,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 5763135331,
+      "lat": 10.775719,
+      "lon": 106.7004206,
+      "timestamp": "2018-07-16T07:35:07Z",
+      "version": 1,
+      "changeset": 60751155,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5763135331,
+      "lat": 10.7757117,
+      "lon": 106.7004089,
+      "timestamp": "2020-05-08T17:07:21Z",
+      "version": 2,
+      "changeset": 84907115,
+      "user": "TuanIfan",
+      "uid": 625303
+    }
+  ]
+}

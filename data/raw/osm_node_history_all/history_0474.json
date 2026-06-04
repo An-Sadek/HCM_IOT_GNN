@@ -1,0 +1,944 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3151254797,
+      "lat": 10.7584441,
+      "lon": 106.6765501,
+      "timestamp": "2014-10-26T17:48:47Z",
+      "version": 1,
+      "changeset": 26346144,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "addr:street": "An Dương Vương",
+        "name": "An Dương Vương - Huỳnh Mẫn Đạt",
+        "highway": "bus_stop",
+        "note": "460 An Dương Vương",
+        "addr:housenumber": "460"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254797,
+      "lat": 10.7584592,
+      "lon": 106.6765438,
+      "timestamp": "2017-01-24T12:43:26Z",
+      "version": 2,
+      "changeset": 45433835,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "addr:street": "An Dương Vương",
+        "name": "An Dương Vương - Huỳnh Mẫn Đạt",
+        "highway": "bus_stop",
+        "note": "460 An Dương Vương",
+        "addr:housenumber": "460"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254797,
+      "lat": 10.7584595,
+      "lon": 106.6765437,
+      "timestamp": "2017-01-24T13:55:56Z",
+      "version": 3,
+      "changeset": 45436041,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "addr:street": "An Dương Vương",
+        "name": "An Dương Vương - Huỳnh Mẫn Đạt",
+        "highway": "bus_stop",
+        "note": "460 An Dương Vương",
+        "addr:housenumber": "460"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254797,
+      "lat": 10.7584618,
+      "lon": 106.6765427,
+      "timestamp": "2019-08-20T15:59:48Z",
+      "version": 4,
+      "changeset": 73547128,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "addr:street": "An Dương Vương",
+        "name": "An Dương Vương - Huỳnh Mẫn Đạt",
+        "highway": "bus_stop",
+        "note": "460 An Dương Vương",
+        "addr:housenumber": "460"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254797,
+      "lat": 10.7584618,
+      "lon": 106.6765427,
+      "timestamp": "2019-08-20T18:40:37Z",
+      "version": 5,
+      "changeset": 73552430,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "name": "An Dương Vương - Huỳnh Mẫn Đạt",
+        "highway": "bus_stop",
+        "note": "460 An Dương Vương",
+        "addr:street": "Đường An Dương Vương",
+        "addr:housenumber": "460"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254797,
+      "lat": 10.7584618,
+      "lon": 106.6765427,
+      "timestamp": "2022-04-15T11:27:24Z",
+      "version": 6,
+      "changeset": 119747343,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus An Dương Vương - Huỳnh Mẫn Đạt",
+        "note": "460 An Dương Vương",
+        "addr:street": "Đường An Dương Vương",
+        "addr:housenumber": "460"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254797,
+      "lat": 10.7584062,
+      "lon": 106.6765616,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 7,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "460",
+        "addr:street": "Đường An Dương Vương",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Huỳnh Mẫn Đạt",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7573125,
+      "lon": 106.6731465,
+      "timestamp": "2014-10-26T17:48:47Z",
+      "version": 1,
+      "changeset": 26346144,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572933,
+      "lon": 106.6731475,
+      "timestamp": "2017-01-21T11:29:49Z",
+      "version": 2,
+      "changeset": 45347673,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572926,
+      "lon": 106.6731476,
+      "timestamp": "2017-01-25T02:03:01Z",
+      "version": 3,
+      "changeset": 45457328,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572927,
+      "lon": 106.6731476,
+      "timestamp": "2017-01-25T02:29:22Z",
+      "version": 4,
+      "changeset": 45457887,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572927,
+      "lon": 106.6731476,
+      "timestamp": "2017-01-25T02:34:48Z",
+      "version": 5,
+      "changeset": 45458001,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572931,
+      "lon": 106.6731475,
+      "timestamp": "2017-01-25T06:49:09Z",
+      "version": 6,
+      "changeset": 45464318,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572931,
+      "lon": 106.6731475,
+      "timestamp": "2017-01-25T07:26:45Z",
+      "version": 7,
+      "changeset": 45465209,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572931,
+      "lon": 106.6731475,
+      "timestamp": "2017-01-25T07:37:19Z",
+      "version": 8,
+      "changeset": 45465497,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572932,
+      "lon": 106.6731475,
+      "timestamp": "2019-08-20T14:19:50Z",
+      "version": 9,
+      "changeset": 73542686,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572932,
+      "lon": 106.6731475,
+      "timestamp": "2019-08-20T14:26:12Z",
+      "version": 10,
+      "changeset": 73543040,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572933,
+      "lon": 106.6731475,
+      "timestamp": "2019-08-20T14:37:30Z",
+      "version": 11,
+      "changeset": 73543606,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Đối diện An Đông Plaza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572933,
+      "lon": 106.6731475,
+      "timestamp": "2022-01-05T01:55:03Z",
+      "version": 12,
+      "changeset": 115777106,
+      "user": "hoanganhlami33",
+      "uid": 14252795,
+      "tags": {
+        "name": "Đối diện An Đông Plaza",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7572933,
+      "lon": 106.6731475,
+      "timestamp": "2022-04-15T11:27:24Z",
+      "version": 13,
+      "changeset": 119747343,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus An Đông Plaza",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254798,
+      "lat": 10.7570355,
+      "lon": 106.6721669,
+      "timestamp": "2024-03-23T10:25:01Z",
+      "version": 14,
+      "changeset": 149044848,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Chợ An Đông",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254801,
+      "lat": 10.7578567,
+      "lon": 106.6674622,
+      "timestamp": "2014-10-26T17:48:47Z",
+      "version": 1,
+      "changeset": 26346144,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "addr:street": "Ngô Gia Tự",
+        "note": "546 Ngô Gia Tự",
+        "name": "Ký Túc Xá Đại học Y Dược",
+        "highway": "bus_stop",
+        "addr:housenumber": "546"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254801,
+      "lat": 10.7578604,
+      "lon": 106.6674585,
+      "timestamp": "2017-01-17T12:47:18Z",
+      "version": 2,
+      "changeset": 45241916,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "addr:street": "Ngô Gia Tự",
+        "note": "546 Ngô Gia Tự",
+        "name": "Ký Túc Xá Đại học Y Dược",
+        "highway": "bus_stop",
+        "addr:housenumber": "546"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254801,
+      "lat": 10.7578192,
+      "lon": 106.6675014,
+      "timestamp": "2017-01-18T11:00:01Z",
+      "version": 3,
+      "changeset": 45267307,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "addr:street": "Ngô Gia Tự",
+        "note": "546 Ngô Gia Tự",
+        "name": "Ký Túc Xá Đại học Y Dược",
+        "highway": "bus_stop",
+        "addr:housenumber": "546"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254801,
+      "lat": 10.7578166,
+      "lon": 106.6675162,
+      "timestamp": "2019-08-27T20:55:38Z",
+      "version": 4,
+      "changeset": 73814310,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "addr:street": "Ngô Gia Tự",
+        "note": "546 Ngô Gia Tự",
+        "name": "Ký Túc Xá Đại học Y Dược",
+        "highway": "bus_stop",
+        "addr:housenumber": "546"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254801,
+      "lat": 10.7578152,
+      "lon": 106.6675128,
+      "timestamp": "2019-08-27T20:59:51Z",
+      "version": 5,
+      "changeset": 73814410,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "note": "546 Ngô Gia Tự",
+        "name": "Ký Túc Xá Đại học Y Dược",
+        "highway": "bus_stop",
+        "addr:housenumber": "546",
+        "addr:street": "Đường Ngô Gia Tự"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254801,
+      "lat": 10.7578152,
+      "lon": 106.6675128,
+      "timestamp": "2022-04-15T11:27:24Z",
+      "version": 6,
+      "changeset": 119747343,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "addr:housenumber": "546",
+        "addr:street": "Đường Ngô Gia Tự",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Ký Túc Xá Đại học Y Dược",
+        "note": "546 Ngô Gia Tự",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254801,
+      "lat": 10.7578287,
+      "lon": 106.6674938,
+      "timestamp": "2022-05-13T00:36:26Z",
+      "version": 7,
+      "changeset": 120909692,
+      "user": "Tommybara",
+      "uid": 12198525,
+      "tags": {
+        "addr:housenumber": "546",
+        "addr:street": "Đường Ngô Gia Tự",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Ký Túc Xá Đại học Y Dược",
+        "note": "546 Ngô Gia Tự",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254801,
+      "lat": 10.7578503,
+      "lon": 106.6674622,
+      "timestamp": "2026-03-05T09:57:37Z",
+      "version": 8,
+      "changeset": 179388091,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "546",
+        "addr:street": "Đường Ngô Gia Tự",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Ký Túc Xá Đại học Y Dược",
+        "note": "546 Ngô Gia Tự",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254802,
+      "lat": 10.7557253,
+      "lon": 106.6646049,
+      "timestamp": "2014-10-26T17:48:47Z",
+      "version": 1,
+      "changeset": 26346144,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Đại học Y Dược"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254802,
+      "lat": 10.7556989,
+      "lon": 106.6646022,
+      "timestamp": "2017-01-17T11:09:13Z",
+      "version": 2,
+      "changeset": 45239835,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Đại học Y Dược"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254802,
+      "lat": 10.7556477,
+      "lon": 106.6646126,
+      "timestamp": "2017-01-18T10:04:15Z",
+      "version": 3,
+      "changeset": 45266250,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Đại học Y Dược"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3151254802,
+      "lat": 10.7556534,
+      "lon": 106.6646114,
+      "timestamp": "2019-09-03T15:52:41Z",
+      "version": 4,
+      "changeset": 74048695,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Đại học Y Dược"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152325555,
+      "lat": 10.757822,
+      "lon": 106.6586248,
+      "timestamp": "2014-10-27T11:05:00Z",
+      "version": 1,
+      "changeset": 26360933,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện Chợ Rẫy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632050,
+      "lat": 10.7570989,
+      "lon": 106.6550839,
+      "timestamp": "2014-10-27T15:58:25Z",
+      "version": 1,
+      "changeset": 26366983,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hội thánh Tin Lành Việt Nam",
+        "note": "604 Nguyễn Chí Thanh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632050,
+      "lat": 10.7571144,
+      "lon": 106.6551129,
+      "timestamp": "2017-01-04T14:35:34Z",
+      "version": 2,
+      "changeset": 44900059,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hội thánh Tin Lành Việt Nam",
+        "note": "604 Nguyễn Chí Thanh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632050,
+      "lat": 10.7571232,
+      "lon": 106.6551129,
+      "timestamp": "2017-01-17T11:46:52Z",
+      "version": 3,
+      "changeset": 45240625,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hội thánh Tin Lành Việt Nam",
+        "note": "604 Nguyễn Chí Thanh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632050,
+      "lat": 10.7571212,
+      "lon": 106.6551133,
+      "timestamp": "2019-09-04T17:28:34Z",
+      "version": 4,
+      "changeset": 74098945,
+      "user": "ReedtheRiver",
+      "uid": 9965337,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hội thánh Tin Lành Việt Nam",
+        "note": "604 Nguyễn Chí Thanh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632051,
+      "lat": 10.7554339,
+      "lon": 106.6537488,
+      "timestamp": "2014-10-27T15:58:25Z",
+      "version": 1,
+      "changeset": 26366983,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "addr:street": "Tạ Uyên",
+        "addr:housenumber": "79",
+        "highway": "bus_stop",
+        "name": "Chợ Tân Thành",
+        "note": "79 Tạ Uyên"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632051,
+      "lat": 10.7554365,
+      "lon": 106.6537837,
+      "timestamp": "2019-07-22T13:54:08Z",
+      "version": 2,
+      "changeset": 72516997,
+      "user": "szilardk_grab",
+      "uid": 10143877,
+      "tags": {
+        "addr:street": "Tạ Uyên",
+        "addr:housenumber": "79",
+        "highway": "bus_stop",
+        "name": "Chợ Tân Thành",
+        "note": "79 Tạ Uyên"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632051,
+      "lat": 10.7554531,
+      "lon": 106.6538552,
+      "timestamp": "2019-08-27T15:26:16Z",
+      "version": 3,
+      "changeset": 73804339,
+      "user": "AnonJason",
+      "uid": 9151615,
+      "tags": {
+        "addr:housenumber": "79",
+        "addr:street": "Đường Tạ Uyên",
+        "highway": "bus_stop",
+        "name": "Chợ Tân Thành",
+        "note": "79 Tạ Uyên"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632052,
+      "lat": 10.7951592,
+      "lon": 106.6492614,
+      "timestamp": "2014-10-27T15:58:25Z",
+      "version": 1,
+      "changeset": 26366983,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "150 Trường Chinh",
+        "name": "150 Trường Chinh",
+        "highway": "bus_stop",
+        "addr:housenumber": "150",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632052,
+      "lat": 10.7951592,
+      "lon": 106.6492614,
+      "timestamp": "2022-04-24T13:12:36Z",
+      "version": 2,
+      "changeset": 120123834,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus 150 Trường Chinh",
+        "addr:housenumber": "150",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "150 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632052,
+      "lat": 10.7951354,
+      "lon": 106.649248,
+      "timestamp": "2023-12-15T17:26:33Z",
+      "version": 3,
+      "changeset": 145159942,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus 150 Trường Chinh",
+        "addr:housenumber": "150",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "150 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632052,
+      "lat": 10.7951345,
+      "lon": 106.6492475,
+      "timestamp": "2023-12-25T13:12:20Z",
+      "version": 4,
+      "changeset": 145497360,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus 150 Trường Chinh",
+        "addr:housenumber": "150",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "150 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632052,
+      "lat": 10.7959631,
+      "lon": 106.6477825,
+      "timestamp": "2024-03-24T08:37:15Z",
+      "version": 5,
+      "changeset": 149078752,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "150",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã ba Hoàng Hoa Thám",
+        "note": "150 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632052,
+      "lat": 10.7959663,
+      "lon": 106.6477825,
+      "timestamp": "2024-03-29T14:32:49Z",
+      "version": 6,
+      "changeset": 149315430,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "150",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngã ba Hoàng Hoa Thám",
+        "note": "150 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632053,
+      "lat": 10.7952881,
+      "lon": 106.6488492,
+      "timestamp": "2014-10-27T15:58:25Z",
+      "version": 1,
+      "changeset": 26366983,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "Đối diện 160B Trường Chinh",
+        "name": "Nhà thờ - Tu hội Đắc Lộ",
+        "highway": "bus_stop",
+        "addr:housenumber": "Đối diện 160B",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632053,
+      "lat": 10.7952881,
+      "lon": 106.6488492,
+      "timestamp": "2022-04-24T13:12:36Z",
+      "version": 2,
+      "changeset": 120123834,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà thờ - Tu hội Đắc Lộ",
+        "addr:housenumber": "Đối diện 160B",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "Đối diện 160B Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632053,
+      "lat": 10.7952819,
+      "lon": 106.6488457,
+      "timestamp": "2023-12-25T13:12:20Z",
+      "version": 3,
+      "changeset": 145497360,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "name": "Trạm Xe Bus Nhà thờ - Tu hội Đắc Lộ",
+        "addr:housenumber": "Đối diện 160B",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "note": "Đối diện 160B Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632053,
+      "lat": 10.7949952,
+      "lon": 106.6492935,
+      "timestamp": "2024-03-29T14:32:49Z",
+      "version": 4,
+      "changeset": 149315430,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "addr:housenumber": "Đối diện 160B",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nhà thờ Đắc Lộ",
+        "note": "Đối diện 160B Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632054,
+      "lat": 10.7968927,
+      "lon": 106.6460211,
+      "timestamp": "2014-10-27T15:58:25Z",
+      "version": 1,
+      "changeset": 26366983,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "note": "174-176 Trường Chinh",
+        "name": "Trường Chinh - Đồng Đen",
+        "highway": "bus_stop",
+        "addr:housenumber": "174 - 176",
+        "addr:street": "Trường Chinh"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632054,
+      "lat": 10.7968927,
+      "lon": 106.6460211,
+      "timestamp": "2022-04-24T13:12:36Z",
+      "version": 2,
+      "changeset": 120123834,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "addr:housenumber": "174 - 176",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Trường Chinh - Đồng Đen",
+        "note": "174-176 Trường Chinh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3152632054,
+      "lat": 10.7968777,
+      "lon": 106.6460128,
+      "timestamp": "2023-12-25T13:12:20Z",
+      "version": 3,
+      "changeset": 145497360,
+      "user": "Khakha01",
+      "uid": 17678394,
+      "tags": {
+        "addr:housenumber": "174 - 176",
+        "addr:street": "Trường Chinh",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm Xe Bus Trường Chinh - Đồng Đen",
+        "note": "174-176 Trường Chinh",
+        "public_transport": "platform"
+      }
+    }
+  ]
+}

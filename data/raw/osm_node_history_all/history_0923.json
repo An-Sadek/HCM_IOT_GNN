@@ -1,0 +1,202 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5762600151,
+      "lat": 10.8756185,
+      "lon": 106.7574278,
+      "timestamp": "2018-07-16T01:17:54Z",
+      "version": 1,
+      "changeset": 60743529,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762600151,
+      "lat": 10.875608,
+      "lon": 106.7574224,
+      "timestamp": "2018-07-20T07:46:17Z",
+      "version": 2,
+      "changeset": 60894870,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762600151,
+      "lat": 10.875604,
+      "lon": 106.7574144,
+      "timestamp": "2018-07-20T09:07:29Z",
+      "version": 3,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762600675,
+      "lat": 10.8709404,
+      "lon": 106.6144309,
+      "timestamp": "2018-07-16T01:16:39Z",
+      "version": 1,
+      "changeset": 60743515,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762600675,
+      "lat": 10.8709554,
+      "lon": 106.6144539,
+      "timestamp": "2022-04-26T18:18:57Z",
+      "version": 2,
+      "changeset": 120225035,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 5762600697,
+      "lat": 10.8661857,
+      "lon": 106.6159466,
+      "timestamp": "2018-07-16T01:16:39Z",
+      "version": 1,
+      "changeset": 60743515,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762600722,
+      "lat": 10.8651519,
+      "lon": 106.6162922,
+      "timestamp": "2018-07-16T01:16:40Z",
+      "version": 1,
+      "changeset": 60743515,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762600726,
+      "lat": 10.8699562,
+      "lon": 106.6150764,
+      "timestamp": "2018-07-16T01:16:40Z",
+      "version": 1,
+      "changeset": 60743515,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762600726,
+      "lat": 10.8699891,
+      "lon": 106.6150858,
+      "timestamp": "2021-01-22T09:11:49Z",
+      "version": 2,
+      "changeset": 97960876,
+      "user": "srav_gum",
+      "uid": 11660077
+    },
+    {
+      "type": "node",
+      "id": 5762600892,
+      "lat": 10.8669709,
+      "lon": 106.6156465,
+      "timestamp": "2018-07-16T01:16:41Z",
+      "version": 1,
+      "changeset": 60743515,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762600893,
+      "lat": 10.8700866,
+      "lon": 106.6150376,
+      "timestamp": "2018-07-16T01:16:41Z",
+      "version": 1,
+      "changeset": 60743515,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762600894,
+      "lat": 10.8703282,
+      "lon": 106.6149167,
+      "timestamp": "2018-07-16T01:16:41Z",
+      "version": 1,
+      "changeset": 60743515,
+      "user": "lakkarssu",
+      "uid": 8196672
+    },
+    {
+      "type": "node",
+      "id": 5762600894,
+      "lat": 10.8702846,
+      "lon": 106.6149339,
+      "timestamp": "2022-04-26T18:18:57Z",
+      "version": 2,
+      "changeset": 120225035,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 5762610000,
+      "lat": 10.803791,
+      "lon": 106.6351505,
+      "timestamp": "2018-07-16T01:32:07Z",
+      "version": 1,
+      "changeset": 60743715,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5762610000,
+      "lat": 10.8037778,
+      "lon": 106.6351492,
+      "timestamp": "2019-07-19T11:27:22Z",
+      "version": 2,
+      "changeset": 72426382,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5762610000,
+      "lat": 10.8037738,
+      "lon": 106.6351318,
+      "timestamp": "2024-07-26T09:17:12Z",
+      "version": 3,
+      "changeset": 154432794,
+      "user": "openmap-vn",
+      "uid": 21213273
+    },
+    {
+      "type": "node",
+      "id": 5762610009,
+      "lat": 10.8014126,
+      "lon": 106.6375873,
+      "timestamp": "2018-07-16T01:32:07Z",
+      "version": 1,
+      "changeset": 60743715,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5762610009,
+      "lat": 10.8013951,
+      "lon": 106.6375773,
+      "timestamp": "2023-12-21T10:49:48Z",
+      "version": 2,
+      "changeset": 145365984,
+      "user": "Khakha01",
+      "uid": 17678394
+    }
+  ]
+}

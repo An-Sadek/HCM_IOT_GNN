@@ -1,0 +1,12 @@
+**/__pycache__/
+.idea/
+**/.ipynb_checkpoints/
+.vscode/
+.jupyter/
+**/cache/
+data/raw/osm_edge_batches/
+data/raw/edges_df/
+data/raw/nodes_df/
+data/raw/nodes_meta/
+data/raw/osm_node_ids/
+**/*.npy

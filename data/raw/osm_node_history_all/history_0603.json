@@ -1,0 +1,202 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 4068017786,
+      "lat": 10.8735778,
+      "lon": 106.7649528,
+      "timestamp": "2016-03-19T07:15:54Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017787,
+      "lat": 10.8738486,
+      "lon": 106.7651952,
+      "timestamp": "2016-03-19T07:15:54Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017787,
+      "lat": 10.8738822,
+      "lon": 106.7652158,
+      "timestamp": "2018-03-10T03:48:38Z",
+      "version": 2,
+      "changeset": 57049771,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 4068017787,
+      "lat": 10.8738835,
+      "lon": 106.7652225,
+      "timestamp": "2025-01-21T11:40:21Z",
+      "version": 3,
+      "changeset": 161597029,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 4068017788,
+      "lat": 10.873635,
+      "lon": 106.7650777,
+      "timestamp": "2016-03-19T07:15:54Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017990,
+      "lat": 10.872296,
+      "lon": 106.7682576,
+      "timestamp": "2016-03-19T07:15:55Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017990,
+      "lat": 10.8723,
+      "lon": 106.7682643,
+      "timestamp": "2018-07-20T09:07:28Z",
+      "version": 2,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 4068017991,
+      "lat": 10.8725074,
+      "lon": 106.7676476,
+      "timestamp": "2016-03-19T07:15:55Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017991,
+      "lat": 10.8725114,
+      "lon": 106.7676543,
+      "timestamp": "2018-07-20T09:07:28Z",
+      "version": 2,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 4068017992,
+      "lat": 10.8701766,
+      "lon": 106.7751466,
+      "timestamp": "2016-03-19T07:15:55Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017993,
+      "lat": 10.8698964,
+      "lon": 106.775542,
+      "timestamp": "2016-03-19T07:15:55Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017993,
+      "lat": 10.8699004,
+      "lon": 106.7755487,
+      "timestamp": "2018-07-20T09:07:28Z",
+      "version": 2,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 4068017994,
+      "lat": 10.8697983,
+      "lon": 106.7758216,
+      "timestamp": "2016-03-19T07:15:55Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017994,
+      "lat": 10.8698023,
+      "lon": 106.7758283,
+      "timestamp": "2018-07-20T09:07:28Z",
+      "version": 2,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 4068017996,
+      "lat": 10.8686769,
+      "lon": 106.7788624,
+      "timestamp": "2016-03-19T07:15:55Z",
+      "version": 1,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 4068017996,
+      "lat": 10.8686625,
+      "lon": 106.7788595,
+      "timestamp": "2018-07-18T01:39:24Z",
+      "version": 2,
+      "changeset": 60817116,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 4068017996,
+      "lat": 10.8686691,
+      "lon": 106.7788662,
+      "timestamp": "2018-07-20T09:07:28Z",
+      "version": 3,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 4068031139,
+      "lat": 10.8608887,
+      "lon": 106.7934333,
+      "timestamp": "2016-03-19T07:29:16Z",
+      "version": 1,
+      "changeset": 37933249,
+      "user": "totim",
+      "uid": 562188
+    }
+  ]
+}

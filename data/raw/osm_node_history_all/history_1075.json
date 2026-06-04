@@ -1,0 +1,349 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5794854826,
+      "lat": 10.7553192,
+      "lon": 106.676557,
+      "timestamp": "2018-07-30T03:19:56Z",
+      "version": 1,
+      "changeset": 61178755,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854826,
+      "lat": 10.7552968,
+      "lon": 106.6765248,
+      "timestamp": "2018-08-08T01:51:12Z",
+      "version": 2,
+      "changeset": 61450892,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854826,
+      "lat": 10.7552957,
+      "lon": 106.6765197,
+      "timestamp": "2019-09-05T14:34:54Z",
+      "version": 3,
+      "changeset": 74138477,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794854826,
+      "lat": 10.7553059,
+      "lon": 106.6765443,
+      "timestamp": "2024-06-21T08:51:42Z",
+      "version": 4,
+      "changeset": 152982467,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5794854827,
+      "lat": 10.7554891,
+      "lon": 106.6765058,
+      "timestamp": "2018-07-30T03:19:56Z",
+      "version": 1,
+      "changeset": 61178755,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854827,
+      "lat": 10.7554746,
+      "lon": 106.676479,
+      "timestamp": "2018-08-08T01:51:12Z",
+      "version": 2,
+      "changeset": 61450892,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854827,
+      "lat": 10.7554878,
+      "lon": 106.6764763,
+      "timestamp": "2018-08-08T02:19:58Z",
+      "version": 3,
+      "changeset": 61451189,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854827,
+      "lat": 10.7554832,
+      "lon": 106.6764723,
+      "timestamp": "2019-08-28T15:39:40Z",
+      "version": 4,
+      "changeset": 73848430,
+      "user": "_Poliwrath_",
+      "uid": 8759140
+    },
+    {
+      "type": "node",
+      "id": 5794854827,
+      "lat": 10.7554824,
+      "lon": 106.676469,
+      "timestamp": "2019-09-05T14:34:54Z",
+      "version": 5,
+      "changeset": 74138477,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794854827,
+      "lat": 10.7555025,
+      "lon": 106.6764894,
+      "timestamp": "2024-06-21T08:51:42Z",
+      "version": 6,
+      "changeset": 152982467,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5794854830,
+      "lat": 10.7563856,
+      "lon": 106.6762478,
+      "timestamp": "2018-07-30T03:19:56Z",
+      "version": 1,
+      "changeset": 61178755,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854830,
+      "lat": 10.7563852,
+      "lon": 106.6762464,
+      "timestamp": "2019-08-20T15:28:08Z",
+      "version": 2,
+      "changeset": 73545983,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794854830,
+      "lat": 10.7563833,
+      "lon": 106.6762386,
+      "timestamp": "2019-09-05T14:34:54Z",
+      "version": 3,
+      "changeset": 74138477,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794854830,
+      "lat": 10.7563836,
+      "lon": 106.6762397,
+      "timestamp": "2019-09-13T22:28:41Z",
+      "version": 4,
+      "changeset": 74456570,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794854830,
+      "lat": 10.7563822,
+      "lon": 106.6762239,
+      "timestamp": "2025-05-29T09:22:33Z",
+      "version": 5,
+      "changeset": 166910456,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5794854831,
+      "lat": 10.7610779,
+      "lon": 106.6747575,
+      "timestamp": "2018-07-30T03:19:56Z",
+      "version": 1,
+      "changeset": 61178755,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854831,
+      "lat": 10.761097,
+      "lon": 106.6747924,
+      "timestamp": "2019-08-20T18:25:40Z",
+      "version": 2,
+      "changeset": 73551968,
+      "user": "_Poliwrath_",
+      "uid": 8759140,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5794854831,
+      "lat": 10.7610891,
+      "lon": 106.6747895,
+      "timestamp": "2019-09-09T14:51:02Z",
+      "version": 3,
+      "changeset": 74268314,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794854831,
+      "lat": 10.7610914,
+      "lon": 106.6747885,
+      "timestamp": "2019-09-09T15:16:02Z",
+      "version": 4,
+      "changeset": 74269677,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794854832,
+      "lat": 10.7610737,
+      "lon": 106.6746464,
+      "timestamp": "2018-07-30T03:19:56Z",
+      "version": 1,
+      "changeset": 61178755,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854832,
+      "lat": 10.7610783,
+      "lon": 106.6746115,
+      "timestamp": "2018-08-02T06:12:10Z",
+      "version": 2,
+      "changeset": 61284704,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854833,
+      "lat": 10.7609989,
+      "lon": 106.6745905,
+      "timestamp": "2018-07-30T03:19:56Z",
+      "version": 1,
+      "changeset": 61178755,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854833,
+      "lat": 10.7610378,
+      "lon": 106.6745731,
+      "timestamp": "2018-08-02T06:12:10Z",
+      "version": 2,
+      "changeset": 61284704,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854833,
+      "lat": 10.7610325,
+      "lon": 106.6745637,
+      "timestamp": "2019-08-27T14:34:17Z",
+      "version": 3,
+      "changeset": 73802086,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794854834,
+      "lat": 10.7610918,
+      "lon": 106.67454,
+      "timestamp": "2018-07-30T03:19:56Z",
+      "version": 1,
+      "changeset": 61178755,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794854834,
+      "lat": 10.761088,
+      "lon": 106.6745563,
+      "timestamp": "2019-08-27T14:34:17Z",
+      "version": 2,
+      "changeset": 73802086,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794857261,
+      "lat": 10.7601722,
+      "lon": 106.6704457,
+      "timestamp": "2018-07-30T03:19:56Z",
+      "version": 1,
+      "changeset": 61178755,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794857261,
+      "lat": 10.7601722,
+      "lon": 106.6704457,
+      "timestamp": "2019-08-27T14:34:17Z",
+      "version": 2,
+      "changeset": 73802086,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794857261,
+      "lat": 10.7601702,
+      "lon": 106.6704464,
+      "timestamp": "2019-09-09T17:35:40Z",
+      "version": 3,
+      "changeset": 74275395,
+      "user": "ReedtheRiver",
+      "uid": 9965337
+    },
+    {
+      "type": "node",
+      "id": 5794883960,
+      "lat": 10.7594307,
+      "lon": 106.6760696,
+      "timestamp": "2018-07-30T03:43:08Z",
+      "version": 1,
+      "changeset": 61179103,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5794883969,
+      "lat": 10.7612328,
+      "lon": 106.6767941,
+      "timestamp": "2018-07-30T03:43:08Z",
+      "version": 1,
+      "changeset": 61179103,
+      "user": "Neethu5",
+      "uid": 7671607
+    }
+  ]
+}

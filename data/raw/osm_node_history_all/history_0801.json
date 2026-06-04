@@ -1,0 +1,250 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5598917001,
+      "lat": 10.7608484,
+      "lon": 106.673373,
+      "timestamp": "2018-05-05T15:37:28Z",
+      "version": 1,
+      "changeset": 58709843,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5598917002,
+      "lat": 10.7607983,
+      "lon": 106.6732308,
+      "timestamp": "2018-05-05T15:37:28Z",
+      "version": 1,
+      "changeset": 58709843,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5598917002,
+      "lat": 10.760826,
+      "lon": 106.6732281,
+      "timestamp": "2018-07-30T01:59:15Z",
+      "version": 2,
+      "changeset": 61177754,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5598917851,
+      "lat": 10.7691479,
+      "lon": 106.6711928,
+      "timestamp": "2018-05-05T15:37:32Z",
+      "version": 1,
+      "changeset": 58709843,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5599264009,
+      "lat": 10.7315808,
+      "lon": 106.8232295,
+      "timestamp": "2018-05-05T20:09:09Z",
+      "version": 1,
+      "changeset": 58715459,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5599264334,
+      "lat": 10.7580012,
+      "lon": 106.7888769,
+      "timestamp": "2018-05-05T20:09:10Z",
+      "version": 1,
+      "changeset": 58715459,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5599264334,
+      "lat": 10.7581158,
+      "lon": 106.7888856,
+      "timestamp": "2018-07-02T03:47:58Z",
+      "version": 2,
+      "changeset": 60334192,
+      "user": "sabiyana",
+      "uid": 7795574
+    },
+    {
+      "type": "node",
+      "id": 5599264334,
+      "lat": 10.7581122,
+      "lon": 106.7889037,
+      "timestamp": "2018-07-02T05:37:21Z",
+      "version": 3,
+      "changeset": 60335771,
+      "user": "sabiyana",
+      "uid": 7795574
+    },
+    {
+      "type": "node",
+      "id": 5599264334,
+      "lat": 10.7580906,
+      "lon": 106.7888919,
+      "timestamp": "2019-10-15T06:50:16Z",
+      "version": 4,
+      "changeset": 75700319,
+      "user": "GrabVNTommy",
+      "uid": 8421597
+    },
+    {
+      "type": "node",
+      "id": 5599264334,
+      "lat": 10.7580638,
+      "lon": 106.7888548,
+      "timestamp": "2025-07-15T05:07:19Z",
+      "version": 5,
+      "changeset": 168944748,
+      "user": "ZioDragon",
+      "uid": 13799024
+    },
+    {
+      "type": "node",
+      "id": 5599264336,
+      "lat": 10.758133,
+      "lon": 106.7887616,
+      "timestamp": "2018-05-05T20:09:10Z",
+      "version": 1,
+      "changeset": 58715459,
+      "user": "ff5722",
+      "uid": 3450290,
+      "tags": {
+        "barrier": "toll_booth"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5599264336,
+      "lat": 10.7581765,
+      "lon": 106.7887958,
+      "timestamp": "2018-07-02T03:47:59Z",
+      "version": 2,
+      "changeset": 60334192,
+      "user": "sabiyana",
+      "uid": 7795574,
+      "tags": {
+        "barrier": "toll_booth"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5599264336,
+      "lat": 10.7581824,
+      "lon": 106.7888166,
+      "timestamp": "2018-07-02T04:46:32Z",
+      "version": 3,
+      "changeset": 60334916,
+      "user": "sabiyana",
+      "uid": 7795574,
+      "tags": {
+        "barrier": "toll_booth"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5599264336,
+      "lat": 10.7581658,
+      "lon": 106.7888174,
+      "timestamp": "2019-10-15T06:50:16Z",
+      "version": 4,
+      "changeset": 75700319,
+      "user": "GrabVNTommy",
+      "uid": 8421597,
+      "tags": {
+        "barrier": "toll_booth"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5599264336,
+      "lat": 10.7581373,
+      "lon": 106.7887897,
+      "timestamp": "2025-07-15T05:07:19Z",
+      "version": 5,
+      "changeset": 168944748,
+      "user": "ZioDragon",
+      "uid": 13799024,
+      "tags": {
+        "barrier": "toll_booth"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5599264355,
+      "lat": 10.7155364,
+      "lon": 106.8476983,
+      "timestamp": "2018-05-05T20:09:10Z",
+      "version": 1,
+      "changeset": 58715459,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5599264356,
+      "lat": 10.7154797,
+      "lon": 106.8476116,
+      "timestamp": "2018-05-05T20:09:10Z",
+      "version": 1,
+      "changeset": 58715459,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5599264357,
+      "lat": 10.7155673,
+      "lon": 106.8477977,
+      "timestamp": "2018-05-05T20:09:10Z",
+      "version": 1,
+      "changeset": 58715459,
+      "user": "ff5722",
+      "uid": 3450290
+    },
+    {
+      "type": "node",
+      "id": 5613330532,
+      "lat": 10.7956365,
+      "lon": 106.7644149,
+      "timestamp": "2018-05-12T10:18:36Z",
+      "version": 1,
+      "changeset": 58898753,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 5613330532,
+      "lat": 10.7956633,
+      "lon": 106.7644126,
+      "timestamp": "2018-10-07T00:42:29Z",
+      "version": 2,
+      "changeset": 63268647,
+      "user": "Sal73x",
+      "uid": 1293386
+    },
+    {
+      "type": "node",
+      "id": 5613330532,
+      "lat": 10.7956449,
+      "lon": 106.7644113,
+      "timestamp": "2019-09-04T16:56:10Z",
+      "version": 3,
+      "changeset": 74097717,
+      "user": "UncoolGuyJake",
+      "uid": 7674729
+    }
+  ]
+}

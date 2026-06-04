@@ -1,0 +1,183 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 2691240096,
+      "lat": 10.7707145,
+      "lon": 106.6991208,
+      "timestamp": "2014-02-26T16:07:18Z",
+      "version": 1,
+      "changeset": 20793403,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2691240098,
+      "lat": 10.7706972,
+      "lon": 106.6991321,
+      "timestamp": "2014-02-26T16:07:18Z",
+      "version": 1,
+      "changeset": 20793403,
+      "user": "TuanIfan",
+      "uid": 625303,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2692283088,
+      "lat": 10.8015833,
+      "lon": 106.713464,
+      "timestamp": "2014-02-27T08:24:27Z",
+      "version": 1,
+      "changeset": 20804497,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2692283088,
+      "lat": 10.801552,
+      "lon": 106.7134576,
+      "timestamp": "2016-03-18T08:54:52Z",
+      "version": 2,
+      "changeset": 37914239,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 2692283088,
+      "lat": 10.801545,
+      "lon": 106.7134465,
+      "timestamp": "2016-03-18T09:27:20Z",
+      "version": 3,
+      "changeset": 37914772,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 2692283089,
+      "lat": 10.8016016,
+      "lon": 106.7133562,
+      "timestamp": "2014-02-27T08:24:27Z",
+      "version": 1,
+      "changeset": 20804497,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2692283089,
+      "lat": 10.8015757,
+      "lon": 106.7133262,
+      "timestamp": "2016-03-18T08:54:52Z",
+      "version": 2,
+      "changeset": 37914239,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 2692283089,
+      "lat": 10.8015688,
+      "lon": 106.7133178,
+      "timestamp": "2016-03-18T09:27:20Z",
+      "version": 3,
+      "changeset": 37914772,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 2692325112,
+      "lat": 10.7952173,
+      "lon": 106.7309601,
+      "timestamp": "2014-02-27T08:57:39Z",
+      "version": 1,
+      "changeset": 20804875,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2692325197,
+      "lat": 10.790863,
+      "lon": 106.7302316,
+      "timestamp": "2014-02-27T08:57:40Z",
+      "version": 1,
+      "changeset": 20804875,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2692325211,
+      "lat": 10.7918517,
+      "lon": 106.7304037,
+      "timestamp": "2014-02-27T08:57:40Z",
+      "version": 1,
+      "changeset": 20804875,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2692325212,
+      "lat": 10.7929991,
+      "lon": 106.7305961,
+      "timestamp": "2014-02-27T08:57:40Z",
+      "version": 1,
+      "changeset": 20804875,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2692325231,
+      "lat": 10.7893523,
+      "lon": 106.729969,
+      "timestamp": "2014-02-27T08:57:41Z",
+      "version": 1,
+      "changeset": 20804875,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2692325231,
+      "lat": 10.7893523,
+      "lon": 106.7299958,
+      "timestamp": "2022-12-14T23:50:56Z",
+      "version": 2,
+      "changeset": 130092811,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 2692325251,
+      "lat": 10.7866089,
+      "lon": 106.7295174,
+      "timestamp": "2014-02-27T08:57:41Z",
+      "version": 1,
+      "changeset": 20804875,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 2692325251,
+      "lat": 10.7865786,
+      "lon": 106.7295415,
+      "timestamp": "2022-12-14T23:50:56Z",
+      "version": 2,
+      "changeset": 130092811,
+      "user": "Tommybara",
+      "uid": 12198525
+    }
+  ]
+}

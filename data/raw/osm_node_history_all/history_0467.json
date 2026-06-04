@@ -1,0 +1,790 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3117088315,
+      "lat": 10.8647504,
+      "lon": 106.781145,
+      "timestamp": "2014-10-07T19:04:53Z",
+      "version": 1,
+      "changeset": 25924477,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3117088315,
+      "lat": 10.8647214,
+      "lon": 106.78109,
+      "timestamp": "2018-07-20T06:05:20Z",
+      "version": 2,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3117088457,
+      "lat": 10.8671391,
+      "lon": 106.7888666,
+      "timestamp": "2014-10-07T19:04:54Z",
+      "version": 1,
+      "changeset": 25924477,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3117088457,
+      "lat": 10.8671024,
+      "lon": 106.7888479,
+      "timestamp": "2016-03-19T07:16:00Z",
+      "version": 2,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 3117088457,
+      "lat": 10.8671011,
+      "lon": 106.7888399,
+      "timestamp": "2018-07-20T06:05:21Z",
+      "version": 3,
+      "changeset": 60890892,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3117088457,
+      "lat": 10.8671103,
+      "lon": 106.7887782,
+      "timestamp": "2018-07-20T07:46:16Z",
+      "version": 4,
+      "changeset": 60894870,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3117088459,
+      "lat": 10.8673373,
+      "lon": 106.786639,
+      "timestamp": "2014-10-07T19:04:54Z",
+      "version": 1,
+      "changeset": 25924477,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3117088459,
+      "lat": 10.8673419,
+      "lon": 106.7866437,
+      "timestamp": "2016-03-19T07:15:59Z",
+      "version": 2,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 3117088459,
+      "lat": 10.8673419,
+      "lon": 106.7866035,
+      "timestamp": "2018-07-17T08:59:37Z",
+      "version": 3,
+      "changeset": 60790441,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3117088459,
+      "lat": 10.8673459,
+      "lon": 106.7866102,
+      "timestamp": "2018-07-20T09:07:28Z",
+      "version": 4,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3117088459,
+      "lat": 10.8673059,
+      "lon": 106.7866102,
+      "timestamp": "2022-01-14T09:20:25Z",
+      "version": 5,
+      "changeset": 116139893,
+      "user": "turtle-bienhoa",
+      "uid": 13865352
+    },
+    {
+      "type": "node",
+      "id": 3117088485,
+      "lat": 10.8717716,
+      "lon": 106.7699901,
+      "timestamp": "2014-10-07T19:04:54Z",
+      "version": 1,
+      "changeset": 25924477,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3117088485,
+      "lat": 10.8717928,
+      "lon": 106.7699473,
+      "timestamp": "2015-10-19T05:26:05Z",
+      "version": 2,
+      "changeset": 34724330,
+      "user": "Jothirnadh",
+      "uid": 2015224
+    },
+    {
+      "type": "node",
+      "id": 3117088485,
+      "lat": 10.871758,
+      "lon": 106.769942,
+      "timestamp": "2016-03-19T07:15:58Z",
+      "version": 3,
+      "changeset": 37933094,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 3117088485,
+      "lat": 10.8717638,
+      "lon": 106.7699567,
+      "timestamp": "2018-07-18T01:39:23Z",
+      "version": 4,
+      "changeset": 60817116,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3117088485,
+      "lat": 10.8717533,
+      "lon": 106.7699299,
+      "timestamp": "2018-07-20T07:46:16Z",
+      "version": 5,
+      "changeset": 60894870,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3117088485,
+      "lat": 10.8717573,
+      "lon": 106.7699366,
+      "timestamp": "2018-07-20T09:07:28Z",
+      "version": 6,
+      "changeset": 60898296,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3117088686,
+      "lat": 10.8790897,
+      "lon": 106.7669301,
+      "timestamp": "2014-10-07T19:04:56Z",
+      "version": 1,
+      "changeset": 25924477,
+      "user": "528491",
+      "uid": 1377843
+    },
+    {
+      "type": "node",
+      "id": 3117088686,
+      "lat": 10.8790976,
+      "lon": 106.7669194,
+      "timestamp": "2018-07-11T08:36:28Z",
+      "version": 2,
+      "changeset": 60603363,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7720083,
+      "lon": 106.6599161,
+      "timestamp": "2014-10-08T17:57:31Z",
+      "version": 1,
+      "changeset": 25944943,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Bệnh viện Trưng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7719932,
+      "lon": 106.6599155,
+      "timestamp": "2017-01-27T05:43:23Z",
+      "version": 2,
+      "changeset": 45543624,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "Bệnh viện Trưng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7719644,
+      "lon": 106.6599253,
+      "timestamp": "2017-01-27T05:45:23Z",
+      "version": 3,
+      "changeset": 45543669,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "name": "Bệnh viện Trưng Vương",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7719644,
+      "lon": 106.6599253,
+      "timestamp": "2017-02-07T02:14:16Z",
+      "version": 4,
+      "changeset": 45872079,
+      "user": "Gã Trùm",
+      "uid": 5083656,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7719573,
+      "lon": 106.6599301,
+      "timestamp": "2017-09-26T07:09:34Z",
+      "version": 5,
+      "changeset": 52374983,
+      "user": "Duc Minh Le",
+      "uid": 6712625,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7730637,
+      "lon": 106.6610755,
+      "timestamp": "2024-03-31T11:37:10Z",
+      "version": 6,
+      "changeset": 149386147,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Đại học Bách Khoa (cổng sau)",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7730637,
+      "lon": 106.6610755,
+      "timestamp": "2026-02-12T07:26:05Z",
+      "version": 7,
+      "changeset": 178439038,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "name": "Đại học Bách Khoa (cổng sau)",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7730637,
+      "lon": 106.6610755,
+      "timestamp": "2026-02-12T07:26:23Z",
+      "version": 8,
+      "changeset": 178439038,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Đại học Bách Khoa (cổng sau)",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7730637,
+      "lon": 106.6610755,
+      "timestamp": "2026-02-12T07:26:27Z",
+      "version": 9,
+      "changeset": 178439038,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "name": "Đại học Bách Khoa (cổng sau)",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7730637,
+      "lon": 106.6610755,
+      "timestamp": "2026-02-12T07:26:29Z",
+      "version": 10,
+      "changeset": 178439040,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "shelter": "yes",
+        "public_transport": "platform",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đại học Bách Khoa (cổng sau)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7730637,
+      "lon": 106.6610755,
+      "timestamp": "2026-02-12T07:26:35Z",
+      "version": 11,
+      "changeset": 178439100,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "shelter": "yes",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đại học Bách Khoa (cổng sau)",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842029,
+      "lat": 10.7730637,
+      "lon": 106.6610755,
+      "timestamp": "2026-02-12T07:26:36Z",
+      "version": 12,
+      "changeset": 178439400,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Đại học Bách Khoa (cổng sau)",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842030,
+      "lat": 10.7740504,
+      "lon": 106.6617069,
+      "timestamp": "2014-10-08T17:57:31Z",
+      "version": 1,
+      "changeset": 25944943,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Đại học Bách Khoa",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842030,
+      "lat": 10.7738818,
+      "lon": 106.6615621,
+      "timestamp": "2017-02-04T10:02:45Z",
+      "version": 2,
+      "changeset": 45800772,
+      "user": "Gã Trùm",
+      "uid": 5083656,
+      "tags": {
+        "name": "Đại học Bách Khoa",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842030,
+      "lat": 10.7738818,
+      "lon": 106.6615621,
+      "timestamp": "2017-02-06T07:01:18Z",
+      "version": 3,
+      "changeset": 45847381,
+      "user": "Gã Trùm",
+      "uid": 5083656,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842030,
+      "lat": 10.7739249,
+      "lon": 106.6616396,
+      "timestamp": "2017-09-26T07:09:34Z",
+      "version": 4,
+      "changeset": 52374983,
+      "user": "Duc Minh Le",
+      "uid": 6712625,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842030,
+      "lat": 10.7739998,
+      "lon": 106.6614617,
+      "timestamp": "2024-04-04T15:27:59Z",
+      "version": 5,
+      "changeset": 149575802,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đại học Bách Khoa",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842031,
+      "lat": 10.7758754,
+      "lon": 106.6631464,
+      "timestamp": "2014-10-08T17:57:31Z",
+      "version": 1,
+      "changeset": 25944943,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "name": "Tô Hiến Thành - Thành Thái",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842031,
+      "lat": 10.7758754,
+      "lon": 106.6631464,
+      "timestamp": "2017-02-06T07:28:43Z",
+      "version": 2,
+      "changeset": 45847836,
+      "user": "Gã Trùm",
+      "uid": 5083656,
+      "tags": {
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842031,
+      "lat": 10.7755911,
+      "lon": 106.6628695,
+      "timestamp": "2024-03-31T11:37:10Z",
+      "version": 3,
+      "changeset": 149386147,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ngân hàng Quân Đội - 136 Tô Hiến Thành",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842032,
+      "lat": 10.7763475,
+      "lon": 106.663643,
+      "timestamp": "2014-10-08T17:57:31Z",
+      "version": 1,
+      "changeset": 25944943,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Thành Thái - Tô Hiến Thành"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842032,
+      "lat": 10.776346,
+      "lon": 106.663639,
+      "timestamp": "2017-01-24T17:03:33Z",
+      "version": 2,
+      "changeset": 45441855,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Thành Thái - Tô Hiến Thành"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842032,
+      "lat": 10.7763448,
+      "lon": 106.6636356,
+      "timestamp": "2018-07-20T08:31:13Z",
+      "version": 3,
+      "changeset": 60896718,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7738294,
+      "lon": 106.6646203,
+      "timestamp": "2014-10-08T17:57:31Z",
+      "version": 1,
+      "changeset": 25944943,
+      "user": "Sony Ynos",
+      "uid": 2025054,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện 115"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7738275,
+      "lon": 106.6646153,
+      "timestamp": "2017-01-24T17:03:33Z",
+      "version": 2,
+      "changeset": 45441855,
+      "user": "dotnam",
+      "uid": 5030528,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện 115"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7738264,
+      "lon": 106.6646138,
+      "timestamp": "2018-07-23T09:02:40Z",
+      "version": 3,
+      "changeset": 60978067,
+      "user": "neela1",
+      "uid": 7795604,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bệnh viện 115"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7738264,
+      "lon": 106.6646138,
+      "timestamp": "2022-05-09T09:37:43Z",
+      "version": 4,
+      "changeset": 120738606,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "name": "Trạm Xe Bus Bệnh Viện 115",
+        "public_transport": "platform",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7737147,
+      "lon": 106.6646384,
+      "timestamp": "2024-03-31T11:37:10Z",
+      "version": 5,
+      "changeset": 149386147,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Bệnh Viện 115",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7737095,
+      "lon": 106.6646103,
+      "timestamp": "2024-06-20T07:58:28Z",
+      "version": 6,
+      "changeset": 152929571,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Bệnh Viện 115",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7732847,
+      "lon": 106.6647972,
+      "timestamp": "2024-09-30T16:29:29Z",
+      "version": 7,
+      "changeset": 157305756,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "public_transport": "platform",
+        "name": "Bệnh Viện 115",
+        "highway": "bus_stop",
+        "bus": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7732847,
+      "lon": 106.6647972,
+      "timestamp": "2026-02-12T07:14:00Z",
+      "version": 8,
+      "changeset": 178439038,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "name": "Bệnh Viện 115",
+        "bus": "yes",
+        "highway": "bus_stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7732847,
+      "lon": 106.6647972,
+      "timestamp": "2026-02-12T07:14:01Z",
+      "version": 9,
+      "changeset": 178439040,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "shelter": "no",
+        "public_transport": "platform",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bệnh Viện 115"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7732847,
+      "lon": 106.6647972,
+      "timestamp": "2026-02-12T07:14:03Z",
+      "version": 10,
+      "changeset": 178439100,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "shelter": "no",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bệnh Viện 115",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.7732847,
+      "lon": 106.6647972,
+      "timestamp": "2026-02-12T07:14:05Z",
+      "version": 11,
+      "changeset": 178439400,
+      "user": "Woden",
+      "uid": 566688,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Bệnh Viện 115",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3118842033,
+      "lat": 10.773846,
+      "lon": 106.6645619,
+      "timestamp": "2026-03-06T13:44:56Z",
+      "version": 12,
+      "changeset": 179447831,
+      "user": "edumiz624",
+      "uid": 20881381,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Bệnh Viện 115",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    }
+  ]
+}

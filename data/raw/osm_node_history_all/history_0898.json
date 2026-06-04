@@ -1,0 +1,180 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5755083708,
+      "lat": 10.69182,
+      "lon": 106.5749195,
+      "timestamp": "2018-07-12T02:19:32Z",
+      "version": 1,
+      "changeset": 60631674,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5755083708,
+      "lat": 10.6918609,
+      "lon": 106.5749128,
+      "timestamp": "2018-07-18T01:39:59Z",
+      "version": 2,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5755083711,
+      "lat": 10.6917661,
+      "lon": 106.5746652,
+      "timestamp": "2018-07-12T02:19:33Z",
+      "version": 1,
+      "changeset": 60631674,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5755083711,
+      "lat": 10.6918056,
+      "lon": 106.5746719,
+      "timestamp": "2018-07-18T01:40:00Z",
+      "version": 2,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5755083717,
+      "lat": 10.6913804,
+      "lon": 106.5728969,
+      "timestamp": "2018-07-12T02:19:33Z",
+      "version": 1,
+      "changeset": 60631674,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5755083717,
+      "lat": 10.6914516,
+      "lon": 106.5728889,
+      "timestamp": "2018-07-18T01:40:00Z",
+      "version": 2,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5755098111,
+      "lat": 10.8408045,
+      "lon": 106.6626119,
+      "timestamp": "2018-07-12T02:33:03Z",
+      "version": 1,
+      "changeset": 60631800,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5755098113,
+      "lat": 10.8407627,
+      "lon": 106.6626162,
+      "timestamp": "2018-07-12T02:33:03Z",
+      "version": 1,
+      "changeset": 60631800,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5755098113,
+      "lat": 10.8407815,
+      "lon": 106.6626143,
+      "timestamp": "2018-09-07T08:01:08Z",
+      "version": 2,
+      "changeset": 62366423,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5755098835,
+      "lat": 10.8417767,
+      "lon": 106.6624099,
+      "timestamp": "2018-07-12T02:33:04Z",
+      "version": 1,
+      "changeset": 60631800,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5755098835,
+      "lat": 10.8418186,
+      "lon": 106.6623835,
+      "timestamp": "2018-09-07T08:01:09Z",
+      "version": 2,
+      "changeset": 62366423,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 5755145276,
+      "lat": 10.8783182,
+      "lon": 106.7607532,
+      "timestamp": "2018-07-12T03:11:23Z",
+      "version": 1,
+      "changeset": 60632210,
+      "user": "kawle",
+      "uid": 7446620
+    },
+    {
+      "type": "node",
+      "id": 5755149899,
+      "lat": 10.8051035,
+      "lon": 106.6979322,
+      "timestamp": "2018-07-12T03:17:34Z",
+      "version": 1,
+      "changeset": 60632286,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 5755168768,
+      "lat": 10.8386801,
+      "lon": 106.6665575,
+      "timestamp": "2018-07-12T03:31:35Z",
+      "version": 1,
+      "changeset": 60632520,
+      "user": "vaidha1",
+      "uid": 7671609
+    },
+    {
+      "type": "node",
+      "id": 5755169526,
+      "lat": 10.6945996,
+      "lon": 106.5859475,
+      "timestamp": "2018-07-12T03:32:31Z",
+      "version": 1,
+      "changeset": 60632543,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5755169526,
+      "lat": 10.6946398,
+      "lon": 106.585924,
+      "timestamp": "2018-07-18T01:40:00Z",
+      "version": 2,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    }
+  ]
+}

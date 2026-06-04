@@ -1,0 +1,367 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5762711577,
+      "lat": 10.7675573,
+      "lon": 106.686213,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5762711577,
+      "lat": 10.7675599,
+      "lon": 106.6862586,
+      "timestamp": "2019-08-21T15:32:31Z",
+      "version": 2,
+      "changeset": 73586945,
+      "user": "_Poliwrath_",
+      "uid": 8759140,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5762711577,
+      "lat": 10.7675599,
+      "lon": 106.6862586,
+      "timestamp": "2019-08-21T15:34:59Z",
+      "version": 3,
+      "changeset": 73586945,
+      "user": "_Poliwrath_",
+      "uid": 8759140,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5762711577,
+      "lat": 10.7675599,
+      "lon": 106.6862586,
+      "timestamp": "2019-08-28T21:41:48Z",
+      "version": 4,
+      "changeset": 73858389,
+      "user": "AnonJason",
+      "uid": 9151615,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5762711577,
+      "lat": 10.7675563,
+      "lon": 106.686257,
+      "timestamp": "2021-02-17T01:55:14Z",
+      "version": 5,
+      "changeset": 99412663,
+      "user": "TuanIfan",
+      "uid": 625303,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5762711577,
+      "lat": 10.7675719,
+      "lon": 106.6862412,
+      "timestamp": "2022-12-08T19:43:52Z",
+      "version": 6,
+      "changeset": 129875287,
+      "user": "GrabVN_QThoai",
+      "uid": 15740602,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5762711577,
+      "lat": 10.7675751,
+      "lon": 106.6862458,
+      "timestamp": "2023-05-19T03:07:54Z",
+      "version": 7,
+      "changeset": 136279194,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5762711578,
+      "lat": 10.7673647,
+      "lon": 106.6866641,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762711578,
+      "lat": 10.7673779,
+      "lon": 106.6866547,
+      "timestamp": "2019-08-21T15:32:31Z",
+      "version": 2,
+      "changeset": 73586945,
+      "user": "_Poliwrath_",
+      "uid": 8759140
+    },
+    {
+      "type": "node",
+      "id": 5762711578,
+      "lat": 10.7673764,
+      "lon": 106.686654,
+      "timestamp": "2021-02-17T01:55:14Z",
+      "version": 3,
+      "changeset": 99412663,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 5762711578,
+      "lat": 10.7673695,
+      "lon": 106.6867135,
+      "timestamp": "2023-10-27T06:51:59Z",
+      "version": 4,
+      "changeset": 143195864,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5762711579,
+      "lat": 10.7661541,
+      "lon": 106.689501,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762711579,
+      "lat": 10.7661645,
+      "lon": 106.689493,
+      "timestamp": "2024-06-07T15:02:47Z",
+      "version": 2,
+      "changeset": 152380752,
+      "user": "map2goPro",
+      "uid": 20077207
+    },
+    {
+      "type": "node",
+      "id": 5762711580,
+      "lat": 10.7661929,
+      "lon": 106.6894367,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762711580,
+      "lat": 10.7661876,
+      "lon": 106.6894354,
+      "timestamp": "2018-07-24T05:49:01Z",
+      "version": 2,
+      "changeset": 61006481,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5762711581,
+      "lat": 10.7662263,
+      "lon": 106.6893738,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762711581,
+      "lat": 10.7662223,
+      "lon": 106.6893698,
+      "timestamp": "2018-07-24T05:49:01Z",
+      "version": 2,
+      "changeset": 61006481,
+      "user": "Neethu5",
+      "uid": 7671607
+    },
+    {
+      "type": "node",
+      "id": 5762711581,
+      "lat": 10.7662238,
+      "lon": 106.689373,
+      "timestamp": "2024-06-07T15:02:47Z",
+      "version": 3,
+      "changeset": 152380752,
+      "user": "map2goPro",
+      "uid": 20077207
+    },
+    {
+      "type": "node",
+      "id": 5762711582,
+      "lat": 10.7668465,
+      "lon": 106.6885993,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762711582,
+      "lat": 10.7668684,
+      "lon": 106.6886314,
+      "timestamp": "2024-04-08T10:58:48Z",
+      "version": 2,
+      "changeset": 149729447,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5762711591,
+      "lat": 10.7669665,
+      "lon": 106.6883289,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762711591,
+      "lat": 10.7669665,
+      "lon": 106.6883369,
+      "timestamp": "2019-09-03T17:58:47Z",
+      "version": 2,
+      "changeset": 74053340,
+      "user": "_Poliwrath_",
+      "uid": 8759140
+    },
+    {
+      "type": "node",
+      "id": 5762711591,
+      "lat": 10.7669661,
+      "lon": 106.688338,
+      "timestamp": "2019-09-11T20:35:01Z",
+      "version": 3,
+      "changeset": 74371188,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5762711597,
+      "lat": 10.7681685,
+      "lon": 106.6892677,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762711597,
+      "lat": 10.7681589,
+      "lon": 106.6892445,
+      "timestamp": "2023-06-28T03:22:27Z",
+      "version": 2,
+      "changeset": 137858811,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5762711597,
+      "lat": 10.7681447,
+      "lon": 106.6892166,
+      "timestamp": "2024-06-07T15:02:47Z",
+      "version": 3,
+      "changeset": 152380752,
+      "user": "map2goPro",
+      "uid": 20077207
+    },
+    {
+      "type": "node",
+      "id": 5762711603,
+      "lat": 10.7678345,
+      "lon": 106.6887814,
+      "timestamp": "2018-07-16T03:35:25Z",
+      "version": 1,
+      "changeset": 60744829,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 5762711603,
+      "lat": 10.7678358,
+      "lon": 106.6887747,
+      "timestamp": "2019-08-21T18:49:19Z",
+      "version": 2,
+      "changeset": 73593379,
+      "user": "Kaarti_B",
+      "uid": 9029309
+    },
+    {
+      "type": "node",
+      "id": 5762711603,
+      "lat": 10.7678285,
+      "lon": 106.6887693,
+      "timestamp": "2024-06-03T15:55:51Z",
+      "version": 3,
+      "changeset": 152206735,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 5762721228,
+      "lat": 10.8735484,
+      "lon": 106.7775852,
+      "timestamp": "2018-07-16T03:48:20Z",
+      "version": 1,
+      "changeset": 60744978,
+      "user": "Malka7",
+      "uid": 7671604
+    },
+    {
+      "type": "node",
+      "id": 5762721228,
+      "lat": 10.8735497,
+      "lon": 106.7775745,
+      "timestamp": "2019-07-15T15:09:15Z",
+      "version": 2,
+      "changeset": 72270044,
+      "user": "grabtaxi15",
+      "uid": 10143746
+    }
+  ]
+}

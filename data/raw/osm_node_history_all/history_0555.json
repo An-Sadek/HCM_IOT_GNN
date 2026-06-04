@@ -1,0 +1,383 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3727350727,
+      "lat": 10.8431953,
+      "lon": 106.7454144,
+      "timestamp": "2015-09-03T08:29:24Z",
+      "version": 1,
+      "changeset": 33767798,
+      "user": "hcalpf",
+      "uid": 2895317
+    },
+    {
+      "type": "node",
+      "id": 3727350727,
+      "lat": 10.8431638,
+      "lon": 106.745461,
+      "timestamp": "2016-10-14T08:24:29Z",
+      "version": 2,
+      "changeset": 42889570,
+      "user": "mrjoba",
+      "uid": 4677744
+    },
+    {
+      "type": "node",
+      "id": 3727813436,
+      "lat": 10.7835445,
+      "lon": 106.6529833,
+      "timestamp": "2015-09-03T13:40:27Z",
+      "version": 1,
+      "changeset": 33773269,
+      "user": "zeazu",
+      "uid": 3209961
+    },
+    {
+      "type": "node",
+      "id": 3727813436,
+      "lat": 10.7835806,
+      "lon": 106.6537695,
+      "timestamp": "2017-01-14T21:37:00Z",
+      "version": 2,
+      "changeset": 45172729,
+      "user": "Gã Trùm",
+      "uid": 5083656
+    },
+    {
+      "type": "node",
+      "id": 3727813436,
+      "lat": 10.7835806,
+      "lon": 106.6537695,
+      "timestamp": "2019-06-05T06:47:49Z",
+      "version": 3,
+      "changeset": 70945656,
+      "user": "pizzagal",
+      "uid": 7772276
+    },
+    {
+      "type": "node",
+      "id": 3727813436,
+      "lat": 10.7835608,
+      "lon": 106.6537829,
+      "timestamp": "2019-07-19T13:11:55Z",
+      "version": 4,
+      "changeset": 72430889,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 3727819086,
+      "lat": 10.7801903,
+      "lon": 106.6542717,
+      "timestamp": "2015-09-03T13:46:35Z",
+      "version": 1,
+      "changeset": 33773407,
+      "user": "zeazu",
+      "uid": 3209961
+    },
+    {
+      "type": "node",
+      "id": 3727819086,
+      "lat": 10.7801804,
+      "lon": 106.654269,
+      "timestamp": "2018-07-20T06:17:55Z",
+      "version": 2,
+      "changeset": 60891327,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 3734216834,
+      "lat": 10.830328,
+      "lon": 106.7632446,
+      "timestamp": "2015-09-08T09:42:36Z",
+      "version": 1,
+      "changeset": 33877402,
+      "user": "ruthmaben",
+      "uid": 2554698
+    },
+    {
+      "type": "node",
+      "id": 3734216834,
+      "lat": 10.8303445,
+      "lon": 106.7632003,
+      "timestamp": "2017-06-25T03:45:40Z",
+      "version": 2,
+      "changeset": 49805550,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3734216834,
+      "lat": 10.8303076,
+      "lon": 106.7631788,
+      "timestamp": "2019-09-05T19:48:56Z",
+      "version": 3,
+      "changeset": 74148991,
+      "user": "Whimsical Otter",
+      "uid": 7466823
+    },
+    {
+      "type": "node",
+      "id": 3734437558,
+      "lat": 10.7937181,
+      "lon": 106.6846243,
+      "timestamp": "2015-09-08T12:21:21Z",
+      "version": 1,
+      "changeset": 33881244,
+      "user": "phucdoan1973",
+      "uid": 2821292
+    },
+    {
+      "type": "node",
+      "id": 3734437558,
+      "lat": 10.7937188,
+      "lon": 106.684631,
+      "timestamp": "2018-07-17T03:58:00Z",
+      "version": 2,
+      "changeset": 60781261,
+      "user": "akhil2",
+      "uid": 7795526
+    },
+    {
+      "type": "node",
+      "id": 3734437558,
+      "lat": 10.7937249,
+      "lon": 106.6846358,
+      "timestamp": "2023-06-21T04:50:03Z",
+      "version": 3,
+      "changeset": 137586281,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3734437558,
+      "lat": 10.7937096,
+      "lon": 106.6846195,
+      "timestamp": "2023-06-23T10:40:44Z",
+      "version": 4,
+      "changeset": 137683010,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3734437575,
+      "lat": 10.7820029,
+      "lon": 106.6801416,
+      "timestamp": "2015-09-08T12:21:21Z",
+      "version": 1,
+      "changeset": 33881244,
+      "user": "phucdoan1973",
+      "uid": 2821292
+    },
+    {
+      "type": "node",
+      "id": 3734437594,
+      "lat": 10.7782903,
+      "lon": 106.6719115,
+      "timestamp": "2015-09-08T12:21:22Z",
+      "version": 1,
+      "changeset": 33881244,
+      "user": "phucdoan1973",
+      "uid": 2821292
+    },
+    {
+      "type": "node",
+      "id": 3734437594,
+      "lat": 10.7784973,
+      "lon": 106.672503,
+      "timestamp": "2018-07-23T01:25:29Z",
+      "version": 2,
+      "changeset": 60966012,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 3734437594,
+      "lat": 10.7782944,
+      "lon": 106.6719035,
+      "timestamp": "2018-07-23T01:59:35Z",
+      "version": 3,
+      "changeset": 60966404,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 3734437594,
+      "lat": 10.7783043,
+      "lon": 106.6719265,
+      "timestamp": "2024-07-22T09:54:45Z",
+      "version": 4,
+      "changeset": 154254209,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3734437594,
+      "lat": 10.7783004,
+      "lon": 106.671943,
+      "timestamp": "2024-07-22T09:58:14Z",
+      "version": 5,
+      "changeset": 154254341,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3735830662,
+      "lat": 10.780404,
+      "lon": 106.6547695,
+      "timestamp": "2015-09-09T10:34:04Z",
+      "version": 1,
+      "changeset": 33905010,
+      "user": "zeazu",
+      "uid": 3209961
+    },
+    {
+      "type": "node",
+      "id": 3735830662,
+      "lat": 10.7803895,
+      "lon": 106.6547735,
+      "timestamp": "2018-07-20T06:17:55Z",
+      "version": 2,
+      "changeset": 60891327,
+      "user": "neela1",
+      "uid": 7795604
+    },
+    {
+      "type": "node",
+      "id": 3735830662,
+      "lat": 10.7804012,
+      "lon": 106.6548169,
+      "timestamp": "2024-05-08T07:31:28Z",
+      "version": 3,
+      "changeset": 151040775,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3735830662,
+      "lat": 10.7803976,
+      "lon": 106.6548078,
+      "timestamp": "2024-05-26T17:05:25Z",
+      "version": 4,
+      "changeset": 151861539,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3744246109,
+      "lat": 10.7749389,
+      "lon": 106.6888619,
+      "timestamp": "2015-09-15T14:59:53Z",
+      "version": 1,
+      "changeset": 34042620,
+      "user": "capiscuas",
+      "uid": 112975,
+      "tags": {
+        "cuisine": "vegetarian",
+        "diet:vegetarian": "yes",
+        "name": "Vegetarian Saigon 3",
+        "addr:street": "Võ Văn Tần",
+        "amenity": "restaurant",
+        "diet:vegan": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3744246109,
+      "lat": 10.7763241,
+      "lon": 106.6866414,
+      "timestamp": "2017-05-23T10:54:13Z",
+      "version": 2,
+      "changeset": 48913676,
+      "user": "tonytran",
+      "uid": 2513747,
+      "tags": {
+        "cuisine": "vegetarian",
+        "diet:vegetarian": "yes",
+        "name": "Vegetarian Saigon 3",
+        "addr:street": "Võ Văn Tần",
+        "amenity": "restaurant",
+        "diet:vegan": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3744246109,
+      "lat": 10.7763157,
+      "lon": 106.6866707,
+      "timestamp": "2019-09-16T14:30:55Z",
+      "version": 3,
+      "changeset": 74536123,
+      "user": "AnonJason",
+      "uid": 9151615,
+      "tags": {
+        "cuisine": "vegetarian",
+        "diet:vegetarian": "yes",
+        "name": "Vegetarian Saigon 3",
+        "addr:street": "Võ Văn Tần",
+        "amenity": "restaurant",
+        "diet:vegan": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3744246109,
+      "lat": 10.7763157,
+      "lon": 106.6866707,
+      "timestamp": "2020-11-27T21:59:20Z",
+      "version": 4,
+      "changeset": 94915507,
+      "user": "rouelibre1",
+      "uid": 10901304,
+      "tags": {
+        "name": "Vegetarian Saigon 3",
+        "addr:street": "Võ Văn Tần",
+        "amenity": "restaurant",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "only"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3744246109,
+      "lat": 10.7763157,
+      "lon": 106.6866707,
+      "timestamp": "2022-05-09T09:37:43Z",
+      "version": 5,
+      "changeset": 120738606,
+      "user": "GrabVN_Kien",
+      "uid": 13899044,
+      "tags": {
+        "addr:street": "Võ Văn Tần",
+        "amenity": "restaurant",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "only",
+        "name": "Nhà Hàng Chay Saigon 3"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3744246112,
+      "lat": 10.7754965,
+      "lon": 106.6893097,
+      "timestamp": "2015-09-15T14:59:53Z",
+      "version": 1,
+      "changeset": 34042620,
+      "user": "capiscuas",
+      "uid": 112975
+    }
+  ]
+}

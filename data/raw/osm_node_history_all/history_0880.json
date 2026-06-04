@@ -1,0 +1,191 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5750698697,
+      "lat": 10.8367869,
+      "lon": 106.6569021,
+      "timestamp": "2018-07-10T04:28:35Z",
+      "version": 1,
+      "changeset": 60558605,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5750698697,
+      "lat": 10.8367869,
+      "lon": 106.6569021,
+      "timestamp": "2019-07-19T10:01:45Z",
+      "version": 3,
+      "changeset": 72422230,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5750699239,
+      "lat": 10.8363912,
+      "lon": 106.6587983,
+      "timestamp": "2018-07-10T04:28:35Z",
+      "version": 1,
+      "changeset": 60558605,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5750699239,
+      "lat": 10.8363919,
+      "lon": 106.6587985,
+      "timestamp": "2025-08-09T14:24:58Z",
+      "version": 2,
+      "changeset": 170205293,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5750699241,
+      "lat": 10.8367613,
+      "lon": 106.6572982,
+      "timestamp": "2018-07-10T04:28:35Z",
+      "version": 1,
+      "changeset": 60558605,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5750699243,
+      "lat": 10.8370402,
+      "lon": 106.6562014,
+      "timestamp": "2018-07-10T04:28:35Z",
+      "version": 1,
+      "changeset": 60558605,
+      "user": "naik4",
+      "uid": 7671613
+    },
+    {
+      "type": "node",
+      "id": 5750699243,
+      "lat": 10.8370444,
+      "lon": 106.6562025,
+      "timestamp": "2025-08-09T14:24:58Z",
+      "version": 2,
+      "changeset": 170205293,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 5750708929,
+      "lat": 10.7127452,
+      "lon": 106.5989686,
+      "timestamp": "2018-07-10T04:38:25Z",
+      "version": 1,
+      "changeset": 60558722,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5750709020,
+      "lat": 10.7097597,
+      "lon": 106.5986052,
+      "timestamp": "2018-07-10T04:38:26Z",
+      "version": 1,
+      "changeset": 60558722,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5750709022,
+      "lat": 10.7090856,
+      "lon": 106.5984816,
+      "timestamp": "2018-07-10T04:38:26Z",
+      "version": 1,
+      "changeset": 60558722,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5750709097,
+      "lat": 10.711384,
+      "lon": 106.5987747,
+      "timestamp": "2018-07-10T04:38:28Z",
+      "version": 1,
+      "changeset": 60558722,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5750709097,
+      "lat": 10.7113404,
+      "lon": 106.5987716,
+      "timestamp": "2025-11-13T19:22:19Z",
+      "version": 2,
+      "changeset": 174620213,
+      "user": "Tommybara",
+      "uid": 12198525
+    },
+    {
+      "type": "node",
+      "id": 5750709098,
+      "lat": 10.7114688,
+      "lon": 106.5987138,
+      "timestamp": "2018-07-10T04:38:28Z",
+      "version": 1,
+      "changeset": 60558722,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5750709098,
+      "lat": 10.7114767,
+      "lon": 106.5987192,
+      "timestamp": "2019-07-18T13:36:08Z",
+      "version": 2,
+      "changeset": 72391279,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    },
+    {
+      "type": "node",
+      "id": 5750709099,
+      "lat": 10.711553,
+      "lon": 106.5986542,
+      "timestamp": "2018-07-10T04:38:28Z",
+      "version": 1,
+      "changeset": 60558722,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5750709099,
+      "lat": 10.7115444,
+      "lon": 106.5986468,
+      "timestamp": "2018-07-13T07:46:06Z",
+      "version": 2,
+      "changeset": 60676825,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5750709099,
+      "lat": 10.7115563,
+      "lon": 106.5986696,
+      "timestamp": "2019-07-18T13:36:08Z",
+      "version": 3,
+      "changeset": 72391279,
+      "user": "szilardk_grab",
+      "uid": 10143877
+    }
+  ]
+}

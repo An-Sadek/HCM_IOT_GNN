@@ -1,0 +1,235 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3647300423,
+      "lat": 10.8198581,
+      "lon": 106.7580647,
+      "timestamp": "2015-07-12T12:11:22Z",
+      "version": 1,
+      "changeset": 32579997,
+      "user": "hcalpf",
+      "uid": 2895317
+    },
+    {
+      "type": "node",
+      "id": 3647300423,
+      "lat": 10.8198667,
+      "lon": 106.7580597,
+      "timestamp": "2018-07-03T04:25:36Z",
+      "version": 2,
+      "changeset": 60364150,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 3647300426,
+      "lat": 10.8194971,
+      "lon": 106.7580094,
+      "timestamp": "2015-07-12T12:11:22Z",
+      "version": 1,
+      "changeset": 32579997,
+      "user": "hcalpf",
+      "uid": 2895317
+    },
+    {
+      "type": "node",
+      "id": 3647300426,
+      "lat": 10.8195004,
+      "lon": 106.7580057,
+      "timestamp": "2018-07-03T04:25:36Z",
+      "version": 2,
+      "changeset": 60364150,
+      "user": "mutpuri",
+      "uid": 7795551
+    },
+    {
+      "type": "node",
+      "id": 3654066932,
+      "lat": 10.804223,
+      "lon": 106.683699,
+      "timestamp": "2015-07-16T11:49:51Z",
+      "version": 1,
+      "changeset": 32671991,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289
+    },
+    {
+      "type": "node",
+      "id": 3654066932,
+      "lat": 10.8042025,
+      "lon": 106.6837194,
+      "timestamp": "2019-03-12T06:36:52Z",
+      "version": 2,
+      "changeset": 68049946,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 3654066941,
+      "lat": 10.8072061,
+      "lon": 106.6799151,
+      "timestamp": "2015-07-16T11:49:52Z",
+      "version": 1,
+      "changeset": 32671991,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289
+    },
+    {
+      "type": "node",
+      "id": 3654066941,
+      "lat": 10.8071706,
+      "lon": 106.6799018,
+      "timestamp": "2015-09-25T08:02:12Z",
+      "version": 2,
+      "changeset": 34240342,
+      "user": "phucdoan1973",
+      "uid": 2821292
+    },
+    {
+      "type": "node",
+      "id": 3654066941,
+      "lat": 10.8071732,
+      "lon": 106.6799038,
+      "timestamp": "2023-06-06T08:41:37Z",
+      "version": 3,
+      "changeset": 137003990,
+      "user": "Trần Thanh Tuấn",
+      "uid": 16014056
+    },
+    {
+      "type": "node",
+      "id": 3654066941,
+      "lat": 10.8071439,
+      "lon": 106.6799471,
+      "timestamp": "2024-03-14T04:02:09Z",
+      "version": 4,
+      "changeset": 148620128,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3654066948,
+      "lat": 10.8005914,
+      "lon": 106.6753848,
+      "timestamp": "2015-07-16T11:49:52Z",
+      "version": 1,
+      "changeset": 32671991,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289
+    },
+    {
+      "type": "node",
+      "id": 3654066949,
+      "lat": 10.8015333,
+      "lon": 106.6759142,
+      "timestamp": "2015-07-16T11:49:52Z",
+      "version": 1,
+      "changeset": 32671991,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289
+    },
+    {
+      "type": "node",
+      "id": 3654066949,
+      "lat": 10.8015128,
+      "lon": 106.6759362,
+      "timestamp": "2024-03-31T02:44:54Z",
+      "version": 2,
+      "changeset": 149374677,
+      "user": "phoenixsaigon1698",
+      "uid": 3323343
+    },
+    {
+      "type": "node",
+      "id": 3654066950,
+      "lat": 10.8039758,
+      "lon": 106.677304,
+      "timestamp": "2015-07-16T11:49:52Z",
+      "version": 1,
+      "changeset": 32671991,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289
+    },
+    {
+      "type": "node",
+      "id": 3654066958,
+      "lat": 10.8009731,
+      "lon": 106.6820996,
+      "timestamp": "2015-07-16T11:49:52Z",
+      "version": 1,
+      "changeset": 32671991,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289
+    },
+    {
+      "type": "node",
+      "id": 3654066958,
+      "lat": 10.8009634,
+      "lon": 106.6821136,
+      "timestamp": "2025-11-05T06:10:03Z",
+      "version": 2,
+      "changeset": 174224393,
+      "user": "LamLe",
+      "uid": 23036805
+    },
+    {
+      "type": "node",
+      "id": 3654066959,
+      "lat": 10.7994869,
+      "lon": 106.6767211,
+      "timestamp": "2015-07-16T11:49:52Z",
+      "version": 1,
+      "changeset": 32671991,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289
+    },
+    {
+      "type": "node",
+      "id": 3654066959,
+      "lat": 10.7994845,
+      "lon": 106.6767558,
+      "timestamp": "2019-03-21T06:54:57Z",
+      "version": 2,
+      "changeset": 68362742,
+      "user": "KimChinhTri",
+      "uid": 4892796
+    },
+    {
+      "type": "node",
+      "id": 3654066959,
+      "lat": 10.7994808,
+      "lon": 106.6767555,
+      "timestamp": "2025-08-09T14:40:15Z",
+      "version": 3,
+      "changeset": 170206058,
+      "user": "Trần Xuân",
+      "uid": 23012452
+    },
+    {
+      "type": "node",
+      "id": 3654066975,
+      "lat": 10.8079932,
+      "lon": 106.6790799,
+      "timestamp": "2015-07-16T11:49:52Z",
+      "version": 1,
+      "changeset": 32671991,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289
+    },
+    {
+      "type": "node",
+      "id": 3654066975,
+      "lat": 10.807965,
+      "lon": 106.6790756,
+      "timestamp": "2015-09-25T08:02:12Z",
+      "version": 2,
+      "changeset": 34240342,
+      "user": "phucdoan1973",
+      "uid": 2821292
+    }
+  ]
+}

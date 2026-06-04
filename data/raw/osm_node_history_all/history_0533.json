@@ -1,0 +1,172 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 3349992373,
+      "lat": 10.8660403,
+      "lon": 106.6800711,
+      "timestamp": "2015-02-14T14:14:51Z",
+      "version": 1,
+      "changeset": 28841938,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3349992373,
+      "lat": 10.866064,
+      "lon": 106.6800349,
+      "timestamp": "2016-03-20T04:43:20Z",
+      "version": 2,
+      "changeset": 37949677,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 3349992373,
+      "lat": 10.8660809,
+      "lon": 106.6800276,
+      "timestamp": "2025-09-15T04:27:11Z",
+      "version": 3,
+      "changeset": 171944508,
+      "user": "tuananhvu_2110",
+      "uid": 23289810
+    },
+    {
+      "type": "node",
+      "id": 3349992380,
+      "lat": 10.8667322,
+      "lon": 106.6796478,
+      "timestamp": "2015-02-14T14:14:51Z",
+      "version": 1,
+      "changeset": 28841938,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3349992380,
+      "lat": 10.8667282,
+      "lon": 106.679629,
+      "timestamp": "2016-03-20T04:43:20Z",
+      "version": 2,
+      "changeset": 37949677,
+      "user": "totim",
+      "uid": 562188
+    },
+    {
+      "type": "node",
+      "id": 3370353411,
+      "lat": 10.8136529,
+      "lon": 106.6326858,
+      "timestamp": "2015-02-24T15:49:50Z",
+      "version": 1,
+      "changeset": 29070071,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3370353411,
+      "lat": 10.8136617,
+      "lon": 106.6326825,
+      "timestamp": "2018-03-07T13:32:27Z",
+      "version": 2,
+      "changeset": 56968895,
+      "user": "8221",
+      "uid": 7649715
+    },
+    {
+      "type": "node",
+      "id": 3370353411,
+      "lat": 10.8136617,
+      "lon": 106.6326825,
+      "timestamp": "2019-08-13T13:09:59Z",
+      "version": 3,
+      "changeset": 73308076,
+      "user": "Rene Tran-Guillot",
+      "uid": 1638289,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3370353412,
+      "lat": 10.8137902,
+      "lon": 106.6326507,
+      "timestamp": "2015-02-24T15:49:50Z",
+      "version": 1,
+      "changeset": 29070071,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3370353413,
+      "lat": 10.8144903,
+      "lon": 106.6324402,
+      "timestamp": "2015-02-24T15:49:50Z",
+      "version": 1,
+      "changeset": 29070071,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3370353414,
+      "lat": 10.814956,
+      "lon": 106.632301,
+      "timestamp": "2015-02-24T15:49:50Z",
+      "version": 1,
+      "changeset": 29070071,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3370353418,
+      "lat": 10.8176884,
+      "lon": 106.6314622,
+      "timestamp": "2015-02-24T15:49:51Z",
+      "version": 1,
+      "changeset": 29070071,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3370353419,
+      "lat": 10.8187936,
+      "lon": 106.6311177,
+      "timestamp": "2015-02-24T15:49:51Z",
+      "version": 1,
+      "changeset": 29070071,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3370353421,
+      "lat": 10.8210224,
+      "lon": 106.6304332,
+      "timestamp": "2015-02-24T15:49:51Z",
+      "version": 1,
+      "changeset": 29070071,
+      "user": "TuanIfan",
+      "uid": 625303
+    },
+    {
+      "type": "node",
+      "id": 3370353422,
+      "lat": 10.8215819,
+      "lon": 106.630262,
+      "timestamp": "2015-02-24T15:49:51Z",
+      "version": 1,
+      "changeset": 29070071,
+      "user": "TuanIfan",
+      "uid": 625303
+    }
+  ]
+}

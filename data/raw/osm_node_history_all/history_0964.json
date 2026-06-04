@@ -1,0 +1,114 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 5767087951,
+      "lat": 10.6911896,
+      "lon": 106.5716811,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087953,
+      "lat": 10.6904707,
+      "lon": 106.5692027,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087954,
+      "lat": 10.6903712,
+      "lon": 106.5689492,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087955,
+      "lat": 10.6899449,
+      "lon": 106.5677442,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087957,
+      "lat": 10.6894758,
+      "lon": 106.5663535,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087958,
+      "lat": 10.6890692,
+      "lon": 106.5651935,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087959,
+      "lat": 10.6889618,
+      "lon": 106.5648884,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087960,
+      "lat": 10.6887477,
+      "lon": 106.5643023,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087963,
+      "lat": 10.686257,
+      "lon": 106.5568753,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    },
+    {
+      "type": "node",
+      "id": 5767087964,
+      "lat": 10.6859973,
+      "lon": 106.5559579,
+      "timestamp": "2018-07-18T01:39:56Z",
+      "version": 1,
+      "changeset": 60817127,
+      "user": "vijay1",
+      "uid": 8139602
+    }
+  ]
+}
