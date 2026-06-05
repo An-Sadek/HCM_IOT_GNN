@@ -162,7 +162,7 @@ class NodePreprocess(Preprocess):
         static_node_features = self.df.drop(columns=["id", "long", "lat"]).to_numpy().astype(np.float32)
         
         self.metadata["conversion"] = conversion_dict
-        static_node_features.save(
+        np.save(
             static_node_savepath,
             static_node_features
         )
@@ -173,6 +173,7 @@ class NodePreprocess(Preprocess):
         print("\n=== Tiến hành xử lý node ===")
         self.fill()
         self.onehot_encoding()
+        self.save_data_grid()
 
         self.write_meta("metadata/nodes.csv")
         self.save("data/preprocess/nodes.csv")
@@ -258,11 +259,11 @@ class WayPreprocess(Preprocess):
         # DF one-hot
         way_encoded_array = way_oh_encoder.fit_transform(self.combine_ways_df[self.oh_tags])
         way_oh_encoded_df = pd.DataFrame(
-            way_encoded_array, 
+            way_encoded_array,
             columns=way_oh_encoder.get_feature_names_out(),
-            index=self.df.index
+            index=self.combine_ways_df.index
         )
-        way_oh_encoded_df.insert(0, "id", self.combine_ways_df["id"])
+        way_oh_encoded_df.insert(0, "id", self.combine_ways_df["id"].to_numpy())
 
         # Merge one-hot
         self.df = self.df.merge(
@@ -312,6 +313,7 @@ class WayPreprocess(Preprocess):
             how="inner",
             on="id"
         )
+        self.save_data_grid()
 
         self.write_meta("metadata/ways.csv")
         self.save("data/preprocess/ways.csv")
@@ -382,14 +384,14 @@ class SegmentPreprocess(Preprocess):
         segment_id2index = dict()
         for index, segment_id in enumerate(self.df["id"]):
             segment_index2id[index] = segment_id
-            segment_index2id[segment_id] = index
+            segment_id2index[segment_id] = index
         conversion_dict = {
             "index2id": segment_index2id,
             "id2index": segment_id2index
         }
 
         segment_grid_savepath = "data/preprocess/static_segments.npy"
-        static_segment_grid = self.df[self.feature_names_out + "length"].to_numpy().astype(np.float32)
+        static_segment_grid = self.df[self.feature_names_out + ["length"]].to_numpy().astype(np.float32)
         
         np.save(
             segment_grid_savepath,
@@ -404,6 +406,7 @@ class SegmentPreprocess(Preprocess):
         self.onehot_encoding()
         self.normalize_length()
         self.create_edges()
+        self.save_data_grid()
         
         self.write_meta("metadata/segments.csv")
         self.save("data/preprocess/segments.csv")
