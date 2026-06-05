@@ -121,11 +121,11 @@ class NodePreprocess(Preprocess):
         # DF one-hot
         node_encoded_array = node_oh_encoder.fit_transform(self.combine_nodes_df[self.oh_tags])
         node_oh_encoded_df = pd.DataFrame(
-            node_encoded_array, 
+            node_encoded_array,
             columns=node_oh_encoder.get_feature_names_out(),
-            index=self.df.index
+            index=self.combine_nodes_df.index
         )
-        node_oh_encoded_df.insert(0, "id", self.combine_nodes_df["id"])
+        node_oh_encoded_df.insert(0, "id", self.combine_nodes_df["id"].to_numpy())
 
         # Gộp lại
         self.df = self.df.merge(
@@ -140,12 +140,13 @@ class NodePreprocess(Preprocess):
         self.metadata["onehot"]["onehot_feature_names"] = node_oh_encoder.get_feature_names_out().tolist()
 
     def preprocess(self):
+        print("=== Tiến hành xử lý node ===")
         self.fill()
         self.onehot_encoding()
 
         self.write_meta("metadata/nodes.csv")
         self.save("data/preprocess/nodes.csv")
-        print("Xử lý xong node")
+        print("=== Xử lý xong node ===\n")
 
         
 class WayPreprocess(Preprocess):
@@ -216,6 +217,7 @@ class WayPreprocess(Preprocess):
         self.combine_ways_df["max_velocity"] = self.combine_ways_df["max_velocity"].astype(float)
         self.combine_ways_df["max_velocity"] = self.combine_ways_df.apply(self.max_velocity_rules, axis=1)
         self.metadata["fill"]["max_velocity"] = "120 if tags.highway == \"motorway\" else (50 if tags.oneway == \"yes\" else 60)"
+        print("Thế thành công các giá trị rỗng")
 
     def onehot_encoding(self):
         way_oh_encoder = OneHotEncoder(
@@ -242,19 +244,23 @@ class WayPreprocess(Preprocess):
         # Viết metadata
         self.metadata["onehot"]["features"] = self.oh_tags
         self.metadata["onehot"]["onehot_feature_names"] = way_oh_encoder.get_feature_names_out().tolist()
+        print("OH thành công")
 
     def preprocess(self): 
+        print("=== Đang xử lý way ===")
         self.fill()
         self.onehot_encoding()
+        self.df = self.df.drop(columns=self.num_tags, errors="ignore")
+
         self.df = self.df.merge(
             self.combine_ways_df[["id"] + self.num_tags],
             how="inner",
-            on=["id", "level", "max_velocity"]
+            on="id"
         )
 
         self.write_meta("metadata/ways.csv")
         self.save("data/preprocess/ways.csv")
-        print("Xử lý xong way")
+        print("=== Xử lý xong way ===\n")
 
 
 class SegmentPreprocess(Preprocess):
@@ -295,6 +301,7 @@ class SegmentPreprocess(Preprocess):
 
         self.metadata["onehot"]["features"] = ["type"]
         self.metadata["onehot"]["onehot_feature_names"] = segment_oh_encoder.get_feature_names_out().tolist()
+        print("OH thành công")
 
     def normalize_length(self):
         """
@@ -302,20 +309,24 @@ class SegmentPreprocess(Preprocess):
         """
         self.df["length"] = self.df["length"] / 1000
         self.metadata["normalize"] = "length / 1000"
+        print("Chuẩn hóa từ km -> m cho length")
 
     def create_edges(self):
         node_segment_edges_df = self.segments_df[["_id", "s_node_id", "e_node_id"]]
+        node_segment_edges_df = node_segment_edges_df.rename(columns={"_id": "id"})
         print("Kích thước của [segments] ---(has[startswith|endswiths])---> [nodes]", node_segment_edges_df.shape)
         node_segment_edges_df.to_csv("data/preprocess/nodes_segments_edges_df.csv", index=False)
+        print("Tạo và lưu các cạnh từ edge và node gốc")
 
     def preprocess(self):
+        print("=== Xử lý segments ===")
         self.onehot_encoding()
         self.normalize_length()
         self.create_edges()
         
         self.write_meta("metadata/segments.csv")
         self.save("data/preprocess/segments.csv")
-        print("Xử lý xong segments")
+        print("=== Xử lý xong segments ===")
 
 
 class DynamicPreprocess(Preprocess):
@@ -387,6 +398,7 @@ class DynamicPreprocess(Preprocess):
         
         print("Kích thước của pivot table velocity và mask trong status df:", X.shape)
         np.save("data/preprocess/dynamic_velocity.npy", X)
+        print("Xử lý xong velocity của status")
 
     def train_preprocess(self):
         self.train_df["LOS"] = self.train_df["LOS"].apply(lambda x: ord(x) - ord('A'))
@@ -429,6 +441,7 @@ class DynamicPreprocess(Preprocess):
         )
         print("Kích thước của pivot table LOS và mask trong train df:", X.shape)
         np.save("data/preprocess/dynamic_LOS.npy", X)
+        print("Xử lý thành công LOS của train")
 
     def target_preprocess(self):
         los_mat = self.train_df.pivot(
@@ -437,15 +450,15 @@ class DynamicPreprocess(Preprocess):
             values="LOS"
         ).reindex(self.full_time)
         los_mat = los_mat.ffill().bfill()
-
         print("Xử lý xong target của dynamic")
 
     def preprocess(self):
+        print("=== Tiến hành tạo dynamic feature cho status và train ===\n")
         self.train_preprocess()
         self.status_preprocess()
         self.target_preprocess()
 
-        print("Xử lý xong status và train")
+        print("=== Xử lý xong status và train ===\n")
 
 
 if __name__ == "__main__":
