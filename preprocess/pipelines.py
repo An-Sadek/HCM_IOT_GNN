@@ -74,8 +74,11 @@ class Preprocess:
         self.df = pd.DataFrame()
         self.metadata = {
             "fill": {}, 
-            "onehot": {}
+            "onehot": {},
+            "conversion": {}
         }
+
+        self.feature_names_out = None
 
     def save(self, output_file):
         assert Path(output_file).parent.exists(), "Thư mục cha không tồn tại"
@@ -139,8 +142,35 @@ class NodePreprocess(Preprocess):
         self.metadata["onehot"]["features"] = self.oh_tags
         self.metadata["onehot"]["onehot_feature_names"] = node_oh_encoder.get_feature_names_out().tolist()
 
+        # Node thực ra không cần
+        self.feature_names_out = node_oh_encoder.get_feature_names_out().tolist()
+
+    def save_data_grid(self):
+        self.df = self.df.sort_values("id")
+        static_node_savepath = "data/preprocess/static_nodes.npy"
+
+        node_index2id = dict()
+        node_id2index = dict()
+        for index, node_id in enumerate(self.df["id"]):
+            node_index2id[index] = node_id
+            node_id2index[node_id] = index
+        conversion_dict = {
+            "index2id": node_index2id,
+            "id2index": node_id2index
+        }
+
+        static_node_features = self.df.drop(columns=["id", "long", "lat"]).to_numpy().astype(np.float32)
+        
+        self.metadata["conversion"] = conversion_dict
+        static_node_features.save(
+            static_node_savepath,
+            static_node_features
+        )
+
+        print("Đã lưu static_node_grid tại:", static_node_savepath)
+
     def preprocess(self):
-        print("=== Tiến hành xử lý node ===")
+        print("\n=== Tiến hành xử lý node ===")
         self.fill()
         self.onehot_encoding()
 
@@ -244,10 +274,35 @@ class WayPreprocess(Preprocess):
         # Viết metadata
         self.metadata["onehot"]["features"] = self.oh_tags
         self.metadata["onehot"]["onehot_feature_names"] = way_oh_encoder.get_feature_names_out().tolist()
+        
+        self.feature_names_out = way_oh_encoder.get_feature_names_out().tolist()
         print("OH thành công")
 
+    def save_data_grid(self):
+        self.df = self.df.sort_values("id")
+
+        way_index2id = dict()
+        way_id2index = dict()
+        for index, way_id in enumerate(self.df["id"]):
+            way_index2id[index] = way_id
+            way_id2index[way_id] = index
+        way_conversion_dict = {
+            "index2id": way_index2id,
+            "id2index": way_id2index
+        }
+
+        static_way_savepath = "data/preprocess/static_ways.npy"
+        static_way_grid = self.df[self.feature_names_out + self.num_tags].to_numpy().astype(np.float32)
+        
+        self.metadata["conversion"] = way_conversion_dict
+        np.save(
+            static_way_savepath,
+            static_way_grid
+        )
+        print("Đã lưu static way tại:", static_way_savepath)
+
     def preprocess(self): 
-        print("=== Đang xử lý way ===")
+        print("\n=== Đang xử lý way ===")
         self.fill()
         self.onehot_encoding()
         self.df = self.df.drop(columns=self.num_tags, errors="ignore")
@@ -301,6 +356,7 @@ class SegmentPreprocess(Preprocess):
 
         self.metadata["onehot"]["features"] = ["type"]
         self.metadata["onehot"]["onehot_feature_names"] = segment_oh_encoder.get_feature_names_out().tolist()
+        self.feature_names_out = segment_oh_encoder.get_feature_names_out().tolist()
         print("OH thành công")
 
     def normalize_length(self):
@@ -318,15 +374,40 @@ class SegmentPreprocess(Preprocess):
         node_segment_edges_df.to_csv("data/preprocess/nodes_segments_edges_df.csv", index=False)
         print("Tạo và lưu các cạnh từ edge và node gốc")
 
+
+    def save_data_grid(self):
+        self.df = self.df.sort_values("id")
+
+        segment_index2id = dict()
+        segment_id2index = dict()
+        for index, segment_id in enumerate(self.df["id"]):
+            segment_index2id[index] = segment_id
+            segment_index2id[segment_id] = index
+        conversion_dict = {
+            "index2id": segment_index2id,
+            "id2index": segment_id2index
+        }
+
+        segment_grid_savepath = "data/preprocess/static_segments.npy"
+        static_segment_grid = self.df[self.feature_names_out + "length"].to_numpy().astype(np.float32)
+        
+        np.save(
+            segment_grid_savepath,
+            static_segment_grid
+        )
+        self.metadata["conversion"] = conversion_dict
+        print("Đã lưu static segment tại:", segment_grid_savepath)
+
+
     def preprocess(self):
-        print("=== Xử lý segments ===")
+        print("\n=== Xử lý segments ===")
         self.onehot_encoding()
         self.normalize_length()
         self.create_edges()
         
         self.write_meta("metadata/segments.csv")
         self.save("data/preprocess/segments.csv")
-        print("=== Xử lý xong segments ===")
+        print("=== Xử lý xong segments ===\n")
 
 
 class DynamicPreprocess(Preprocess):
@@ -453,7 +534,7 @@ class DynamicPreprocess(Preprocess):
         print("Xử lý xong target của dynamic")
 
     def preprocess(self):
-        print("=== Tiến hành tạo dynamic feature cho status và train ===\n")
+        print("\n=== Tiến hành tạo dynamic feature cho status và train ===\n")
         self.train_preprocess()
         self.status_preprocess()
         self.target_preprocess()
