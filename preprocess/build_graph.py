@@ -9,7 +9,7 @@ import torch
 
 from torch_geometric.data import HeteroData
 
-PREPROCESS_ROOT = Path("../data/preprocess")
+PREPROCESS_ROOT = Path("data/preprocess")
 RAW_ROOT = Path("../data/raw")
 
 
@@ -22,6 +22,7 @@ def build_static_graph():
         PREPROCESS_ROOT / "nodes_segments_edges_df.csv"
     )
     way2way_df = pd.read_csv(PREPROCESS_ROOT / "way2way.csv")
+    way_restrictions_df = pd.read_csv(PREPROCESS_ROOT / "relation_members.csv")
 
     static_node_features = np.load(PREPROCESS_ROOT / "static_nodes.npy")
     static_segment_features = np.load(PREPROCESS_ROOT / "static_segments.npy")
@@ -75,13 +76,26 @@ def build_static_graph():
         left_on = "start_id",
         right_on = "end_id"
     )
-    way2way_connections = (
-        merge_way2way_df[["start_id", "end_id"]]
-        .drop_duplicates()
-        .drop_duplicates()
-        .to_numpy()
-        .astype(int)
-    )
-    data[""]
+    way2way_connections_df = merge_way2way_df[["start_id", "end_id"]]
+    
+    # Loại bỏ đường cấm rẽ
+    way_restrictions_df = way_restrictions_df[way_restrictions_df["type"] == "node"] # Bỏ node ra (via)
+
+    ## Tạo các restriction
+    way_restrictions = []
+    way_restrictions_group = way_restrictions_df.groupby("id")
+    for _, group in way_restrictions_group:
+        start_way_id = group[group["role" == "from"]]["ref"].values[0]
+        start_way_id = int(start_way_id)
+        end_way_id = group[group["role" == "to"]]["ref"].values[0]
+        end_way_id = int(end_way_id)
+        way_restrictions = way_restrictions.append([start_way_id, end_way_id])
+
+    ## Lọc các restriction
+    way2way_connections_df = way2way_connections_df[~
+        way2way_connections_df[["start_node", "end_node"]].isin(way_restrictions) 
+    ]
 
     
+if __name__ == "__main__":
+    build_static_graph()

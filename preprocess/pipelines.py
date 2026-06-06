@@ -602,13 +602,15 @@ class RelationPreprocess(Preprocess):
     def save_relation_df(self):
         osm_relation_df = self.osm_elements_df[
             self.osm_elements_df["type"] == "relation"
-        ]
+        ].copy()
+        osm_relation_df = osm_relation_df.rename(columns={"id": "relation_id"})
         osm_relation_df = osm_relation_df.drop(columns=
             ["lat", "lon", "nodes"] + 
             [x for x in osm_relation_df.columns if x.startswith("tags.")]
         )
         df_exploded = osm_relation_df.explode('members').reset_index(drop=True)
         member_df = pd.json_normalize(df_exploded['members'])
+        member_df.insert(0, "id", df_exploded["relation_id"].to_numpy())
         member_df.to_csv("data/preprocess/relation_members.csv", index=False)
         print("Lưu thành công đường cấm rẽ")
 
@@ -619,6 +621,7 @@ class RelationPreprocess(Preprocess):
 
 
 if __name__ == "__main__":
+    """
     node_process = NodePreprocess(
         "data/raw", 
         "data/raw/osm_train_2019_01_03.json"
@@ -643,6 +646,7 @@ if __name__ == "__main__":
     dynamic_process = DynamicPreprocess()
     dynamic_process.preprocess()
     del dynamic_process
+    """
 
     relation_process = RelationPreprocess()
     relation_process.preprocess()
