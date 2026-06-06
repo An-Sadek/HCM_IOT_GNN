@@ -72,38 +72,30 @@ class Preprocess:
             "way": way_dict
         }
 
-        # Chuyển sang index trong HCM Traffic Flow
-        self.nodes_df["_id"] = self.nodes_df["_id"].apply(lambda x: self.convert_index(x, node_id2index))
-        self.segments_df["s_node_id"] = self.segments_df["s_node_id"].apply(lambda x: self.convert_index(x, node_id2index))
-        self.segments_df["e_node_id"] = self.segments_df["e_node_id"].apply(lambda x: self.convert_index(x, node_id2index))
-        self.train_df["s_node_id"] = self.train_df["s_node_id"].apply(lambda x: self.convert_index(x, node_id2index))
-        self.train_df["e_node_id"] = self.train_df["e_node_id"].apply(lambda x: self.convert_index(x, node_id2index))
+        # Filter raw ids first
+        self.nodes_df = self.nodes_df[self.nodes_df["_id"].isin(train_nodes)].copy()
+        self.segments_df = self.segments_df[self.segments_df["_id"].isin(train_segments)].copy()
+        self.streets_df = self.streets_df[self.streets_df["_id"].isin(train_ways)].copy()
 
-        self.segments_df["_id"] = self.segments_df["_id"].apply(lambda x: self.convert_index(x, segment_id2index))
-        self.train_df["segment_id"] = self.train_df["segment_id"].apply(lambda x: self.convert_index(x, segment_id2index))
+        # Then convert to index
+        self.nodes_df["_id"] = self.nodes_df["_id"].map(node_id2index)
 
-        self.streets_df["_id"] = self.streets_df["_id"].apply(lambda x: self.convert_index(x, way_id2index))
-        self.segments_df["street_id"] = self.segments_df["street_id"].apply(lambda x: self.convert_index(x, way_id2index))
-        self.train_df["street_id"] = self.train_df["street_id"].apply(lambda x: self.convert_index(x, way_id2index))
+        self.segments_df["s_node_id"] = self.segments_df["s_node_id"].map(node_id2index)
+        self.segments_df["e_node_id"] = self.segments_df["e_node_id"].map(node_id2index)
+        self.segments_df["_id"] = self.segments_df["_id"].map(segment_id2index)
+        self.segments_df["street_id"] = self.segments_df["street_id"].map(way_id2index)
 
+        self.streets_df["_id"] = self.streets_df["_id"].map(way_id2index)
 
-        # Lọc node, segments, way
-        nodes = sorted(
-            set(self.train_df["s_node_id"]) |
-            set(self.train_df["e_node_id"])
+        self.train_df["s_node_id"] = self.train_df["s_node_id"].map(node_id2index)
+        self.train_df["e_node_id"] = self.train_df["e_node_id"].map(node_id2index)
+        self.train_df["segment_id"] = self.train_df["segment_id"].map(segment_id2index)
+        self.train_df["street_id"] = self.train_df["street_id"].map(way_id2index)
+
+        self.status_df["segment_id"] = (
+            self.status_df["segment_id"]
+            .map(self.conversion_dict["segment"])
         )
-        streets = sorted(set(self.train_df["street_id"]))
-        segments = sorted(self.train_df["segment_id"])
-
-        self.nodes_df = self.nodes_df[
-            self.nodes_df["_id"].isin(nodes)
-        ]
-        self.segments_df = self.segments_df[
-            self.segments_df["_id"].isin(segments)
-        ]
-        self.streets_df = self.streets_df[
-            self.streets_df["_id"].isin(streets)
-        ]
 
         # Load OSM
         with open(osm_path, "r", encoding="utf-8") as f:
@@ -113,7 +105,7 @@ class Preprocess:
         # OSM Node
         self.osm_nodes_df = self.osm_elements_df[self.osm_elements_df["type"] == "node"]
         self.osm_nodes_df = self.osm_nodes_df[self.osm_nodes_df["id"].isin(train_nodes)]
-        self.osm_nodes_df["id"] = self.osm_nodes_df["id"].apply(lambda x: self.convert_index(x, node_id2index))
+        self.osm_nodes_df["id"] = self.osm_nodes_df["id"].map(node_id2index)
         self.osm_nodes_df = self.osm_nodes_df.drop(columns=["type"])
         self.combine_nodes_df = self.nodes_df.merge(
             self.osm_nodes_df,
@@ -125,7 +117,7 @@ class Preprocess:
         # OSM Way
         self.osm_ways_df = self.osm_elements_df[self.osm_elements_df["type"] == "way"]
         self.osm_ways_df = self.osm_ways_df[self.osm_ways_df["id"].isin(train_ways)]
-        self.osm_ways_df["id"] = self.osm_ways_df["id"].apply(lambda x: self.convert_index(x, way_id2index))
+        self.osm_ways_df["id"] = self.osm_ways_df["id"].map(way_id2index)
         self.osm_ways_df = self.osm_ways_df.drop(columns=["type"])
         self.combine_ways_df = self.streets_df.merge(
             self.osm_ways_df,
@@ -158,12 +150,6 @@ class Preprocess:
 
     def onehot_encoding(self):
         pass
-
-    def convert_index(self, x, ref_dict: dict):
-        try:
-            return ref_dict[x]
-        except:
-            return x
 
 
 class NodePreprocess(Preprocess):
@@ -341,8 +327,6 @@ class WayPreprocess(Preprocess):
     def save_data_grid(self):
         self.df = self.df.sort_values("id")
 
-        
-
         static_way_savepath = "data/preprocess/static_ways.npy"
         static_way_grid = self.df[self.feature_names_out + self.num_tags].to_numpy().astype(np.float32)
         
@@ -430,8 +414,6 @@ class SegmentPreprocess(Preprocess):
 
     def save_data_grid(self):
         self.df = self.df.sort_values("id")
-
-        
 
         segment_grid_savepath = "data/preprocess/static_segments.npy"
         static_segment_grid = self.df[self.feature_names_out + ["length"]].to_numpy().astype(np.float32)
@@ -556,12 +538,11 @@ class DynamicPreprocess(Preprocess):
             columns="segment_id",
             values="LOS"
         ).reindex(self.full_time)
-        los_mask = (los_mat == 0).astype(np.float32)
 
         # Gộp lại, fill -1 thể hiện data bị trống
         los_arr = los_mat.reindex(self.full_time)
+        mask_arr = los_mat.isna().to_numpy().astype(np.float32)
         los_arr = los_mat.fillna(-1).to_numpy().astype(np.float32)
-        mask_arr = (los_mat == 0).astype(np.float32)
         X = np.stack(
             [los_arr, mask_arr],
             axis=-1

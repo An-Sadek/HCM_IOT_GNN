@@ -9,7 +9,6 @@ onehot:
   - type_clothes
   - type_company
   - type_convenience
-  - type_department_store
   - type_fuel
   - type_government
   - type_house
