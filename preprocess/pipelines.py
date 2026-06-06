@@ -611,6 +611,10 @@ class RelationPreprocess(Preprocess):
         df_exploded = osm_relation_df.explode('members').reset_index(drop=True)
         member_df = pd.json_normalize(df_exploded['members'])
         member_df.insert(0, "id", df_exploded["relation_id"].to_numpy())
+
+        # Convert sang index
+
+        
         member_df.to_csv("data/preprocess/relation_members.csv", index=False)
         print("Lưu thành công đường cấm rẽ")
 
