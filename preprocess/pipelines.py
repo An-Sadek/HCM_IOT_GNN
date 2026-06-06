@@ -20,11 +20,72 @@ class Preprocess:
         assert osm_path.exists(), "File không tồn tại"
 
         # Load HCM Traffic Flow
-        self.nodes_df = pd.read_csv(self.raw_root / "nodes.csv")
-        self.segments_df = pd.read_csv(self.raw_root / "segments.csv")
-        self.streets_df = pd.read_csv(self.raw_root / "streets.csv")
-        self.status_df = pd.read_csv(self.raw_root/ "segment_status.csv")
-        self.train_df = pd.read_csv(self.raw_root / "train.csv")
+        self.nodes_df = pd.read_csv(self.raw_root / "nodes.csv").sort_values("_id")
+        self.segments_df = pd.read_csv(self.raw_root / "segments.csv").sort_values("_id")
+        self.streets_df = pd.read_csv(self.raw_root / "streets.csv").sort_values("_id")
+        self.status_df = pd.read_csv(self.raw_root/ "segment_status.csv").sort_values("_id")
+        self.train_df = pd.read_csv(self.raw_root / "train.csv").sort_values("_id")
+
+        train_nodes = sorted(
+            set(self.train_df["s_node_id"]) |
+            set(self.train_df["e_node_id"])
+        )
+        train_segments = sorted(self.train_df["segment_id"].unique().tolist())
+        train_ways = sorted(self.train_df["street_id"].unique().tolist())
+
+        # Xây dựng dict để chuyển id sang index
+        ## Node
+        node_index2id = dict()
+        node_id2index = dict()
+        for index, node_id in enumerate(train_nodes):
+            node_index2id[index] = node_id
+            node_id2index[node_id] = index
+        node_dict = {
+            "index2id": node_index2id,
+            "id2index": node_id2index
+        }
+
+        ## Segment
+        segment_index2id = dict()
+        segment_id2index = dict()
+        for index, segment_id in enumerate(train_segments):
+            segment_index2id[index] = segment_id
+            segment_id2index[segment_id] = index
+        segment_dict = {
+            "index2id": segment_index2id,
+            "id2index": segment_id2index
+        }
+
+        # Way
+        way_index2id = dict()
+        way_id2index = dict()
+        for index, way_id in enumerate(train_ways):
+            way_index2id[index] = way_id
+            way_id2index[way_id] = index
+        way_dict = {
+            "index2id": way_index2id,
+            "id2index": way_id2index
+        }
+        self.conversion_dict = {
+            "node": node_dict,
+            "segment": segment_dict,
+            "way": way_dict
+        }
+
+        # Chuyển sang index trong HCM Traffic Flow
+        self.nodes_df["_id"] = self.nodes_df["_id"].apply(lambda x: self.convert_index(x, node_id2index))
+        self.segments_df["s_node_id"] = self.segments_df["s_node_id"].apply(lambda x: self.convert_index(x, node_id2index))
+        self.segments_df["e_node_id"] = self.segments_df["e_node_id"].apply(lambda x: self.convert_index(x, node_id2index))
+        self.train_df["s_node_id"] = self.train_df["s_node_id"].apply(lambda x: self.convert_index(x, node_id2index))
+        self.train_df["e_node_id"] = self.train_df["e_node_id"].apply(lambda x: self.convert_index(x, node_id2index))
+
+        self.segments_df["_id"] = self.segments_df["_id"].apply(lambda x: self.convert_index(x, segment_id2index))
+        self.train_df["segment_id"] = self.train_df["segment_id"].apply(lambda x: self.convert_index(x, segment_id2index))
+
+        self.streets_df["_id"] = self.streets_df["_id"].apply(lambda x: self.convert_index(x, way_id2index))
+        self.segments_df["street_id"] = self.segments_df["street_id"].apply(lambda x: self.convert_index(x, way_id2index))
+        self.train_df["street_id"] = self.train_df["street_id"].apply(lambda x: self.convert_index(x, way_id2index))
+
 
         # Lọc node, segments, way
         nodes = sorted(
@@ -51,7 +112,8 @@ class Preprocess:
 
         # OSM Node
         self.osm_nodes_df = self.osm_elements_df[self.osm_elements_df["type"] == "node"]
-        self.osm_nodes_df = self.osm_nodes_df[self.osm_nodes_df["id"].isin(nodes)]
+        self.osm_nodes_df = self.osm_nodes_df[self.osm_nodes_df["id"].isin(train_nodes)]
+        self.osm_nodes_df["id"] = self.osm_nodes_df["id"].apply(lambda x: self.convert_index(x, node_id2index))
         self.osm_nodes_df = self.osm_nodes_df.drop(columns=["type"])
         self.combine_nodes_df = self.nodes_df.merge(
             self.osm_nodes_df,
@@ -62,7 +124,8 @@ class Preprocess:
 
         # OSM Way
         self.osm_ways_df = self.osm_elements_df[self.osm_elements_df["type"] == "way"]
-        self.osm_ways_df = self.osm_ways_df[self.osm_ways_df["id"].isin(streets)]
+        self.osm_ways_df = self.osm_ways_df[self.osm_ways_df["id"].isin(train_ways)]
+        self.osm_ways_df["id"] = self.osm_ways_df["id"].apply(lambda x: self.convert_index(x, way_id2index))
         self.osm_ways_df = self.osm_ways_df.drop(columns=["type"])
         self.combine_ways_df = self.streets_df.merge(
             self.osm_ways_df,
@@ -95,6 +158,12 @@ class Preprocess:
 
     def onehot_encoding(self):
         pass
+
+    def convert_index(self, x, ref_dict: dict):
+        try:
+            return ref_dict[x]
+        except:
+            return x
 
 
 class NodePreprocess(Preprocess):
@@ -149,19 +218,9 @@ class NodePreprocess(Preprocess):
         self.df = self.df.sort_values("id")
         static_node_savepath = "data/preprocess/static_nodes.npy"
 
-        node_index2id = dict()
-        node_id2index = dict()
-        for index, node_id in enumerate(self.df["id"]):
-            node_index2id[index] = node_id
-            node_id2index[node_id] = index
-        conversion_dict = {
-            "index2id": node_index2id,
-            "id2index": node_id2index
-        }
-
         static_node_features = self.df.drop(columns=["id", "long", "lat"]).to_numpy().astype(np.float32)
         
-        self.metadata["conversion"] = conversion_dict
+        self.metadata["conversion"] = self.conversion_dict["node"]
         np.save(
             static_node_savepath,
             static_node_features
@@ -282,20 +341,12 @@ class WayPreprocess(Preprocess):
     def save_data_grid(self):
         self.df = self.df.sort_values("id")
 
-        way_index2id = dict()
-        way_id2index = dict()
-        for index, way_id in enumerate(self.df["id"]):
-            way_index2id[index] = way_id
-            way_id2index[way_id] = index
-        way_conversion_dict = {
-            "index2id": way_index2id,
-            "id2index": way_id2index
-        }
+        
 
         static_way_savepath = "data/preprocess/static_ways.npy"
         static_way_grid = self.df[self.feature_names_out + self.num_tags].to_numpy().astype(np.float32)
         
-        self.metadata["conversion"] = way_conversion_dict
+        self.metadata["conversion"] = self.conversion_dict["way"]
         np.save(
             static_way_savepath,
             static_way_grid
@@ -380,15 +431,7 @@ class SegmentPreprocess(Preprocess):
     def save_data_grid(self):
         self.df = self.df.sort_values("id")
 
-        segment_index2id = dict()
-        segment_id2index = dict()
-        for index, segment_id in enumerate(self.df["id"]):
-            segment_index2id[index] = segment_id
-            segment_id2index[segment_id] = index
-        conversion_dict = {
-            "index2id": segment_index2id,
-            "id2index": segment_id2index
-        }
+        
 
         segment_grid_savepath = "data/preprocess/static_segments.npy"
         static_segment_grid = self.df[self.feature_names_out + ["length"]].to_numpy().astype(np.float32)
@@ -397,7 +440,7 @@ class SegmentPreprocess(Preprocess):
             segment_grid_savepath,
             static_segment_grid
         )
-        self.metadata["conversion"] = conversion_dict
+        self.metadata["conversion"] = self.conversion_dict["segment"]
         print("Đã lưu static segment tại:", segment_grid_savepath)
 
 
