@@ -1,4 +1,6 @@
 from pathlib import Path
+import os
+import tempfile
 
 import pandas as pd
 import numpy as np
@@ -136,9 +138,22 @@ class Preprocess:
         self.feature_names_out = None
 
     def save(self, output_file):
-        assert Path(output_file).parent.exists(), "Thư mục cha không tồn tại"
+        output_path = Path(output_file)
+        assert output_path.parent.exists(), "Thư mục cha không tồn tại"
         assert len(self.df.columns) > 0, "DF rỗng kiểm tra lại"
-        self.df.to_csv(output_file, index=False)
+        tmp_path = None
+        try:
+            fd, tmp_path = tempfile.mkstemp(
+                prefix=f".{output_path.name}.",
+                suffix=".tmp",
+                dir=output_path.parent,
+            )
+            os.close(fd)
+            self.df.to_csv(tmp_path, index=False)
+            os.replace(tmp_path, output_path)
+        finally:
+            if tmp_path is not None and Path(tmp_path).exists():
+                os.remove(tmp_path)
 
     def write_meta(self, output_file):
         assert Path(output_file).parent.exists(), "Thư mục cha không tồn tại"
