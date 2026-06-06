@@ -337,6 +337,13 @@ class WayPreprocess(Preprocess):
         )
         print("Đã lưu static way tại:", static_way_savepath)
 
+    def save_way2way(self):
+        filtered_osm_ways_df = self.combine_ways_df[["id", "nodes"]]
+        filtered_osm_ways_df["start_node"] = filtered_osm_ways_df["nodes"].apply(lambda x: x[0])
+        filtered_osm_ways_df["end_node"] = filtered_osm_ways_df["nodes"].apply(lambda x: x[-1])
+        filtered_osm_ways_df.to_csv("data/preprocess/way2way.csv", index=False)
+        print("Đã xử lý xong way2way")
+
     def preprocess(self): 
         print("\n=== Đang xử lý way ===")
         self.fill()
@@ -348,6 +355,7 @@ class WayPreprocess(Preprocess):
             how="inner",
             on="id"
         )
+        self.save_way2way()
         self.save_data_grid()
 
         self.write_meta("metadata/ways.csv")
@@ -561,12 +569,38 @@ class DynamicPreprocess(Preprocess):
         print("Xử lý xong target của dynamic")
 
     def preprocess(self):
-        print("\n=== Tiến hành tạo dynamic feature cho status và train ===\n")
+        print("\n=== Tiến hành tạo dynamic feature cho status và train ===")
         self.train_preprocess()
         self.status_preprocess()
         self.target_preprocess()
 
         print("=== Xử lý xong status và train ===\n")
+
+
+class RelationPreprocess(Preprocess):
+    def __init__(self, 
+                 raw_root: str="data/raw", 
+                 osm_path: str="data/raw/osm_train_2019_01_03.json"
+    ):
+        super().__init__(raw_root, osm_path)
+
+    def save_relation_df(self):
+        osm_relation_df = self.osm_elements_df[
+            self.osm_elements_df["type"] == "relation"
+        ]
+        osm_relation_df = osm_relation_df.drop(columns=
+            ["lat", "lon", "nodes"] + 
+            [x for x in osm_relation_df.columns if x.startswith("tags.")]
+        )
+        df_exploded = osm_relation_df.explode('members').reset_index(drop=True)
+        member_df = pd.json_normalize(df_exploded['members'])
+        member_df.to_csv("data/preprocess/relation_members.csv", index=False)
+        print("Lưu thành công đường cấm rẽ")
+
+    def preprocess(self):
+        print("\n=== Đang xử lý relation ===")
+        self.save_relation_df()
+        print("\n=== Xử lý xong relation ===")
 
 
 if __name__ == "__main__":
@@ -594,3 +628,7 @@ if __name__ == "__main__":
     dynamic_process = DynamicPreprocess()
     dynamic_process.preprocess()
     del dynamic_process
+
+    relation_process = RelationPreprocess()
+    relation_process.preprocess()
+    del relation_process
