@@ -589,7 +589,7 @@ class DynamicPreprocess(Preprocess):
         # Gộp lại, fill với -1 thể hiện nó bị trống
         velocity_arr = velocity_mat.reindex(self.full_time)
         velocity_arr = velocity_mat.fillna(-1).to_numpy().astype(np.float32)
-        mask_arr = (velocity_mat == 0).astype(np.float32)
+        mask_arr = (velocity_mat == -1).astype(np.float32)
         X = np.stack(
             [velocity_arr, mask_arr],
             axis=-1
