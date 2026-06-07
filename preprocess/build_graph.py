@@ -8,17 +8,17 @@ from torch_geometric.data import HeteroData
 
 PREPROCESS_ROOT = Path("data/preprocess")
 
+ways_df = pd.read_csv(PREPROCESS_ROOT / "ways.csv")
 segments_df = pd.read_csv(PREPROCESS_ROOT / "segments.csv")
 way2way_df = pd.read_csv(PREPROCESS_ROOT / "way2way.csv")
 relation_df = pd.read_csv(PREPROCESS_ROOT / "relation_members.csv")
+segment2segment_df = pd.read_csv(PREPROCESS_ROOT / "segment2segment.csv")
+oneway_df = pd.read_csv(PREPROCESS_ROOT / "oneway_df.csv")
+nodes_segments_edges_df = pd.read_csv(PREPROCESS_ROOT / "nodes_segments_edges_df.csv")
 
 static_node_features = np.load(PREPROCESS_ROOT / "static_nodes.npy")
 static_segment_features = np.load(PREPROCESS_ROOT / "static_segments.npy")
 static_way_features = np.load(PREPROCESS_ROOT / "static_ways.npy")
-
-
-def build_segment_pairs():
-    filtered_segments_df = segments_df[["s_node_id", "e_node_id"]]
 
 
 def build_restricted_way_pairs():
@@ -50,44 +50,43 @@ def build_restricted_way_pairs():
 
     return restriction_df
 
-def build_way_pairs():
+
+def build_segment_pairs():
     # Xây dựng df cặp
-    way_pairs_df = way2way_df[["id", "end_node"]].merge(
-        way2way_df[["id", "start_node"]],
-        left_on="end_node",
-        right_on="start_node",
-        how="inner"
-    ).drop_duplicates()
-    way_pairs_df = way_pairs_df.rename(
-        columns={"id_x": "from_way_id", "id_y": "to_way_id"}
+    segment_pairs = segment2segment_df[["from_segment_id", "to_segment_id"]]
+    print("Shape của cặp thuận:", segment_pairs.shape)
+
+    # Tạo các segment 2 chiều
+    twoway_segments = oneway_df[oneway_df["tags.oneway"] == "no"]["segment_id"]
+    print("Số cặp way 2 chiều:", twoway_segments.shape[0])
+    print("Số segment một chiều:", segment_pairs.shape[0] - twoway_segments.shape[0])
+
+    all_pairs = segment_pairs.copy()
+    reverse_pairs = segment_pairs.rename(
+        columns={"from_segment_id": "to_segment_id", "to_segment_id": "from_segment_id"}
     )
-    way_pairs_df = way_pairs_df[way_pairs_df["from_way_id"] != way_pairs_df["to_way_id"]]
-    print("Shape của các cặp đường gốc", way_pairs_df.shape)
 
-    # Lấy nghịch đảo
-    reverse_df = way_pairs_df.copy()
-    reverse_df = reverse_df.rename(columns={
-        "from_way_id": "to_way_id",
-        "to_way_id": "from_way_id"
-    })
+    # Tạo reverse pair hợp lệ
+    reverse_pairs_filtered = reverse_pairs[
+        reverse_pairs["from_segment_id"].isin(twoway_segments)
+        & reverse_pairs["to_segment_id"].isin(twoway_segments)
+    ]
+    print("Số cặp reverse segment hợp lệ", reverse_pairs_filtered.shape[0])
 
-    # Lọc các restrict
+    # Tổng hợp
+    full_segment_df = (
+        pd.concat([all_pairs, reverse_pairs_filtered], ignore_index=True)
+        .drop_duplicates()
+    )
+    print("Tổng cặp segment hợp lệ", full_segment_df.shape[0])
+
+    # Bỏ các edge thông qua restriction
+    segment_node_df = segments_df[["s_node_id", "e_node_id"]]
     restriction_df = build_restricted_way_pairs()
-    merged_df = way_pairs_df.merge(
-        restriction_df[["from_way_id", "to_way_id"]], 
-        on=["from_way_id", "to_way_id"], 
-        how="left", 
-        indicator="is_restricted"
-    )
-    allowed_way_pairs_df = merged_df[merged_df["is_restricted"] == "left_only"].drop(columns=["is_restricted"])
-    print("Shape sau khi lọc các đường cấm rẽ:", allowed_way_pairs_df.shape)
 
-    # Gộp 2 data lại
-    full_df = pd.concat([allowed_way_pairs_df, reverse_df], axis=0).drop_duplicates()
-    print(full_df.isnull().sum())
-    print("Shape sau khi kết hợp 2 data", full_df.shape)
 
-    return full_df
+
+    return full_segment_df[["from_segment_id", "to_segment_id"]].to_numpy().astype(int)
 
 def to_edge_index(edges):
     return torch.tensor(edges.T, dtype=torch.long)
@@ -138,10 +137,12 @@ def build_static_graph():
         ends_with[:, [1, 0]]
     )
 
+    connects_to_segment = build_segment_pairs()
+    data["segment", "connects_to_segment", "segment"].edge_index = to_edge_index(connects_to_segment)
+
     return data
 
 
 if __name__ == "__main__":
     data = build_static_graph()
     print(data)
-    build_way_pairs()

@@ -252,7 +252,7 @@ class NodePreprocess(Preprocess):
         self.onehot_encoding()
         self.save_data_grid()
 
-        self.write_meta("metadata/nodes.csv")
+        self.write_meta("metadata/nodes.yaml")
         self.save("data/preprocess/nodes.csv")
         print("=== Xử lý xong node ===\n")
 
@@ -261,6 +261,12 @@ class WayPreprocess(Preprocess):
     def __init__(self, raw_root: str, osm_path:str):
         super().__init__(raw_root, osm_path)
         self.df = self.streets_df.rename(columns={"_id": "id"})
+        # Mask 
+        outlier_mask = (
+            ~self.combine_ways_df["tags.oneway"].isin(["yes", "no"]) &
+            self.combine_ways_df["tags.oneway"].notna()
+        )
+        self.combine_ways_df.loc[outlier_mask, "tags.oneway"] = "yes"
         
         self.oh_tags = [
             "tags.surface",
@@ -386,6 +392,21 @@ class WayPreprocess(Preprocess):
         filtered_osm_ways_df.to_csv("data/preprocess/way2way.csv", index=False)
         print("Đã xử lý xong way2way")
 
+    def save_way_segment(self):
+        oneway_df = self.combine_ways_df[["id", "tags.oneway"]]
+        filtered_segment_df = self.segments_df[["_id", "street_id"]].rename(
+            columns={
+                "_id": "segment_id", 
+                "street_id": "id"
+            }
+        )
+        oneway_df = oneway_df.merge(
+            filtered_segment_df,
+            how="inner",
+            on="id"
+        )
+        oneway_df.to_csv("data/preprocess/oneway_df.csv", index=False)
+
     def preprocess(self): 
         print("\n=== Đang xử lý way ===")
         self.fill()
@@ -397,10 +418,11 @@ class WayPreprocess(Preprocess):
             how="inner",
             on="id"
         )
+        self.save_way_segment()
         self.save_way2way()
         self.save_data_grid()
 
-        self.write_meta("metadata/ways.csv")
+        self.write_meta("metadata/ways.yaml")
         self.save("data/preprocess/ways.csv")
         print("=== Xử lý xong way ===\n")
 
@@ -461,6 +483,22 @@ class SegmentPreprocess(Preprocess):
         node_segment_edges_df.to_csv("data/preprocess/nodes_segments_edges_df.csv", index=False)
         print("Tạo và lưu các cạnh từ edge và node gốc")
 
+    def save_segment2segment(self):
+        start_segment_df = self.segments_df[["_id", "s_node_id"]]
+        end_segment_df = self.segments_df[["_id", "e_node_id"]]
+
+        segment2segment_df = end_segment_df.merge(
+            start_segment_df,
+            how="inner",
+            left_on="e_node_id",
+            right_on="s_node_id"
+        ).drop_duplicates()
+
+        segment2segment_df = segment2segment_df.rename(columns={
+            "_id_x": "from_segment_id", "_id_y": "to_segment_id"
+        })
+        segment2segment_df.to_csv("data/preprocess/segment2segment.csv", index=False)
+
 
     def save_data_grid(self):
         self.df = self.df.sort_values("id")
@@ -481,9 +519,10 @@ class SegmentPreprocess(Preprocess):
         self.onehot_encoding()
         self.normalize_length()
         self.create_edges()
+        self.save_segment2segment()
         self.save_data_grid()
         
-        self.write_meta("metadata/segments.csv")
+        self.write_meta("metadata/segments.yaml")
         self.save("data/preprocess/segments.csv")
         print("=== Xử lý xong segments ===\n")
 
@@ -663,7 +702,6 @@ class RelationPreprocess(Preprocess):
 
 
 if __name__ == "__main__":
-    """
     node_process = NodePreprocess(
         "data/raw", 
         "data/raw/osm_train_2019_01_03.json"
@@ -688,7 +726,7 @@ if __name__ == "__main__":
     dynamic_process = DynamicPreprocess()
     dynamic_process.preprocess()
     del dynamic_process
-    """
+    
     relation_process = RelationPreprocess()
     relation_process.preprocess()
     del relation_process
