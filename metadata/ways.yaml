@@ -10,6 +10,7 @@ onehot:
   - tags.surface
   - tags.bridge
   - tags.oneway
+  - tags.motorroad
   onehot_feature_names:
   - tags.surface_concrete
   - tags.surface_dirt
@@ -17,6 +18,7 @@ onehot:
   - tags.surface_unpaved
   - tags.bridge_yes
   - tags.oneway_yes
+  - tags.motorroad_nan
 conversion:
   index2id:
     0: 32575820

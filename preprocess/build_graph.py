@@ -66,7 +66,7 @@ def build_segment_pairs():
     # Tổng hợp lại
     valid_df = pd.concat([segment_pairs, reverse_pairs], ignore_index=True).drop_duplicates()
 
-    # 4. Xác định danh sách các node cấm rẽ (via nodes)
+    # Xác định danh sách các node cấm rẽ (via nodes)
     restriction_nodes = set(relation_df.loc[relation_df["role"] == "via", "ref"])
 
     # Map start_node và end_node trực tiếp vào valid_df
@@ -90,9 +90,7 @@ def build_segment_pairs():
 def to_edge_index(edges):
     return torch.tensor(edges.T, dtype=torch.long)
 
-
 def build_static_graph():
-
     data = HeteroData()
 
     data["node"].x = torch.from_numpy(static_node_features)
@@ -137,7 +135,7 @@ def build_static_graph():
     )
 
     connects_to_segment = build_segment_pairs()
-    data["segment", "connects_to_segment", "segment"].edge_index = to_edge_index(connects_to_segment)
+    data["segment", "connects_to", "segment"].edge_index = to_edge_index(connects_to_segment)
 
     return data
 
@@ -145,3 +143,4 @@ def build_static_graph():
 if __name__ == "__main__":
     data = build_static_graph()
     print(data)
+    torch.save(data, "data/preprocess/hetero_data.pt")
