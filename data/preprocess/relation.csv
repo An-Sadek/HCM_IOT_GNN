@@ -1,0 +1,64 @@
+,type,id,tags.note,members,tags.hour_off,tags.hour_on,tags.type,tags.except,tags.restriction
+5631,relation,2922023,,"[{'type': 'node', 'ref': 366443898, 'role': 'via'}, {'type': 'way', 'ref': 220971019, 'role': 'from'}, {'type': 'way', 'ref': 32580244, 'role': 'to'}]",18:00,17:00,restriction,motorcycle,no_left_turn
+5632,relation,3423384,,"[{'type': 'node', 'ref': 2079964894, 'role': 'via'}, {'type': 'way', 'ref': 255646465, 'role': 'from'}, {'type': 'way', 'ref': 255646464, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+7974,relation,2907508,,"[{'type': 'node', 'ref': 366476538, 'role': 'via'}, {'type': 'way', 'ref': 219856946, 'role': 'from'}, {'type': 'way', 'ref': 239030925, 'role': 'to'}]",,,restriction,,no_left_turn
+7975,relation,2914954,,"[{'type': 'node', 'ref': 366462455, 'role': 'via'}, {'type': 'way', 'ref': 152067208, 'role': 'from'}]",,,restriction,,no_u_turn
+7976,relation,2970026,,"[{'type': 'node', 'ref': 2079964991, 'role': 'via'}, {'type': 'way', 'ref': 223784360, 'role': 'from'}, {'type': 'way', 'ref': 628721073, 'role': 'to'}]",,,restriction,motorcycle,no_right_turn
+7977,relation,3029466,,"[{'type': 'node', 'ref': 2210806919, 'role': 'via'}, {'type': 'way', 'ref': 629178829, 'role': 'from'}, {'type': 'way', 'ref': 225922496, 'role': 'to'}]",,,restriction,,no_right_turn
+7978,relation,3113587,,"[{'type': 'way', 'ref': 399152053, 'role': 'from'}, {'type': 'way', 'ref': 231977547, 'role': 'from'}, {'type': 'way', 'ref': 223229323, 'role': 'via'}, {'type': 'way', 'ref': 260604763, 'role': 'to'}, {'type': 'way', 'ref': 399152054, 'role': 'to'}]",,,restriction,motorcycle,no_u_turn
+7979,relation,4264025,,"[{'type': 'node', 'ref': 2244879146, 'role': 'via'}, {'type': 'way', 'ref': 211068224, 'role': 'from'}, {'type': 'way', 'ref': 316618923, 'role': 'to'}]",,,restriction,,no_right_turn
+7980,relation,5351138,,"[{'type': 'node', 'ref': 366389514, 'role': 'via'}, {'type': 'way', 'ref': 32576645, 'role': 'from'}, {'type': 'way', 'ref': 359550384, 'role': 'to'}]",,,restriction,,no_left_turn
+7981,relation,5996329,,"[{'type': 'node', 'ref': 366437635, 'role': 'via'}, {'type': 'way', 'ref': 32585398, 'role': 'from'}, {'type': 'way', 'ref': 211419161, 'role': 'to'}]",,,restriction,,only_left_turn
+10908,relation,3029468,,"[{'type': 'node', 'ref': 2244906874, 'role': 'via'}, {'type': 'way', 'ref': 210779439, 'role': 'from'}, {'type': 'way', 'ref': 611396786, 'role': 'to'}]",,,restriction,,no_right_turn
+10909,relation,8092086,,"[{'type': 'way', 'ref': 32578654, 'role': 'from'}, {'type': 'node', 'ref': 2468452120, 'role': 'via'}, {'type': 'way', 'ref': 567751082, 'role': 'to'}]",,,restriction,,no_straight_on
+12183,relation,3123749,,"[{'type': 'node', 'ref': 2409402335, 'role': 'via'}, {'type': 'way', 'ref': 232595316, 'role': 'from'}, {'type': 'way', 'ref': 32588479, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+12184,relation,6422646,,"[{'type': 'way', 'ref': 468590910, 'role': 'from'}, {'type': 'node', 'ref': 366416137, 'role': 'via'}, {'type': 'way', 'ref': 289862304, 'role': 'to'}]",,,restriction,,no_left_turn
+13334,relation,3267012,,"[{'type': 'node', 'ref': 2409402337, 'role': 'via'}, {'type': 'way', 'ref': 232595317, 'role': 'from'}, {'type': 'way', 'ref': 241578431, 'role': 'to'}]",22:00,6:00,restriction,motorcycle,no_left_turn
+14107,relation,6794946,no right turn for cars only,"[{'type': 'way', 'ref': 197804036, 'role': 'from'}, {'type': 'node', 'ref': 366431751, 'role': 'via'}, {'type': 'way', 'ref': 211411397, 'role': 'to'}]",,,restriction,,no_right_turn
+16065,relation,3122313,,"[{'type': 'node', 'ref': 2211350097, 'role': 'via'}, {'type': 'way', 'ref': 32581070, 'role': 'from'}, {'type': 'way', 'ref': 211131732, 'role': 'to'}]",,,restriction,,no_left_turn
+18590,relation,3223919,,"[{'type': 'node', 'ref': 2468452113, 'role': 'via'}, {'type': 'way', 'ref': 239031059, 'role': 'from'}, {'type': 'way', 'ref': 239030906, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+19739,relation,2993786,,"[{'type': 'node', 'ref': 411925883, 'role': 'via'}, {'type': 'way', 'ref': 225192895, 'role': 'from'}, {'type': 'way', 'ref': 35113487, 'role': 'to'}]",,,restriction,,no_left_turn
+19740,relation,3003924,,"[{'type': 'node', 'ref': 1767909387, 'role': 'via'}, {'type': 'way', 'ref': 34684246, 'role': 'from'}, {'type': 'way', 'ref': 211404526, 'role': 'to'}]",,,restriction,,no_left_turn
+19741,relation,3031371,,"[{'type': 'node', 'ref': 2230310614, 'role': 'via'}, {'type': 'way', 'ref': 35115251, 'role': 'from'}, {'type': 'way', 'ref': 227739782, 'role': 'to'}]",,,restriction,motorcycle,no_right_turn
+19742,relation,4029629,,"[{'type': 'node', 'ref': 411926140, 'role': 'via'}, {'type': 'way', 'ref': 35115272, 'role': 'from'}, {'type': 'way', 'ref': 302854589, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+20672,relation,3096648,,"[{'type': 'node', 'ref': 411918706, 'role': 'via'}, {'type': 'way', 'ref': 35115032, 'role': 'to'}]",,,restriction,,no_left_turn
+20673,relation,3451647,,"[{'type': 'node', 'ref': 411925307, 'role': 'via'}, {'type': 'way', 'ref': 220863461, 'role': 'to'}, {'type': 'way', 'ref': 329878185, 'role': 'from'}]",,,restriction,,only_right_turn
+20674,relation,3581768,,"[{'type': 'node', 'ref': 2393615146, 'role': 'via'}, {'type': 'way', 'ref': 266769168, 'role': 'to'}, {'type': 'way', 'ref': 610093732, 'role': 'from'}]",,,restriction,,no_left_turn
+21525,relation,2993780,,"[{'type': 'way', 'ref': 497628302, 'role': 'from'}, {'type': 'node', 'ref': 411919410, 'role': 'via'}, {'type': 'way', 'ref': 71373483, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+22272,relation,2857516,,"[{'type': 'node', 'ref': 1767203801, 'role': 'via'}, {'type': 'way', 'ref': 32576371, 'role': 'to'}, {'type': 'way', 'ref': 326848019, 'role': 'from'}]",,,restriction,mortorcycle,no_left_turn
+22273,relation,3044414,,"[{'type': 'node', 'ref': 1767203801, 'role': 'via'}, {'type': 'way', 'ref': 35113051, 'role': 'from'}, {'type': 'way', 'ref': 326848019, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+22274,relation,3096616,,"[{'type': 'node', 'ref': 2393614146, 'role': 'via'}, {'type': 'way', 'ref': 35114583, 'role': 'from'}, {'type': 'way', 'ref': 230934667, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+22275,relation,3796402,,"[{'type': 'way', 'ref': 35113051, 'role': 'from'}]",,,restriction,,no_straight_on
+24747,relation,2864377,,"[{'type': 'node', 'ref': 735998170, 'role': 'via'}, {'type': 'way', 'ref': 59339636, 'role': 'from'}, {'type': 'way', 'ref': 59265376, 'role': 'to'}]",,,restriction,,no_left_turn
+24748,relation,3044416,,"[{'type': 'node', 'ref': 738217351, 'role': 'via'}, {'type': 'way', 'ref': 84721821, 'role': 'from'}, {'type': 'way', 'ref': 59528583, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+26576,relation,2857515,,"[{'type': 'node', 'ref': 1767203801, 'role': 'via'}, {'type': 'way', 'ref': 165149818, 'role': 'from'}, {'type': 'way', 'ref': 215167469, 'role': 'to'}]",,,restriction,,no_left_turn
+26577,relation,3009249,,"[{'type': 'way', 'ref': 32910319, 'role': 'from'}, {'type': 'way', 'ref': 226347941, 'role': 'via'}, {'type': 'way', 'ref': 199222899, 'role': 'to'}, {'type': 'node', 'ref': 723876669, 'role': ''}]",,,restriction,,no_u_turn
+26578,relation,8055221,,"[{'type': 'node', 'ref': 1611021940, 'role': 'via'}, {'type': 'way', 'ref': 563775071, 'role': 'to'}]",,,restriction,,no_left_turn
+26579,relation,8055222,,"[{'type': 'node', 'ref': 1611021940, 'role': 'via'}, {'type': 'way', 'ref': 564159232, 'role': 'to'}]",,,restriction,,no_straight_on
+26580,relation,8055223,,"[{'type': 'way', 'ref': 563775071, 'role': 'from'}, {'type': 'node', 'ref': 1611021940, 'role': 'via'}, {'type': 'way', 'ref': 563775071, 'role': 'to'}]",,,restriction,,no_u_turn
+26581,relation,8055224,,"[{'type': 'way', 'ref': 563775071, 'role': 'from'}, {'type': 'node', 'ref': 1611021940, 'role': 'via'}, {'type': 'way', 'ref': 564159232, 'role': 'to'}]",,,restriction,,no_straight_on
+29425,relation,2916615,,"[{'type': 'node', 'ref': 5356329018, 'role': 'via'}, {'type': 'way', 'ref': 197804068, 'role': 'from'}, {'type': 'way', 'ref': 197804026, 'role': 'to'}]",,,restriction,motorcycle,no_u_turn
+29783,relation,2907528,,"[{'type': 'way', 'ref': 219861150, 'role': 'from'}]",,,restriction,motorcycle,no_left_turn
+30457,relation,3029450,,"[{'type': 'node', 'ref': 2209385698, 'role': 'via'}, {'type': 'way', 'ref': 210772373, 'role': 'from'}, {'type': 'way', 'ref': 611349470, 'role': 'to'}]",,,restriction,,no_right_turn
+30458,relation,4264021,,"[{'type': 'node', 'ref': 2210760917, 'role': 'via'}, {'type': 'way', 'ref': 211064630, 'role': 'from'}, {'type': 'way', 'ref': 316618666, 'role': 'to'}]",,,restriction,,no_left_turn
+30459,relation,8055212,,"[{'type': 'way', 'ref': 228021174, 'role': 'from'}, {'type': 'node', 'ref': 723876669, 'role': 'via'}, {'type': 'way', 'ref': 564175102, 'role': 'to'}]",,,restriction,,no_left_turn
+30460,relation,8055213,,"[{'type': 'way', 'ref': 564175102, 'role': 'from'}, {'type': 'node', 'ref': 723876669, 'role': 'via'}, {'type': 'way', 'ref': 564175102, 'role': 'to'}]",,,restriction,,no_u_turn
+30461,relation,8055214,,"[{'type': 'way', 'ref': 564175102, 'role': 'from'}, {'type': 'node', 'ref': 723876669, 'role': 'via'}]",,,restriction,,no_left_turn
+30462,relation,8055216,,"[{'type': 'way', 'ref': 330035861, 'role': 'from'}]",,,restriction,,no_left_turn
+31534,relation,3029303,,"[{'type': 'node', 'ref': 2355608069, 'role': 'via'}, {'type': 'way', 'ref': 260982113, 'role': 'from'}, {'type': 'way', 'ref': 226827648, 'role': 'to'}]",,,restriction,,no_right_turn
+33172,relation,2993768,,"[{'type': 'node', 'ref': 2340037589, 'role': 'via'}, {'type': 'way', 'ref': 225192428, 'role': 'from'}, {'type': 'way', 'ref': 225192428, 'role': 'to'}]",,,restriction,,no_u_turn
+33845,relation,4264019,,"[{'type': 'node', 'ref': 2358286021, 'role': 'via'}, {'type': 'way', 'ref': 211067382, 'role': 'from'}, {'type': 'way', 'ref': 316618619, 'role': 'to'}]",,,restriction,,no_left_turn
+33846,relation,5638389,,"[{'type': 'node', 'ref': 2358286024, 'role': 'via'}, {'type': 'way', 'ref': 260982113, 'role': ''}, {'type': 'way', 'ref': 225921220, 'role': 'from'}, {'type': 'way', 'ref': 378250858, 'role': 'to'}]",,,restriction,,no_left_turn
+34489,relation,3123755,,"[{'type': 'node', 'ref': 2409402333, 'role': 'via'}, {'type': 'way', 'ref': 495450437, 'role': 'from'}]",,,restriction,,no_left_turn
+34962,relation,3223920,,"[{'type': 'node', 'ref': 2468452124, 'role': 'via'}, {'type': 'way', 'ref': 239031344, 'role': 'from'}, {'type': 'way', 'ref': 239030906, 'role': 'to'}]",,,restriction,motorcycle,no_left_turn
+34963,relation,8092087,,"[{'type': 'way', 'ref': 567751082, 'role': 'from'}, {'type': 'node', 'ref': 2468452120, 'role': 'via'}, {'type': 'way', 'ref': 567751082, 'role': 'to'}]",,,restriction,,only_u_turn
+36630,relation,8089446,,"[{'type': 'way', 'ref': 567493114, 'role': 'from'}, {'type': 'node', 'ref': 5462344911, 'role': 'via'}, {'type': 'way', 'ref': 567493111, 'role': 'to'}]",,,restriction,,no_left_turn
+43218,relation,6786767,,"[{'type': 'node', 'ref': 4530357192, 'role': 'via'}, {'type': 'way', 'ref': 456799180, 'role': 'to'}, {'type': 'way', 'ref': 609387296, 'role': 'from'}]",,,restriction,,no_right_turn
+43618,relation,8061455,,"[{'type': 'way', 'ref': 35113620, 'role': 'from'}, {'type': 'node', 'ref': 4605032714, 'role': 'via'}, {'type': 'way', 'ref': 408162167, 'role': 'to'}]",,,restriction,,no_right_turn
+43619,relation,8061456,,"[{'type': 'way', 'ref': 35113835, 'role': 'from'}, {'type': 'node', 'ref': 4605032714, 'role': 'via'}, {'type': 'way', 'ref': 408162167, 'role': 'to'}]",,,restriction,,no_right_turn
+43620,relation,8061457,,"[{'type': 'way', 'ref': 565040731, 'role': 'from'}, {'type': 'node', 'ref': 4605032714, 'role': 'via'}, {'type': 'way', 'ref': 408162167, 'role': 'to'}]",,,restriction,,no_straight_on
+43905,relation,3044431,,"[{'type': 'node', 'ref': 4609802776, 'role': 'via'}, {'type': 'way', 'ref': 215508134, 'role': 'from'}]",,,restriction,motorcycle,no_left_turn
+43906,relation,3796401,,"[{'type': 'way', 'ref': 192680130, 'role': 'from'}]",,,restriction,,no_left_turn
+43907,relation,8061453,,"[{'type': 'way', 'ref': 35114956, 'role': 'from'}, {'type': 'node', 'ref': 4605032065, 'role': 'via'}, {'type': 'way', 'ref': 565040731, 'role': 'to'}]",,,restriction,,no_right_turn
+52194,relation,8055211,,"[{'type': 'way', 'ref': 228021174, 'role': 'from'}, {'type': 'node', 'ref': 723876669, 'role': 'via'}]",,,restriction,,no_right_turn
+53565,relation,8061452,,"[{'type': 'way', 'ref': 565040730, 'role': 'from'}, {'type': 'node', 'ref': 4605032065, 'role': 'via'}, {'type': 'way', 'ref': 565040731, 'role': 'to'}]",,,restriction,,no_straight_on

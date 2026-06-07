@@ -127,6 +127,7 @@ class Preprocess:
             left_on="_id",
             right_on="id"
         ).drop(columns="_id")
+        print(self.combine_ways_df.columns)
 
         self.df = pd.DataFrame()
         self.metadata = {
@@ -136,6 +137,22 @@ class Preprocess:
         }
 
         self.feature_names_out = None
+
+    def to_index(self, x, ref_dict: dict):
+        try:
+            return ref_dict[int(x)]
+        except (KeyError, TypeError, ValueError):
+            return x
+        
+    def convert_row_ref(self, row):
+        obj_type = row["type"]
+        obj_ref = row["ref"]
+        
+        if obj_type in ["node", "way"]:
+            mapping_dict = self.conversion_dict[obj_type]["id2index"]
+            return self.to_index(obj_ref, mapping_dict)
+        
+        return obj_ref
 
     def save(self, output_file):
         output_path = Path(output_file)
@@ -354,8 +371,18 @@ class WayPreprocess(Preprocess):
 
     def save_way2way(self):
         filtered_osm_ways_df = self.combine_ways_df[["id", "nodes"]]
+        
+        # Thêm node
         filtered_osm_ways_df["start_node"] = filtered_osm_ways_df["nodes"].apply(lambda x: x[0])
         filtered_osm_ways_df["end_node"] = filtered_osm_ways_df["nodes"].apply(lambda x: x[-1])
+
+        # Thêm tag oneway
+        filtered_osm_ways_df = filtered_osm_ways_df.merge(
+            self.combine_ways_df[["id", "tags.oneway"]],
+            how="inner",
+            on="id"
+        )
+
         filtered_osm_ways_df.to_csv("data/preprocess/way2way.csv", index=False)
         print("Đã xử lý xong way2way")
 
@@ -599,27 +626,38 @@ class RelationPreprocess(Preprocess):
     ):
         super().__init__(raw_root, osm_path)
 
-    def save_relation_df(self):
-        osm_relation_df = self.osm_elements_df[
+    def abc(self):
+        self.df = self.osm_elements_df[
             self.osm_elements_df["type"] == "relation"
         ].copy()
-        osm_relation_df = osm_relation_df.rename(columns={"id": "relation_id"})
-        osm_relation_df = osm_relation_df.drop(columns=
-            ["lat", "lon", "nodes"] + 
-            [x for x in osm_relation_df.columns if x.startswith("tags.")]
-        )
-        df_exploded = osm_relation_df.explode('members').reset_index(drop=True)
+        self.df = self.df.dropna(how="all", axis=1)
+        self.df.to_csv("data/preprocess/relation.csv")
+
+    def save_relation_df(self):
+        """
+        Lưu các relation members lại
+        """
+        try:
+            self.df = self.df.drop(columns=
+                ["lat", "lon", "nodes"] + 
+                [x for x in self.df.columns if x.startswith("tags.")]
+            )
+        except KeyError:
+            pass
+
+        df_exploded = self.df.explode('members').reset_index(drop=True)
         member_df = pd.json_normalize(df_exploded['members'])
-        member_df.insert(0, "id", df_exploded["relation_id"].to_numpy())
+        member_df.insert(0, "id", df_exploded["id"].to_numpy())
 
         # Convert sang index
-
+        member_df["ref"] = member_df.apply(self.convert_row_ref, axis=1)
         
         member_df.to_csv("data/preprocess/relation_members.csv", index=False)
         print("Lưu thành công đường cấm rẽ")
 
     def preprocess(self):
         print("\n=== Đang xử lý relation ===")
+        self.abc()
         self.save_relation_df()
         print("\n=== Xử lý xong relation ===")
 
@@ -632,7 +670,7 @@ if __name__ == "__main__":
     )
     node_process.preprocess()
     del node_process
-
+    
     way_process = WayPreprocess(
         "data/raw", 
         "data/raw/osm_train_2019_01_03.json"
@@ -651,7 +689,6 @@ if __name__ == "__main__":
     dynamic_process.preprocess()
     del dynamic_process
     """
-
     relation_process = RelationPreprocess()
     relation_process.preprocess()
     del relation_process

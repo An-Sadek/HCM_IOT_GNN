@@ -3,99 +3,97 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import torch
-import yaml
 from torch_geometric.data import HeteroData
 
 
 PREPROCESS_ROOT = Path("data/preprocess")
-METADATA_ROOT = Path("metadata")
+
+segments_df = pd.read_csv(PREPROCESS_ROOT / "segments.csv")
+way2way_df = pd.read_csv(PREPROCESS_ROOT / "way2way.csv")
+relation_df = pd.read_csv(PREPROCESS_ROOT / "relation_members.csv")
+
+static_node_features = np.load(PREPROCESS_ROOT / "static_nodes.npy")
+static_segment_features = np.load(PREPROCESS_ROOT / "static_segments.npy")
+static_way_features = np.load(PREPROCESS_ROOT / "static_ways.npy")
 
 
-def load_id2index(metadata_path):
-    with open(metadata_path, "r", encoding="utf-8") as f:
-        metadata = yaml.safe_load(f)
+def build_segment_pairs():
+    filtered_segments_df = segments_df[["s_node_id", "e_node_id"]]
 
-    return {
-        int(raw_id): int(index)
-        for raw_id, index in metadata["conversion"]["id2index"].items()
-    }
 
-def build_node_pairs():
-    pass
+def build_restricted_way_pairs():
+    """
+    Tìm các tuyến đường bị cấm
+    """
+    start_way_list = []
+    end_way_list = []
 
-def build_restricted_way_pairs(relation_members_df, way_id2index):
-    relation_col = (
-        "relation_id"
-        if "relation_id" in relation_members_df.columns
-        else "id"
-    )
-    way_members_df = relation_members_df[
-        relation_members_df["type"] == "way"
-    ].copy()
+    relation_group =  relation_df.groupby("id")
+    for _, group in relation_group:
+        from_series = group.loc[group["role"] == "from", "ref"]
+        to_series = group.loc[group["role"] == "to", "ref"]
 
-    restricted_pairs = set()
-    for _, group in way_members_df.groupby(relation_col):
-        from_refs = group.loc[group["role"] == "from", "ref"]
-        to_refs = group.loc[group["role"] == "to", "ref"]
-        if from_refs.empty or to_refs.empty:
+        # Kiểm tra xem có bị rỗng không
+        if from_series.empty or to_series.empty:
             continue
 
-        from_way = way_id2index.get(int(from_refs.iloc[0]))
-        to_way = way_id2index.get(int(to_refs.iloc[0]))
-        if from_way is None or to_way is None:
-            continue
+        from_way = from_series.values[0]
+        to_way = to_series.values[0]
 
-        restricted_pairs.add((from_way, to_way))
+        start_way_list.append(int(from_way))
+        end_way_list.append(int(to_way))
 
-    return restricted_pairs
+    restriction_df = pd.DataFrame({
+        "from_way_id": start_way_list,
+        "to_way_id": end_way_list
+    })
 
+    return restriction_df
 
-def build_way_connections(way2way_df, restricted_pairs):
-    way_start_nodes_df = way2way_df[["id", "start_node"]].rename(
-        columns={"id": "to_way", "start_node": "junction_node"}
+def build_way_pairs():
+    # Xây dựng df cặp
+    way_pairs_df = way2way_df[["id", "end_node"]].merge(
+        way2way_df[["id", "start_node"]],
+        left_on="end_node",
+        right_on="start_node",
+        how="inner"
+    ).drop_duplicates()
+    way_pairs_df = way_pairs_df.rename(
+        columns={"id_x": "from_way_id", "id_y": "to_way_id"}
     )
-    way_end_nodes_df = way2way_df[["id", "end_node"]].rename(
-        columns={"id": "from_way", "end_node": "junction_node"}
-    )
+    way_pairs_df = way_pairs_df[way_pairs_df["from_way_id"] != way_pairs_df["to_way_id"]]
+    print("Shape của các cặp đường gốc", way_pairs_df.shape)
 
-    connections_df = way_end_nodes_df.merge(
-        way_start_nodes_df,
-        how="inner",
-        on="junction_node",
-    )
-    connections_df = connections_df[
-        connections_df["from_way"] != connections_df["to_way"]
-    ].copy()
+    # Lấy nghịch đảo
+    reverse_df = way_pairs_df.copy()
+    reverse_df = reverse_df.rename(columns={
+        "from_way_id": "to_way_id",
+        "to_way_id": "from_way_id"
+    })
 
-    is_restricted = connections_df.apply(
-        lambda row: (
-            int(row["from_way"]),
-            int(row["to_way"]),
-        ) in restricted_pairs,
-        axis=1,
+    # Lọc các restrict
+    restriction_df = build_restricted_way_pairs()
+    merged_df = way_pairs_df.merge(
+        restriction_df[["from_way_id", "to_way_id"]], 
+        on=["from_way_id", "to_way_id"], 
+        how="left", 
+        indicator="is_restricted"
     )
+    allowed_way_pairs_df = merged_df[merged_df["is_restricted"] == "left_only"].drop(columns=["is_restricted"])
+    print("Shape sau khi lọc các đường cấm rẽ:", allowed_way_pairs_df.shape)
 
-    connections = (
-        connections_df.loc[~is_restricted, ["from_way", "to_way"]]
-        .drop_duplicates()
-        .to_numpy()
-        .astype(int)
-    )
-    return connections, len(connections_df), int(is_restricted.sum())
+    # Gộp 2 data lại
+    full_df = pd.concat([allowed_way_pairs_df, reverse_df], axis=0).drop_duplicates()
+    print(full_df.isnull().sum())
+    print("Shape sau khi kết hợp 2 data", full_df.shape)
 
+    return full_df
 
 def to_edge_index(edges):
     return torch.tensor(edges.T, dtype=torch.long)
 
 
 def build_static_graph():
-    segments_df = pd.read_csv(PREPROCESS_ROOT / "segments.csv")
-    way2way_df = pd.read_csv(PREPROCESS_ROOT / "way2way.csv")
-    relation_members_df = pd.read_csv(PREPROCESS_ROOT / "relation_members.csv")
-
-    static_node_features = np.load(PREPROCESS_ROOT / "static_nodes.npy")
-    static_segment_features = np.load(PREPROCESS_ROOT / "static_segments.npy")
-    static_way_features = np.load(PREPROCESS_ROOT / "static_ways.npy")
 
     data = HeteroData()
 
@@ -140,25 +138,10 @@ def build_static_graph():
         ends_with[:, [1, 0]]
     )
 
-    way_id2index = load_id2index(METADATA_ROOT / "ways.csv")
-    restricted_pairs = build_restricted_way_pairs(
-        relation_members_df,
-        way_id2index,
-    )
-    way_connections, total_connections, removed_connections = (
-        build_way_connections(way2way_df, restricted_pairs)
-    )
-    data["way", "connects_to", "way"].edge_index = to_edge_index(
-        way_connections
-    )
-
-    print("Way connections before filtering:", total_connections)
-    print("Restricted way turns removed:", removed_connections)
-    print("Way connections after filtering:", way_connections.shape[0])
-
     return data
 
 
 if __name__ == "__main__":
     data = build_static_graph()
     print(data)
+    build_way_pairs()
