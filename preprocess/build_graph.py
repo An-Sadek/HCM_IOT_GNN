@@ -52,41 +52,40 @@ def build_restricted_way_pairs():
 
 
 def build_segment_pairs():
-    # Xây dựng df cặp
+    # Lấy cặp segment thuận
     segment_pairs = segment2segment_df[["from_segment_id", "to_segment_id"]]
-    print("Shape của cặp thuận:", segment_pairs.shape)
-
-    # Tạo các segment 2 chiều
-    twoway_segments = oneway_df[oneway_df["tags.oneway"] == "no"]["segment_id"]
-    print("Số cặp way 2 chiều:", twoway_segments.shape[0])
-    print("Số segment một chiều:", segment_pairs.shape[0] - twoway_segments.shape[0])
-
-    all_pairs = segment_pairs.copy()
-    reverse_pairs = segment_pairs.rename(
+    
+    # Tìm cặp đảo ngược hợp lệ
+    twoway_segs = set(oneway_df.loc[oneway_df["tags.oneway"] == "no", "segment_id"])
+    mask_twoway = segment_pairs["from_segment_id"].isin(twoway_segs) & segment_pairs["to_segment_id"].isin(twoway_segs)
+    
+    reverse_pairs = segment_pairs[mask_twoway].rename(
         columns={"from_segment_id": "to_segment_id", "to_segment_id": "from_segment_id"}
     )
 
-    # Tạo reverse pair hợp lệ
-    reverse_pairs_filtered = reverse_pairs[
-        reverse_pairs["from_segment_id"].isin(twoway_segments)
-        & reverse_pairs["to_segment_id"].isin(twoway_segments)
-    ]
-    print("Số cặp reverse segment hợp lệ", reverse_pairs_filtered.shape[0])
+    # Tổng hợp lại
+    valid_df = pd.concat([segment_pairs, reverse_pairs], ignore_index=True).drop_duplicates()
 
-    # Tổng hợp
-    full_segment_df = (
-        pd.concat([all_pairs, reverse_pairs_filtered], ignore_index=True)
-        .drop_duplicates()
-    )
-    print("Tổng cặp segment hợp lệ", full_segment_df.shape[0])
+    # 4. Xác định danh sách các node cấm rẽ (via nodes)
+    restriction_nodes = set(relation_df.loc[relation_df["role"] == "via", "ref"])
 
-    # Bỏ các edge thông qua restriction
-    segment_node_df = segments_df[["s_node_id", "e_node_id"]]
-    restriction_df = build_restricted_way_pairs()
+    # Map start_node và end_node trực tiếp vào valid_df
+    e_node_map = segments_df.set_index("id")["e_node_id"]
+    s_node_map = segments_df.set_index("id")["s_node_id"]
 
+    from_e_nodes = valid_df["from_segment_id"].map(e_node_map)
+    to_s_nodes = valid_df["to_segment_id"].map(s_node_map)
 
+    # Lọc bỏ restriction
+    is_restricted = (from_e_nodes == to_s_nodes) & (from_e_nodes.isin(restriction_nodes))
+    final_valid_df = valid_df[~is_restricted] # <--- Dùng dấu ~ để giữ lại các dòng KHÔNG bị cấm
 
-    return full_segment_df[["from_segment_id", "to_segment_id"]].to_numpy().astype(int)
+    # In log kiểm tra
+    print(f"Tổng cặp ban đầu (gồm 1 chiều + 2 chiều): {len(valid_df)}")
+    print(f"Số cặp bị cấm rẽ (restriction): {is_restricted.sum()}")
+    print(f"Tổng cặp hợp lệ cuối cùng: {len(final_valid_df)}")
+
+    return final_valid_df[["from_segment_id", "to_segment_id"]].to_numpy().astype(int)
 
 def to_edge_index(edges):
     return torch.tensor(edges.T, dtype=torch.long)
