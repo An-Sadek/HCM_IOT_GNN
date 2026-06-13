@@ -547,10 +547,10 @@ class DynamicPreprocess(Preprocess):
         # Mốc thời gian
         min_timestamp = self.status_df["updated_at"].min()
         max_timestamp = self.status_df["updated_at"].max()
-        self.full_time = pd.date_range(
-            min_timestamp,
-            max_timestamp,
-            freq="30min"
+        self.full_time = np.sort(
+            self.status_df["updated_at"]
+            .dt.floor("30min")
+            .unique()
         )
 
         # Metadata
