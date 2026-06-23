@@ -127,7 +127,6 @@ class Preprocess:
             left_on="_id",
             right_on="id"
         ).drop(columns="_id")
-        print(self.combine_ways_df.columns)
 
         self.df = pd.DataFrame()
         self.metadata = {
@@ -547,11 +546,7 @@ class DynamicPreprocess(Preprocess):
         # Mốc thời gian
         min_timestamp = self.status_df["updated_at"].min()
         max_timestamp = self.status_df["updated_at"].max()
-        self.full_time = np.sort(
-            self.status_df["updated_at"]
-            .dt.floor("30min")
-            .unique()
-        )
+        self.full_time = pd.date_range(start=min_timestamp, end=max_timestamp, freq='30min')
 
         # Metadata
         self.metadata = dict()
@@ -586,17 +581,12 @@ class DynamicPreprocess(Preprocess):
             values="velocity"
         ).reindex(self.full_time)
 
-        # Gộp lại, fill với -1 thể hiện nó bị trống
+        # Gộp lại, ffill rồi bfill
         velocity_arr = velocity_mat.reindex(self.full_time)
-        velocity_arr = velocity_mat.fillna(-1).to_numpy().astype(np.float32)
-        mask_arr = (velocity_mat == -1).astype(np.float32)
-        X = np.stack(
-            [velocity_arr, mask_arr],
-            axis=-1
-        )
+        velocity_arr = velocity_mat.ffill().bfill()
         
-        print("Kích thước của pivot table velocity và mask trong status df:", X.shape)
-        np.save("data/preprocess/dynamic_velocity.npy", X)
+        print("Kích thước của pivot table velocity và mask trong status df:", velocity_arr.shape)
+        np.save("data/preprocess/dynamic_velocity.npy", velocity_arr)
         print("Xử lý xong velocity của status")
 
     def train_preprocess(self):
@@ -629,16 +619,12 @@ class DynamicPreprocess(Preprocess):
             values="LOS"
         ).reindex(self.full_time)
 
-        # Gộp lại, fill -1 thể hiện data bị trống
+        # Gộp lại, ffill rồi bfill
         los_arr = los_mat.reindex(self.full_time)
-        mask_arr = los_mat.isna().to_numpy().astype(np.float32)
-        los_arr = los_mat.fillna(-1).to_numpy().astype(np.float32)
-        X = np.stack(
-            [los_arr, mask_arr],
-            axis=-1
-        )
-        print("Kích thước của pivot table LOS và mask trong train df:", X.shape)
-        np.save("data/preprocess/dynamic_LOS.npy", X)
+        los_arr = los_arr.ffill().bfill()
+
+        print("Kích thước của pivot table LOS và mask trong train df:", los_arr.shape)
+        np.save("data/preprocess/dynamic_LOS.npy", los_arr)
         print("Xử lý thành công LOS của train")
 
     def target_preprocess(self):
