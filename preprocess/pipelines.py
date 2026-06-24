@@ -627,20 +627,10 @@ class DynamicPreprocess(Preprocess):
         np.save("data/preprocess/dynamic_LOS.npy", los_arr)
         print("Xử lý thành công LOS của train")
 
-    def target_preprocess(self):
-        los_mat = self.train_df.pivot(
-            index="timestamp",
-            columns="segment_id",
-            values="LOS"
-        ).reindex(self.full_time)
-        los_mat = los_mat.ffill().bfill()
-        print("Xử lý xong target của dynamic")
-
     def preprocess(self):
         print("\n=== Tiến hành tạo dynamic feature cho status và train ===")
         self.train_preprocess()
         self.status_preprocess()
-        self.target_preprocess()
 
         print("=== Xử lý xong status và train ===\n")
 
