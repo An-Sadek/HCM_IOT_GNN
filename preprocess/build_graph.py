@@ -7,6 +7,10 @@ from torch_geometric.data import HeteroData
 
 
 PREPROCESS_ROOT = Path("data/preprocess")
+RAW_ROOT = Path("data/raw")
+
+train_df = pd.read_csv(RAW_ROOT / "train.csv")
+raw_ways_df = pd.read_csv(PREPROCESS_ROOT / "combine_ways_df.csv")
 
 ways_df = pd.read_csv(PREPROCESS_ROOT / "ways.csv")
 segments_df = pd.read_csv(PREPROCESS_ROOT / "segments.csv")
@@ -21,71 +25,126 @@ static_segment_features = np.load(PREPROCESS_ROOT / "static_segments.npy")
 static_way_features = np.load(PREPROCESS_ROOT / "static_ways.npy")
 
 
-def build_restricted_way_pairs():
-    """
-    Tìm các tuyến đường bị cấm
-    """
-    start_way_list = []
-    end_way_list = []
-
-    relation_group =  relation_df.groupby("id")
-    for _, group in relation_group:
-        from_series = group.loc[group["role"] == "from", "ref"]
-        to_series = group.loc[group["role"] == "to", "ref"]
-
-        # Kiểm tra xem có bị rỗng không
-        if from_series.empty or to_series.empty:
-            continue
-
-        from_way = from_series.values[0]
-        to_way = to_series.values[0]
-
-        start_way_list.append(int(from_way))
-        end_way_list.append(int(to_way))
-
-    restriction_df = pd.DataFrame({
-        "from_way_id": start_way_list,
-        "to_way_id": end_way_list
+def build_connects_with():
+    from_df = segments_df[["id", "e_node_id", "street_id"]].rename(columns={
+        "id": "from_segment_id",
+        "e_node_id": "node_id",
+        "street_id": "from_street_id"
     })
 
-    return restriction_df
+    to_df = segments_df[["id", "s_node_id", "street_id"]].rename(columns={
+        "id": "to_segment_id",
+        "s_node_id": "node_id",
+        "street_id": "to_street_id"
+    })
 
+    connects_with_df = from_df.merge(to_df, on="node_id", how="inner").drop_duplicates()
+    print("Shape thuận gốc:", connects_with_df.shape)
 
-def build_segment_pairs():
-    # Lấy cặp segment thuận
-    segment_pairs = segment2segment_df[["from_segment_id", "to_segment_id"]]
-    
-    # Tìm cặp đảo ngược hợp lệ
-    twoway_segs = set(oneway_df.loc[oneway_df["tags.oneway"] == "no", "segment_id"])
-    mask_twoway = segment_pairs["from_segment_id"].isin(twoway_segs) & segment_pairs["to_segment_id"].isin(twoway_segs)
-    
-    reverse_pairs = segment_pairs[mask_twoway].rename(
-        columns={"from_segment_id": "to_segment_id", "to_segment_id": "from_segment_id"}
+    connects_with_df["same_way"] = (
+        connects_with_df["from_street_id"] == connects_with_df["to_street_id"]
+    ).astype(int)
+
+    # Gắn oneway cho street nguồn của chiều thuận
+    connects_with_df = connects_with_df.merge(
+        raw_ways_df[["id", "tags.oneway"]],
+        how="left",
+        left_on="from_street_id",
+        right_on="id"
+    ).drop(columns="id")
+
+    connects_with_df["tags.oneway"] = connects_with_df["tags.oneway"].fillna("no")
+
+    # Bỏ chiều thuận nếu cùng way và oneway = -1
+    invalid_forward_mask = (
+        (connects_with_df["tags.oneway"] == "-1") &
+        (connects_with_df["same_way"] == 1)
     )
 
-    # Tổng hợp lại
-    valid_df = pd.concat([segment_pairs, reverse_pairs], ignore_index=True).drop_duplicates()
+    forward_connects = connects_with_df[~invalid_forward_mask].copy()
+    print("Shape thuận sau khi bỏ oneway=-1:", forward_connects.shape)
 
-    # Xác định danh sách các node cấm rẽ (via nodes)
-    restriction_nodes = set(relation_df.loc[relation_df["role"] == "via", "ref"])
+    # Tạo chiều nghịch
+    reverse_connects = connects_with_df.rename(columns={
+        "from_segment_id": "to_segment_id",
+        "to_segment_id": "from_segment_id",
+        "from_street_id": "to_street_id",
+        "to_street_id": "from_street_id"
+    }).copy()
 
-    # Map start_node và end_node trực tiếp vào valid_df
-    e_node_map = segments_df.set_index("id")["e_node_id"]
-    s_node_map = segments_df.set_index("id")["s_node_id"]
+    # Xoá tags.oneway cũ vì nó thuộc from_street_id cũ
+    reverse_connects = reverse_connects.drop(columns=["tags.oneway"])
 
-    from_e_nodes = valid_df["from_segment_id"].map(e_node_map)
-    to_s_nodes = valid_df["to_segment_id"].map(s_node_map)
+    # Gắn lại oneway theo from_street_id mới
+    reverse_connects = reverse_connects.merge(
+        raw_ways_df[["id", "tags.oneway"]],
+        how="left",
+        left_on="from_street_id",
+        right_on="id"
+    ).drop(columns="id")
+    reverse_connects["tags.oneway"] = reverse_connects["tags.oneway"].fillna("no")
 
-    # Lọc bỏ restriction
-    is_restricted = (from_e_nodes == to_s_nodes) & (from_e_nodes.isin(restriction_nodes))
-    final_valid_df = valid_df[~is_restricted] # <--- Dùng dấu ~ để giữ lại các dòng KHÔNG bị cấm
+    # Bỏ chiều nghịch nếu cùng way và oneway = yes
+    invalid_reverse_mask = (
+        (reverse_connects["tags.oneway"] == "yes") &
+        (reverse_connects["same_way"] == 1)
+    )
 
-    # In log kiểm tra
-    print(f"Tổng cặp ban đầu (gồm 1 chiều + 2 chiều): {len(valid_df)}")
-    print(f"Số cặp bị cấm rẽ (restriction): {is_restricted.sum()}")
-    print(f"Tổng cặp hợp lệ cuối cùng: {len(final_valid_df)}")
+    reverse_connects = reverse_connects[~invalid_reverse_mask].copy()
+    print("Shape nghịch sau khi bỏ oneway=yes:", reverse_connects.shape)
 
-    return final_valid_df[["from_segment_id", "to_segment_id"]].to_numpy().astype(int)
+    connects_with_df = pd.concat(
+        [forward_connects, reverse_connects],
+        ignore_index=True
+    ).drop_duplicates()
+    print("Shape trước khi bỏ restriction:", connects_with_df.shape)
+
+    # Bỏ restriction
+    restriction_wide = (
+        relation_df
+        .pivot_table(
+            index="id",
+            columns="role",
+            values="ref",
+            aggfunc="first"
+        )
+        .reset_index()
+    )
+
+    # Chỉ lấy restriction có đủ from, via, to
+    restriction_wide = restriction_wide.dropna(subset=["from", "via", "to"])
+
+    restriction_wide = restriction_wide.rename(columns={
+        "from": "from_street_id",
+        "via": "node_id",
+        "to": "to_street_id"
+    })
+
+    # Ép kiểu cho chắc
+    for col in ["from_street_id", "node_id", "to_street_id"]:
+        restriction_wide[col] = restriction_wide[col].astype(connects_with_df[col].dtype)
+
+    # Đánh dấu các cặp bị cấm
+    connects_with_df = connects_with_df.merge(
+        restriction_wide[["from_street_id", "node_id", "to_street_id"]],
+        on=["from_street_id", "node_id", "to_street_id"],
+        how="left",
+        indicator="restriction_check"
+    )
+
+    is_restricted = connects_with_df["restriction_check"] == "both"
+
+    print("Số cặp bị cấm rẽ:", is_restricted.sum())
+
+    connects_with_df = (
+        connects_with_df[~is_restricted]
+        .drop(columns=["restriction_check"])
+        .drop_duplicates()
+        .reset_index(drop=True)
+    )
+
+    print("Shape cuối:", connects_with_df.shape)
+    return connects_with_df
 
 def to_edge_index(edges):
     return torch.tensor(edges.T, dtype=torch.long)
@@ -141,6 +200,7 @@ def build_static_graph():
 
 
 if __name__ == "__main__":
-    data = build_static_graph()
-    print(data)
-    torch.save(data, "data/preprocess/hetero_data.pt")
+    build_connects_with()
+    #data = build_static_graph()
+    #print(data)
+    #torch.save(data, "data/preprocess/hetero_data.pt")

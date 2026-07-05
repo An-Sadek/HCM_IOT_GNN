@@ -216,6 +216,8 @@ class NodePreprocess(Preprocess):
             .ge(3)
             .astype(np.int8)
         )
+
+        print("Thêm điểm giao nhau, có tổng cộng có", self.df["junction"].sum(), "điểm giao nhau")
         self.metadata["junction"] = "1 if node connects to at least 3 distinct segments else 0"
 
     def fill(self):
@@ -283,13 +285,17 @@ class WayPreprocess(Preprocess):
     def __init__(self, raw_root: str, osm_path:str):
         super().__init__(raw_root, osm_path)
         self.df = self.streets_df.rename(columns={"_id": "id"})
+
         # Mask 
         outlier_mask = (
-            ~self.combine_ways_df["tags.oneway"].isin(["yes", "no"]) &
+            ~self.combine_ways_df["tags.oneway"].isin(["yes", "no", "-1"]) &
             self.combine_ways_df["tags.oneway"].notna()
         )
-        self.combine_ways_df.loc[outlier_mask, "tags.oneway"] = "yes"
-        
+        self.combine_ways_df.loc[outlier_mask, "tags.oneway"] = "no"
+
+        # Lưu 1 bản có -1
+        self.combine_ways_df.to_csv("data/preprocess/combine_ways_df.csv", index=False)
+
         self.oh_tags = [
             "tags.surface",
             "tags.bridge",
@@ -310,7 +316,7 @@ class WayPreprocess(Preprocess):
             if row["type"] == "motorway":
                 return 120
     
-            oneway = row["tags.oneway"] == "yes"
+            oneway = row["tags.oneway"] in ["yes", "-1"]
             if oneway:
                 return 50
             else:
