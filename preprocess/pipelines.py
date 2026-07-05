@@ -190,11 +190,32 @@ class NodePreprocess(Preprocess):
 
         self.oh_tags = [
             "tags.railway",
-            "tags.junction",
             "tags.crossing",
             "tags.highway",
-            "tags.bus"
         ]
+
+    def add_junction_feature(self):
+        segment_endpoints = pd.concat(
+            [
+                self.segments_df[["_id", "s_node_id"]].rename(
+                    columns={"_id": "segment_id", "s_node_id": "node_id"}
+                ),
+                self.segments_df[["_id", "e_node_id"]].rename(
+                    columns={"_id": "segment_id", "e_node_id": "node_id"}
+                ),
+            ],
+            ignore_index=True,
+        ).drop_duplicates()
+
+        connection_counts = segment_endpoints.groupby("node_id")["segment_id"].nunique()
+        self.df["junction"] = (
+            self.df["_id"]
+            .map(connection_counts)
+            .fillna(0)
+            .ge(3)
+            .astype(np.int8)
+        )
+        self.metadata["junction"] = "1 if node connects to at least 3 distinct segments else 0"
 
     def fill(self):
         for tag in self.oh_tags:
@@ -248,6 +269,7 @@ class NodePreprocess(Preprocess):
     def preprocess(self):
         print("\n=== Tiến hành xử lý node ===")
         self.fill()
+        self.add_junction_feature()
         self.onehot_encoding()
         self.save_data_grid()
 
@@ -276,7 +298,6 @@ class WayPreprocess(Preprocess):
         
         self.num_tags = [
             "tags.lanes",
-            "tags.layer",
             "max_velocity",
             "tags.minspeed",
             "level"

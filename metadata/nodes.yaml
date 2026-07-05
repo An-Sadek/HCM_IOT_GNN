@@ -1,27 +1,21 @@
 fill:
   tags.railway: 'no'
-  tags.junction: 'no'
   tags.crossing: 'no'
   tags.highway: 'no'
-  tags.bus: 'no'
 onehot:
   features:
   - tags.railway
-  - tags.junction
   - tags.crossing
   - tags.highway
-  - tags.bus
   onehot_feature_names:
   - tags.railway_level_crossing
   - tags.railway_no
   - tags.railway_station
-  - tags.junction_yes
   - tags.crossing_traffic_signals
   - tags.crossing_zebra
   - tags.highway_crossing
   - tags.highway_no
   - tags.highway_traffic_signals
-  - tags.bus_yes
 conversion:
   index2id:
     0: 366367392
@@ -22653,3 +22647,4 @@ conversion:
     6175932025: 11311
     6175932032: 11312
     6175932046: 11313
+junction: 1 if node connects to at least 3 distinct segments else 0
