@@ -9,6 +9,7 @@ import yaml
 import json
 
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import MinMaxScaler
 
 
 class Preprocess:
@@ -318,6 +319,11 @@ class WayPreprocess(Preprocess):
 
     def fill(self):
         valid_type = [x for x in self.combine_ways_df["type"] if not (x == "unclassified")]
+        for col in self.num_tags:
+            self.combine_ways_df[col] = pd.to_numeric(
+                self.combine_ways_df[col],
+                errors="coerce",
+            )
 
         # Surface
         surface_mask = (
@@ -343,17 +349,33 @@ class WayPreprocess(Preprocess):
         self.combine_ways_df["tags.lanes"] = self.combine_ways_df["tags.lanes"].fillna(1)
         self.metadata["fill"]["lanes"] = 1
 
-        # Layer
-        self.combine_ways_df["tags.layer"] = self.combine_ways_df["tags.layer"].fillna(0)
-        self.metadata["fill"]["lanes"] = 0
-
         # Max velocity
         self.combine_ways_df["max_velocity"] = self.combine_ways_df["max_velocity"].fillna(-1)
         self.combine_ways_df["max_velocity"] = self.combine_ways_df["max_velocity"].astype(float)
         self.combine_ways_df["max_velocity"] = self.combine_ways_df.apply(self.max_velocity_rules, axis=1)
         self.metadata["fill"]["max_velocity"] = "120 if tags.highway == \"motorway\" else (50 if tags.oneway == \"yes\" else 60)"
+        
+        # Min speed
+        self.combine_ways_df["tags.minspeed"] = self.combine_ways_df["tags.minspeed"].fillna(0)
+
         print("Thế thành công các giá trị rỗng")
 
+    def zscore_std(self):
+        num_tags = [
+            "tags.lanes",
+            "max_velocity",
+            "tags.minspeed",
+        ]
+
+        mm_scaler = MinMaxScaler()
+
+        for col in num_tags:
+            data = self.df[[col]]
+            encoded_data = mm_scaler.fit_transform(data).reshape(-1, 1)
+            self.df[col] = encoded_data
+        
+        print("Chuẩn hoá Z-Score thành công cho dữ liệu liên tục")
+    
     def onehot_encoding(self):
         way_oh_encoder = OneHotEncoder(
             drop='first',        
@@ -439,6 +461,7 @@ class WayPreprocess(Preprocess):
             how="inner",
             on="id"
         )
+        self.zscore_std()
         self.save_way_segment()
         self.save_way2way()
         self.save_data_grid()

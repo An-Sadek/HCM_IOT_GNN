@@ -2,7 +2,7 @@ fill:
   surface: '"paved" if tags.surface != "unclassified" else "unpaved"'
   bridge: 'no'
   oneway: 'no'
-  lanes: 0
+  lanes: 1
   max_velocity: 120 if tags.highway == "motorway" else (50 if tags.oneway == "yes"
     else 60)
 onehot:
