@@ -144,7 +144,7 @@ def build_connects_with():
     )
 
     print("Shape cuối:", connects_with_df.shape)
-    return connects_with_df
+    return connects_with_df[["from_segment_id", "to_segment_id"]].to_numpy().astype(int)
 
 def to_edge_index(edges):
     return torch.tensor(edges.T, dtype=torch.long)
@@ -193,14 +193,13 @@ def build_static_graph():
         ends_with[:, [1, 0]]
     )
 
-    connects_to_segment = build_segment_pairs()
+    connects_to_segment = build_connects_with()
     data["segment", "connects_to", "segment"].edge_index = to_edge_index(connects_to_segment)
 
     return data
 
 
 if __name__ == "__main__":
-    build_connects_with()
-    #data = build_static_graph()
-    #print(data)
-    #torch.save(data, "data/preprocess/hetero_data.pt")
+    data = build_static_graph()
+    print(data)
+    torch.save(data, "data/preprocess/hetero_data.pt")
