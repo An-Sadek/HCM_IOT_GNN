@@ -23,14 +23,14 @@ class DynamicPreprocess(Preprocess):
         )
 
         # Mốc thời gian
-        min_timestamp = self.status_df["updated_at"].min()
-        max_timestamp = self.status_df["updated_at"].max()
+        min_timestamp = self.status_df["updated_at"].min().floor("30min")
+        max_timestamp = self.status_df["updated_at"].max().floor("30min")
         self.full_time = pd.date_range(start=min_timestamp, end=max_timestamp, freq='30min')
 
         # Metadata
         self.metadata = dict()
 
-    def status_preprocess(self):
+    def velocity_preprocess(self):
         # Chuyển thành datetime
         self.status_df["updated_at"] = pd.to_datetime(self.status_df["updated_at"])
 
@@ -64,11 +64,11 @@ class DynamicPreprocess(Preprocess):
         velocity_arr = velocity_mat.reindex(self.full_time)
         velocity_arr = velocity_mat.ffill().bfill()
         
-        print("Kích thước của pivot table velocity và mask trong status df:", velocity_arr.shape)
-        np.save("data/preprocess/dynamic_velocity.npy", velocity_arr)
-        print("Xử lý xong velocity của status")
+        print("Kích thước của pivot table velocity trong status df:", velocity_arr.shape)
+        
+        return velocity_arr
 
-    def train_preprocess(self):
+    def los_preprocess(self):
         self.train_df["LOS"] = self.train_df["LOS"].apply(lambda x: ord(x) - ord('A'))
         self.train_df["date"] = pd.to_datetime(
             self.train_df["date"]
@@ -103,12 +103,77 @@ class DynamicPreprocess(Preprocess):
         los_arr = los_arr.ffill().bfill()
 
         print("Kích thước của pivot table LOS và mask trong train df:", los_arr.shape)
-        np.save("data/preprocess/dynamic_LOS.npy", los_arr)
-        print("Xử lý thành công LOS của train")
+
+        return los_arr
+
+    def dayweek_preprocess(self, columns=None):
+        dayweek_arr = pd.DataFrame(
+            {
+                "dayweek": self.full_time.dayofweek.astype(np.int8)
+            },
+            index=self.full_time
+        )
+        dayweek_arr.index.name = "timestamp"
+
+        if columns is not None:
+            dayweek_arr = pd.DataFrame(
+                np.repeat(dayweek_arr[["dayweek"]].to_numpy(), len(columns), axis=1),
+                index=self.full_time,
+                columns=columns
+            )
+            dayweek_arr.index.name = "timestamp"
+
+        print("Kích thước của pivot table dayweek:", dayweek_arr.shape)
+
+        return dayweek_arr
+
+
+    def save_dynamic_features(self):
+        """
+        """
+        los_arr = self.los_preprocess()
+        velocity_arr = self.velocity_preprocess()
+        dayweek_arr = self.dayweek_preprocess(columns=los_arr.columns)
+
+        los_dayweek_features = np.stack(
+            [
+                los_arr.to_numpy().astype(np.float32),
+                dayweek_arr.to_numpy().astype(np.float32)
+            ],
+            axis=-1
+        )
+
+        np.save(
+            "data/preprocess/dynamic_LOS.npy",
+            los_arr.to_numpy().astype(np.float32)
+        )
+        np.save(
+            "data/preprocess/dynamic_velocity.npy",
+            velocity_arr.to_numpy().astype(np.float32)
+        )
+        np.save(
+            "data/preprocess/dynamic_dayweek.npy",
+            dayweek_arr.to_numpy().astype(np.float32)
+        )
+        np.save(
+            "data/preprocess/dynamic_LOS_dayweek.npy",
+            los_dayweek_features
+        )
+
+        dynamic_features = np.stack([los_arr, velocity_arr, dayweek_arr], axis=1)
+        dynamic_features = np.transpose(dynamic_features, (0, 2, 1))
+        print("Kích thước của dynamic LOS + dayweek:", los_dayweek_features.shape)
+        print("Kích thước của dynamic feature:", dynamic_features.shape)
+
+        np.save(
+            "data/preprocess/dynamic_features.npy",
+            dynamic_features
+        )
+
+        return dynamic_features
 
     def preprocess(self):
         print("\n=== Tiến hành tạo dynamic feature cho status và train ===")
-        self.train_preprocess()
-        self.status_preprocess()
+        self.save_dynamic_features()
 
         print("=== Xử lý xong status và train ===\n")
