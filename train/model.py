@@ -3,7 +3,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 import dgl
 from torch.nn import GRU
-from torch_geometric.nn.norm import LayerNorm
+try:
+    from torch_geometric.nn.norm import LayerNorm
+except ImportError:
+    LayerNorm = nn.LayerNorm
 from collections import defaultdict
 
 import torch as th
@@ -116,6 +119,7 @@ class HTGNNLayer(nn.Module):
         self.timeframe = timeframe
         self.norm      = norm
         self.dropout   = dropout
+        self.device    = device
         self.GRUlayer = 1
         # intra reltion aggregation modules
         self.LLM_features = LLM_feature
@@ -155,7 +159,7 @@ class HTGNNLayer(nn.Module):
 
         # attention_coefficient predcit
         h_mask = {key: self.predict[key](torch.stack(h_mask[key], dim=1), #[key]
-                 init_attention[key].expand(self.GRUlayer, h_mask[key][0].size(0), 1).cuda(), ) for
+                 init_attention[key].expand(self.GRUlayer, h_mask[key][0].size(0), 1).to(self.device), ) for
                   key in
                   h_mask.keys()
                   }
