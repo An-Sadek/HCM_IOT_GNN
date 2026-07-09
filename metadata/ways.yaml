@@ -17,6 +17,7 @@ onehot:
   - tags.surface_paved
   - tags.surface_unpaved
   - tags.bridge_yes
+  - tags.oneway_no
   - tags.oneway_yes
   - tags.motorroad_nan
 conversion:
