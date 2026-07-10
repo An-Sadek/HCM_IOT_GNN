@@ -254,4 +254,4 @@ def collate_sehtgnn(samples):
 if __name__ == "__main__":
     test = SEHTGNNDataset()
     print(len(test))
-    print(test[0])
+    print(len(test[0][1]))
