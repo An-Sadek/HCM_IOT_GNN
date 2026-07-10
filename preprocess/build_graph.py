@@ -201,5 +201,5 @@ def build_static_graph():
 
 if __name__ == "__main__":
     data = build_static_graph()
-    print(data)
+    print(data[0].shape)
     torch.save(data, "data/preprocess/hetero_data.pt")
