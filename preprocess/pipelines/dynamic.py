@@ -127,6 +127,41 @@ class DynamicPreprocess(Preprocess):
 
         return dayweek_arr
 
+    def cyclic_time_preprocess(self, columns=None):
+        minute_of_day = (
+            self.full_time.hour * 60
+            + self.full_time.minute
+            + self.full_time.second / 60
+        )
+        time_angle = 2 * np.pi * minute_of_day / (24 * 60)
+
+        day_of_month = self.full_time.day - 1
+        days_in_month = self.full_time.days_in_month
+        date_angle = 2 * np.pi * day_of_month / days_in_month
+
+        cyclic_arr = pd.DataFrame(
+            {
+                "time_in_day_sin": np.sin(time_angle).astype(np.float32),
+                "time_in_day_cos": np.cos(time_angle).astype(np.float32),
+                "date_in_month_sin": np.sin(date_angle).astype(np.float32),
+                "date_in_month_cos": np.cos(date_angle).astype(np.float32),
+            },
+            index=self.full_time
+        )
+        cyclic_arr.index.name = "timestamp"
+
+        if columns is not None:
+            cyclic_arr = pd.DataFrame(
+                np.repeat(cyclic_arr.to_numpy(), len(columns), axis=1),
+                index=self.full_time,
+                columns=pd.MultiIndex.from_product([cyclic_arr.columns, columns])
+            )
+            cyclic_arr.index.name = "timestamp"
+
+        print("Kích thước của pivot table cyclic time:", cyclic_arr.shape)
+
+        return cyclic_arr
+
 
     def save_dynamic_features(self):
         """
@@ -134,6 +169,12 @@ class DynamicPreprocess(Preprocess):
         los_arr = self.los_preprocess()
         velocity_arr = self.velocity_preprocess()
         dayweek_arr = self.dayweek_preprocess(columns=los_arr.columns)
+        cyclic_time_arr = self.cyclic_time_preprocess()
+        cyclic_time_features = np.repeat(
+            cyclic_time_arr.to_numpy()[:, None, :],
+            len(los_arr.columns),
+            axis=1
+        )
 
         los_dayweek_features = np.stack(
             [
@@ -156,12 +197,22 @@ class DynamicPreprocess(Preprocess):
             dayweek_arr.to_numpy().astype(np.float32)
         )
         np.save(
+            "data/preprocess/dynamic_cyclic_time.npy",
+            cyclic_time_features.astype(np.float32)
+        )
+        np.save(
             "data/preprocess/dynamic_LOS_dayweek.npy",
             los_dayweek_features
         )
 
-        dynamic_features = np.stack([los_arr, velocity_arr, dayweek_arr], axis=1)
-        dynamic_features = np.transpose(dynamic_features, (0, 2, 1))
+        dynamic_features = np.concatenate(
+            [
+                los_arr.to_numpy()[:, :, None],
+                dayweek_arr.to_numpy()[:, :, None],
+                cyclic_time_features,
+            ],
+            axis=2
+        ).astype(np.float32)
         print("Kích thước của dynamic LOS + dayweek:", los_dayweek_features.shape)
         print("Kích thước của dynamic feature:", dynamic_features.shape)
 

@@ -47,10 +47,10 @@ class SEHTGNNDataset(Dataset):
         self.target_channel = int(target_channel)
 
         if dynamic_path is None:
-            dynamic_path = self.preprocess_root / "dynamic_features.npy"
+            dynamic_path = self.preprocess_root / "dynamic_LOS_dayweek.npy"
         self.dynamic = np.load(dynamic_path, mmap_mode=mmap_mode)
 
-        if self.dynamic.ndim != 3:
+        if self.dynamic.ndim != 2:
             raise ValueError(
                 "dynamic_features must have shape (time, num_segments, channels), "
                 f"got {self.dynamic.shape}"

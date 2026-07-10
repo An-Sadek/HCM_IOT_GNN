@@ -1,8 +1,10 @@
 import argparse
+import csv
 from pathlib import Path
 
 import torch
 from torch.utils.data import DataLoader, random_split
+from tqdm.auto import tqdm
 
 from data import SEHTGNNDataset, collate_sehtgnn
 from model import NodePredictor, SEHTGNN
@@ -28,7 +30,8 @@ def parse_args():
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--train-ratio", type=float, default=0.8)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
-    parser.add_argument("--checkpoint", default="data/preprocess/sehtgnn_best.pt")
+    parser.add_argument("--checkpoint", default="result/sehtgnn_best.pt")
+    parser.add_argument("--history-csv", default="result/train_history.csv")
     return parser.parse_args()
 
 
@@ -92,13 +95,32 @@ def main():
     best_val_loss = float("inf")
     checkpoint_path = Path(args.checkpoint)
     checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+    history_path = Path(args.history_csv)
+    history_path.parent.mkdir(parents=True, exist_ok=True)
+    with history_path.open("w", newline="") as history_file:
+        writer = csv.DictWriter(
+            history_file,
+            fieldnames=[
+                "epoch",
+                "train_loss",
+                "val_loss",
+                "best_val_loss",
+                "is_best",
+            ],
+        )
+        writer.writeheader()
 
     for epoch in range(1, args.epochs + 1):
         encoder.train()
         predictor.train()
         train_loss = 0.0
 
-        for graph, y in train_loader:
+        train_bar = tqdm(
+            train_loader,
+            desc=f"epoch {epoch:03d} train",
+            leave=False,
+        )
+        for graph, y in train_bar:
             graph = graph.to(device)
             y = y.to(device).long()
 
@@ -110,6 +132,7 @@ def main():
             optimizer.step()
 
             train_loss += loss.item()
+            train_bar.set_postfix(loss=f"{loss.item():.4f}")
 
         train_loss /= max(len(train_loader), 1)
 
@@ -117,7 +140,12 @@ def main():
         predictor.eval()
         val_loss = 0.0
         with torch.no_grad():
-            for graph, y in val_loader:
+            val_bar = tqdm(
+                val_loader,
+                desc=f"epoch {epoch:03d} val",
+                leave=False,
+            )
+            for graph, y in val_bar:
                 graph = graph.to(device)
                 y = y.to(device).long()
                 logits = predictor(encoder(graph, predict_type="segment")).view(
@@ -125,11 +153,14 @@ def main():
                     args.horizon,
                     6,
                 )
-                val_loss += criterion(logits.reshape(-1, 6), y.reshape(-1)).item()
+                loss = criterion(logits.reshape(-1, 6), y.reshape(-1))
+                val_loss += loss.item()
+                val_bar.set_postfix(loss=f"{loss.item():.4f}")
 
         val_loss /= max(len(val_loader), 1)
         print(f"epoch={epoch:03d} train_loss={train_loss:.4f} val_loss={val_loss:.4f}")
 
+        is_best = val_loss < best_val_loss
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             torch.save(
@@ -140,6 +171,26 @@ def main():
                     "inp_list": dataset.inp_list,
                 },
                 checkpoint_path,
+            )
+        with history_path.open("a", newline="") as history_file:
+            writer = csv.DictWriter(
+                history_file,
+                fieldnames=[
+                    "epoch",
+                    "train_loss",
+                    "val_loss",
+                    "best_val_loss",
+                    "is_best",
+                ],
+            )
+            writer.writerow(
+                {
+                    "epoch": epoch,
+                    "train_loss": train_loss,
+                    "val_loss": val_loss,
+                    "best_val_loss": best_val_loss,
+                    "is_best": int(is_best),
+                }
             )
 
     print(f"best_val_loss={best_val_loss:.4f}")
