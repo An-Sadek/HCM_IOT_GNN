@@ -93,7 +93,7 @@ class SEHTGNNDataset(Dataset):
             np.asarray(
                 self.dynamic[target_start:target_end, :, self.target_channel].T,
                 dtype=np.float32,
-            )
+            ).copy()
         )
         return graph, y
 
@@ -114,7 +114,7 @@ class SEHTGNNDataset(Dataset):
 
         for t in range(self.window_size):
             key = f"t{t}"
-            dynamic_t = np.asarray(self.dynamic[start_idx + t], dtype=np.float32)
+            dynamic_t = np.asarray(self.dynamic[start_idx + t], dtype=np.float32).copy()
             segment_t = np.concatenate([static_segment, dynamic_t], axis=1)
 
             graph.nodes["node"].data[key] = static_node

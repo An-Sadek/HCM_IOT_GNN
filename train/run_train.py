@@ -39,7 +39,8 @@ def parse_args():
     parser.add_argument("--heads", type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--epochs", type=int, default=100)
-    parser.add_argument("--batch-size", type=int, default=64)
+    parser.add_argument("--batch-size", type=int, default=1)
+    parser.add_argument("--grad-accum-steps", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--train-ratio", type=float, default=0.8)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
@@ -50,6 +51,9 @@ def parse_args():
 
 def main():
     args = parse_args()
+    if args.grad_accum_steps < 1:
+        raise ValueError("--grad-accum-steps must be >= 1")
+
     device = torch.device(args.device)
 
     dataset = SEHTGNNDataset(
@@ -123,30 +127,35 @@ def main():
         train_squared_error = 0.0
         train_absolute_error = 0.0
         train_count = 0
+        optimizer.zero_grad()
 
         train_bar = tqdm(
             train_loader,
             desc=f"epoch {epoch:03d} train",
             leave=False,
         )
-        for graph, y in train_bar:
+        for step, (graph, y) in enumerate(train_bar, start=1):
             graph = graph.to(device)
             y = y.to(device).float()
 
-            optimizer.zero_grad()
             segment_emb = encoder(graph, predict_type="segment")
             pred = predictor(segment_emb).view(-1, args.horizon)
             loss = criterion(pred, y)
-            loss.backward()
-            optimizer.step()
+            (loss / args.grad_accum_steps).backward()
+
+            if step % args.grad_accum_steps == 0 or step == len(train_loader):
+                optimizer.step()
+                optimizer.zero_grad()
 
             error = pred.detach() - y
             train_squared_error += torch.sum(error ** 2).item()
             train_absolute_error += torch.sum(torch.abs(error)).item()
             train_count += y.numel()
+            accum_step = (step - 1) % args.grad_accum_steps + 1
             train_bar.set_postfix(
                 loss=f"{loss.item():.4f}",
                 mae=f"{train_absolute_error / max(train_count, 1):.4f}",
+                accum=f"{accum_step}/{args.grad_accum_steps}",
             )
 
         train_loss = train_squared_error / max(train_count, 1)
