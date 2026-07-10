@@ -10,6 +10,19 @@ from data import SEHTGNNDataset, collate_sehtgnn
 from model import NodePredictor, SEHTGNN
 
 
+HISTORY_FIELDS = [
+    "epoch",
+    "train_loss",
+    "train_mae",
+    "train_rmse",
+    "val_loss",
+    "val_mae",
+    "val_rmse",
+    "best_val_loss",
+    "is_best",
+]
+
+
 def make_llm_feature(ntypes, dim=4096):
     # Positive vectors keep the official LLM4init log(inner_product) well-defined.
     return {ntype: torch.ones(dim) for ntype in ntypes}
@@ -20,13 +33,13 @@ def parse_args():
     parser.add_argument("--preprocess-root", default="data/preprocess")
     parser.add_argument("--dynamic-path", default="data/preprocess/dynamic_features.npy")
     parser.add_argument("--window-size", type=int, default=12)
-    parser.add_argument("--horizon", type=int, default=1)
+    parser.add_argument("--horizon", type=int, default=12)
     parser.add_argument("--hidden-dim", type=int, default=64)
-    parser.add_argument("--layers", type=int, default=2)
-    parser.add_argument("--heads", type=int, default=4)
-    parser.add_argument("--dropout", type=float, default=0.2)
-    parser.add_argument("--epochs", type=int, default=10)
-    parser.add_argument("--batch-size", type=int, default=1)
+    parser.add_argument("--layers", type=int, default=1)
+    parser.add_argument("--heads", type=int, default=1)
+    parser.add_argument("--dropout", type=float, default=0.5)
+    parser.add_argument("--epochs", type=int, default=100)
+    parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--train-ratio", type=float, default=0.8)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
@@ -84,13 +97,13 @@ def main():
         LLM_feature=llm_feature,
         inp_list=dataset.inp_list,
     ).to(device)
-    predictor = NodePredictor(args.hidden_dim, 6 * args.horizon).to(device)
+    predictor = NodePredictor(args.hidden_dim, args.horizon).to(device)
 
     optimizer = torch.optim.Adam(
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
     )
-    criterion = torch.nn.CrossEntropyLoss()
+    criterion = torch.nn.MSELoss()
 
     best_val_loss = float("inf")
     checkpoint_path = Path(args.checkpoint)
@@ -100,20 +113,16 @@ def main():
     with history_path.open("w", newline="") as history_file:
         writer = csv.DictWriter(
             history_file,
-            fieldnames=[
-                "epoch",
-                "train_loss",
-                "val_loss",
-                "best_val_loss",
-                "is_best",
-            ],
+            fieldnames=HISTORY_FIELDS,
         )
         writer.writeheader()
 
     for epoch in range(1, args.epochs + 1):
         encoder.train()
         predictor.train()
-        train_loss = 0.0
+        train_squared_error = 0.0
+        train_absolute_error = 0.0
+        train_count = 0
 
         train_bar = tqdm(
             train_loader,
@@ -122,23 +131,33 @@ def main():
         )
         for graph, y in train_bar:
             graph = graph.to(device)
-            y = y.to(device).long()
+            y = y.to(device).float()
 
             optimizer.zero_grad()
             segment_emb = encoder(graph, predict_type="segment")
-            logits = predictor(segment_emb).view(-1, args.horizon, 6)
-            loss = criterion(logits.reshape(-1, 6), y.reshape(-1))
+            pred = predictor(segment_emb).view(-1, args.horizon)
+            loss = criterion(pred, y)
             loss.backward()
             optimizer.step()
 
-            train_loss += loss.item()
-            train_bar.set_postfix(loss=f"{loss.item():.4f}")
+            error = pred.detach() - y
+            train_squared_error += torch.sum(error ** 2).item()
+            train_absolute_error += torch.sum(torch.abs(error)).item()
+            train_count += y.numel()
+            train_bar.set_postfix(
+                loss=f"{loss.item():.4f}",
+                mae=f"{train_absolute_error / max(train_count, 1):.4f}",
+            )
 
-        train_loss /= max(len(train_loader), 1)
+        train_loss = train_squared_error / max(train_count, 1)
+        train_mae = train_absolute_error / max(train_count, 1)
+        train_rmse = train_loss ** 0.5
 
         encoder.eval()
         predictor.eval()
-        val_loss = 0.0
+        val_squared_error = 0.0
+        val_absolute_error = 0.0
+        val_count = 0
         with torch.no_grad():
             val_bar = tqdm(
                 val_loader,
@@ -147,18 +166,29 @@ def main():
             )
             for graph, y in val_bar:
                 graph = graph.to(device)
-                y = y.to(device).long()
-                logits = predictor(encoder(graph, predict_type="segment")).view(
+                y = y.to(device).float()
+                pred = predictor(encoder(graph, predict_type="segment")).view(
                     -1,
                     args.horizon,
-                    6,
                 )
-                loss = criterion(logits.reshape(-1, 6), y.reshape(-1))
-                val_loss += loss.item()
-                val_bar.set_postfix(loss=f"{loss.item():.4f}")
+                loss = criterion(pred, y)
+                error = pred - y
+                val_squared_error += torch.sum(error ** 2).item()
+                val_absolute_error += torch.sum(torch.abs(error)).item()
+                val_count += y.numel()
+                val_bar.set_postfix(
+                    loss=f"{loss.item():.4f}",
+                    mae=f"{val_absolute_error / max(val_count, 1):.4f}",
+                )
 
-        val_loss /= max(len(val_loader), 1)
-        print(f"epoch={epoch:03d} train_loss={train_loss:.4f} val_loss={val_loss:.4f}")
+        val_loss = val_squared_error / max(val_count, 1)
+        val_mae = val_absolute_error / max(val_count, 1)
+        val_rmse = val_loss ** 0.5
+        print(
+            f"epoch={epoch:03d} "
+            f"train_loss={train_loss:.4f} train_mae={train_mae:.4f} train_rmse={train_rmse:.4f} "
+            f"val_loss={val_loss:.4f} val_mae={val_mae:.4f} val_rmse={val_rmse:.4f}"
+        )
 
         is_best = val_loss < best_val_loss
         if val_loss < best_val_loss:
@@ -175,19 +205,17 @@ def main():
         with history_path.open("a", newline="") as history_file:
             writer = csv.DictWriter(
                 history_file,
-                fieldnames=[
-                    "epoch",
-                    "train_loss",
-                    "val_loss",
-                    "best_val_loss",
-                    "is_best",
-                ],
+                fieldnames=HISTORY_FIELDS,
             )
             writer.writerow(
                 {
                     "epoch": epoch,
                     "train_loss": train_loss,
+                    "train_mae": train_mae,
+                    "train_rmse": train_rmse,
                     "val_loss": val_loss,
+                    "val_mae": val_mae,
+                    "val_rmse": val_rmse,
                     "best_val_loss": best_val_loss,
                     "is_best": int(is_best),
                 }
