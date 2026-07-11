@@ -17,19 +17,41 @@ from model import NodePredictor, SEHTGNN
 HISTORY_FIELDS = [
     "epoch",
     "train_loss",
-    "train_mae",
-    "train_rmse",
+    "train_accuracy",
+    "train_f1_macro",
     "val_loss",
-    "val_mae",
-    "val_rmse",
-    "best_val_loss",
+    "val_accuracy",
+    "val_f1_macro",
+    "best_val_f1_macro",
     "is_best",
 ]
+
+NUM_CLASSES = 6
 
 
 def make_llm_feature(ntypes, dim=4096):
     # Positive vectors keep the official LLM4init log(inner_product) well-defined.
     return {ntype: torch.ones(dim) for ntype in ntypes}
+
+
+def update_confusion_matrix(confusion, target, prediction):
+    indices = target.reshape(-1) * NUM_CLASSES + prediction.reshape(-1)
+    confusion += torch.bincount(
+        indices,
+        minlength=NUM_CLASSES * NUM_CLASSES,
+    ).reshape(NUM_CLASSES, NUM_CLASSES)
+
+
+def classification_metrics(confusion):
+    confusion = confusion.to(torch.float64)
+    true_positive = confusion.diag()
+    support = confusion.sum(dim=1)
+    predicted = confusion.sum(dim=0)
+    accuracy = true_positive.sum() / confusion.sum().clamp_min(1)
+    f1_per_class = 2 * true_positive / (support + predicted).clamp_min(1)
+    present_classes = support > 0
+    macro_f1 = f1_per_class[present_classes].mean() if present_classes.any() else 0.0
+    return accuracy.item(), float(macro_f1)
 
 
 def parse_args():
@@ -139,7 +161,7 @@ def main():
         LLM_feature=llm_feature,
         inp_list=dataset.inp_list,
     ).to(device)
-    predictor = NodePredictor(args.hidden_dim, 6 * args.horizon).to(device)
+    predictor = NodePredictor(args.hidden_dim, NUM_CLASSES * args.horizon).to(device)
 
     if distributed:
         # The current model contains parameters that are not used by every forward path.
@@ -152,7 +174,7 @@ def main():
     )
     criterion = torch.nn.CrossEntropyLoss()
 
-    best_val_loss = float("inf")
+    best_val_f1 = -1.0
     checkpoint_path = Path(args.checkpoint)
     if is_main:
         checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
@@ -168,9 +190,14 @@ def main():
             train_sampler.set_epoch(epoch)
         encoder.train()
         predictor.train()
-        train_squared_error = 0.0
-        train_absolute_error = 0.0
+        train_loss_sum = 0.0
         train_count = 0
+        train_confusion = torch.zeros(
+            NUM_CLASSES,
+            NUM_CLASSES,
+            dtype=torch.int64,
+            device=device,
+        )
         optimizer.zero_grad()
 
         train_bar = tqdm(
@@ -184,8 +211,8 @@ def main():
             y = y.to(device).long()
 
             segment_emb = encoder(graph, predict_type="segment")
-            logits = predictor(segment_emb).view(-1, args.horizon, 6)
-            loss = criterion(logits.reshape(-1, 6), y.reshape(-1))
+            logits = predictor(segment_emb).view(-1, args.horizon, NUM_CLASSES)
+            loss = criterion(logits.reshape(-1, NUM_CLASSES), y.reshape(-1))
             (loss / args.grad_accum_steps).backward()
 
             if step % args.grad_accum_steps == 0 or step == len(train_loader):
@@ -193,34 +220,38 @@ def main():
                 optimizer.zero_grad()
 
             pred_class = logits.detach().argmax(dim=-1)
-            error = pred_class.float() - y.float()
-            train_squared_error += torch.sum(error ** 2).item()
-            train_absolute_error += torch.sum(torch.abs(error)).item()
+            train_loss_sum += loss.item() * y.numel()
             train_count += y.numel()
+            update_confusion_matrix(train_confusion, y, pred_class)
             accum_step = (step - 1) % args.grad_accum_steps + 1
             train_bar.set_postfix(
                 loss=f"{loss.item():.4f}",
-                mae=f"{train_absolute_error / max(train_count, 1):.4f}",
+                accuracy=f"{train_confusion.diag().sum().item() / max(train_count, 1):.4f}",
                 accum=f"{accum_step}/{args.grad_accum_steps}",
             )
 
         train_stats = torch.tensor(
-            [train_squared_error, train_absolute_error, train_count],
+            [train_loss_sum, train_count],
             dtype=torch.float64,
             device=device,
         )
         if distributed:
             dist.all_reduce(train_stats, op=dist.ReduceOp.SUM)
-        train_squared_error, train_absolute_error, train_count = train_stats.tolist()
-        train_loss = train_squared_error / max(train_count, 1)
-        train_mae = train_absolute_error / max(train_count, 1)
-        train_rmse = train_loss ** 0.5
+            dist.all_reduce(train_confusion, op=dist.ReduceOp.SUM)
+        train_loss_sum, train_count = train_stats.tolist()
+        train_loss = train_loss_sum / max(train_count, 1)
+        train_accuracy, train_f1 = classification_metrics(train_confusion)
 
         encoder.eval()
         predictor.eval()
-        val_squared_error = 0.0
-        val_absolute_error = 0.0
+        val_loss_sum = 0.0
         val_count = 0
+        val_confusion = torch.zeros(
+            NUM_CLASSES,
+            NUM_CLASSES,
+            dtype=torch.int64,
+            device=device,
+        )
         with torch.no_grad():
             val_bar = tqdm(
                 val_loader,
@@ -234,40 +265,40 @@ def main():
                 logits = predictor(encoder(graph, predict_type="segment")).view(
                     -1,
                     args.horizon,
-                    6,
+                    NUM_CLASSES,
                 )
-                loss = criterion(logits.reshape(-1, 6), y.reshape(-1))
+                loss = criterion(logits.reshape(-1, NUM_CLASSES), y.reshape(-1))
                 pred_class = logits.argmax(dim=-1)
-                error = pred_class.float() - y.float()
-                val_squared_error += torch.sum(error ** 2).item()
-                val_absolute_error += torch.sum(torch.abs(error)).item()
+                val_loss_sum += loss.item() * y.numel()
                 val_count += y.numel()
+                update_confusion_matrix(val_confusion, y, pred_class)
                 val_bar.set_postfix(
                     loss=f"{loss.item():.4f}",
-                    mae=f"{val_absolute_error / max(val_count, 1):.4f}",
+                    accuracy=f"{val_confusion.diag().sum().item() / max(val_count, 1):.4f}",
                 )
 
         val_stats = torch.tensor(
-            [val_squared_error, val_absolute_error, val_count],
+            [val_loss_sum, val_count],
             dtype=torch.float64,
             device=device,
         )
         if distributed:
             dist.all_reduce(val_stats, op=dist.ReduceOp.SUM)
-        val_squared_error, val_absolute_error, val_count = val_stats.tolist()
-        val_loss = val_squared_error / max(val_count, 1)
-        val_mae = val_absolute_error / max(val_count, 1)
-        val_rmse = val_loss ** 0.5
+            dist.all_reduce(val_confusion, op=dist.ReduceOp.SUM)
+        val_loss_sum, val_count = val_stats.tolist()
+        val_loss = val_loss_sum / max(val_count, 1)
+        val_accuracy, val_f1 = classification_metrics(val_confusion)
         if is_main:
             print(
                 f"epoch={epoch:03d} "
-                f"train_loss={train_loss:.4f} train_mae={train_mae:.4f} train_rmse={train_rmse:.4f} "
-                f"val_loss={val_loss:.4f} val_mae={val_mae:.4f} val_rmse={val_rmse:.4f}"
+                f"train_loss={train_loss:.4f} train_accuracy={train_accuracy:.4f} "
+                f"train_f1={train_f1:.4f} val_loss={val_loss:.4f} "
+                f"val_accuracy={val_accuracy:.4f} val_f1={val_f1:.4f}"
             )
 
-        is_best = val_loss < best_val_loss
-        if is_main and val_loss < best_val_loss:
-            best_val_loss = val_loss
+        is_best = val_f1 > best_val_f1
+        if is_main and is_best:
+            best_val_f1 = val_f1
             torch.save(
                 {
                     "encoder": (encoder.module if distributed else encoder).state_dict(),
@@ -287,18 +318,18 @@ def main():
                     {
                         "epoch": epoch,
                         "train_loss": train_loss,
-                        "train_mae": train_mae,
-                        "train_rmse": train_rmse,
+                        "train_accuracy": train_accuracy,
+                        "train_f1_macro": train_f1,
                         "val_loss": val_loss,
-                        "val_mae": val_mae,
-                        "val_rmse": val_rmse,
-                        "best_val_loss": best_val_loss,
+                        "val_accuracy": val_accuracy,
+                        "val_f1_macro": val_f1,
+                        "best_val_f1_macro": best_val_f1,
                         "is_best": int(is_best),
                     }
                 )
 
     if is_main:
-        print(f"best_val_loss={best_val_loss:.4f}")
+        print(f"best_val_f1_macro={best_val_f1:.4f}")
     if distributed:
         dist.destroy_process_group()
 
