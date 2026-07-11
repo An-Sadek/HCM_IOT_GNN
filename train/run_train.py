@@ -1,9 +1,13 @@
 import argparse
 import csv
+import os
 from pathlib import Path
 
 import torch
+import torch.distributed as dist
+from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.data import DataLoader, random_split
+from torch.utils.data.distributed import DistributedSampler
 from tqdm.auto import tqdm
 
 from data import SEHTGNNDataset, collate_sehtgnn
@@ -34,12 +38,12 @@ def parse_args():
     parser.add_argument("--dynamic-path", default="data/preprocess/dynamic_features.npy")
     parser.add_argument("--window-size", type=int, default=12)
     parser.add_argument("--horizon", type=int, default=12)
-    parser.add_argument("--hidden-dim", type=int, default=64)
+    parser.add_argument("--hidden-dim", type=int, default=32)
     parser.add_argument("--layers", type=int, default=1)
     parser.add_argument("--heads", type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--epochs", type=int, default=100)
-    parser.add_argument("--batch-size", type=int, default=1)
+    parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--grad-accum-steps", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--train-ratio", type=float, default=0.7)
@@ -54,7 +58,26 @@ def main():
     if args.grad_accum_steps < 1:
         raise ValueError("--grad-accum-steps must be >= 1")
 
-    device = torch.device(args.device)
+    distributed = int(os.environ.get("WORLD_SIZE", "1")) > 1
+    if distributed:
+        if not torch.cuda.is_available():
+            raise RuntimeError("Distributed training requires CUDA GPUs with the NCCL backend")
+        local_rank = int(os.environ["LOCAL_RANK"])
+        torch.cuda.set_device(local_rank)
+        dist.init_process_group(backend="nccl")
+        device = torch.device("cuda", local_rank)
+        rank = dist.get_rank()
+        world_size = dist.get_world_size()
+    else:
+        device = torch.device(args.device)
+        rank = 0
+        world_size = 1
+    is_main = rank == 0
+    if is_main:
+        print(
+            f"training_mode={'DDP' if distributed else 'single-process'} "
+            f"world_size={world_size} batch_size_per_gpu={args.batch_size}"
+        )
 
     dataset = SEHTGNNDataset(
         preprocess_root=args.preprocess_root,
@@ -72,16 +95,31 @@ def main():
         generator=torch.Generator().manual_seed(42),
     )
 
+    train_sampler = DistributedSampler(
+        train_ds,
+        num_replicas=world_size,
+        rank=rank,
+        shuffle=True,
+    ) if distributed else None
+    val_sampler = DistributedSampler(
+        val_ds,
+        num_replicas=world_size,
+        rank=rank,
+        shuffle=False,
+    ) if distributed else None
+
     train_loader = DataLoader(
         train_ds,
         batch_size=args.batch_size,
-        shuffle=True,
+        shuffle=train_sampler is None,
+        sampler=train_sampler,
         collate_fn=collate_sehtgnn,
     )
     val_loader = DataLoader(
         val_ds,
         batch_size=args.batch_size,
         shuffle=False,
+        sampler=val_sampler,
         collate_fn=collate_sehtgnn,
     )
 
@@ -103,6 +141,11 @@ def main():
     ).to(device)
     predictor = NodePredictor(args.hidden_dim, 6 * args.horizon).to(device)
 
+    if distributed:
+        # The current model contains parameters that are not used by every forward path.
+        encoder = DDP(encoder, device_ids=[local_rank], find_unused_parameters=True)
+        predictor = DDP(predictor, device_ids=[local_rank], find_unused_parameters=True)
+
     optimizer = torch.optim.Adam(
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
@@ -111,17 +154,18 @@ def main():
 
     best_val_loss = float("inf")
     checkpoint_path = Path(args.checkpoint)
-    checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+    if is_main:
+        checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
     history_path = Path(args.history_csv)
-    history_path.parent.mkdir(parents=True, exist_ok=True)
-    with history_path.open("w", newline="") as history_file:
-        writer = csv.DictWriter(
-            history_file,
-            fieldnames=HISTORY_FIELDS,
-        )
-        writer.writeheader()
+    if is_main:
+        history_path.parent.mkdir(parents=True, exist_ok=True)
+        with history_path.open("w", newline="") as history_file:
+            writer = csv.DictWriter(history_file, fieldnames=HISTORY_FIELDS)
+            writer.writeheader()
 
     for epoch in range(1, args.epochs + 1):
+        if train_sampler is not None:
+            train_sampler.set_epoch(epoch)
         encoder.train()
         predictor.train()
         train_squared_error = 0.0
@@ -133,6 +177,7 @@ def main():
             train_loader,
             desc=f"epoch {epoch:03d} train",
             leave=False,
+            disable=not is_main,
         )
         for step, (graph, y) in enumerate(train_bar, start=1):
             graph = graph.to(device)
@@ -159,6 +204,14 @@ def main():
                 accum=f"{accum_step}/{args.grad_accum_steps}",
             )
 
+        train_stats = torch.tensor(
+            [train_squared_error, train_absolute_error, train_count],
+            dtype=torch.float64,
+            device=device,
+        )
+        if distributed:
+            dist.all_reduce(train_stats, op=dist.ReduceOp.SUM)
+        train_squared_error, train_absolute_error, train_count = train_stats.tolist()
         train_loss = train_squared_error / max(train_count, 1)
         train_mae = train_absolute_error / max(train_count, 1)
         train_rmse = train_loss ** 0.5
@@ -173,6 +226,7 @@ def main():
                 val_loader,
                 desc=f"epoch {epoch:03d} val",
                 leave=False,
+                disable=not is_main,
             )
             for graph, y in val_bar:
                 graph = graph.to(device)
@@ -193,47 +247,60 @@ def main():
                     mae=f"{val_absolute_error / max(val_count, 1):.4f}",
                 )
 
+        val_stats = torch.tensor(
+            [val_squared_error, val_absolute_error, val_count],
+            dtype=torch.float64,
+            device=device,
+        )
+        if distributed:
+            dist.all_reduce(val_stats, op=dist.ReduceOp.SUM)
+        val_squared_error, val_absolute_error, val_count = val_stats.tolist()
         val_loss = val_squared_error / max(val_count, 1)
         val_mae = val_absolute_error / max(val_count, 1)
         val_rmse = val_loss ** 0.5
-        print(
-            f"epoch={epoch:03d} "
-            f"train_loss={train_loss:.4f} train_mae={train_mae:.4f} train_rmse={train_rmse:.4f} "
-            f"val_loss={val_loss:.4f} val_mae={val_mae:.4f} val_rmse={val_rmse:.4f}"
-        )
+        if is_main:
+            print(
+                f"epoch={epoch:03d} "
+                f"train_loss={train_loss:.4f} train_mae={train_mae:.4f} train_rmse={train_rmse:.4f} "
+                f"val_loss={val_loss:.4f} val_mae={val_mae:.4f} val_rmse={val_rmse:.4f}"
+            )
 
         is_best = val_loss < best_val_loss
-        if val_loss < best_val_loss:
+        if is_main and val_loss < best_val_loss:
             best_val_loss = val_loss
             torch.save(
                 {
-                    "encoder": encoder.state_dict(),
-                    "predictor": predictor.state_dict(),
+                    "encoder": (encoder.module if distributed else encoder).state_dict(),
+                    "predictor": (predictor.module if distributed else predictor).state_dict(),
                     "args": vars(args),
                     "inp_list": dataset.inp_list,
                 },
                 checkpoint_path,
             )
-        with history_path.open("a", newline="") as history_file:
-            writer = csv.DictWriter(
-                history_file,
-                fieldnames=HISTORY_FIELDS,
-            )
-            writer.writerow(
-                {
-                    "epoch": epoch,
-                    "train_loss": train_loss,
-                    "train_mae": train_mae,
-                    "train_rmse": train_rmse,
-                    "val_loss": val_loss,
-                    "val_mae": val_mae,
-                    "val_rmse": val_rmse,
-                    "best_val_loss": best_val_loss,
-                    "is_best": int(is_best),
-                }
-            )
+        if is_main:
+            with history_path.open("a", newline="") as history_file:
+                writer = csv.DictWriter(
+                    history_file,
+                    fieldnames=HISTORY_FIELDS,
+                )
+                writer.writerow(
+                    {
+                        "epoch": epoch,
+                        "train_loss": train_loss,
+                        "train_mae": train_mae,
+                        "train_rmse": train_rmse,
+                        "val_loss": val_loss,
+                        "val_mae": val_mae,
+                        "val_rmse": val_rmse,
+                        "best_val_loss": best_val_loss,
+                        "is_best": int(is_best),
+                    }
+                )
 
-    print(f"best_val_loss={best_val_loss:.4f}")
+    if is_main:
+        print(f"best_val_loss={best_val_loss:.4f}")
+    if distributed:
+        dist.destroy_process_group()
 
 
 if __name__ == "__main__":
