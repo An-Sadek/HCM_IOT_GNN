@@ -42,7 +42,7 @@ def parse_args():
     parser.add_argument("--batch-size", type=int, default=1)
     parser.add_argument("--grad-accum-steps", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
-    parser.add_argument("--train-ratio", type=float, default=0.8)
+    parser.add_argument("--train-ratio", type=float, default=0.7)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--checkpoint", default="result/sehtgnn_best.pt")
     parser.add_argument("--history-csv", default="result/train_history.csv")
@@ -101,13 +101,13 @@ def main():
         LLM_feature=llm_feature,
         inp_list=dataset.inp_list,
     ).to(device)
-    predictor = NodePredictor(args.hidden_dim, args.horizon).to(device)
+    predictor = NodePredictor(args.hidden_dim, 6 * args.horizon).to(device)
 
     optimizer = torch.optim.Adam(
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
     )
-    criterion = torch.nn.MSELoss()
+    criterion = torch.nn.CrossEntropyLoss()
 
     best_val_loss = float("inf")
     checkpoint_path = Path(args.checkpoint)
@@ -136,18 +136,19 @@ def main():
         )
         for step, (graph, y) in enumerate(train_bar, start=1):
             graph = graph.to(device)
-            y = y.to(device).float()
+            y = y.to(device).long()
 
             segment_emb = encoder(graph, predict_type="segment")
-            pred = predictor(segment_emb).view(-1, args.horizon)
-            loss = criterion(pred, y)
+            logits = predictor(segment_emb).view(-1, args.horizon, 6)
+            loss = criterion(logits.reshape(-1, 6), y.reshape(-1))
             (loss / args.grad_accum_steps).backward()
 
             if step % args.grad_accum_steps == 0 or step == len(train_loader):
                 optimizer.step()
                 optimizer.zero_grad()
 
-            error = pred.detach() - y
+            pred_class = logits.detach().argmax(dim=-1)
+            error = pred_class.float() - y.float()
             train_squared_error += torch.sum(error ** 2).item()
             train_absolute_error += torch.sum(torch.abs(error)).item()
             train_count += y.numel()
@@ -175,13 +176,15 @@ def main():
             )
             for graph, y in val_bar:
                 graph = graph.to(device)
-                y = y.to(device).float()
-                pred = predictor(encoder(graph, predict_type="segment")).view(
+                y = y.to(device).long()
+                logits = predictor(encoder(graph, predict_type="segment")).view(
                     -1,
                     args.horizon,
+                    6,
                 )
-                loss = criterion(pred, y)
-                error = pred - y
+                loss = criterion(logits.reshape(-1, 6), y.reshape(-1))
+                pred_class = logits.argmax(dim=-1)
+                error = pred_class.float() - y.float()
                 val_squared_error += torch.sum(error ** 2).item()
                 val_absolute_error += torch.sum(torch.abs(error)).item()
                 val_count += y.numel()
