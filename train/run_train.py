@@ -60,7 +60,7 @@ def parse_args():
     parser.add_argument("--dynamic-path", default="data/preprocess/dynamic_features.npy")
     parser.add_argument("--window-size", type=int, default=12)
     parser.add_argument("--horizon", type=int, default=12)
-    parser.add_argument("--hidden-dim", type=int, default=32)
+    parser.add_argument("--hidden-dim", type=int, default=8)
     parser.add_argument("--layers", type=int, default=1)
     parser.add_argument("--heads", type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.5)
@@ -171,6 +171,7 @@ def main():
     optimizer = torch.optim.Adam(
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
+        weight_decay=1e-4
     )
     criterion = torch.nn.CrossEntropyLoss()
 
