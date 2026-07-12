@@ -1,0 +1,10 @@
+BATCH_SIZE 32
+P 12
+Q 12
+layers 1
+heads 1
+epoch 100
+lr 1e-3
+dropout 0.5
+train_ratio 0.7
+Note: Đồ thị dị biến song hướng (Bidirectional heterogenous graph)
