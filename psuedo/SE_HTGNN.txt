@@ -1,0 +1,41 @@
+FUNCTION get_intra_features(graph, node_features):
+    INPUT:
+        graph: Đồ thị dị biến, trong đó mỗi canonical edge type đã gắn với một mốc thời gian
+        node_features: Đặc trưng node có dạng {node_type: {time_type: feature_matrix}}
+
+    OUTPUT:
+        intra_features: Đặc trưng intra được nhóm theo thời gian và canonical relation. intra_features có dạng {"t": (src_type, rel_type, dest_type)}
+        relation_history: Chuỗi đặc trưng của từng relation qua các mốc thời gian
+
+    BEGIN
+        Khởi tạo intra_features cho mọi mốc thời gian
+        Khởi tạo relation_history cho mọi relation type
+
+        FOR mỗi canonical relation (src_type, edge_type, destination_type) trong graph:
+
+            subgraph <- graph[src_type, edge_type, dest_type]
+            relation_type <- loại bỏ hậu tố thời gian khỏi edge_type
+            source_features <- node_features[src_type][time_type]
+            destination_features <- node_features[dest_type][time_type]
+
+            z <- GraphConv(
+                    subgraph,
+                    source_features,
+                    destination_features
+                 )
+
+            intra_features[time_type]
+                          [(src_type, edge_type, dest_type)] <- z
+
+            INSERT(relation_history[relation_type], Z)
+
+        RETURN intra_features, relation_history
+    END
+
+FUNCTION get_attention_coef(relation_history, init_attention):
+    INPUT:
+
+    OUTPUT:
+
+    BEGIN
+    END

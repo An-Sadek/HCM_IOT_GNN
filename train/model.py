@@ -328,3 +328,8 @@ class NodePredictor(nn.Module):
         pred = self.fc2(node_feat)
 
         return pred
+
+
+
+if __name__ == "__main__":
+    pass

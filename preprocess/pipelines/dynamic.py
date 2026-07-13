@@ -135,16 +135,15 @@ class DynamicPreprocess(Preprocess):
         )
         time_angle = 2 * np.pi * minute_of_day / (24 * 60)
 
-        day_of_month = self.full_time.day - 1
-        days_in_month = self.full_time.days_in_month
-        date_angle = 2 * np.pi * day_of_month / days_in_month
+        day_of_week = self.full_time.dayofweek
+        day_angle = 2 * np.pi * day_of_week / 7
 
         cyclic_arr = pd.DataFrame(
             {
                 "time_in_day_sin": np.sin(time_angle).astype(np.float32),
                 "time_in_day_cos": np.cos(time_angle).astype(np.float32),
-                "date_in_month_sin": np.sin(date_angle).astype(np.float32),
-                "date_in_month_cos": np.cos(date_angle).astype(np.float32),
+                "day_in_week_sin": np.sin(day_angle).astype(np.float32),
+                "day_in_week_cos": np.cos(day_angle).astype(np.float32),
             },
             index=self.full_time
         )
