@@ -5,13 +5,17 @@ from pathlib import Path
 
 import torch
 import torch.distributed as dist
+import torch.nn.functional as F
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.data import DataLoader, random_split
 from torch.utils.data.distributed import DistributedSampler
 from tqdm.auto import tqdm
 
-from data import SEHTGNNDataset, collate_sehtgnn
+from data import NUM_CLASSES, SEHTGNNDataset, collate_sehtgnn
 from model import NodePredictor, SEHTGNN
+
+
+torch.manual_seed(42)
 
 
 HISTORY_FIELDS = [
@@ -26,15 +30,19 @@ HISTORY_FIELDS = [
     "is_best",
 ]
 
-NUM_CLASSES = 6
-
-
 def make_llm_feature(ntypes, dim=4096):
-    # Positive vectors keep the official LLM4init log(inner_product) well-defined.
-    return {ntype: torch.ones(dim) for ntype in ntypes}
+    LLM_feature = {
+        ntype: F.normalize(torch.randn(dim), dim=0)
+        for ntype in ntypes
+    }
+    return LLM_feature
 
 
 def update_confusion_matrix(confusion, target, prediction):
+    if target.ndim == prediction.ndim and target.shape[-1] == NUM_CLASSES:
+        target = target.argmax(dim=-1)
+    if prediction.ndim > target.ndim:
+        prediction = prediction.argmax(dim=-1)
     indices = target.reshape(-1) * NUM_CLASSES + prediction.reshape(-1)
     confusion += torch.bincount(
         indices,
@@ -107,6 +115,7 @@ def main():
         window_size=args.window_size,
         horizon=args.horizon,
         target_channel=0,
+        num_classes=NUM_CLASSES,
     )
 
     train_size = int(len(dataset) * args.train_ratio)
@@ -209,21 +218,28 @@ def main():
         )
         for step, (graph, y) in enumerate(train_bar, start=1):
             graph = graph.to(device)
-            y = y.to(device).long()
+            y = y.to(device)
 
             segment_emb = encoder(graph, predict_type="segment")
             logits = predictor(segment_emb).view(-1, args.horizon, NUM_CLASSES)
-            loss = criterion(logits.reshape(-1, NUM_CLASSES), y.reshape(-1))
+            loss = criterion(
+                logits.reshape(-1, NUM_CLASSES),
+                y.reshape(-1, NUM_CLASSES),
+            )
             (loss / args.grad_accum_steps).backward()
 
             if step % args.grad_accum_steps == 0 or step == len(train_loader):
                 optimizer.step()
                 optimizer.zero_grad()
 
-            pred_class = logits.detach().argmax(dim=-1)
-            train_loss_sum += loss.item() * y.numel()
-            train_count += y.numel()
-            update_confusion_matrix(train_confusion, y, pred_class)
+            pred_one_hot = F.one_hot(
+                logits.detach().argmax(dim=-1),
+                num_classes=NUM_CLASSES,
+            )
+            target_count = y.shape[:-1].numel()
+            train_loss_sum += loss.item() * target_count
+            train_count += target_count
+            update_confusion_matrix(train_confusion, y, pred_one_hot)
             accum_step = (step - 1) % args.grad_accum_steps + 1
             train_bar.set_postfix(
                 loss=f"{loss.item():.4f}",
@@ -262,17 +278,24 @@ def main():
             )
             for graph, y in val_bar:
                 graph = graph.to(device)
-                y = y.to(device).long()
+                y = y.to(device)
                 logits = predictor(encoder(graph, predict_type="segment")).view(
                     -1,
                     args.horizon,
                     NUM_CLASSES,
                 )
-                loss = criterion(logits.reshape(-1, NUM_CLASSES), y.reshape(-1))
-                pred_class = logits.argmax(dim=-1)
-                val_loss_sum += loss.item() * y.numel()
-                val_count += y.numel()
-                update_confusion_matrix(val_confusion, y, pred_class)
+                loss = criterion(
+                    logits.reshape(-1, NUM_CLASSES),
+                    y.reshape(-1, NUM_CLASSES),
+                )
+                pred_one_hot = F.one_hot(
+                    logits.argmax(dim=-1),
+                    num_classes=NUM_CLASSES,
+                )
+                target_count = y.shape[:-1].numel()
+                val_loss_sum += loss.item() * target_count
+                val_count += target_count
+                update_confusion_matrix(val_confusion, y, pred_one_hot)
                 val_bar.set_postfix(
                     loss=f"{loss.item():.4f}",
                     accuracy=f"{val_confusion.diag().sum().item() / max(val_count, 1):.4f}",

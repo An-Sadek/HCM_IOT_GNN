@@ -166,8 +166,6 @@ class DynamicPreprocess(Preprocess):
         """
         """
         los_arr = self.los_preprocess()
-        velocity_arr = self.velocity_preprocess()
-        dayweek_arr = self.dayweek_preprocess(columns=los_arr.columns)
         cyclic_time_arr = self.cyclic_time_preprocess()
         cyclic_time_features = np.repeat(
             cyclic_time_arr.to_numpy()[:, None, :],
@@ -178,7 +176,6 @@ class DynamicPreprocess(Preprocess):
         los_dayweek_features = np.stack(
             [
                 los_arr.to_numpy().astype(np.float32),
-                dayweek_arr.to_numpy().astype(np.float32)
             ],
             axis=-1
         )
@@ -186,14 +183,6 @@ class DynamicPreprocess(Preprocess):
         np.save(
             "data/preprocess/dynamic_LOS.npy",
             los_arr.to_numpy().astype(np.float32)
-        )
-        np.save(
-            "data/preprocess/dynamic_velocity.npy",
-            velocity_arr.to_numpy().astype(np.float32)
-        )
-        np.save(
-            "data/preprocess/dynamic_dayweek.npy",
-            dayweek_arr.to_numpy().astype(np.float32)
         )
         np.save(
             "data/preprocess/dynamic_cyclic_time.npy",
@@ -207,7 +196,6 @@ class DynamicPreprocess(Preprocess):
         dynamic_features = np.concatenate(
             [
                 los_arr.to_numpy()[:, :, None],
-                dayweek_arr.to_numpy()[:, :, None],
                 cyclic_time_features,
             ],
             axis=2
