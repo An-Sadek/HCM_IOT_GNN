@@ -31,11 +31,8 @@ HISTORY_FIELDS = [
 ]
 
 def make_llm_feature(ntypes, dim=4096):
-    LLM_feature = {
-        ntype: F.normalize(torch.randn(dim), dim=0)
-        for ntype in ntypes
-    }
-    return LLM_feature
+    # Positive vectors keep the official LLM4init log(inner_product) well-defined.
+    return {ntype: torch.ones(dim) for ntype in ntypes}
 
 
 def update_confusion_matrix(confusion, target, prediction):
