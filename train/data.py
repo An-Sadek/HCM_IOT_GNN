@@ -161,10 +161,7 @@ class SEHTGNNDataset(Dataset):
 
         return {
             ("way", "contains_segment", "segment"): (contains[:, 0], contains[:, 1]),
-            ("segment", "contained_in", "way"): (contains[:, 1], contains[:, 0]),
-            ("segment", "starts_with", "node"): (starts[:, 0], starts[:, 1]),
             ("node", "start_of", "segment"): (starts[:, 1], starts[:, 0]),
-            ("segment", "ends_with", "node"): (ends[:, 0], ends[:, 1]),
             ("node", "end_of", "segment"): (ends[:, 1], ends[:, 0]),
             ("segment", "connects_to", "segment"): (connects[:, 0], connects[:, 1]),
         }
