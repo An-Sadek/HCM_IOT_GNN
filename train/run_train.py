@@ -30,9 +30,67 @@ HISTORY_FIELDS = [
     "is_best",
 ]
 
-def make_llm_feature(ntypes, dim=4096):
-    # Positive vectors keep the official LLM4init log(inner_product) well-defined.
-    return {ntype: torch.ones(dim) for ntype in ntypes}
+NODE_TYPE_DESCRIPTIONS = {
+    "segment": (
+        "A road segment contains detailed information about its start node, "
+        "end node, length, and the street to which it belongs."
+    ),
+    "node": (
+        "A node is a point on Earth specified by longitude and latitude. "
+        "It connects road segments together."
+    ),
+    "way": (
+        "A street is formed by multiple road segments. It contains the street "
+        "name, road level, road type, and maximum velocity under free-flow traffic."
+    ),
+}
+
+
+def make_llm_feature(ntypes, model_name, dim=4096, device="cpu"):
+    """Encode the author's descriptions into one semantic vector per node type."""
+    try:
+        from transformers import AutoModel, AutoTokenizer
+    except ImportError as exc:
+        raise ImportError(
+            "LLM features require transformers. Install it with `pip install transformers`."
+        ) from exc
+
+    unknown_types = set(ntypes) - NODE_TYPE_DESCRIPTIONS.keys()
+    if unknown_types:
+        raise ValueError(f"Missing LLM descriptions for node types: {sorted(unknown_types)}")
+
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModel.from_pretrained(
+        model_name,
+        torch_dtype="auto",
+        low_cpu_mem_usage=True,
+    ).to(device)
+    model.eval()
+
+    prompts = [
+        "Represent this urban road-network entity for graph learning: "
+        + NODE_TYPE_DESCRIPTIONS[ntype]
+        for ntype in ntypes
+    ]
+    encoded = tokenizer(prompts, padding=True, truncation=True, return_tensors="pt")
+    encoded = {key: value.to(device) for key, value in encoded.items()}
+
+    with torch.inference_mode():
+        hidden = model(**encoded).last_hidden_state.float()
+        mask = encoded["attention_mask"].unsqueeze(-1)
+        embeddings = (hidden * mask).sum(dim=1) / mask.sum(dim=1).clamp_min(1)
+
+    if embeddings.shape[1] != dim:
+        raise ValueError(
+            f"{model_name} produces {embeddings.shape[1]}-D embeddings, but "
+            f"LLM4init expects {dim}. Choose a model with hidden size {dim}."
+        )
+
+    # LLM4init applies log(dot(source, destination)); make every component
+    # positive so that all relation scores remain in the logarithm's domain.
+    embeddings -= embeddings.amin(dim=1, keepdim=True)
+    embeddings = F.normalize(embeddings + 1e-6, p=2, dim=1).cpu()
+    return {ntype: embeddings[i] for i, ntype in enumerate(ntypes)}
 
 
 def update_confusion_matrix(confusion, target, prediction):
@@ -77,6 +135,16 @@ def parse_args():
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--checkpoint", default="result/sehtgnn_best.pt")
     parser.add_argument("--history-csv", default="result/train_history.csv")
+    parser.add_argument(
+        "--llm-model",
+        default="meta-llama/Llama-3.1-8B-Instruct",
+        help="Hugging Face model used to encode node-type descriptions (hidden size 4096)",
+    )
+    parser.add_argument(
+        "--llm-device",
+        default="cpu",
+        help="Device used once to create LLM embeddings, e.g. cpu, cuda, or cuda:0",
+    )
     return parser.parse_args()
 
 
@@ -152,7 +220,11 @@ def main():
     )
 
     sample_graph, _ = dataset[0]
-    llm_feature = make_llm_feature(sample_graph.ntypes)
+    llm_feature = make_llm_feature(
+        sample_graph.ntypes,
+        model_name=args.llm_model,
+        device=args.llm_device,
+    )
 
     encoder = SEHTGNN(
         graph=sample_graph,

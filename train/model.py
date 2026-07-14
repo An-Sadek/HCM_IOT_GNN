@@ -267,8 +267,10 @@ class SEHTGNN(nn.Module):
         else:
             self.adaption_layer = nn.ModuleDict({ntype: nn.Linear(inp_list[ntype], n_hid) for ntype in graph.ntypes})
 
-        # LLM-enhanced prompt
-        self.LLM_init = LLM4init(graph, 4096, n_hid, LLM_feature,device)
+        # LLM-enhanced prompt. Infer the encoder dimension (e.g. BERT-base: 768)
+        # instead of requiring the original hard-coded 4096 dimensions.
+        llm_dim = next(iter(LLM_feature.values())).numel()
+        self.LLM_init = LLM4init(graph, llm_dim, n_hid, LLM_feature,device)
 
         # Dynamic-attention-based graph learning
         self.gnn_layers = nn.ModuleDict({str(i): HTGNNLayer(graph, n_hid, n_hid, n_heads, self.timeframe, norm, device, dropout, LLM_feature) for i in range(self.n_layers)})
