@@ -88,6 +88,9 @@ class WayPreprocess(Preprocess):
         # Min speed
         self.combine_ways_df["tags.minspeed"] = self.combine_ways_df["tags.minspeed"].fillna(0)
 
+        # Motorroad
+        self.combine_ways_df["tags.motorroad"] = self.combine_ways_df["tags.motorroad"].fillna("no")
+
         print("Thế thành công các giá trị rỗng")
 
     def zscore_std(self):

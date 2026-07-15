@@ -19,7 +19,7 @@ onehot:
   - tags.bridge_yes
   - tags.oneway_no
   - tags.oneway_yes
-  - tags.motorroad_nan
+  - tags.motorroad_yes
 conversion:
   index2id:
     0: 32575820

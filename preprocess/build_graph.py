@@ -165,18 +165,12 @@ def build_static_graph():
     data["way", "contains_segment", "segment"].edge_index = to_edge_index(
         contain_segments
     )
-    data["segment", "contained_in", "way"].edge_index = to_edge_index(
-        contain_segments[:, [1, 0]]
-    )
 
     starts_with = (
         segments_df[["id", "s_node_id"]]
         .drop_duplicates()
         .to_numpy()
         .astype(int)
-    )
-    data["segment", "starts_with", "node"].edge_index = to_edge_index(
-        starts_with
     )
     data["node", "start_of", "segment"].edge_index = to_edge_index(
         starts_with[:, [1, 0]]
@@ -188,7 +182,6 @@ def build_static_graph():
         .to_numpy()
         .astype(int)
     )
-    data["segment", "ends_with", "node"].edge_index = to_edge_index(ends_with)
     data["node", "end_of", "segment"].edge_index = to_edge_index(
         ends_with[:, [1, 0]]
     )
@@ -201,5 +194,5 @@ def build_static_graph():
 
 if __name__ == "__main__":
     data = build_static_graph()
-    print(data[0].shape)
+    print(data)
     torch.save(data, "data/preprocess/hetero_data.pt")
