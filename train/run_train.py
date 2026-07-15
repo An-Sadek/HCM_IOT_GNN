@@ -60,6 +60,10 @@ def make_llm_feature(ntypes, model_name, dim=4096, device="cpu"):
         raise ValueError(f"Missing LLM descriptions for node types: {sorted(unknown_types)}")
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
     model = AutoModel.from_pretrained(
         model_name,
         torch_dtype="auto",
