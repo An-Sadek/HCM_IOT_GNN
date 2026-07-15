@@ -92,7 +92,7 @@ def make_llm_feature(ntypes, model_name, dim=4096, device="cpu"):
 
     # LLM4init applies log(dot(source, destination)); make every component
     # positive so that all relation scores remain in the logarithm's domain.
-    embeddings -= embeddings.amin(dim=1, keepdim=True)
+    embeddings = embeddings - embeddings.amin(dim=1, keepdim=True)
     embeddings = F.normalize(embeddings + 1e-6, p=2, dim=1).cpu()
     return {ntype: embeddings[i] for i, ntype in enumerate(ntypes)}
 
