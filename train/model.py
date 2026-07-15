@@ -177,6 +177,14 @@ class HTGNNLayer(nn.Module):
                         weight = h_mask[reltype][ttype]
                         types_weight.append(weight)
                         types_features.append(intra_features[ttype][(stype, etype, dtype)])
+                # Some node types only act as message sources (for example,
+                # node and way in the current graph schema), so they have no
+                # incoming relation to aggregate. Preserve their current
+                # representation for this layer instead of stacking an empty
+                # list of attention weights.
+                if not types_features:
+                    inter_features[ntype][ttype] = node_features[ntype][ttype]
+                    continue
                 out_feat = []
                 #weight softmax
                 types_weight = F.softmax(torch.stack(types_weight, dim=0), dim=0)
