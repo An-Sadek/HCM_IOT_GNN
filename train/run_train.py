@@ -132,13 +132,16 @@ def parse_args():
     parser.add_argument("--heads", type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--epochs", type=int, default=100)
-    parser.add_argument("--batch-size", type=int, default=32)
+    parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--grad-accum-steps", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--train-ratio", type=float, default=0.7)
+    parser.add_argument("--val-ratio", type=float, default=0.1)
+    parser.add_argument("--test-ratio", type=float, default=0.2)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--checkpoint", default="result/sehtgnn_best.pt")
     parser.add_argument("--history-csv", default="result/train_history.csv")
+    parser.add_argument("--test-csv", default="result/test.csv")
     parser.add_argument(
         "--llm-model",
         default="meta-llama/Llama-3.1-8B-Instruct",
@@ -156,6 +159,11 @@ def main():
     args = parse_args()
     if args.grad_accum_steps < 1:
         raise ValueError("--grad-accum-steps must be >= 1")
+    split_ratio = args.train_ratio + args.val_ratio + args.test_ratio
+    if min(args.train_ratio, args.val_ratio, args.test_ratio) <= 0:
+        raise ValueError("Train, validation, and test ratios must all be positive")
+    if abs(split_ratio - 1.0) > 1e-8:
+        raise ValueError("--train-ratio + --val-ratio + --test-ratio must equal 1")
 
     distributed = int(os.environ.get("WORLD_SIZE", "1")) > 1
     if distributed:
@@ -188,10 +196,11 @@ def main():
     )
 
     train_size = int(len(dataset) * args.train_ratio)
-    val_size = len(dataset) - train_size
-    train_ds, val_ds = random_split(
+    val_size = int(len(dataset) * args.val_ratio)
+    test_size = len(dataset) - train_size - val_size
+    train_ds, val_ds, test_ds = random_split(
         dataset,
-        [train_size, val_size],
+        [train_size, val_size, test_size],
         generator=torch.Generator().manual_seed(42),
     )
 
@@ -203,6 +212,12 @@ def main():
     ) if distributed else None
     val_sampler = DistributedSampler(
         val_ds,
+        num_replicas=world_size,
+        rank=rank,
+        shuffle=False,
+    ) if distributed else None
+    test_sampler = DistributedSampler(
+        test_ds,
         num_replicas=world_size,
         rank=rank,
         shuffle=False,
@@ -220,6 +235,13 @@ def main():
         batch_size=args.batch_size,
         shuffle=False,
         sampler=val_sampler,
+        collate_fn=collate_sehtgnn,
+    )
+    test_loader = DataLoader(
+        test_ds,
+        batch_size=args.batch_size,
+        shuffle=False,
+        sampler=test_sampler,
         collate_fn=collate_sehtgnn,
     )
 
@@ -425,8 +447,77 @@ def main():
                     }
                 )
 
+    if distributed:
+        dist.barrier()
+
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
+    (encoder.module if distributed else encoder).load_state_dict(checkpoint["encoder"])
+    (predictor.module if distributed else predictor).load_state_dict(checkpoint["predictor"])
+    encoder.eval()
+    predictor.eval()
+
+    test_loss_sum = 0.0
+    test_count = 0
+    test_confusion = torch.zeros(
+        NUM_CLASSES,
+        NUM_CLASSES,
+        dtype=torch.int64,
+        device=device,
+    )
+    with torch.no_grad():
+        test_bar = tqdm(test_loader, desc="test", leave=False, disable=not is_main)
+        for graph, y in test_bar:
+            graph = graph.to(device)
+            y = y.to(device)
+            logits = predictor(encoder(graph, predict_type="segment")).view(
+                -1,
+                args.horizon,
+                NUM_CLASSES,
+            )
+            loss = criterion(
+                logits.reshape(-1, NUM_CLASSES),
+                y.reshape(-1, NUM_CLASSES),
+            )
+            prediction = F.one_hot(logits.argmax(dim=-1), num_classes=NUM_CLASSES)
+            target_count = y.shape[:-1].numel()
+            test_loss_sum += loss.item() * target_count
+            test_count += target_count
+            update_confusion_matrix(test_confusion, y, prediction)
+
+    test_stats = torch.tensor(
+        [test_loss_sum, test_count],
+        dtype=torch.float64,
+        device=device,
+    )
+    if distributed:
+        dist.all_reduce(test_stats, op=dist.ReduceOp.SUM)
+        dist.all_reduce(test_confusion, op=dist.ReduceOp.SUM)
+    test_loss_sum, test_count = test_stats.tolist()
+    test_loss = test_loss_sum / max(test_count, 1)
+    test_accuracy, test_f1 = classification_metrics(test_confusion)
+
     if is_main:
+        test_path = Path(args.test_csv)
+        test_path.parent.mkdir(parents=True, exist_ok=True)
+        with test_path.open("w", newline="") as test_file:
+            writer = csv.DictWriter(
+                test_file,
+                fieldnames=["test_size", "test_loss", "test_accuracy", "test_f1_macro"],
+            )
+            writer.writeheader()
+            writer.writerow(
+                {
+                    "test_size": test_size,
+                    "test_loss": test_loss,
+                    "test_accuracy": test_accuracy,
+                    "test_f1_macro": test_f1,
+                }
+            )
         print(f"best_val_f1_macro={best_val_f1:.4f}")
+        print(
+            f"test_loss={test_loss:.4f} test_accuracy={test_accuracy:.4f} "
+            f"test_f1={test_f1:.4f} test_csv={test_path}"
+        )
     if distributed:
         dist.destroy_process_group()
 
