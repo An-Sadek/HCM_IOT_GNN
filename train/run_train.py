@@ -123,7 +123,7 @@ def parse_args():
     parser.add_argument("--dynamic-path", default="data/preprocess/dynamic_features.npy")
     parser.add_argument("--window-size", type=int, default=12)
     parser.add_argument("--horizon", type=int, default=12)
-    parser.add_argument("--hidden-dim", type=int, default=8)
+    parser.add_argument("--hidden-dim", type=int, default=16)
     parser.add_argument("--layers", type=int, default=1)
     parser.add_argument("--heads", type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.5)
