@@ -132,6 +132,21 @@ def parse_args():
     parser.add_argument("--heads", type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--epochs", type=int, default=100)
+    parser.add_argument(
+        "--early-stopping-patience",
+        type=int,
+        default=10,
+        help=(
+            "Stop after this many consecutive epochs without a meaningful "
+            "val macro-F1 improvement. Set to 0 to disable early stopping."
+        ),
+    )
+    parser.add_argument(
+        "--early-stopping-min-delta",
+        type=float,
+        default=1e-4,
+        help="Minimum val macro-F1 increase counted as an improvement.",
+    )
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--grad-accum-steps", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
@@ -168,6 +183,10 @@ def main():
     args = parse_args()
     if args.grad_accum_steps < 1:
         raise ValueError("--grad-accum-steps must be >= 1")
+    if args.early_stopping_patience < 0:
+        raise ValueError("--early-stopping-patience must be >= 0")
+    if args.early_stopping_min_delta < 0:
+        raise ValueError("--early-stopping-min-delta must be >= 0")
     split_ratio = args.train_ratio + args.val_ratio + args.test_ratio
     if min(args.train_ratio, args.val_ratio, args.test_ratio) <= 0:
         raise ValueError("Train, validation, and test ratios must all be positive")
@@ -316,6 +335,7 @@ def main():
     criterion = torch.nn.CrossEntropyLoss()
 
     best_val_f1 = -1.0
+    epochs_without_improvement = 0
     start_epoch = 0
     saved_best_this_run = False
     if resume_checkpoint is not None:
@@ -469,10 +489,13 @@ def main():
                 f"val_accuracy={val_accuracy:.4f} val_f1={val_f1:.4f}"
             )
 
-        is_best = val_f1 > best_val_f1
+        is_best = val_f1 > best_val_f1 + args.early_stopping_min_delta
         if is_best:
             best_val_f1 = val_f1
+            epochs_without_improvement = 0
             saved_best_this_run = True
+        else:
+            epochs_without_improvement += 1
         if is_main and is_best:
             torch.save(
                 {
@@ -509,6 +532,19 @@ def main():
                         "is_best": int(is_best),
                     }
                 )
+
+        should_stop = (
+            args.early_stopping_patience > 0
+            and epochs_without_improvement >= args.early_stopping_patience
+        )
+        if should_stop:
+            if is_main:
+                print(
+                    f"early_stopping epoch={epoch:03d} "
+                    f"patience={args.early_stopping_patience} "
+                    f"best_val_f1_macro={best_val_f1:.4f}"
+                )
+            break
 
     if distributed:
         dist.barrier()
