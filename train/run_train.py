@@ -284,7 +284,7 @@ def main():
     optimizer = torch.optim.SGD(
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
-        weight_decay=1e-4
+        weight_decay=1e-3
     )
     criterion = torch.nn.CrossEntropyLoss()
 
