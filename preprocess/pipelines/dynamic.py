@@ -180,19 +180,6 @@ class DynamicPreprocess(Preprocess):
             axis=-1
         )
 
-        np.save(
-            "data/preprocess/dynamic_LOS.npy",
-            los_arr.to_numpy().astype(np.float32)
-        )
-        np.save(
-            "data/preprocess/dynamic_cyclic_time.npy",
-            cyclic_time_features.astype(np.float32)
-        )
-        np.save(
-            "data/preprocess/dynamic_LOS_dayweek.npy",
-            los_dayweek_features
-        )
-
         dynamic_features = np.concatenate(
             [
                 los_arr.to_numpy()[:, :, None],

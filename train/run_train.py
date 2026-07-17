@@ -272,7 +272,7 @@ def main():
         encoder = DDP(encoder, device_ids=[local_rank], find_unused_parameters=True)
         predictor = DDP(predictor, device_ids=[local_rank], find_unused_parameters=True)
 
-    optimizer = torch.optim.Adam(
+    optimizer = torch.optim.SGD(
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
         weight_decay=1e-4
