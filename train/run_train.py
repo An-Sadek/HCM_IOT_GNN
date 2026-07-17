@@ -254,12 +254,39 @@ def main():
         collate_fn=collate_sehtgnn,
     )
 
+    resume_path = Path(args.model) if args.model else None
+    resume_checkpoint = None
+    if resume_path is not None:
+        if not resume_path.is_file():
+            raise FileNotFoundError(f"Resume checkpoint not found: {resume_path}")
+        resume_checkpoint = torch.load(
+            resume_path,
+            map_location="cpu",
+            weights_only=True,
+        )
+
     sample_graph, _ = dataset[0]
-    llm_feature = make_llm_feature(
-        sample_graph.ntypes,
-        model_name=args.llm_model,
-        device=args.llm_device,
-    )
+    if resume_checkpoint is not None and "llm_feature" in resume_checkpoint:
+        llm_feature = resume_checkpoint["llm_feature"]
+        if is_main:
+            print(f"loaded_llm_feature_from={resume_path}")
+    else:
+        if is_main and resume_checkpoint is not None:
+            print(
+                "resume checkpoint has no llm_feature; generating it once for "
+                "backward compatibility"
+            )
+        llm_feature = None
+        if is_main:
+            llm_feature = make_llm_feature(
+                sample_graph.ntypes,
+                model_name=args.llm_model,
+                device=args.llm_device,
+            )
+        if distributed:
+            llm_feature_container = [llm_feature]
+            dist.broadcast_object_list(llm_feature_container, src=0, device=device)
+            llm_feature = llm_feature_container[0]
 
     encoder = SEHTGNN(
         graph=sample_graph,
@@ -291,15 +318,7 @@ def main():
     best_val_f1 = -1.0
     start_epoch = 0
     saved_best_this_run = False
-    resume_path = Path(args.model) if args.model else None
-    if resume_path is not None:
-        if not resume_path.is_file():
-            raise FileNotFoundError(f"Resume checkpoint not found: {resume_path}")
-        resume_checkpoint = torch.load(
-            resume_path,
-            map_location=device,
-            weights_only=True,
-        )
+    if resume_checkpoint is not None:
         encoder_to_load = encoder.module if distributed else encoder
         predictor_to_load = predictor.module if distributed else predictor
         encoder_to_load.load_state_dict(resume_checkpoint["encoder"])
@@ -462,6 +481,10 @@ def main():
                     "optimizer": optimizer.state_dict(),
                     "epoch": epoch,
                     "best_val_f1": best_val_f1,
+                    "llm_feature": {
+                        key: feature.detach().cpu()
+                        for key, feature in llm_feature.items()
+                    },
                     "args": vars(args),
                     "inp_list": dataset.inp_list,
                 },
