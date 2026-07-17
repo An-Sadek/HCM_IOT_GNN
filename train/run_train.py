@@ -139,6 +139,15 @@ def parse_args():
     parser.add_argument("--val-ratio", type=float, default=0.2)
     parser.add_argument("--test-ratio", type=float, default=0.1)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument(
+        "--model",
+        default=None,
+        help=(
+            "Checkpoint to resume training from. Restores model weights and, when "
+            "available, optimizer/epoch/best validation state. --epochs is the number "
+            "of additional epochs to train."
+        ),
+    )
     parser.add_argument("--checkpoint", default="result/sehtgnn_best.pt")
     parser.add_argument("--history-csv", default="result/train_history.csv")
     parser.add_argument("--test-csv", default="result/test.csv")
@@ -280,17 +289,43 @@ def main():
     criterion = torch.nn.CrossEntropyLoss()
 
     best_val_f1 = -1.0
+    start_epoch = 0
+    saved_best_this_run = False
+    resume_path = Path(args.model) if args.model else None
+    if resume_path is not None:
+        if not resume_path.is_file():
+            raise FileNotFoundError(f"Resume checkpoint not found: {resume_path}")
+        resume_checkpoint = torch.load(
+            resume_path,
+            map_location=device,
+            weights_only=True,
+        )
+        encoder_to_load = encoder.module if distributed else encoder
+        predictor_to_load = predictor.module if distributed else predictor
+        encoder_to_load.load_state_dict(resume_checkpoint["encoder"])
+        predictor_to_load.load_state_dict(resume_checkpoint["predictor"])
+        if "optimizer" in resume_checkpoint:
+            optimizer.load_state_dict(resume_checkpoint["optimizer"])
+        start_epoch = int(resume_checkpoint.get("epoch", 0))
+        best_val_f1 = float(resume_checkpoint.get("best_val_f1", -1.0))
+        if is_main:
+            print(
+                f"resumed_from={resume_path} start_epoch={start_epoch + 1} "
+                f"best_val_f1_macro={best_val_f1:.4f}"
+            )
+
     checkpoint_path = Path(args.checkpoint)
     if is_main:
         checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
     history_path = Path(args.history_csv)
     if is_main:
         history_path.parent.mkdir(parents=True, exist_ok=True)
-        with history_path.open("w", newline="") as history_file:
-            writer = csv.DictWriter(history_file, fieldnames=HISTORY_FIELDS)
-            writer.writeheader()
+        if resume_path is None or not history_path.exists():
+            with history_path.open("w", newline="") as history_file:
+                writer = csv.DictWriter(history_file, fieldnames=HISTORY_FIELDS)
+                writer.writeheader()
 
-    for epoch in range(1, args.epochs + 1):
+    for epoch in range(start_epoch + 1, start_epoch + args.epochs + 1):
         if train_sampler is not None:
             train_sampler.set_epoch(epoch)
         encoder.train()
@@ -416,12 +451,17 @@ def main():
             )
 
         is_best = val_f1 > best_val_f1
-        if is_main and is_best:
+        if is_best:
             best_val_f1 = val_f1
+            saved_best_this_run = True
+        if is_main and is_best:
             torch.save(
                 {
                     "encoder": (encoder.module if distributed else encoder).state_dict(),
                     "predictor": (predictor.module if distributed else predictor).state_dict(),
+                    "optimizer": optimizer.state_dict(),
+                    "epoch": epoch,
+                    "best_val_f1": best_val_f1,
                     "args": vars(args),
                     "inp_list": dataset.inp_list,
                 },
@@ -450,7 +490,12 @@ def main():
     if distributed:
         dist.barrier()
 
-    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
+    best_model_path = checkpoint_path if saved_best_this_run else resume_path
+    if best_model_path is None:
+        raise FileNotFoundError(
+            f"No checkpoint was saved to {checkpoint_path}; cannot run test evaluation"
+        )
+    checkpoint = torch.load(best_model_path, map_location=device, weights_only=True)
     (encoder.module if distributed else encoder).load_state_dict(checkpoint["encoder"])
     (predictor.module if distributed else predictor).load_state_dict(checkpoint["predictor"])
     encoder.eval()

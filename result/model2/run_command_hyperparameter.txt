@@ -1,4 +1,4 @@
-#torchrun --standalone --nproc_per_node=gpu train/run_train.py --epochs 100 --batch-size 96 --hidden-dim 16 --lr 0.01
+# torchrun --standalone --nproc_per_node=gpu train/run_train.py --epochs 100 --batch-size 96 --hidden-dim 16 --lr 0.01
 # Chip Xeon® Gold 6138, GPU 4xTesla V100 (4x32=128 VRAM), 386 GB RAM, ổ cứng Intel SSDPEKNU020TZ
 BATCH_SIZE 96
 P 12
@@ -6,7 +6,7 @@ Q 12
 layers 1
 heads 1
 epoch 100
-SGD lr 0.01
+optimizer SGD lr 0.01
 dropout 0.5
 train/val/test 0.7, 0.2, 0.1
-Note: Đồ thị dị biến song hướng (Bidirectional heterogenous graph)
+Note: Đồ thị dị biến đơn hướng (Unidirectional heterogenous graph)
