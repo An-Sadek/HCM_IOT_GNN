@@ -7,7 +7,7 @@ import torch
 import torch.distributed as dist
 import torch.nn.functional as F
 from torch.nn.parallel import DistributedDataParallel as DDP
-from torch.utils.data import DataLoader, Subset
+from torch.utils.data import DataLoader, random_split
 from torch.utils.data.distributed import DistributedSampler
 from tqdm.auto import tqdm
 
@@ -121,58 +121,6 @@ def classification_metrics(confusion):
     return accuracy.item(), float(macro_f1)
 
 
-def chronological_split(dataset, train_ratio, val_ratio):
-    """Split sliding windows by the timestamps occupied by their targets.
-
-    Validation and test windows may use observations immediately before their
-    boundary as input history, but every target timestamp belongs to exactly
-    one split. This mirrors forecasting at deployment time without leaking
-    future targets into training.
-    """
-    total_timesteps = dataset.total_timesteps
-    window_size = dataset.window_size
-    horizon = dataset.horizon
-
-    train_time_end = int(total_timesteps * train_ratio)
-    val_time_end = train_time_end + int(total_timesteps * val_ratio)
-
-    # A sample starting at i uses input [i, i + window_size) and predicts
-    # [i + window_size, i + window_size + horizon).
-    train_indices = range(0, train_time_end - window_size - horizon + 1)
-    val_indices = range(
-        train_time_end - window_size,
-        val_time_end - window_size - horizon + 1,
-    )
-    test_indices = range(
-        val_time_end - window_size,
-        dataset.num_samples,
-    )
-
-    splits = {
-        "train": list(train_indices),
-        "val": list(val_indices),
-        "test": list(test_indices),
-    }
-    empty_splits = [name for name, indices in splits.items() if not indices]
-    if empty_splits:
-        raise ValueError(
-            "Not enough timesteps for chronological splitting with the requested "
-            f"window/horizon; empty splits: {empty_splits}"
-        )
-    if min(indices[0] for indices in splits.values()) < 0:
-        raise ValueError(
-            "A chronological split is shorter than window_size. Adjust the split "
-            "ratios or use a smaller window."
-        )
-
-    boundaries = {
-        "train": (0, train_time_end),
-        "val": (train_time_end, val_time_end),
-        "test": (val_time_end, total_timesteps),
-    }
-    return tuple(Subset(dataset, splits[name]) for name in ("train", "val", "test")), boundaries
-
-
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--preprocess-root", default="data/preprocess")
@@ -275,17 +223,14 @@ def main():
         num_classes=NUM_CLASSES,
     )
 
-    (train_ds, val_ds, test_ds), split_boundaries = chronological_split(
+    train_size = int(len(dataset) * args.train_ratio)
+    val_size = int(len(dataset) * args.val_ratio)
+    test_size = len(dataset) - train_size - val_size
+    train_ds, val_ds, test_ds = random_split(
         dataset,
-        args.train_ratio,
-        args.val_ratio,
+        [train_size, val_size, test_size],
+        generator=torch.Generator().manual_seed(42),
     )
-    if is_main:
-        print(
-            "chronological_split "
-            f"target_time_ranges={split_boundaries} "
-            f"samples=(train={len(train_ds)}, val={len(val_ds)}, test={len(test_ds)})"
-        )
 
     train_sampler = DistributedSampler(
         train_ds,
