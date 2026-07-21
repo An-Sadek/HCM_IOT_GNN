@@ -1,5 +1,6 @@
 import argparse
 import csv
+import gc
 import os
 from pathlib import Path
 
@@ -94,7 +95,16 @@ def make_llm_feature(ntypes, model_name, dim=4096, device="cpu"):
     # positive so that all relation scores remain in the logarithm's domain.
     embeddings = embeddings - embeddings.amin(dim=1, keepdim=True)
     embeddings = F.normalize(embeddings + 1e-6, p=2, dim=1).cpu()
-    return {ntype: embeddings[i] for i, ntype in enumerate(ntypes)}
+    llm_feature = {ntype: embeddings[i] for i, ntype in enumerate(ntypes)}
+
+    # The language model is only needed to create these one-time CPU features.
+    # Release it before constructing/training the GNN so it does not retain RAM/VRAM.
+    del model, tokenizer, encoded, hidden, mask, embeddings
+    gc.collect()
+    if torch.device(device).type == "cuda":
+        torch.cuda.empty_cache()
+
+    return llm_feature
 
 
 def update_confusion_matrix(confusion, target, prediction):
@@ -331,7 +341,7 @@ def main():
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
         momentum=0.9,
-        weight_decay=5e-5
+        weight_decay=1e-4
     )
     criterion = torch.nn.CrossEntropyLoss()
 
