@@ -1,1 +1,2 @@
 torchrun --standalone --nproc_per_node=gpu train/run_train.py --epochs 100 --batch-size 128 --hidden-dim 16 --lr 0.001 --model result/model3/sehtgnn_best.pt --checkpoint result/model5/sehtgnn_best.pt
+Train tiếp từ epoch 15
