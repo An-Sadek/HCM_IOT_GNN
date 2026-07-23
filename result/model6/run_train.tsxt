@@ -1,1 +1,0 @@
-torchrun --standalone --nproc_per_node=gpu train/run_train.py --epochs 100 --batch-size 128 --hidden-dim 16 --lr 0.0001 --model result/model3/sehtgnn_best.pt --checkpoint result/model6/sehtgnn_best.pt

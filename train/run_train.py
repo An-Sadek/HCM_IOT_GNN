@@ -145,7 +145,7 @@ def parse_args():
     parser.add_argument(
         "--early-stopping-patience",
         type=int,
-        default=10,
+        default=20,
         help=(
             "Stop after this many consecutive epochs without a meaningful "
             "val macro-F1 improvement. Set to 0 to disable early stopping."
@@ -341,7 +341,7 @@ def main():
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
         momentum=0.9,
-        weight_decay=1e-4
+        weight_decay=1e-5
     )
     criterion = torch.nn.CrossEntropyLoss()
 
