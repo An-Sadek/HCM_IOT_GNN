@@ -2,8 +2,6 @@ from pathlib import Path
 
 import pandas as pd
 import numpy as np
-import joblib
-from sklearn.preprocessing import StandardScaler
 
 from general import Preprocess
 
@@ -176,9 +174,6 @@ class DynamicPreprocess(Preprocess):
                 f"{missing_segments[:10]}"
             )
 
-        velocity = velocity_arr.to_numpy(dtype=np.float32)
-        velocity_scaler = StandardScaler()
-        velocity_scaled = velocity_scaler.fit_transform(velocity).astype(np.float32)
         cyclic_time_arr = self.cyclic_time_preprocess()
         cyclic_time_features = np.repeat(
             cyclic_time_arr.to_numpy()[:, None, :],
@@ -195,8 +190,8 @@ class DynamicPreprocess(Preprocess):
 
         dynamic_features = np.concatenate(
             [
+                velocity_arr.to_numpy(dtype=np.float32)[:, :, None],
                 los_arr.to_numpy(dtype=np.float32)[:, :, None],
-                velocity_scaled[:, :, None],
                 cyclic_time_features,
             ],
             axis=2
@@ -207,8 +202,12 @@ class DynamicPreprocess(Preprocess):
         output_dir = Path("data/preprocess")
         output_dir.mkdir(parents=True, exist_ok=True)
         np.save(output_dir / "dynamic_features.npy", dynamic_features)
-        np.save(output_dir / "dynamic_velocity.npy", velocity)
-        joblib.dump(velocity_scaler, output_dir / "velocity_standard_scaler.joblib")
+        # Keep targets raw. Train-only normalization is fitted after the
+        # chronological split in train/run_train.py.
+        np.save(
+            output_dir / "dynamic_velocity.npy",
+            velocity_arr.to_numpy(dtype=np.float32),
+        )
 
         return dynamic_features
 

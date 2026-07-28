@@ -214,8 +214,8 @@ def parse_args():
     parser.add_argument(
         "--velocity-channel",
         type=int,
-        default=1,
-        help="Channel in dynamic_features.npy containing standardized velocity.",
+        default=0,
+        help="Channel in dynamic_features.npy containing raw velocity.",
     )
     parser.add_argument(
         "--split-gap",

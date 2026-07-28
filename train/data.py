@@ -116,6 +116,26 @@ class SEHTGNNDataset(Dataset):
         if chunk_size < 1:
             raise ValueError("chunk_size must be >= 1")
 
+        check_timestamps = np.linspace(
+            timestamp_start,
+            timestamp_end - 1,
+            num=min(16, timestamp_end - timestamp_start),
+            dtype=np.int64,
+        )
+        stored_velocity = np.asarray(
+            self.dynamic[check_timestamps, :, velocity_channel], dtype=np.float32
+        )
+        raw_velocity = np.asarray(
+            self.targets[check_timestamps, :], dtype=np.float32
+        )
+        if not np.allclose(stored_velocity, raw_velocity, rtol=1e-5, atol=1e-5):
+            raise ValueError(
+                "Configured velocity channel does not contain raw velocity: "
+                f"channel={velocity_channel}. Regenerate dynamic_features.npy with "
+                "the current preprocess/pipelines/dynamic.py or select the correct "
+                "--velocity-channel."
+            )
+
         velocity_sum = np.zeros(self.num_segments, dtype=np.float64)
         count = 0
         for start in range(timestamp_start, timestamp_end, chunk_size):
