@@ -3,13 +3,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import torch
-import torch.nn.functional as F
 from torch.utils.data import Dataset
 
 import dgl
-
-
-NUM_CLASSES = 6
 
 
 def _require_dgl():
@@ -29,8 +25,7 @@ class SEHTGNNDataset(Dataset):
 
     Each sample returns:
     - graph: a DGL heterograph with time-suffixed edge types, e.g. connects_to_t0
-    - y: one-hot LOS targets for segment nodes, shape
-      (num_segments, horizon, num_classes)
+    - y: continuous targets for segment nodes, shape (num_segments, horizon)
 
     Node data is stored as graph.nodes[ntype].data["t{i}"], matching model.py.
     Segment snapshots contain static segment attributes concatenated with
@@ -44,17 +39,12 @@ class SEHTGNNDataset(Dataset):
         window_size=12,
         horizon=6,
         target_channel=0,
-        num_classes=NUM_CLASSES,
         mmap_mode="r",
     ):
         self.preprocess_root = Path(preprocess_root)
         self.window_size = int(window_size)
         self.horizon = int(horizon)
         self.target_channel = int(target_channel)
-        self.num_classes = int(num_classes)
-        if self.num_classes < 2:
-            raise ValueError(f"num_classes must be >= 2, got {self.num_classes}")
-
         if dynamic_path is None:
             dynamic_path = self.preprocess_root / "dynamic_features.npy"
         self.dynamic = np.load(dynamic_path, mmap_mode=mmap_mode)
@@ -103,17 +93,7 @@ class SEHTGNNDataset(Dataset):
         ).copy()
         if not np.isfinite(raw_target).all():
             raise ValueError(f"Target contains a non-finite value at sample {idx}")
-        if not np.equal(raw_target, np.floor(raw_target)).all():
-            raise ValueError(f"Target contains a non-integer class id at sample {idx}")
-
-        class_target = torch.from_numpy(raw_target.astype(np.int64, copy=False))
-        if class_target.min().item() < 0 or class_target.max().item() >= self.num_classes:
-            raise ValueError(
-                f"Target class ids must be in [0, {self.num_classes - 1}], "
-                f"got [{class_target.min().item()}, {class_target.max().item()}] "
-                f"at sample {idx}"
-            )
-        y = F.one_hot(class_target, num_classes=self.num_classes).to(torch.float32)
+        y = torch.from_numpy(raw_target.astype(np.float32, copy=False))
         return graph, y
 
     def build_graph(self, start_idx):

@@ -319,16 +319,16 @@ class SEHTGNN(nn.Module):
 
 
 class NodePredictor(nn.Module):
-    def __init__(self, n_inp: int, n_classes: int):
+    def __init__(self, n_inp: int, output_dim: int):
         """
     
         :param n_inp      : int, input dimension
-        :param n_classes  : int, number of classes
+        :param output_dim : int, number of regression outputs
         """
         super().__init__()
 
         self.fc1 = nn.Linear(n_inp, n_inp)
-        self.fc2 =  nn.Linear(n_inp, n_classes)
+        self.fc2 = nn.Linear(n_inp, output_dim)
 
     def forward(self, node_feat: torch.tensor):
         """

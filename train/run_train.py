@@ -12,7 +12,7 @@ from torch.utils.data import DataLoader, random_split
 from torch.utils.data.distributed import DistributedSampler
 from tqdm.auto import tqdm
 
-from data import NUM_CLASSES, SEHTGNNDataset, collate_sehtgnn
+from data import SEHTGNNDataset, collate_sehtgnn
 from model import NodePredictor, SEHTGNN
 
 
@@ -22,12 +22,14 @@ torch.manual_seed(42)
 HISTORY_FIELDS = [
     "epoch",
     "train_loss",
-    "train_accuracy",
-    "train_f1_macro",
+    "train_rmse",
+    "train_r2",
+    "train_mape",
     "val_loss",
-    "val_accuracy",
-    "val_f1_macro",
-    "best_val_f1_macro",
+    "val_rmse",
+    "val_r2",
+    "val_mape",
+    "best_val_r2",
     "is_best",
 ]
 
@@ -107,28 +109,34 @@ def make_llm_feature(ntypes, model_name, dim=4096, device="cpu"):
     return llm_feature
 
 
-def update_confusion_matrix(confusion, target, prediction):
-    if target.ndim == prediction.ndim and target.shape[-1] == NUM_CLASSES:
-        target = target.argmax(dim=-1)
-    if prediction.ndim > target.ndim:
-        prediction = prediction.argmax(dim=-1)
-    indices = target.reshape(-1) * NUM_CLASSES + prediction.reshape(-1)
-    confusion += torch.bincount(
-        indices,
-        minlength=NUM_CLASSES * NUM_CLASSES,
-    ).reshape(NUM_CLASSES, NUM_CLASSES)
+def update_regression_stats(stats, target, prediction, mape_epsilon):
+    target = target.to(torch.float64)
+    error = prediction.to(torch.float64) - target
+    stats[0] += error.square().sum()
+    stats[1] += (error.abs() / target.abs().clamp_min(mape_epsilon)).sum()
+    stats[2] += target.sum()
+    stats[3] += target.square().sum()
+    stats[4] += target.numel()
 
 
-def classification_metrics(confusion):
-    confusion = confusion.to(torch.float64)
-    true_positive = confusion.diag()
-    support = confusion.sum(dim=1)
-    predicted = confusion.sum(dim=0)
-    accuracy = true_positive.sum() / confusion.sum().clamp_min(1)
-    f1_per_class = 2 * true_positive / (support + predicted).clamp_min(1)
-    present_classes = support > 0
-    macro_f1 = f1_per_class[present_classes].mean() if present_classes.any() else 0.0
-    return accuracy.item(), float(macro_f1)
+def regression_metrics(stats):
+    (
+        squared_error,
+        absolute_percentage_error,
+        target_sum,
+        target_squared_sum,
+        count,
+    ) = stats.tolist()
+    count = max(count, 1.0)
+    rmse = (squared_error / count) ** 0.5
+    total_sum_of_squares = target_squared_sum - target_sum ** 2 / count
+    r2 = (
+        1.0 - squared_error / total_sum_of_squares
+        if total_sum_of_squares > 0
+        else float("nan")
+    )
+    mape = 100.0 * absolute_percentage_error / count
+    return rmse, r2, mape
 
 
 def parse_args():
@@ -148,18 +156,20 @@ def parse_args():
         default=20,
         help=(
             "Stop after this many consecutive epochs without a meaningful "
-            "val macro-F1 improvement. Set to 0 to disable early stopping."
+            "validation R2 improvement. Set to 0 to disable early stopping."
         ),
     )
     parser.add_argument(
         "--early-stopping-min-delta",
         type=float,
         default=1e-4,
-        help="Minimum val macro-F1 increase counted as an improvement.",
+        help="Minimum validation R2 increase counted as an improvement.",
     )
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--grad-accum-steps", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
+    parser.add_argument("--weight-decay", type=float, default=1e-5)
+    parser.add_argument("--mape-epsilon", type=float, default=1e-8)
     parser.add_argument("--train-ratio", type=float, default=0.7)
     parser.add_argument("--val-ratio", type=float, default=0.2)
     parser.add_argument("--test-ratio", type=float, default=0.1)
@@ -197,6 +207,8 @@ def main():
         raise ValueError("--early-stopping-patience must be >= 0")
     if args.early_stopping_min_delta < 0:
         raise ValueError("--early-stopping-min-delta must be >= 0")
+    if args.mape_epsilon <= 0:
+        raise ValueError("--mape-epsilon must be > 0")
     split_ratio = args.train_ratio + args.val_ratio + args.test_ratio
     if min(args.train_ratio, args.val_ratio, args.test_ratio) <= 0:
         raise ValueError("Train, validation, and test ratios must all be positive")
@@ -230,7 +242,6 @@ def main():
         window_size=args.window_size,
         horizon=args.horizon,
         target_channel=0,
-        num_classes=NUM_CLASSES,
     )
 
     train_size = int(len(dataset) * args.train_ratio)
@@ -330,22 +341,21 @@ def main():
         LLM_feature=llm_feature,
         inp_list=dataset.inp_list,
     ).to(device)
-    predictor = NodePredictor(args.hidden_dim, NUM_CLASSES * args.horizon).to(device)
+    predictor = NodePredictor(args.hidden_dim, args.horizon).to(device)
 
     if distributed:
         # The current model contains parameters that are not used by every forward path.
         encoder = DDP(encoder, device_ids=[local_rank], find_unused_parameters=True)
         predictor = DDP(predictor, device_ids=[local_rank], find_unused_parameters=True)
 
-    optimizer = torch.optim.SGD(
+    optimizer = torch.optim.AdamW(
         list(encoder.parameters()) + list(predictor.parameters()),
         lr=args.lr,
-        momentum=0.9,
-        weight_decay=1e-5
+        weight_decay=args.weight_decay,
     )
-    criterion = torch.nn.CrossEntropyLoss()
+    criterion = torch.nn.MSELoss()
 
-    best_val_f1 = -1.0
+    best_val_r2 = float("-inf")
     epochs_without_improvement = 0
     start_epoch = 0
     saved_best_this_run = False
@@ -357,11 +367,11 @@ def main():
         if "optimizer" in resume_checkpoint:
             optimizer.load_state_dict(resume_checkpoint["optimizer"])
         start_epoch = int(resume_checkpoint.get("epoch", 0))
-        best_val_f1 = float(resume_checkpoint.get("best_val_f1", -1.0))
+        best_val_r2 = float(resume_checkpoint.get("best_val_r2", float("-inf")))
         if is_main:
             print(
                 f"resumed_from={resume_path} start_epoch={start_epoch + 1} "
-                f"best_val_f1_macro={best_val_f1:.4f}"
+                f"best_val_r2={best_val_r2:.4f}"
             )
 
     checkpoint_path = Path(args.checkpoint)
@@ -382,12 +392,7 @@ def main():
         predictor.train()
         train_loss_sum = 0.0
         train_count = 0
-        train_confusion = torch.zeros(
-            NUM_CLASSES,
-            NUM_CLASSES,
-            dtype=torch.int64,
-            device=device,
-        )
+        train_metric_stats = torch.zeros(5, dtype=torch.float64, device=device)
         optimizer.zero_grad()
 
         train_bar = tqdm(
@@ -401,29 +406,24 @@ def main():
             y = y.to(device)
 
             segment_emb = encoder(graph, predict_type="segment")
-            logits = predictor(segment_emb).view(-1, args.horizon, NUM_CLASSES)
-            loss = criterion(
-                logits.reshape(-1, NUM_CLASSES),
-                y.reshape(-1, NUM_CLASSES),
-            )
+            predictions = predictor(segment_emb).view(-1, args.horizon)
+            loss = criterion(predictions, y)
             (loss / args.grad_accum_steps).backward()
 
             if step % args.grad_accum_steps == 0 or step == len(train_loader):
                 optimizer.step()
                 optimizer.zero_grad()
 
-            pred_one_hot = F.one_hot(
-                logits.detach().argmax(dim=-1),
-                num_classes=NUM_CLASSES,
-            )
-            target_count = y.shape[:-1].numel()
+            target_count = y.numel()
             train_loss_sum += loss.item() * target_count
             train_count += target_count
-            update_confusion_matrix(train_confusion, y, pred_one_hot)
+            update_regression_stats(
+                train_metric_stats, y, predictions.detach(), args.mape_epsilon
+            )
             accum_step = (step - 1) % args.grad_accum_steps + 1
             train_bar.set_postfix(
                 loss=f"{loss.item():.4f}",
-                accuracy=f"{train_confusion.diag().sum().item() / max(train_count, 1):.4f}",
+                rmse=f"{(train_metric_stats[0].item() / max(train_count, 1)) ** 0.5:.4f}",
                 accum=f"{accum_step}/{args.grad_accum_steps}",
             )
 
@@ -434,21 +434,16 @@ def main():
         )
         if distributed:
             dist.all_reduce(train_stats, op=dist.ReduceOp.SUM)
-            dist.all_reduce(train_confusion, op=dist.ReduceOp.SUM)
+            dist.all_reduce(train_metric_stats, op=dist.ReduceOp.SUM)
         train_loss_sum, train_count = train_stats.tolist()
         train_loss = train_loss_sum / max(train_count, 1)
-        train_accuracy, train_f1 = classification_metrics(train_confusion)
+        train_rmse, train_r2, train_mape = regression_metrics(train_metric_stats)
 
         encoder.eval()
         predictor.eval()
         val_loss_sum = 0.0
         val_count = 0
-        val_confusion = torch.zeros(
-            NUM_CLASSES,
-            NUM_CLASSES,
-            dtype=torch.int64,
-            device=device,
-        )
+        val_metric_stats = torch.zeros(5, dtype=torch.float64, device=device)
         with torch.no_grad():
             val_bar = tqdm(
                 val_loader,
@@ -459,26 +454,19 @@ def main():
             for graph, y in val_bar:
                 graph = graph.to(device)
                 y = y.to(device)
-                logits = predictor(encoder(graph, predict_type="segment")).view(
-                    -1,
-                    args.horizon,
-                    NUM_CLASSES,
+                predictions = predictor(encoder(graph, predict_type="segment")).view(
+                    -1, args.horizon
                 )
-                loss = criterion(
-                    logits.reshape(-1, NUM_CLASSES),
-                    y.reshape(-1, NUM_CLASSES),
-                )
-                pred_one_hot = F.one_hot(
-                    logits.argmax(dim=-1),
-                    num_classes=NUM_CLASSES,
-                )
-                target_count = y.shape[:-1].numel()
+                loss = criterion(predictions, y)
+                target_count = y.numel()
                 val_loss_sum += loss.item() * target_count
                 val_count += target_count
-                update_confusion_matrix(val_confusion, y, pred_one_hot)
+                update_regression_stats(
+                    val_metric_stats, y, predictions, args.mape_epsilon
+                )
                 val_bar.set_postfix(
                     loss=f"{loss.item():.4f}",
-                    accuracy=f"{val_confusion.diag().sum().item() / max(val_count, 1):.4f}",
+                    rmse=f"{(val_metric_stats[0].item() / max(val_count, 1)) ** 0.5:.4f}",
                 )
 
         val_stats = torch.tensor(
@@ -488,21 +476,22 @@ def main():
         )
         if distributed:
             dist.all_reduce(val_stats, op=dist.ReduceOp.SUM)
-            dist.all_reduce(val_confusion, op=dist.ReduceOp.SUM)
+            dist.all_reduce(val_metric_stats, op=dist.ReduceOp.SUM)
         val_loss_sum, val_count = val_stats.tolist()
         val_loss = val_loss_sum / max(val_count, 1)
-        val_accuracy, val_f1 = classification_metrics(val_confusion)
+        val_rmse, val_r2, val_mape = regression_metrics(val_metric_stats)
         if is_main:
             print(
                 f"epoch={epoch:03d} "
-                f"train_loss={train_loss:.4f} train_accuracy={train_accuracy:.4f} "
-                f"train_f1={train_f1:.4f} val_loss={val_loss:.4f} "
-                f"val_accuracy={val_accuracy:.4f} val_f1={val_f1:.4f}"
+                f"train_loss={train_loss:.4f} train_rmse={train_rmse:.4f} "
+                f"train_r2={train_r2:.4f} train_mape={train_mape:.2f}% "
+                f"val_loss={val_loss:.4f} val_rmse={val_rmse:.4f} "
+                f"val_r2={val_r2:.4f} val_mape={val_mape:.2f}%"
             )
 
-        is_best = val_f1 > best_val_f1 + args.early_stopping_min_delta
+        is_best = val_r2 > best_val_r2 + args.early_stopping_min_delta
         if is_best:
-            best_val_f1 = val_f1
+            best_val_r2 = val_r2
             epochs_without_improvement = 0
             saved_best_this_run = True
         else:
@@ -514,7 +503,7 @@ def main():
                     "predictor": (predictor.module if distributed else predictor).state_dict(),
                     "optimizer": optimizer.state_dict(),
                     "epoch": epoch,
-                    "best_val_f1": best_val_f1,
+                    "best_val_r2": best_val_r2,
                     "llm_feature": {
                         key: feature.detach().cpu()
                         for key, feature in llm_feature.items()
@@ -534,12 +523,14 @@ def main():
                     {
                         "epoch": epoch,
                         "train_loss": train_loss,
-                        "train_accuracy": train_accuracy,
-                        "train_f1_macro": train_f1,
+                        "train_rmse": train_rmse,
+                        "train_r2": train_r2,
+                        "train_mape": train_mape,
                         "val_loss": val_loss,
-                        "val_accuracy": val_accuracy,
-                        "val_f1_macro": val_f1,
-                        "best_val_f1_macro": best_val_f1,
+                        "val_rmse": val_rmse,
+                        "val_r2": val_r2,
+                        "val_mape": val_mape,
+                        "best_val_r2": best_val_r2,
                         "is_best": int(is_best),
                     }
                 )
@@ -553,7 +544,7 @@ def main():
                 print(
                     f"early_stopping epoch={epoch:03d} "
                     f"patience={args.early_stopping_patience} "
-                    f"best_val_f1_macro={best_val_f1:.4f}"
+                    f"best_val_r2={best_val_r2:.4f}"
                 )
             break
 
@@ -573,31 +564,22 @@ def main():
 
     test_loss_sum = 0.0
     test_count = 0
-    test_confusion = torch.zeros(
-        NUM_CLASSES,
-        NUM_CLASSES,
-        dtype=torch.int64,
-        device=device,
-    )
+    test_metric_stats = torch.zeros(5, dtype=torch.float64, device=device)
     with torch.no_grad():
         test_bar = tqdm(test_loader, desc="test", leave=False, disable=not is_main)
         for graph, y in test_bar:
             graph = graph.to(device)
             y = y.to(device)
-            logits = predictor(encoder(graph, predict_type="segment")).view(
-                -1,
-                args.horizon,
-                NUM_CLASSES,
+            prediction = predictor(encoder(graph, predict_type="segment")).view(
+                -1, args.horizon
             )
-            loss = criterion(
-                logits.reshape(-1, NUM_CLASSES),
-                y.reshape(-1, NUM_CLASSES),
-            )
-            prediction = F.one_hot(logits.argmax(dim=-1), num_classes=NUM_CLASSES)
-            target_count = y.shape[:-1].numel()
+            loss = criterion(prediction, y)
+            target_count = y.numel()
             test_loss_sum += loss.item() * target_count
             test_count += target_count
-            update_confusion_matrix(test_confusion, y, prediction)
+            update_regression_stats(
+                test_metric_stats, y, prediction, args.mape_epsilon
+            )
 
     test_stats = torch.tensor(
         [test_loss_sum, test_count],
@@ -606,10 +588,10 @@ def main():
     )
     if distributed:
         dist.all_reduce(test_stats, op=dist.ReduceOp.SUM)
-        dist.all_reduce(test_confusion, op=dist.ReduceOp.SUM)
+        dist.all_reduce(test_metric_stats, op=dist.ReduceOp.SUM)
     test_loss_sum, test_count = test_stats.tolist()
     test_loss = test_loss_sum / max(test_count, 1)
-    test_accuracy, test_f1 = classification_metrics(test_confusion)
+    test_rmse, test_r2, test_mape = regression_metrics(test_metric_stats)
 
     if is_main:
         test_path = Path(args.test_csv)
@@ -617,21 +599,22 @@ def main():
         with test_path.open("w", newline="") as test_file:
             writer = csv.DictWriter(
                 test_file,
-                fieldnames=["test_size", "test_loss", "test_accuracy", "test_f1_macro"],
+                fieldnames=["test_size", "test_loss", "test_rmse", "test_r2", "test_mape"],
             )
             writer.writeheader()
             writer.writerow(
                 {
                     "test_size": test_size,
                     "test_loss": test_loss,
-                    "test_accuracy": test_accuracy,
-                    "test_f1_macro": test_f1,
+                    "test_rmse": test_rmse,
+                    "test_r2": test_r2,
+                    "test_mape": test_mape,
                 }
             )
-        print(f"best_val_f1_macro={best_val_f1:.4f}")
+        print(f"best_val_r2={best_val_r2:.4f}")
         print(
-            f"test_loss={test_loss:.4f} test_accuracy={test_accuracy:.4f} "
-            f"test_f1={test_f1:.4f} test_csv={test_path}"
+            f"test_loss={test_loss:.4f} test_rmse={test_rmse:.4f} "
+            f"test_r2={test_r2:.4f} test_mape={test_mape:.2f}% test_csv={test_path}"
         )
     if distributed:
         dist.destroy_process_group()
