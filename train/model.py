@@ -76,6 +76,9 @@ class GraphConv(nn.Module):
 
 
 class Dyanmicatt(nn.Module):
+    """
+    Áp dụng GRU cho attention và hidden state.
+    """
     def __init__(self,n_inp, n_hid, layer=1):
         super(Dyanmicatt, self).__init__()
         self.gru = GRU(n_inp, 1, layer, batch_first=True)   # batch_first=True
