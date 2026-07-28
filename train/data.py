@@ -51,6 +51,9 @@ class SEHTGNNDataset(Dataset):
         if target_path is None:
             target_path = self.preprocess_root / "dynamic_velocity.npy"
         self.targets = np.load(target_path, mmap_mode=mmap_mode)
+        self.velocity_channel = None
+        self.velocity_mean = None
+        self.velocity_scale = None
 
         if self.dynamic.ndim != 3:
             raise ValueError(
@@ -89,6 +92,58 @@ class SEHTGNNDataset(Dataset):
 
         self.base_edges = self._load_base_edges()
 
+    def fit_input_velocity_scaler(
+        self,
+        timestamp_start,
+        timestamp_end,
+        velocity_channel=1,
+        chunk_size=256,
+    ):
+        """Fit per-segment input-velocity statistics on train timestamps only."""
+        timestamp_start = int(timestamp_start)
+        timestamp_end = int(timestamp_end)
+        velocity_channel = int(velocity_channel)
+        if not 0 <= timestamp_start < timestamp_end <= self.total_timesteps:
+            raise ValueError(
+                "Invalid velocity scaler timestamp range: "
+                f"[{timestamp_start}, {timestamp_end}) for T={self.total_timesteps}"
+            )
+        if not 0 <= velocity_channel < self.dynamic_dim:
+            raise ValueError(
+                f"velocity_channel={velocity_channel} is outside dynamic feature "
+                f"dimension {self.dynamic_dim}"
+            )
+        if chunk_size < 1:
+            raise ValueError("chunk_size must be >= 1")
+
+        velocity_sum = np.zeros(self.num_segments, dtype=np.float64)
+        count = 0
+        for start in range(timestamp_start, timestamp_end, chunk_size):
+            end = min(start + chunk_size, timestamp_end)
+            chunk = np.asarray(self.targets[start:end], dtype=np.float64)
+            if not np.isfinite(chunk).all():
+                raise ValueError(
+                    f"Velocity contains a non-finite value in timestamps [{start}, {end})"
+                )
+            velocity_sum += chunk.sum(axis=0)
+            count += chunk.shape[0]
+
+        mean = velocity_sum / count
+        squared_deviation_sum = np.zeros(self.num_segments, dtype=np.float64)
+        for start in range(timestamp_start, timestamp_end, chunk_size):
+            end = min(start + chunk_size, timestamp_end)
+            chunk = np.asarray(self.targets[start:end], dtype=np.float64)
+            squared_deviation_sum += np.square(chunk - mean).sum(axis=0)
+        variance = squared_deviation_sum / count
+        scale = np.sqrt(variance)
+        # Match sklearn StandardScaler: constant features are left with scale 1.
+        scale[scale < 1e-12] = 1.0
+
+        self.velocity_channel = velocity_channel
+        self.velocity_mean = mean.astype(np.float32)
+        self.velocity_scale = scale.astype(np.float32)
+        return self.velocity_mean, self.velocity_scale
+
     def __len__(self):
         return self.num_samples
 
@@ -126,7 +181,13 @@ class SEHTGNNDataset(Dataset):
 
         for t in range(self.window_size):
             key = f"t{t}"
-            dynamic_t = np.asarray(self.dynamic[start_idx + t], dtype=np.float32).copy()
+            timestamp = start_idx + t
+            dynamic_t = np.asarray(self.dynamic[timestamp], dtype=np.float32).copy()
+            if self.velocity_channel is not None:
+                raw_velocity = np.asarray(self.targets[timestamp], dtype=np.float32)
+                dynamic_t[:, self.velocity_channel] = (
+                    raw_velocity - self.velocity_mean
+                ) / self.velocity_scale
             segment_t = np.concatenate([static_segment, dynamic_t], axis=1)
 
             graph.nodes["node"].data[key] = static_node

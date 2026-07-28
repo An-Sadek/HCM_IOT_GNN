@@ -8,7 +8,7 @@ import torch
 import torch.distributed as dist
 import torch.nn.functional as F
 from torch.nn.parallel import DistributedDataParallel as DDP
-from torch.utils.data import DataLoader, random_split
+from torch.utils.data import DataLoader, Subset
 from torch.utils.data.distributed import DistributedSampler
 from tqdm.auto import tqdm
 
@@ -139,6 +139,39 @@ def regression_metrics(stats):
     return rmse, r2, mape
 
 
+def chronological_split(dataset, train_ratio, val_ratio, split_gap):
+    """Split sliding-window samples in time order without boundary overlap."""
+    num_samples = len(dataset)
+    usable_samples = num_samples - 2 * split_gap
+    if usable_samples < 3:
+        raise ValueError(
+            "Not enough samples for chronological train/validation/test split: "
+            f"samples={num_samples}, split_gap={split_gap}"
+        )
+
+    train_size = int(usable_samples * train_ratio)
+    val_size = int(usable_samples * val_ratio)
+    test_size = usable_samples - train_size - val_size
+    if min(train_size, val_size, test_size) <= 0:
+        raise ValueError(
+            "Chronological split produced an empty partition: "
+            f"train={train_size}, val={val_size}, test={test_size}"
+        )
+
+    train_start = 0
+    train_end = train_start + train_size
+    val_start = train_end + split_gap
+    val_end = val_start + val_size
+    test_start = val_end + split_gap
+    test_end = test_start + test_size
+
+    return (
+        Subset(dataset, range(train_start, train_end)),
+        Subset(dataset, range(val_start, val_end)),
+        Subset(dataset, range(test_start, test_end)),
+    )
+
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--preprocess-root", default="data/preprocess")
@@ -178,6 +211,21 @@ def parse_args():
     parser.add_argument("--train-ratio", type=float, default=0.7)
     parser.add_argument("--val-ratio", type=float, default=0.2)
     parser.add_argument("--test-ratio", type=float, default=0.1)
+    parser.add_argument(
+        "--velocity-channel",
+        type=int,
+        default=1,
+        help="Channel in dynamic_features.npy containing standardized velocity.",
+    )
+    parser.add_argument(
+        "--split-gap",
+        type=int,
+        default=None,
+        help=(
+            "Number of sliding-window sample starts omitted at each split boundary. "
+            "Defaults to window_size + horizon - 1 so partitions share no timestamps."
+        ),
+    )
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument(
         "--model",
@@ -198,7 +246,7 @@ def parse_args():
     )
     parser.add_argument(
         "--llm-device",
-        default="cpu",
+        default="cuda",
         help="Device used once to create LLM embeddings, e.g. cpu, cuda, or cuda:0",
     )
     return parser.parse_args()
@@ -214,6 +262,13 @@ def main():
         raise ValueError("--early-stopping-min-delta must be >= 0")
     if args.mape_epsilon <= 0:
         raise ValueError("--mape-epsilon must be > 0")
+    split_gap = (
+        args.window_size + args.horizon - 1
+        if args.split_gap is None
+        else args.split_gap
+    )
+    if split_gap < 0:
+        raise ValueError("--split-gap must be >= 0")
     split_ratio = args.train_ratio + args.val_ratio + args.test_ratio
     if min(args.train_ratio, args.val_ratio, args.test_ratio) <= 0:
         raise ValueError("Train, validation, and test ratios must all be positive")
@@ -249,14 +304,41 @@ def main():
         horizon=args.horizon,
     )
 
-    train_size = int(len(dataset) * args.train_ratio)
-    val_size = int(len(dataset) * args.val_ratio)
-    test_size = len(dataset) - train_size - val_size
-    train_ds, val_ds, test_ds = random_split(
+    train_ds, val_ds, test_ds = chronological_split(
         dataset,
-        [train_size, val_size, test_size],
-        generator=torch.Generator().manual_seed(42),
+        train_ratio=args.train_ratio,
+        val_ratio=args.val_ratio,
+        split_gap=split_gap,
     )
+    train_size, val_size, test_size = map(len, (train_ds, val_ds, test_ds))
+    train_timestamp_start = train_ds.indices[0]
+    train_timestamp_end = (
+        train_ds.indices[-1] + args.window_size + args.horizon
+    )
+    velocity_mean, velocity_scale = dataset.fit_input_velocity_scaler(
+        timestamp_start=train_timestamp_start,
+        timestamp_end=train_timestamp_end,
+        velocity_channel=args.velocity_channel,
+    )
+    if is_main:
+        train_first, train_last = train_ds.indices[0], train_ds.indices[-1]
+        val_first, val_last = val_ds.indices[0], val_ds.indices[-1]
+        test_first, test_last = test_ds.indices[0], test_ds.indices[-1]
+        sample_span = args.window_size + args.horizon
+        print(
+            "chronological_split "
+            f"gap={split_gap} sample_span={sample_span} "
+            f"train={train_size}[{train_first}:{train_last}] "
+            f"val={val_size}[{val_first}:{val_last}] "
+            f"test={test_size}[{test_first}:{test_last}]"
+        )
+        print(
+            "input_velocity_scaler "
+            f"fit_timestamps=[{train_timestamp_start}:{train_timestamp_end - 1}] "
+            f"channel={args.velocity_channel} per_segment=True "
+            f"mean_range=[{velocity_mean.min():.4f}, {velocity_mean.max():.4f}] "
+            f"scale_range=[{velocity_scale.min():.4f}, {velocity_scale.max():.4f}]"
+        )
 
     train_sampler = DistributedSampler(
         train_ds,
