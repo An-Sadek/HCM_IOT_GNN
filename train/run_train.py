@@ -143,6 +143,11 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--preprocess-root", default="data/preprocess")
     parser.add_argument("--dynamic-path", default="data/preprocess/dynamic_features.npy")
+    parser.add_argument(
+        "--target-path",
+        default="data/preprocess/dynamic_velocity.npy",
+        help="Continuous velocity targets with shape (time, num_segments)",
+    )
     parser.add_argument("--window-size", type=int, default=12)
     parser.add_argument("--horizon", type=int, default=12)
     parser.add_argument("--hidden-dim", type=int, default=16)
@@ -239,9 +244,9 @@ def main():
     dataset = SEHTGNNDataset(
         preprocess_root=args.preprocess_root,
         dynamic_path=args.dynamic_path,
+        target_path=args.target_path,
         window_size=args.window_size,
         horizon=args.horizon,
-        target_channel=0,
     )
 
     train_size = int(len(dataset) * args.train_ratio)

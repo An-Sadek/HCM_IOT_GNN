@@ -36,23 +36,36 @@ class SEHTGNNDataset(Dataset):
         self,
         preprocess_root="data/preprocess",
         dynamic_path=None,
+        target_path=None,
         window_size=12,
         horizon=6,
-        target_channel=0,
         mmap_mode="r",
     ):
         self.preprocess_root = Path(preprocess_root)
         self.window_size = int(window_size)
         self.horizon = int(horizon)
-        self.target_channel = int(target_channel)
         if dynamic_path is None:
             dynamic_path = self.preprocess_root / "dynamic_features.npy"
         self.dynamic = np.load(dynamic_path, mmap_mode=mmap_mode)
+
+        if target_path is None:
+            target_path = self.preprocess_root / "dynamic_velocity.npy"
+        self.targets = np.load(target_path, mmap_mode=mmap_mode)
 
         if self.dynamic.ndim != 3:
             raise ValueError(
                 "dynamic_features must have shape (time, num_segments, channels), "
                 f"got {self.dynamic.shape}"
+            )
+        if self.targets.ndim != 2:
+            raise ValueError(
+                "Velocity targets must have shape (time, num_segments), "
+                f"got {self.targets.shape}"
+            )
+        if self.targets.shape != self.dynamic.shape[:2]:
+            raise ValueError(
+                "Velocity target dimensions must match dynamic features: "
+                f"targets={self.targets.shape}, dynamic={self.dynamic.shape[:2]}"
             )
 
         self.total_timesteps, self.num_segments, self.dynamic_dim = self.dynamic.shape
@@ -89,7 +102,7 @@ class SEHTGNNDataset(Dataset):
         target_start = idx + self.window_size
         target_end = target_start + self.horizon
         raw_target = np.asarray(
-            self.dynamic[target_start:target_end, :, self.target_channel].T
+            self.targets[target_start:target_end, :].T
         ).copy()
         if not np.isfinite(raw_target).all():
             raise ValueError(f"Target contains a non-finite value at sample {idx}")
