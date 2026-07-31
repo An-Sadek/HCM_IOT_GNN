@@ -60,9 +60,15 @@ class DynamicPreprocess(Preprocess):
             values="velocity"
         ).reindex(self.full_time)
 
-        # Gộp lại, ffill rồi bfill
+        # Thế bằng mode, nếu vượt ngưỡng thì [quantile(0.25), 120]
         velocity_arr = velocity_mat.reindex(self.full_time)
-        velocity_arr = velocity_mat.ffill().bfill()
+        quantile_25 = np.quantile(velocity_arr, 0.25)
+        velocity_arr = velocity_arr.clip(lower=quantile_25, upper=120)
+        velocity_arr = velocity_arr.interpolate(
+            method="linear",
+            axis=0,
+            limit_direction="both",
+        )
         
         print("Kích thước của pivot table velocity trong status df:", velocity_arr.shape)
         

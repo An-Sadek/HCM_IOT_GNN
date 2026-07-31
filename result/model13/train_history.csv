@@ -1,0 +1,1 @@
+epoch,train_loss,train_rmse,train_r2,train_mape,val_loss,val_rmse,val_r2,val_mape,best_val_r2,is_best

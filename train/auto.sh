@@ -1,4 +1,5 @@
 #torchrun --standalone --nproc_per_node=gpu train/run_train.py --epochs 100 --batch-size 32 --hidden-dim 16 --lr 0.01
+cd ~
 git clone --recurse-submodules https://github.com/dmlc/dgl.git
 sudo apt-get update
 sudo apt-get install -y build-essential python3-dev make cmake

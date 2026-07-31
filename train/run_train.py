@@ -191,10 +191,11 @@ def parse_args():
     parser.add_argument(
         "--early-stopping-patience",
         type=int,
-        default=20,
+        default=0,
         help=(
-            "Stop after this many consecutive epochs without a meaningful "
-            "validation R2 improvement. Set to 0 to disable early stopping."
+            "Optional: stop after this many consecutive epochs without a meaningful "
+            "validation R2 improvement. Disabled by default (0), so training runs "
+            "for all --epochs while still saving the best validation-R2 checkpoint."
         ),
     )
     parser.add_argument(
