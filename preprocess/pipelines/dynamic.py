@@ -62,8 +62,7 @@ class DynamicPreprocess(Preprocess):
 
         # Thế bằng mode, nếu vượt ngưỡng thì [quantile(0.25), 120]
         velocity_arr = velocity_mat.reindex(self.full_time)
-        quantile_25 = np.quantile(velocity_arr, 0.25)
-        velocity_arr = velocity_arr.clip(lower=quantile_25, upper=120)
+        velocity_arr = velocity_arr.clip(lower=20, upper=120)
         velocity_arr = velocity_arr.interpolate(
             method="linear",
             axis=0,
