@@ -13,7 +13,8 @@ from torch.utils.data.distributed import DistributedSampler
 from tqdm.auto import tqdm
 
 from data import SEHTGNNDataset, collate_sehtgnn
-from model import NodePredictor, SEHTGNN
+from model import NodePredictor as SENodePredictor, SEHTGNN
+from htgnn_model import HTGNN, NodePredictor as HTGNNNodePredictor
 
 
 torch.manual_seed(42)
@@ -172,8 +173,14 @@ def chronological_split(dataset, train_ratio, val_ratio, split_gap):
     )
 
 
-def parse_args():
+def parse_args(default_architecture="sehtgnn"):
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--architecture",
+        choices=("sehtgnn", "htgnn"),
+        default=default_architecture,
+        help="Model architecture. The dedicated HTGNN launcher defaults to htgnn.",
+    )
     parser.add_argument("--preprocess-root", default="data/preprocess")
     parser.add_argument("--dynamic-path", default="data/preprocess/dynamic_features.npy")
     parser.add_argument(
@@ -237,9 +244,18 @@ def parse_args():
             "of additional epochs to train."
         ),
     )
-    parser.add_argument("--checkpoint", default="result/sehtgnn_best.pt")
-    parser.add_argument("--history-csv", default="result/train_history.csv")
-    parser.add_argument("--test-csv", default="result/test.csv")
+    if default_architecture == "htgnn":
+        default_checkpoint = "result/htgnn_best.pt"
+        default_history = "result/htgnn_train_history.csv"
+        default_test = "result/htgnn_test.csv"
+    else:
+        # Preserve the original SE-HTGNN output paths.
+        default_checkpoint = "result/sehtgnn_best.pt"
+        default_history = "result/train_history.csv"
+        default_test = "result/test.csv"
+    parser.add_argument("--checkpoint", default=default_checkpoint)
+    parser.add_argument("--history-csv", default=default_history)
+    parser.add_argument("--test-csv", default=default_test)
     parser.add_argument(
         "--llm-model",
         default="meta-llama/Llama-3.1-8B-Instruct",
@@ -253,8 +269,8 @@ def parse_args():
     return parser.parse_args()
 
 
-def main():
-    args = parse_args()
+def main(default_architecture="sehtgnn"):
+    args = parse_args(default_architecture=default_architecture)
     if args.grad_accum_steps < 1:
         raise ValueError("--grad-accum-steps must be >= 1")
     if args.early_stopping_patience < 0:
@@ -392,31 +408,45 @@ def main():
             map_location="cpu",
             weights_only=True,
         )
+        checkpoint_architecture = resume_checkpoint.get("architecture")
+        if (
+            checkpoint_architecture is not None
+            and checkpoint_architecture != args.architecture
+        ):
+            raise ValueError(
+                f"Checkpoint architecture is {checkpoint_architecture!r}, but "
+                f"the requested architecture is {args.architecture!r}"
+            )
 
     sample_graph, _ = dataset[0]
-    if resume_checkpoint is not None and "llm_feature" in resume_checkpoint:
-        llm_feature = resume_checkpoint["llm_feature"]
-        if is_main:
-            print(f"loaded_llm_feature_from={resume_path}")
-    else:
-        if is_main and resume_checkpoint is not None:
-            print(
-                "resume checkpoint has no llm_feature; generating it once for "
-                "backward compatibility"
-            )
-        llm_feature = None
-        if is_main:
-            llm_feature = make_llm_feature(
-                sample_graph.ntypes,
-                model_name=args.llm_model,
-                device=args.llm_device,
-            )
-        if distributed:
-            llm_feature_container = [llm_feature]
-            dist.broadcast_object_list(llm_feature_container, src=0, device=device)
-            llm_feature = llm_feature_container[0]
+    llm_feature = None
+    if args.architecture == "sehtgnn":
+        if resume_checkpoint is not None and "llm_feature" in resume_checkpoint:
+            llm_feature = resume_checkpoint["llm_feature"]
+            if is_main:
+                print(f"loaded_llm_feature_from={resume_path}")
+        else:
+            if is_main and resume_checkpoint is not None:
+                print(
+                    "resume checkpoint has no llm_feature; generating it once for "
+                    "backward compatibility"
+                )
+            if is_main:
+                llm_feature = make_llm_feature(
+                    sample_graph.ntypes,
+                    model_name=args.llm_model,
+                    device=args.llm_device,
+                )
+            if distributed:
+                llm_feature_container = [llm_feature]
+                dist.broadcast_object_list(llm_feature_container, src=0, device=device)
+                llm_feature = llm_feature_container[0]
 
-    encoder = SEHTGNN(
+    encoder_class = HTGNN if args.architecture == "htgnn" else SEHTGNN
+    predictor_class = (
+        HTGNNNodePredictor if args.architecture == "htgnn" else SENodePredictor
+    )
+    encoder = encoder_class(
         graph=sample_graph,
         n_inp=args.hidden_dim,
         n_hid=args.hidden_dim,
@@ -429,7 +459,7 @@ def main():
         LLM_feature=llm_feature,
         inp_list=dataset.inp_list,
     ).to(device)
-    predictor = NodePredictor(args.hidden_dim, args.horizon).to(device)
+    predictor = predictor_class(args.hidden_dim, args.horizon).to(device)
 
     if distributed:
         # The current model contains parameters that are not used by every forward path.
@@ -585,22 +615,22 @@ def main():
         else:
             epochs_without_improvement += 1
         if is_main and is_best:
-            torch.save(
-                {
+            checkpoint_data = {
                     "encoder": (encoder.module if distributed else encoder).state_dict(),
                     "predictor": (predictor.module if distributed else predictor).state_dict(),
                     "optimizer": optimizer.state_dict(),
                     "epoch": epoch,
                     "best_val_r2": best_val_r2,
-                    "llm_feature": {
-                        key: feature.detach().cpu()
-                        for key, feature in llm_feature.items()
-                    },
+                    "architecture": args.architecture,
                     "args": vars(args),
                     "inp_list": dataset.inp_list,
-                },
-                checkpoint_path,
-            )
+                }
+            if llm_feature is not None:
+                checkpoint_data["llm_feature"] = {
+                    key: feature.detach().cpu()
+                    for key, feature in llm_feature.items()
+                }
+            torch.save(checkpoint_data, checkpoint_path)
         if is_main:
             with history_path.open("a", newline="") as history_file:
                 writer = csv.DictWriter(
