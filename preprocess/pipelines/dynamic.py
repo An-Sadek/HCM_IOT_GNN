@@ -60,18 +60,19 @@ class DynamicPreprocess(Preprocess):
             values="velocity"
         ).reindex(self.full_time)
 
-        # Thế bằng mode, nếu vượt ngưỡng thì [quantile(0.25), 120]
+        # Preserve which values were actually reported before filling missing
+        # timestamps. This lets the model distinguish a real observation from
+        # an interpolated velocity value.
+        velocity_observed_mask = velocity_mat.notna().astype(np.float32)
+
+        # Thế bằng mode, nếu vượt ngưỡng thì [20, 120]
         velocity_arr = velocity_mat.reindex(self.full_time)
         velocity_arr = velocity_arr.clip(lower=20, upper=120)
-        velocity_arr = velocity_arr.interpolate(
-            method="linear",
-            axis=0,
-            limit_direction="both",
-        )
+        velocity_arr = velocity_arr.ffill().bfill()
         
         print("Kích thước của pivot table velocity trong status df:", velocity_arr.shape)
         
-        return velocity_arr
+        return velocity_arr, velocity_observed_mask
 
     def los_preprocess(self):
         self.train_df["LOS"] = self.train_df["LOS"].apply(lambda x: ord(x) - ord('A'))
@@ -171,7 +172,12 @@ class DynamicPreprocess(Preprocess):
         """
         """
         los_arr = self.los_preprocess()
-        velocity_arr = self.velocity_preprocess().reindex(columns=los_arr.columns)
+        velocity_arr, velocity_observed_mask = self.velocity_preprocess()
+        velocity_arr = velocity_arr.reindex(columns=los_arr.columns)
+        velocity_observed_mask = velocity_observed_mask.reindex(
+            columns=los_arr.columns,
+            fill_value=0.0,
+        )
         if velocity_arr.isna().any().any():
             missing_segments = velocity_arr.columns[velocity_arr.isna().any()].tolist()
             raise ValueError(
@@ -196,6 +202,7 @@ class DynamicPreprocess(Preprocess):
         dynamic_features = np.concatenate(
             [
                 velocity_arr.to_numpy(dtype=np.float32)[:, :, None],
+                velocity_observed_mask.to_numpy(dtype=np.float32)[:, :, None],
                 los_arr.to_numpy(dtype=np.float32)[:, :, None],
                 cyclic_time_features,
             ],
@@ -212,6 +219,10 @@ class DynamicPreprocess(Preprocess):
         np.save(
             output_dir / "dynamic_velocity.npy",
             velocity_arr.to_numpy(dtype=np.float32),
+        )
+        np.save(
+            output_dir / "dynamic_velocity_observed_mask.npy",
+            velocity_observed_mask.to_numpy(dtype=np.float32),
         )
 
         return dynamic_features
