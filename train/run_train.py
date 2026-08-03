@@ -218,8 +218,6 @@ def parse_args(default_architecture="sehtgnn"):
     parser.add_argument("--layers", type=int, default=1)
     parser.add_argument("--heads", type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.5)
-    parser.add_argument("--sgmp-order", type=int, default=2)
-    parser.add_argument("--sgmp-gamma", type=float, default=0.9)
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument(
         "--early-stopping-patience",
@@ -311,10 +309,6 @@ def main(default_architecture="sehtgnn"):
         raise ValueError("--early-stopping-min-delta must be >= 0")
     if args.mape_epsilon <= 0:
         raise ValueError("--mape-epsilon must be > 0")
-    if args.sgmp_order < 1:
-        raise ValueError("--sgmp-order must be >= 1")
-    if not 0.0 < args.sgmp_gamma <= 1.0:
-        raise ValueError("--sgmp-gamma must be in (0, 1]")
     split_gap = (
         args.window_size + args.horizon - 1
         if args.split_gap is None
@@ -509,14 +503,6 @@ def main(default_architecture="sehtgnn"):
         dynamic_input_dim=(
             dataset.dynamic_dim if args.architecture == "htgnn" else None
         ),
-        velocity_feature_index=(
-            args.velocity_channel if args.architecture == "htgnn" else None
-        ),
-        velocity_mask_feature_index=(
-            args.velocity_mask_channel if args.architecture == "htgnn" else None
-        ),
-        sgmp_order=args.sgmp_order,
-        sgmp_gamma=args.sgmp_gamma,
     ).to(device)
     predictor = predictor_class(args.hidden_dim, args.horizon).to(device)
 

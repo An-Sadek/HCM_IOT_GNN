@@ -1,4 +1,4 @@
-"""Traffic HTGNN: SGMP -> temporal/heterogeneous GNN -> +PE.
+"""Traffic HTGNN: temporal/heterogeneous GNN -> +PE.
 
 The dataset stores static positional features in ``ndata['pe']`` and dynamic
 segment observations in ``ndata['dynamic_tN']``.  This module deliberately
@@ -12,9 +12,6 @@ import dgl
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
-from sgmp import SGMPImputer
-
 
 def _base_relation(edge_type: str) -> str:
     relation, separator, timestamp = edge_type.rpartition("_")
@@ -96,7 +93,7 @@ class HeterogeneousGraphLayer(nn.Module):
 
 
 class HTGNN(nn.Module):
-    """Per-segment encoder following ``G^t -> SGMP -> HTGNN -> +PE``."""
+    """Per-segment encoder following ``G^t -> HTGNN -> +PE``."""
 
     def __init__(
         self,
@@ -107,10 +104,6 @@ class HTGNN(nn.Module):
         dropout: float = 0.2,
         inp_list: dict[str, int] | None = None,
         dynamic_input_dim: int | None = None,
-        velocity_feature_index: int | None = None,
-        velocity_mask_feature_index: int | None = None,
-        sgmp_order: int = 2,
-        sgmp_gamma: float = 0.9,
         **_ignored,
     ):
         super().__init__()
@@ -118,17 +111,7 @@ class HTGNN(nn.Module):
             raise ValueError("HTGNN requires inp_list and dynamic_input_dim")
         if n_layers < 1:
             raise ValueError("n_layers must be >= 1")
-        if (velocity_feature_index is None) != (velocity_mask_feature_index is None):
-            raise ValueError("Both velocity and observed-mask indices are required")
-
         self.timeframe = [f"t{i}" for i in range(time_window)]
-        self.velocity_feature_index = velocity_feature_index
-        self.velocity_mask_feature_index = velocity_mask_feature_index
-        self.sgmp = (
-            SGMPImputer(sgmp_order, gamma=sgmp_gamma)
-            if velocity_feature_index is not None
-            else None
-        )
 
         self.dynamic_projection = nn.Linear(dynamic_input_dim, n_hid)
         self.temporal_encoder = nn.GRU(n_hid, n_hid, batch_first=True)
@@ -141,14 +124,6 @@ class HTGNN(nn.Module):
         self.output_norm = nn.LayerNorm(n_hid)
         self.dropout = nn.Dropout(dropout)
 
-    def _segment_edges(self, graph: dgl.DGLGraph):
-        for src_type, edge_type, dst_type in graph.canonical_etypes:
-            if src_type == dst_type == "segment" and _base_relation(edge_type) in {
-                "connects_to", "connects_with"
-            }:
-                return graph[src_type, edge_type, dst_type].edges()
-        raise ValueError("SGMP requires a segment connects_to/connects_with relation")
-
     def forward(self, graph: dgl.DGLGraph, predict_type: str = "segment"):
         if predict_type != "segment":
             raise ValueError("This traffic HTGNN predicts segment nodes only")
@@ -157,18 +132,6 @@ class HTGNN(nn.Module):
             [graph.nodes["segment"].data[f"dynamic_{time}"] for time in self.timeframe],
             dim=1,
         )
-        if self.sgmp is not None:
-            source, destination = self._segment_edges(graph)
-            completed = self.sgmp(
-                sequence[:, :, self.velocity_feature_index],
-                sequence[:, :, self.velocity_mask_feature_index],
-                source,
-                destination,
-                batch_size=graph.batch_size,
-            )
-            sequence = sequence.clone()
-            sequence[:, :, self.velocity_feature_index] = completed
-
         encoded_sequence = self.dropout(F.relu(self.dynamic_projection(sequence)))
         _, hidden = self.temporal_encoder(encoded_sequence)
         features = {

@@ -1,4 +1,4 @@
-"""Train SGMP-HTGNN with separated dynamic and positional features.
+"""Train HTGNN with separated dynamic and positional features.
 
 Usage from the repository root::
 

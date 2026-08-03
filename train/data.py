@@ -281,8 +281,8 @@ class SEHTGNNDataset(Dataset):
                 normalized_velocity = (
                     raw_velocity - self.velocity_mean
                 ) / self.velocity_scale
-                # Missing input values are neutral placeholders. SGMP replaces them
-                # inside HTGNN; using zero here also equals the train mean after scaling.
+                # Missing input values are neutral placeholders. Zero equals the
+                # training-set mean after scaling; the observed mask remains an input.
                 dynamic_t[:, self.velocity_channel] = np.where(
                     observed, normalized_velocity, 0.0
                 )

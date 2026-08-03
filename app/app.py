@@ -68,9 +68,6 @@ def load_runtime(device_name: str):
         dropout=args["dropout"],
         inp_list=checkpoint.get("inp_list", dataset.inp_list),
         dynamic_input_dim=checkpoint.get("dynamic_input_dim", dataset.dynamic_dim),
-        velocity_feature_index=args.get("velocity_channel", 1),
-        velocity_mask_feature_index=args.get("velocity_mask_channel", 1),
-        sgmp_order=args.get("sgmp_order", 2),
     ).to(device)
     predictor = NodePredictor(args["hidden_dim"], args["horizon"]).to(device)
     encoder.load_state_dict(checkpoint["encoder"])
