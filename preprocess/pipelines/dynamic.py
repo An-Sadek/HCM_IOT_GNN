@@ -67,8 +67,7 @@ class DynamicPreprocess(Preprocess):
 
         # Thế bằng mode, nếu vượt ngưỡng thì [20, 120]
         velocity_arr = velocity_mat.reindex(self.full_time)
-        velocity_arr = velocity_arr.clip(lower=20, upper=120)
-        velocity_arr = velocity_arr.ffill().bfill()
+        velocity_arr = velocity_arr.clip(lower=1, upper=120)
         
         print("Kích thước của pivot table velocity trong status df:", velocity_arr.shape)
         
