@@ -60,14 +60,8 @@ class DynamicPreprocess(Preprocess):
             values="velocity"
         ).reindex(self.full_time)
 
-        # Preserve which values were actually reported before filling missing
-        # timestamps. This lets the model distinguish a real observation from
-        # an interpolated velocity value.
         velocity_observed_mask = velocity_mat.notna().astype(np.float32)
-
-        # Thế bằng mode, nếu vượt ngưỡng thì [20, 120]
-        velocity_arr = velocity_mat.reindex(self.full_time)
-        velocity_arr = velocity_arr.clip(lower=1, upper=120)
+        velocity_arr = velocity_mat.clip(lower=1, upper=120).fillna(0.0)
         
         print("Kích thước của pivot table velocity trong status df:", velocity_arr.shape)
         
