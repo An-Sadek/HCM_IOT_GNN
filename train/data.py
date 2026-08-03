@@ -5,9 +5,6 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset
 
-import dgl
-
-
 def _require_dgl():
     try:
         import dgl
@@ -21,22 +18,14 @@ def _require_dgl():
 
 
 class SEHTGNNDataset(Dataset):
-    """Sliding-window dataset that feeds the official SEHTGNN DGL interface.
-
-    Each sample returns:
-    - graph: a DGL heterograph with time-suffixed edge types, e.g. connects_to_t0
-    - y: continuous targets for segment nodes, shape (num_segments, horizon)
-
-    Node data is stored as graph.nodes[ntype].data["t{i}"], matching model.py.
-    Segment snapshots contain static segment attributes concatenated with
-    dynamic features at that timestamp.
-    """
+    """Sliding-window heterograph dataset with observed-target masks."""
 
     def __init__(
         self,
         preprocess_root="data/preprocess",
         dynamic_path=None,
         target_path=None,
+        target_mask_path=None,
         window_size=12,
         horizon=6,
         mmap_mode="r",
@@ -51,7 +40,11 @@ class SEHTGNNDataset(Dataset):
         if target_path is None:
             target_path = self.preprocess_root / "dynamic_velocity.npy"
         self.targets = np.load(target_path, mmap_mode=mmap_mode)
+        if target_mask_path is None:
+            target_mask_path = self.preprocess_root / "dynamic_velocity_observed_mask.npy"
+        self.target_mask = np.load(target_mask_path, mmap_mode=mmap_mode)
         self.velocity_channel = None
+        self.velocity_mask_channel = None
         self.velocity_mean = None
         self.velocity_scale = None
 
@@ -69,6 +62,11 @@ class SEHTGNNDataset(Dataset):
             raise ValueError(
                 "Velocity target dimensions must match dynamic features: "
                 f"targets={self.targets.shape}, dynamic={self.dynamic.shape[:2]}"
+            )
+        if self.target_mask.shape != self.targets.shape:
+            raise ValueError(
+                "Velocity observation mask must match targets: "
+                f"mask={self.target_mask.shape}, targets={self.targets.shape}"
             )
 
         self.total_timesteps, self.num_segments, self.dynamic_dim = self.dynamic.shape
@@ -97,12 +95,14 @@ class SEHTGNNDataset(Dataset):
         timestamp_start,
         timestamp_end,
         velocity_channel=1,
+        velocity_mask_channel=1,
         chunk_size=256,
     ):
         """Fit per-segment input-velocity statistics on train timestamps only."""
         timestamp_start = int(timestamp_start)
         timestamp_end = int(timestamp_end)
         velocity_channel = int(velocity_channel)
+        velocity_mask_channel = int(velocity_mask_channel)
         if not 0 <= timestamp_start < timestamp_end <= self.total_timesteps:
             raise ValueError(
                 "Invalid velocity scaler timestamp range: "
@@ -112,6 +112,11 @@ class SEHTGNNDataset(Dataset):
             raise ValueError(
                 f"velocity_channel={velocity_channel} is outside dynamic feature "
                 f"dimension {self.dynamic_dim}"
+            )
+        if not 0 <= velocity_mask_channel < self.dynamic_dim:
+            raise ValueError(
+                f"velocity_mask_channel={velocity_mask_channel} is outside dynamic "
+                f"feature dimension {self.dynamic_dim}"
             )
         if chunk_size < 1:
             raise ValueError("chunk_size must be >= 1")
@@ -128,7 +133,20 @@ class SEHTGNNDataset(Dataset):
         raw_velocity = np.asarray(
             self.targets[check_timestamps, :], dtype=np.float32
         )
-        if not np.allclose(stored_velocity, raw_velocity, rtol=1e-5, atol=1e-5):
+        check_mask = np.asarray(
+            self.target_mask[check_timestamps, :], dtype=bool
+        )
+        stored_mask = np.asarray(
+            self.dynamic[check_timestamps, :, velocity_mask_channel], dtype=np.float32
+        )
+        if not np.array_equal(stored_mask >= 0.5, check_mask):
+            raise ValueError(
+                "Configured velocity mask channel does not match target mask: "
+                f"channel={velocity_mask_channel}"
+            )
+        if not np.allclose(
+            stored_velocity[check_mask], raw_velocity[check_mask], rtol=1e-5, atol=1e-5
+        ):
             raise ValueError(
                 "Configured velocity channel does not contain raw velocity: "
                 f"channel={velocity_channel}. Regenerate dynamic_features.npy with "
@@ -137,37 +155,76 @@ class SEHTGNNDataset(Dataset):
             )
 
         velocity_sum = np.zeros(self.num_segments, dtype=np.float64)
-        count = 0
+        count = np.zeros(self.num_segments, dtype=np.int64)
         for start in range(timestamp_start, timestamp_end, chunk_size):
             end = min(start + chunk_size, timestamp_end)
             chunk = np.asarray(self.targets[start:end], dtype=np.float64)
+            observed = np.asarray(self.target_mask[start:end], dtype=bool)
             if not np.isfinite(chunk).all():
                 raise ValueError(
                     f"Velocity contains a non-finite value in timestamps [{start}, {end})"
                 )
-            velocity_sum += chunk.sum(axis=0)
-            count += chunk.shape[0]
+            velocity_sum += np.where(observed, chunk, 0.0).sum(axis=0)
+            count += observed.sum(axis=0)
 
-        mean = velocity_sum / count
+        observed_total = count.sum()
+        if observed_total == 0:
+            raise ValueError("Training range contains no observed velocity ground truth")
+        global_mean = velocity_sum.sum() / observed_total
+        mean = np.divide(
+            velocity_sum,
+            count,
+            out=np.full(self.num_segments, global_mean, dtype=np.float64),
+            where=count > 0,
+        )
         squared_deviation_sum = np.zeros(self.num_segments, dtype=np.float64)
         for start in range(timestamp_start, timestamp_end, chunk_size):
             end = min(start + chunk_size, timestamp_end)
             chunk = np.asarray(self.targets[start:end], dtype=np.float64)
-            squared_deviation_sum += np.square(chunk - mean).sum(axis=0)
-        variance = squared_deviation_sum / count
+            observed = np.asarray(self.target_mask[start:end], dtype=bool)
+            squared_deviation_sum += np.where(
+                observed, np.square(chunk - mean), 0.0
+            ).sum(axis=0)
+        variance = np.divide(
+            squared_deviation_sum,
+            count,
+            out=np.ones(self.num_segments, dtype=np.float64),
+            where=count > 0,
+        )
         scale = np.sqrt(variance)
         # Match sklearn StandardScaler: constant features are left with scale 1.
         scale[scale < 1e-12] = 1.0
 
         self.velocity_channel = velocity_channel
+        self.velocity_mask_channel = velocity_mask_channel
         self.velocity_mean = mean.astype(np.float32)
         self.velocity_scale = scale.astype(np.float32)
         return self.velocity_mean, self.velocity_scale
 
     def __len__(self):
+        """
+        Trả về số lượng t sẽ chạy sau khi trừ window_sliding và horizon
+
+        Returns:
+            T: Số lượng t sẽ chạy
+
+        Usages:
+            len(SEHTGNNDataset)
+        """
         return self.num_samples
 
     def __getitem__(self, idx):
+        """
+        Trả về cấu trúc đồ thị dị biến và target
+
+        Parameters:
+            idx: Index của t
+
+        Returns:
+            (graph, y): Một tuple gồm cấu trúc dị biến và horizon của target [t+1,...,t+Q].
+                graph: Cấu trúc đồ thị dị biến
+                y: Horizon của target.
+        """
         if idx < 0:
             idx += self.num_samples
         if idx < 0 or idx >= self.num_samples:
@@ -179,12 +236,17 @@ class SEHTGNNDataset(Dataset):
         raw_target = np.asarray(
             self.targets[target_start:target_end, :].T
         ).copy()
+        raw_mask = np.asarray(
+            self.target_mask[target_start:target_end, :].T, dtype=np.float32
+        ).copy()
         if not np.isfinite(raw_target).all():
             raise ValueError(f"Target contains a non-finite value at sample {idx}")
         y = torch.from_numpy(raw_target.astype(np.float32, copy=False))
-        return graph, y
+        y_mask = torch.from_numpy(raw_mask)
+        return graph, y, y_mask
 
     def build_graph(self, start_idx):
+        """Build one temporal heterograph window."""
         dgl = _require_dgl()
         data_dict = {}
         for t in range(self.window_size):
@@ -205,9 +267,15 @@ class SEHTGNNDataset(Dataset):
             dynamic_t = np.asarray(self.dynamic[timestamp], dtype=np.float32).copy()
             if self.velocity_channel is not None:
                 raw_velocity = np.asarray(self.targets[timestamp], dtype=np.float32)
-                dynamic_t[:, self.velocity_channel] = (
+                observed = np.asarray(self.target_mask[timestamp], dtype=bool)
+                normalized_velocity = (
                     raw_velocity - self.velocity_mean
                 ) / self.velocity_scale
+                # Missing input values are neutral placeholders. SGMP replaces them
+                # inside HTGNN; using zero here also equals the train mean after scaling.
+                dynamic_t[:, self.velocity_channel] = np.where(
+                    observed, normalized_velocity, 0.0
+                )
             segment_t = np.concatenate([static_segment, dynamic_t], axis=1)
 
             graph.nodes["node"].data[key] = static_node
@@ -242,6 +310,29 @@ class SEHTGNNDataset(Dataset):
 
     @staticmethod
     def _build_connects_with(segments_df, raw_ways_df, relation_df):
+        """
+        Xây dựng các cặp nút segment <-> segment.
+        Kèm với luật cấm từ relation. Giả sử có S1 -> S2.
+        B1: Xây dựng cặp thuận.
+            1.1. S1 -> S2 => S1.end_node = S2.start_node.
+            1.2. Nếu có đường một chiều, nhưng là chiều ngược (S1.oneway = -1 || S2.oneway = -1), loại.
+        B2: Xây dựng cặp nghịch.
+            2.1. S2 -> S1 => S2.end_node = S1.start_node.
+            2.2. Nếu có đường một chiều nhưng là chiều thuận (S1.oneway = yes || S2.oneway = yes), loại.
+        B3: Gộp các cặp thuận nghịch lại thành 1.
+        B4: Loại các cặp có trong relation.
+
+        Parameters:
+            segments_df: DF của tập dữ liệu segments đã được rút gọn
+            raw_ways_df: DF của tập dữ liệu ways thô
+            relation_df: DF của tập dữ liệu mối quan hệ được xử lý
+
+        Returns:
+            connects_with: Np array của các cặp được segment được xử lý
+        """
+
+        # B1: Xây dựng cặp thuận chiều
+        # 1.1. Nối giữa S1 và S2
         from_df = segments_df[["id", "e_node_id", "street_id"]].rename(
             columns={
                 "id": "from_segment_id",
@@ -270,10 +361,13 @@ class SEHTGNNDataset(Dataset):
         ).drop(columns="id")
         connects_df["tags.oneway"] = connects_df["tags.oneway"].fillna("no")
 
+        # 1.2. Loại cặp thuận theo đường 1 chiều
         forward = connects_df[
             ~((connects_df["tags.oneway"] == "-1") & (connects_df["same_way"] == 1))
         ].copy()
 
+        # B2: Xây dựng cặp ngược chiều.
+        # 2.1. Nối giữa S2 và S1.
         reverse = connects_df.rename(
             columns={
                 "from_segment_id": "to_segment_id",
@@ -290,12 +384,16 @@ class SEHTGNNDataset(Dataset):
             right_on="id",
         ).drop(columns="id")
         reverse["tags.oneway"] = reverse["tags.oneway"].fillna("no")
+
+        # 2.2. Loại cặp ngược chiều theo đường 1 chiều
         reverse = reverse[
             ~((reverse["tags.oneway"] == "yes") & (reverse["same_way"] == 1))
         ].copy()
 
+        # B3: Gộp các cặp thuận nghịch
         connects_df = pd.concat([forward, reverse], ignore_index=True).drop_duplicates()
 
+        # B4: Loại cặp cấm rẽ
         restrictions = (
             relation_df.pivot_table(
                 index="id",
@@ -337,8 +435,12 @@ class SEHTGNNDataset(Dataset):
 
 def collate_sehtgnn(samples):
     dgl = _require_dgl()
-    graphs, targets = zip(*samples)
-    return dgl.batch(graphs), torch.cat(targets, dim=0)
+    graphs, targets, target_masks = zip(*samples)
+    return (
+        dgl.batch(graphs),
+        torch.cat(targets, dim=0),
+        torch.cat(target_masks, dim=0),
+    )
 
 
 if __name__ == "__main__":

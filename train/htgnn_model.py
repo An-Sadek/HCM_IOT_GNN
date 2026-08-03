@@ -14,6 +14,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from model import GraphConv
+from sgmp import SGMPImputer
 
 
 def _base_relation(edge_type: str) -> str:
@@ -112,6 +113,9 @@ class HTGNN(nn.Module):
         time_window: int,
         dropout: float = 0.2,
         inp_list: dict[str, int] | None = None,
+        velocity_feature_index: int | None = None,
+        velocity_mask_feature_index: int | None = None,
+        sgmp_order: int = 2,
         **_ignored,
     ):
         super().__init__()
@@ -121,6 +125,15 @@ class HTGNN(nn.Module):
             raise ValueError("n_layers must be at least 1")
 
         self.timeframe = [f"t{i}" for i in range(time_window)]
+        self.velocity_feature_index = velocity_feature_index
+        self.velocity_mask_feature_index = velocity_mask_feature_index
+        if (velocity_feature_index is None) != (velocity_mask_feature_index is None):
+            raise ValueError("Both SGMP velocity and mask feature indices are required")
+        self.sgmp = (
+            SGMPImputer(order=sgmp_order)
+            if velocity_feature_index is not None
+            else None
+        )
         self.temporal_encoders = nn.ModuleDict(
             {
                 node_type: TypeTemporalEncoder(inp_list[node_type], n_hid, dropout)
@@ -137,6 +150,27 @@ class HTGNN(nn.Module):
             sequence = torch.stack(
                 [graph.nodes[node_type].data[time] for time in self.timeframe], dim=1
             )
+            if node_type == "segment" and self.sgmp is not None:
+                relation_graph = None
+                for source_type, edge_type, destination_type in graph.canonical_etypes:
+                    if (
+                        source_type == "segment"
+                        and destination_type == "segment"
+                        and _base_relation(edge_type) == "connects_to"
+                    ):
+                        relation_graph = graph[source_type, edge_type, destination_type]
+                        break
+                if relation_graph is None:
+                    raise ValueError("SGMP requires a segment-connects_to-segment relation")
+                source, destination = relation_graph.edges()
+                completed_velocity = self.sgmp(
+                    sequence[:, :, self.velocity_feature_index],
+                    sequence[:, :, self.velocity_mask_feature_index],
+                    source,
+                    destination,
+                )
+                sequence = sequence.clone()
+                sequence[:, :, self.velocity_feature_index] = completed_velocity
             features[node_type] = self.temporal_encoders[node_type](sequence)
 
         for layer in self.gnn_layers:

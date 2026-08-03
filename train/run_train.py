@@ -140,6 +140,14 @@ def regression_metrics(stats):
     return rmse, r2, mape
 
 
+def observed_mse(prediction, target, observed_mask):
+    """MSE over genuine ground truth only; filled labels never affect training."""
+    observed = observed_mask.to(dtype=torch.bool)
+    if not observed.any():
+        raise ValueError("Batch contains no observed target ground truth")
+    return F.mse_loss(prediction[observed], target[observed]), observed
+
+
 def chronological_split(dataset, train_ratio, val_ratio, split_gap):
     """Split sliding-window samples in time order without boundary overlap."""
     num_samples = len(dataset)
@@ -188,12 +196,18 @@ def parse_args(default_architecture="sehtgnn"):
         default="data/preprocess/dynamic_velocity.npy",
         help="Continuous velocity targets with shape (time, num_segments)",
     )
+    parser.add_argument(
+        "--target-mask-path",
+        default="data/preprocess/dynamic_velocity_observed_mask.npy",
+        help="1 for genuine velocity ground truth and 0 for a missing/filled value",
+    )
     parser.add_argument("--window-size", type=int, default=12)
     parser.add_argument("--horizon", type=int, default=12)
     parser.add_argument("--hidden-dim", type=int, default=16)
     parser.add_argument("--layers", type=int, default=1)
     parser.add_argument("--heads", type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.5)
+    parser.add_argument("--sgmp-order", type=int, default=2)
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument(
         "--early-stopping-patience",
@@ -224,6 +238,12 @@ def parse_args(default_architecture="sehtgnn"):
         type=int,
         default=0,
         help="Channel in dynamic_features.npy containing raw velocity.",
+    )
+    parser.add_argument(
+        "--velocity-mask-channel",
+        type=int,
+        default=1,
+        help="Channel in dynamic_features.npy containing the velocity observed mask.",
     )
     parser.add_argument(
         "--split-gap",
@@ -279,6 +299,8 @@ def main(default_architecture="sehtgnn"):
         raise ValueError("--early-stopping-min-delta must be >= 0")
     if args.mape_epsilon <= 0:
         raise ValueError("--mape-epsilon must be > 0")
+    if args.sgmp_order < 1:
+        raise ValueError("--sgmp-order must be >= 1")
     split_gap = (
         args.window_size + args.horizon - 1
         if args.split_gap is None
@@ -317,6 +339,7 @@ def main(default_architecture="sehtgnn"):
         preprocess_root=args.preprocess_root,
         dynamic_path=args.dynamic_path,
         target_path=args.target_path,
+        target_mask_path=args.target_mask_path,
         window_size=args.window_size,
         horizon=args.horizon,
     )
@@ -336,6 +359,7 @@ def main(default_architecture="sehtgnn"):
         timestamp_start=train_timestamp_start,
         timestamp_end=train_timestamp_end,
         velocity_channel=args.velocity_channel,
+        velocity_mask_channel=args.velocity_mask_channel,
     )
     if is_main:
         train_first, train_last = train_ds.indices[0], train_ds.indices[-1]
@@ -418,7 +442,7 @@ def main(default_architecture="sehtgnn"):
                 f"the requested architecture is {args.architecture!r}"
             )
 
-    sample_graph, _ = dataset[0]
+    sample_graph, _, _ = dataset[0]
     llm_feature = None
     if args.architecture == "sehtgnn":
         if resume_checkpoint is not None and "llm_feature" in resume_checkpoint:
@@ -458,6 +482,15 @@ def main(default_architecture="sehtgnn"):
         dropout=args.dropout,
         LLM_feature=llm_feature,
         inp_list=dataset.inp_list,
+        velocity_feature_index=(
+            dataset.static_features["segment"].shape[1] + args.velocity_channel
+            if args.architecture == "htgnn" else None
+        ),
+        velocity_mask_feature_index=(
+            dataset.static_features["segment"].shape[1] + args.velocity_mask_channel
+            if args.architecture == "htgnn" else None
+        ),
+        sgmp_order=args.sgmp_order,
     ).to(device)
     predictor = predictor_class(args.hidden_dim, args.horizon).to(device)
 
@@ -471,8 +504,6 @@ def main(default_architecture="sehtgnn"):
         lr=args.lr,
         weight_decay=args.weight_decay,
     )
-    criterion = torch.nn.MSELoss()
-
     best_val_r2 = float("-inf")
     epochs_without_improvement = 0
     start_epoch = 0
@@ -519,24 +550,28 @@ def main(default_architecture="sehtgnn"):
             leave=False,
             disable=not is_main,
         )
-        for step, (graph, y) in enumerate(train_bar, start=1):
+        for step, (graph, y, y_mask) in enumerate(train_bar, start=1):
             graph = graph.to(device)
             y = y.to(device)
+            y_mask = y_mask.to(device)
 
             segment_emb = encoder(graph, predict_type="segment")
             predictions = predictor(segment_emb).view(-1, args.horizon)
-            loss = criterion(predictions, y)
+            loss, observed = observed_mse(predictions, y, y_mask)
             (loss / args.grad_accum_steps).backward()
 
             if step % args.grad_accum_steps == 0 or step == len(train_loader):
                 optimizer.step()
                 optimizer.zero_grad()
 
-            target_count = y.numel()
+            target_count = observed.sum().item()
             train_loss_sum += loss.item() * target_count
             train_count += target_count
             update_regression_stats(
-                train_metric_stats, y, predictions.detach(), args.mape_epsilon
+                train_metric_stats,
+                y[observed],
+                predictions.detach()[observed],
+                args.mape_epsilon,
             )
             accum_step = (step - 1) % args.grad_accum_steps + 1
             train_bar.set_postfix(
@@ -569,18 +604,22 @@ def main(default_architecture="sehtgnn"):
                 leave=False,
                 disable=not is_main,
             )
-            for graph, y in val_bar:
+            for graph, y, y_mask in val_bar:
                 graph = graph.to(device)
                 y = y.to(device)
+                y_mask = y_mask.to(device)
                 predictions = predictor(encoder(graph, predict_type="segment")).view(
                     -1, args.horizon
                 )
-                loss = criterion(predictions, y)
-                target_count = y.numel()
+                loss, observed = observed_mse(predictions, y, y_mask)
+                target_count = observed.sum().item()
                 val_loss_sum += loss.item() * target_count
                 val_count += target_count
                 update_regression_stats(
-                    val_metric_stats, y, predictions, args.mape_epsilon
+                    val_metric_stats,
+                    y[observed],
+                    predictions[observed],
+                    args.mape_epsilon,
                 )
                 val_bar.set_postfix(
                     loss=f"{loss.item():.4f}",
@@ -685,18 +724,22 @@ def main(default_architecture="sehtgnn"):
     test_metric_stats = torch.zeros(5, dtype=torch.float64, device=device)
     with torch.no_grad():
         test_bar = tqdm(test_loader, desc="test", leave=False, disable=not is_main)
-        for graph, y in test_bar:
+        for graph, y, y_mask in test_bar:
             graph = graph.to(device)
             y = y.to(device)
+            y_mask = y_mask.to(device)
             prediction = predictor(encoder(graph, predict_type="segment")).view(
                 -1, args.horizon
             )
-            loss = criterion(prediction, y)
-            target_count = y.numel()
+            loss, observed = observed_mse(prediction, y, y_mask)
+            target_count = observed.sum().item()
             test_loss_sum += loss.item() * target_count
             test_count += target_count
             update_regression_stats(
-                test_metric_stats, y, prediction, args.mape_epsilon
+                test_metric_stats,
+                y[observed],
+                prediction[observed],
+                args.mape_epsilon,
             )
 
     test_stats = torch.tensor(
