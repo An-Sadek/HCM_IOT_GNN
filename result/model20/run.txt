@@ -1,0 +1,10 @@
+torchrun train/run_train_htgnn.py \
+  --epochs 100 \
+  --batch-size 32 \
+  --hidden-dim 48 \
+  --layers 1 \
+  --lr 0.001 \
+  --weight-decay 0.001 \
+  --window-size 24 \
+  --horizon 24 \
+  --early-stopping-patience 5

@@ -29,10 +29,12 @@ class SEHTGNNDataset(Dataset):
         window_size=12,
         horizon=6,
         mmap_mode="r",
+        separate_dynamic=False,
     ):
         self.preprocess_root = Path(preprocess_root)
         self.window_size = int(window_size)
         self.horizon = int(horizon)
+        self.separate_dynamic = bool(separate_dynamic)
         if dynamic_path is None:
             dynamic_path = self.preprocess_root / "dynamic_features.npy"
         self.dynamic = np.load(dynamic_path, mmap_mode=mmap_mode)
@@ -81,7 +83,8 @@ class SEHTGNNDataset(Dataset):
         self.inp_list = {
             "node": self.static_features["node"].shape[1],
             "way": self.static_features["way"].shape[1],
-            "segment": self.static_features["segment"].shape[1] + self.dynamic_dim,
+            "segment": self.static_features["segment"].shape[1]
+            + (0 if self.separate_dynamic else self.dynamic_dim),
         }
         self.num_nodes_dict = {
             ntype: features.shape[0]
@@ -261,6 +264,13 @@ class SEHTGNNDataset(Dataset):
         static_way = torch.from_numpy(self.static_features["way"])
         static_segment = self.static_features["segment"]
 
+        if self.separate_dynamic:
+            # HTGNN consumes the time-invariant positional/static encoding and
+            # the time-varying signal through independent encoder branches.
+            graph.nodes["node"].data["pe"] = static_node
+            graph.nodes["way"].data["pe"] = static_way
+            graph.nodes["segment"].data["pe"] = torch.from_numpy(static_segment)
+
         for t in range(self.window_size):
             key = f"t{t}"
             timestamp = start_idx + t
@@ -276,11 +286,15 @@ class SEHTGNNDataset(Dataset):
                 dynamic_t[:, self.velocity_channel] = np.where(
                     observed, normalized_velocity, 0.0
                 )
-            segment_t = np.concatenate([static_segment, dynamic_t], axis=1)
-
-            graph.nodes["node"].data[key] = static_node
-            graph.nodes["way"].data[key] = static_way
-            graph.nodes["segment"].data[key] = torch.from_numpy(segment_t)
+            if self.separate_dynamic:
+                graph.nodes["segment"].data[f"dynamic_{key}"] = torch.from_numpy(
+                    dynamic_t
+                )
+            else:
+                segment_t = np.concatenate([static_segment, dynamic_t], axis=1)
+                graph.nodes["node"].data[key] = static_node
+                graph.nodes["way"].data[key] = static_way
+                graph.nodes["segment"].data[key] = torch.from_numpy(segment_t)
 
         return graph
 

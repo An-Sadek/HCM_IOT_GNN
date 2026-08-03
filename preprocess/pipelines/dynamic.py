@@ -133,41 +133,6 @@ class DynamicPreprocess(Preprocess):
 
         return dayweek_arr
 
-    def cyclic_time_preprocess(self, columns=None):
-        minute_of_day = (
-            self.full_time.hour * 60
-            + self.full_time.minute
-            + self.full_time.second / 60
-        )
-        time_angle = 2 * np.pi * minute_of_day / (24 * 60)
-
-        day_of_week = self.full_time.dayofweek
-        day_angle = 2 * np.pi * day_of_week / 7
-
-        cyclic_arr = pd.DataFrame(
-            {
-                "time_in_day_sin": np.sin(time_angle).astype(np.float32),
-                "time_in_day_cos": np.cos(time_angle).astype(np.float32),
-                "day_in_week_sin": np.sin(day_angle).astype(np.float32),
-                "day_in_week_cos": np.cos(day_angle).astype(np.float32),
-            },
-            index=self.full_time
-        )
-        cyclic_arr.index.name = "timestamp"
-
-        if columns is not None:
-            cyclic_arr = pd.DataFrame(
-                np.repeat(cyclic_arr.to_numpy(), len(columns), axis=1),
-                index=self.full_time,
-                columns=pd.MultiIndex.from_product([cyclic_arr.columns, columns])
-            )
-            cyclic_arr.index.name = "timestamp"
-
-        print("Kích thước của pivot table cyclic time:", cyclic_arr.shape)
-
-        return cyclic_arr
-
-
     def save_dynamic_features(self):
         """
         """
@@ -185,13 +150,6 @@ class DynamicPreprocess(Preprocess):
                 f"{missing_segments[:10]}"
             )
 
-        cyclic_time_arr = self.cyclic_time_preprocess()
-        cyclic_time_features = np.repeat(
-            cyclic_time_arr.to_numpy()[:, None, :],
-            len(los_arr.columns),
-            axis=1
-        )
-
         los_dayweek_features = np.stack(
             [
                 los_arr.to_numpy().astype(np.float32),
@@ -204,7 +162,6 @@ class DynamicPreprocess(Preprocess):
                 velocity_arr.to_numpy(dtype=np.float32)[:, :, None],
                 velocity_observed_mask.to_numpy(dtype=np.float32)[:, :, None],
                 los_arr.to_numpy(dtype=np.float32)[:, :, None],
-                cyclic_time_features,
             ],
             axis=2
         ).astype(np.float32)

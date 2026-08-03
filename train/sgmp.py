@@ -5,14 +5,20 @@ import torch.nn as nn
 
 
 class SGMPImputer(nn.Module):
-    """Complete graph signals recursively with a Chebyshev spectral filter."""
+    """
+    Điền giá trị bị thiếu sử dụng SGMP
+    """
 
     def __init__(self, order: int = 2):
+        """
+        Parameters:
+            order: k-hop thông tin của SGMP
+        """
         super().__init__()
         if order < 1:
-            raise ValueError("SGMP Chebyshev order must be at least 1")
+            raise ValueError("k phải lớn hơn hoặc bằng 1")
         self.order = order
-        self.theta = nn.Parameter(torch.zeros(order + 1))
+        self.theta = nn.Parameter(torch.zeros(order + 1)) # Tham số học được
         with torch.no_grad():
             self.theta[0] = 1.0
         self.bias = nn.Parameter(torch.zeros(()))
@@ -33,12 +39,16 @@ class SGMPImputer(nn.Module):
         return output
 
     def _spectral_transition(self, x, source, destination):
+        """
+        SGMP
+        """
         terms = [x, self._propagate(x, source, destination, x.shape[0])]
         for _ in range(2, self.order + 1):
             terms.append(
                 2.0 * self._propagate(terms[-1], source, destination, x.shape[0])
                 - terms[-2]
             )
+
         return sum(weight * term for weight, term in zip(self.theta, terms)) + self.bias
 
     def forward(self, values, observed_mask, source, destination):

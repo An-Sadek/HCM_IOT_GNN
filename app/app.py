@@ -33,13 +33,20 @@ st.set_page_config(page_title="Model18 traffic forecast", layout="wide")
 @st.cache_resource(show_spinner="Đang nạp model18 và dữ liệu...")
 def load_runtime(device_name: str):
     checkpoint = torch.load(CHECKPOINT, map_location="cpu", weights_only=True)
+    if checkpoint.get("feature_layout") != "separate_pe_dynamic":
+        raise ValueError(
+            "Checkpoint uses the old concatenated PE/dynamic HTGNN layout; "
+            "select a checkpoint trained with the separated architecture."
+        )
     args = checkpoint["args"]
     dataset = SEHTGNNDataset(
         preprocess_root=ROOT / args["preprocess_root"],
         dynamic_path=ROOT / args["dynamic_path"],
         target_path=ROOT / args["target_path"],
+        target_mask_path=ROOT / args["target_mask_path"],
         window_size=args["window_size"],
         horizon=args["horizon"],
+        separate_dynamic=True,
     )
     gap = args.get("split_gap")
     gap = args["window_size"] + args["horizon"] - 1 if gap is None else gap
@@ -52,7 +59,7 @@ def load_runtime(device_name: str):
     )
 
     device = torch.device(device_name)
-    graph, _ = dataset[0]
+    graph, _, _ = dataset[0]
     encoder = HTGNN(
         graph=graph,
         n_hid=args["hidden_dim"],
@@ -60,6 +67,10 @@ def load_runtime(device_name: str):
         time_window=args["window_size"],
         dropout=args["dropout"],
         inp_list=checkpoint.get("inp_list", dataset.inp_list),
+        dynamic_input_dim=checkpoint.get("dynamic_input_dim", dataset.dynamic_dim),
+        velocity_feature_index=args.get("velocity_channel", 1),
+        velocity_mask_feature_index=args.get("velocity_mask_channel", 1),
+        sgmp_order=args.get("sgmp_order", 2),
     ).to(device)
     predictor = NodePredictor(args["hidden_dim"], args["horizon"]).to(device)
     encoder.load_state_dict(checkpoint["encoder"])
@@ -198,4 +209,3 @@ st.plotly_chart(
     make_chart(x, actual, prediction, split_regions(dataset, splits, args)),
     use_container_width=True,
 )
-

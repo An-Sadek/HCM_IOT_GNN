@@ -1,4 +1,9 @@
-"""Dedicated CLI entry point for training the traffic-adapted HTGNN."""
+"""Train SGMP-HTGNN with separated dynamic and positional features.
+
+Usage from the repository root::
+
+    python train/run_train_htgnn.py --epochs 100 --horizon 12
+"""
 
 import run_train
 

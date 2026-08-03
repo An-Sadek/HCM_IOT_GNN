@@ -14,7 +14,7 @@ from tqdm.auto import tqdm
 
 from data import SEHTGNNDataset, collate_sehtgnn
 from model import NodePredictor as SENodePredictor, SEHTGNN
-from htgnn_model import HTGNN, NodePredictor as HTGNNNodePredictor
+from HTGNN import HTGNN, NodePredictor as HTGNNNodePredictor
 
 
 torch.manual_seed(42)
@@ -342,6 +342,7 @@ def main(default_architecture="sehtgnn"):
         target_mask_path=args.target_mask_path,
         window_size=args.window_size,
         horizon=args.horizon,
+        separate_dynamic=args.architecture == "htgnn",
     )
 
     train_ds, val_ds, test_ds = chronological_split(
@@ -441,6 +442,15 @@ def main(default_architecture="sehtgnn"):
                 f"Checkpoint architecture is {checkpoint_architecture!r}, but "
                 f"the requested architecture is {args.architecture!r}"
             )
+        if (
+            args.architecture == "htgnn"
+            and resume_checkpoint.get("feature_layout") != "separate_pe_dynamic"
+        ):
+            raise ValueError(
+                "This HTGNN checkpoint uses the legacy concatenated PE/dynamic "
+                "layout and cannot be resumed with the separated architecture. "
+                "Start a new training run without --model."
+            )
 
     sample_graph, _, _ = dataset[0]
     llm_feature = None
@@ -482,13 +492,14 @@ def main(default_architecture="sehtgnn"):
         dropout=args.dropout,
         LLM_feature=llm_feature,
         inp_list=dataset.inp_list,
+        dynamic_input_dim=(
+            dataset.dynamic_dim if args.architecture == "htgnn" else None
+        ),
         velocity_feature_index=(
-            dataset.static_features["segment"].shape[1] + args.velocity_channel
-            if args.architecture == "htgnn" else None
+            args.velocity_channel if args.architecture == "htgnn" else None
         ),
         velocity_mask_feature_index=(
-            dataset.static_features["segment"].shape[1] + args.velocity_mask_channel
-            if args.architecture == "htgnn" else None
+            args.velocity_mask_channel if args.architecture == "htgnn" else None
         ),
         sgmp_order=args.sgmp_order,
     ).to(device)
@@ -663,6 +674,14 @@ def main(default_architecture="sehtgnn"):
                     "architecture": args.architecture,
                     "args": vars(args),
                     "inp_list": dataset.inp_list,
+                    "dynamic_input_dim": (
+                        dataset.dynamic_dim if args.architecture == "htgnn" else None
+                    ),
+                    "feature_layout": (
+                        "separate_pe_dynamic"
+                        if args.architecture == "htgnn"
+                        else "concatenated"
+                    ),
                 }
             if llm_feature is not None:
                 checkpoint_data["llm_feature"] = {
