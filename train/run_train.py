@@ -148,6 +148,17 @@ def observed_mse(prediction, target, observed_mask):
     return F.mse_loss(prediction[observed], target[observed]), observed
 
 
+def batch_has_observed_targets(y_mask, device, distributed):
+    """Keep DDP ranks in sync when one rank receives an all-null batch."""
+    has_observed = y_mask.to(dtype=torch.bool).any()
+    if not distributed:
+        return bool(has_observed)
+
+    has_observed = has_observed.to(device=device, dtype=torch.int32)
+    dist.all_reduce(has_observed, op=dist.ReduceOp.MIN)
+    return bool(has_observed.item())
+
+
 def chronological_split(dataset, train_ratio, val_ratio, split_gap):
     """Split sliding-window samples in time order without boundary overlap."""
     num_samples = len(dataset)
@@ -565,7 +576,12 @@ def main(default_architecture="sehtgnn"):
             leave=False,
             disable=not is_main,
         )
-        for step, (graph, y, y_mask) in enumerate(train_bar, start=1):
+        valid_step = 0
+        for graph, y, y_mask in train_bar:
+            if not batch_has_observed_targets(y_mask, device, distributed):
+                continue
+
+            valid_step += 1
             graph = graph.to(device)
             y = y.to(device)
             y_mask = y_mask.to(device)
@@ -575,7 +591,7 @@ def main(default_architecture="sehtgnn"):
             loss, observed = observed_mse(predictions, y, y_mask)
             (loss / args.grad_accum_steps).backward()
 
-            if step % args.grad_accum_steps == 0 or step == len(train_loader):
+            if valid_step % args.grad_accum_steps == 0:
                 optimizer.step()
                 optimizer.zero_grad()
 
@@ -588,12 +604,16 @@ def main(default_architecture="sehtgnn"):
                 predictions.detach()[observed],
                 args.mape_epsilon,
             )
-            accum_step = (step - 1) % args.grad_accum_steps + 1
+            accum_step = (valid_step - 1) % args.grad_accum_steps + 1
             train_bar.set_postfix(
                 loss=f"{loss.item():.4f}",
                 rmse=f"{(train_metric_stats[0].item() / max(train_count, 1)) ** 0.5:.4f}",
                 accum=f"{accum_step}/{args.grad_accum_steps}",
             )
+
+        if valid_step % args.grad_accum_steps != 0:
+            optimizer.step()
+            optimizer.zero_grad()
 
         train_stats = torch.tensor(
             [train_loss_sum, train_count],
@@ -620,6 +640,9 @@ def main(default_architecture="sehtgnn"):
                 disable=not is_main,
             )
             for graph, y, y_mask in val_bar:
+                if not batch_has_observed_targets(y_mask, device, distributed):
+                    continue
+
                 graph = graph.to(device)
                 y = y.to(device)
                 y_mask = y_mask.to(device)
@@ -748,6 +771,9 @@ def main(default_architecture="sehtgnn"):
     with torch.no_grad():
         test_bar = tqdm(test_loader, desc="test", leave=False, disable=not is_main)
         for graph, y, y_mask in test_bar:
+            if not batch_has_observed_targets(y_mask, device, distributed):
+                continue
+
             graph = graph.to(device)
             y = y.to(device)
             y_mask = y_mask.to(device)
