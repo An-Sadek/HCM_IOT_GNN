@@ -110,6 +110,7 @@ class HTGNN(nn.Module):
         velocity_feature_index: int | None = None,
         velocity_mask_feature_index: int | None = None,
         sgmp_order: int = 2,
+        sgmp_gamma: float = 0.9,
         **_ignored,
     ):
         super().__init__()
@@ -123,7 +124,11 @@ class HTGNN(nn.Module):
         self.timeframe = [f"t{i}" for i in range(time_window)]
         self.velocity_feature_index = velocity_feature_index
         self.velocity_mask_feature_index = velocity_mask_feature_index
-        self.sgmp = SGMPImputer(sgmp_order) if velocity_feature_index is not None else None
+        self.sgmp = (
+            SGMPImputer(sgmp_order, gamma=sgmp_gamma)
+            if velocity_feature_index is not None
+            else None
+        )
 
         self.dynamic_projection = nn.Linear(dynamic_input_dim, n_hid)
         self.temporal_encoder = nn.GRU(n_hid, n_hid, batch_first=True)
@@ -159,6 +164,7 @@ class HTGNN(nn.Module):
                 sequence[:, :, self.velocity_mask_feature_index],
                 source,
                 destination,
+                batch_size=graph.batch_size,
             )
             sequence = sequence.clone()
             sequence[:, :, self.velocity_feature_index] = completed
