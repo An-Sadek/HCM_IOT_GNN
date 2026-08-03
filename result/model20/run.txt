@@ -1,6 +1,6 @@
 torchrun ./train/run_train_htgnn.py \
   --epochs 100 \
-  --batch-size 16 \
+  --batch-size 24 \
   --hidden-dim 8 \
   --layers 1 \
   --lr 0.001 \
