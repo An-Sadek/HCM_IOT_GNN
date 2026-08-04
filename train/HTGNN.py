@@ -21,7 +21,8 @@ def _base_relation(edge_type: str) -> str:
 
 
 class RelationAggregation(nn.Module):
-    """Aggregate one message per incoming relation with learned attention."""
+    """Aggregate one message per incoming relation with learned attention.
+    """
 
     def __init__(self, hidden_dim: int):
         super().__init__()
@@ -36,7 +37,8 @@ class RelationAggregation(nn.Module):
 
 
 class HeterogeneousGraphLayer(nn.Module):
-    """Relation-specific mean message passing and residual relation fusion."""
+    """Relation-specific mean message passing and residual relation fusion.
+    """
 
     def __init__(self, graph: dgl.DGLGraph, hidden_dim: int, dropout: float):
         super().__init__()
@@ -93,7 +95,8 @@ class HeterogeneousGraphLayer(nn.Module):
 
 
 class HTGNN(nn.Module):
-    """Per-segment encoder following ``G^t -> HTGNN -> +PE``."""
+    """Kiến trúc HTGNN
+    """
 
     def __init__(
         self,
@@ -148,7 +151,8 @@ class HTGNN(nn.Module):
 
 
 class NodePredictor(nn.Module):
-    """Map each segment embedding to y^(t+1), ..., y^(t+Q)."""
+    """Lớp MLP cuối để dự báo
+    """
 
     def __init__(self, n_inp: int, output_dim: int, dropout: float = 0.0):
         super().__init__()
