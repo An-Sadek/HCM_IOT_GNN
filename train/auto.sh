@@ -7,7 +7,7 @@ cd ~/dgl
 bash script/create_dev_conda_env.sh -g 12.1
 
 conda activate dgl-dev-gpu-121
-conda install -y -c dglteam/label/th21_cu121 dgl
+CONDA_NO_PLUGINS=true conda install -y -c dglteam/label/th21_cu121 dgl
 pip install "transformers==4.45.2" "tokenizers<0.21" accelerate safetensors sentencepiece protobuf 
 pip install pyyaml pandas scikit-learn "numpy<2"
 

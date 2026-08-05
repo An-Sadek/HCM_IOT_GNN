@@ -489,7 +489,7 @@ def main(default_architecture="sehtgnn"):
     predictor_class = (
         HTGNNNodePredictor if args.architecture == "htgnn" else SENodePredictor
     )
-    encoder = encoder_class(
+    encoder_kwargs = dict(
         graph=sample_graph,
         n_inp=args.hidden_dim,
         n_hid=args.hidden_dim,
@@ -501,10 +501,10 @@ def main(default_architecture="sehtgnn"):
         dropout=args.dropout,
         LLM_feature=llm_feature,
         inp_list=dataset.inp_list,
-        dynamic_input_dim=(
-            dataset.dynamic_dim if args.architecture == "htgnn" else None
-        ),
-    ).to(device)
+    )
+    if args.architecture == "htgnn":
+        encoder_kwargs["dynamic_input_dim"] = dataset.dynamic_dim
+    encoder = encoder_class(**encoder_kwargs).to(device)
     predictor = predictor_class(args.hidden_dim, args.horizon).to(device)
 
     if distributed:
