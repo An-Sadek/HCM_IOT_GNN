@@ -98,9 +98,9 @@ class DynamicPreprocess(Preprocess):
             values="LOS"
         ).reindex(self.full_time)
 
-        # Gộp lại, ffill rồi bfill
+        # Gộp lại, ffill rồi bỏ qua nan
         los_arr = los_mat.reindex(self.full_time)
-        los_arr = los_arr.ffill().bfill()
+        los_arr = los_arr.ffill().fillna(-1.)
 
         print("Kích thước của pivot table LOS và mask trong train df:", los_arr.shape)
 
