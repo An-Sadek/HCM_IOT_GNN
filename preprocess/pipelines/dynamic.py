@@ -99,12 +99,15 @@ class DynamicPreprocess(Preprocess):
         ).reindex(self.full_time)
 
         # Gộp lại, ffill rồi bỏ qua nan
+        # Create the mask from raw observations before filling.  Genuine LOS
+        # values are encoded in [0, 5], so -1 remains a safe missing sentinel.
+        los_observed_mask = los_mat.notna().astype(np.float32)
         los_arr = los_mat.reindex(self.full_time)
         los_arr = los_arr.ffill().fillna(-1.)
 
         print("Kích thước của pivot table LOS và mask trong train df:", los_arr.shape)
 
-        return los_arr
+        return los_arr, los_observed_mask
 
     def dayweek_preprocess(self, columns=None):
         dayweek_arr = pd.DataFrame(
@@ -130,13 +133,24 @@ class DynamicPreprocess(Preprocess):
     def save_dynamic_features(self):
         """
         """
-        los_arr = self.los_preprocess()
+        los_arr, los_observed_mask = self.los_preprocess()
         velocity_arr, velocity_observed_mask = self.velocity_preprocess()
         velocity_arr = velocity_arr.reindex(columns=los_arr.columns)
         velocity_observed_mask = velocity_observed_mask.reindex(
             columns=los_arr.columns,
             fill_value=0.0,
         )
+        los_observed_mask = los_observed_mask.reindex(
+            columns=los_arr.columns,
+            fill_value=0.0,
+        )
+        if not np.array_equal(
+            velocity_observed_mask.to_numpy(),
+            los_observed_mask.to_numpy(),
+        ):
+            raise ValueError(
+                "Velocity and LOS observation masks differ after alignment"
+            )
         if velocity_arr.isna().any().any():
             missing_segments = velocity_arr.columns[velocity_arr.isna().any()].tolist()
             raise ValueError(
@@ -156,6 +170,7 @@ class DynamicPreprocess(Preprocess):
                 velocity_arr.to_numpy(dtype=np.float32)[:, :, None],
                 velocity_observed_mask.to_numpy(dtype=np.float32)[:, :, None],
                 los_arr.to_numpy(dtype=np.float32)[:, :, None],
+                los_observed_mask.to_numpy(dtype=np.float32)[:, :, None],
             ],
             axis=2
         ).astype(np.float32)
@@ -174,6 +189,10 @@ class DynamicPreprocess(Preprocess):
         np.save(
             output_dir / "dynamic_velocity_observed_mask.npy",
             velocity_observed_mask.to_numpy(dtype=np.float32),
+        )
+        np.save(
+            output_dir / "dynamic_los_observed_mask.npy",
+            los_observed_mask.to_numpy(dtype=np.float32),
         )
 
         return dynamic_features
