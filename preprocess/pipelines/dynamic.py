@@ -60,8 +60,8 @@ class DynamicPreprocess(Preprocess):
             values="velocity"
         ).reindex(self.full_time)
 
+        velocity_observed_mask = velocity_mat.notna().astype(np.float32)
         velocity_arr = velocity_mat.ffill()
-        velocity_observed_mask = velocity_arr.notna().astype(np.float32)
         velocity_arr = velocity_arr.clip(lower=1., upper=120.).fillna(0.0)
         
         print("Kích thước của pivot table velocity trong status df:", velocity_arr.shape)
