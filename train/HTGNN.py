@@ -1,165 +1,263 @@
-"""Traffic HTGNN: temporal/heterogeneous GNN -> +PE.
+"""HTGNN adapted from the authors' reference implementation.
 
-The dataset stores static positional features in ``ndata['pe']`` and dynamic
-segment observations in ``ndata['dynamic_tN']``.  This module deliberately
-keeps those branches separate so positional information is only added to the
-final segment representation, as in the requested architecture.
+The model keeps the original HTGNN computation order:
+
+1. relation-specific GAT aggregation at every timestamp;
+2. attention-based fusion of incoming relations;
+3. self-attention across timestamps;
+4. a learned residual gate; and
+5. summation of the timestamp representations.
+
+Only the input adapters differ from the reference repository: traffic node types
+have different feature widths, so ``inp_list`` supplies one width per node type.
 """
 
-from collections import defaultdict
+import math
 
 import dgl
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
-def _base_relation(edge_type: str) -> str:
-    relation, separator, timestamp = edge_type.rpartition("_")
-    if not separator or not timestamp.startswith("t") or not timestamp[1:].isdigit():
-        raise ValueError(f"Expected a time-suffixed edge type, got {edge_type!r}")
-    return relation
+from dgl.nn.pytorch import GATConv
 
 
-class RelationAggregation(nn.Module):
-    """Aggregate one message per incoming relation with learned attention.
-    """
+class RelationAgg(nn.Module):
+    """Attention-based aggregation over incoming relation types."""
 
-    def __init__(self, hidden_dim: int):
+    def __init__(self, n_inp: int, n_hid: int):
         super().__init__()
-        self.score = nn.Sequential(
-            nn.Linear(hidden_dim, hidden_dim), nn.Tanh(), nn.Linear(hidden_dim, 1)
+        self.project = nn.Sequential(
+            nn.Linear(n_inp, n_hid), nn.Tanh(), nn.Linear(n_hid, 1, bias=False)
         )
 
-    def forward(self, messages: list[torch.Tensor]) -> torch.Tensor:
-        stacked = torch.stack(messages, dim=1)
-        weights = torch.softmax(self.score(stacked).mean(dim=0), dim=0)
-        return (stacked * weights.unsqueeze(0)).sum(dim=1)
+    def forward(self, features: torch.Tensor) -> torch.Tensor:
+        weights = torch.softmax(self.project(features).mean(0), dim=0)
+        weights = weights.expand((features.shape[0],) + weights.shape)
+        return (weights * features).sum(1)
 
 
-class HeterogeneousGraphLayer(nn.Module):
-    """Relation-specific mean message passing and residual relation fusion.
-    """
+class TemporalAgg(nn.Module):
+    """Original HTGNN dot-product attention across timestamps."""
 
-    def __init__(self, graph: dgl.DGLGraph, hidden_dim: int, dropout: float):
+    def __init__(
+        self, n_inp: int, n_hid: int, time_window: int, device: torch.device
+    ):
         super().__init__()
-        keys = []
-        for src_type, edge_type, dst_type in graph.canonical_etypes:
-            key = f"{src_type}__{_base_relation(edge_type)}__{dst_type}"
-            if key not in keys:
-                keys.append(key)
-        self.transforms = nn.ModuleDict(
-            {key: nn.Linear(hidden_dim, hidden_dim, bias=False) for key in keys}
+        self.proj = nn.Linear(n_inp, n_hid)
+        self.q_w = nn.Linear(n_hid, n_hid, bias=False)
+        self.k_w = nn.Linear(n_hid, n_hid, bias=False)
+        self.v_w = nn.Linear(n_hid, n_hid, bias=False)
+        self.fc = nn.Linear(n_hid, n_hid)
+        self.register_buffer(
+            "pe",
+            torch.tensor(
+                self.generate_positional_encoding(n_hid, time_window),
+                dtype=torch.float32,
+                device=device,
+            ),
         )
-        self.aggregators = nn.ModuleDict(
-            {node_type: RelationAggregation(hidden_dim) for node_type in graph.ntypes}
-        )
-        self.norms = nn.ModuleDict(
-            {node_type: nn.LayerNorm(hidden_dim) for node_type in graph.ntypes}
-        )
-        self.dropout = nn.Dropout(dropout)
 
-    def forward(self, graph: dgl.DGLGraph, features: dict[str, torch.Tensor]):
-        incoming = defaultdict(list)
-        seen = set()
-        for src_type, edge_type, dst_type in graph.canonical_etypes:
-            relation = _base_relation(edge_type)
-            key = f"{src_type}__{relation}__{dst_type}"
-            if key in seen:  # topology is identical for every timestamp
-                continue
-            seen.add(key)
-            relation_graph = graph[src_type, edge_type, dst_type]
-            source, destination = relation_graph.edges()
-            transformed = self.transforms[key](features[src_type])
-            message = torch.zeros(
-                relation_graph.num_dst_nodes(), transformed.shape[-1],
-                device=transformed.device, dtype=transformed.dtype,
-            )
-            message.index_add_(0, destination, transformed[source])
-            degree = torch.zeros(
-                relation_graph.num_dst_nodes(), device=transformed.device,
-                dtype=transformed.dtype,
-            )
-            degree.index_add_(0, destination, torch.ones_like(destination, dtype=degree.dtype))
-            incoming[dst_type].append(message / degree.clamp_min(1).unsqueeze(-1))
+    @staticmethod
+    def generate_positional_encoding(d_model: int, max_len: int) -> np.ndarray:
+        pe = np.zeros((max_len, d_model))
+        for timestamp in range(max_len):
+            for channel in range(0, d_model, 2):
+                divisor = math.exp(channel * -math.log(100000.0) / d_model)
+                pe[timestamp, channel] = math.sin((timestamp + 1) * divisor)
+                if channel + 1 < d_model:
+                    pe[timestamp, channel + 1] = math.cos(
+                        (timestamp + 1) * divisor
+                    )
+        return pe
 
-        output = {}
-        for node_type, residual in features.items():
-            if not incoming[node_type]:
-                output[node_type] = residual
-                continue
-            fused = self.aggregators[node_type](incoming[node_type])
-            output[node_type] = self.norms[node_type](
-                residual + self.dropout(F.relu(fused))
-            )
-        return output
+    def forward(self, features: torch.Tensor) -> torch.Tensor:
+        hidden = self.proj(features.permute(1, 0, 2)) + self.pe
+        query = self.q_w(hidden)
+        key = self.k_w(hidden)
+        value = self.v_w(hidden)
+        scores = torch.softmax(torch.matmul(query, key.permute(0, 2, 1)), dim=-1)
+        return F.relu(self.fc(torch.matmul(scores, value)))
 
 
-class HTGNN(nn.Module):
-    """Kiến trúc HTGNN
-    """
+class HTGNNLayer(nn.Module):
+    """One spatial, relation, temporal, and residual HTGNN block."""
 
     def __init__(
         self,
         graph: dgl.DGLGraph,
+        n_inp: int,
+        n_hid: int,
+        n_heads: int,
+        timeframe: list[str],
+        norm: bool,
+        device: torch.device,
+        dropout: float,
+    ):
+        super().__init__()
+        if n_heads != 1:
+            raise ValueError(
+                "The reference HTGNN implementation requires n_heads=1 because "
+                "it squeezes the GAT head dimension before relation aggregation."
+            )
+        self.timeframe = timeframe
+        self.norm = norm
+        self.intra_rel_agg = nn.ModuleDict(
+            {
+                etype: GATConv(
+                    n_inp,
+                    n_hid,
+                    n_heads,
+                    feat_drop=dropout,
+                    allow_zero_in_degree=True,
+                )
+                for _, etype, _ in graph.canonical_etypes
+            }
+        )
+        self.inter_rel_agg = nn.ModuleDict(
+            {timestamp: RelationAgg(n_hid, n_hid) for timestamp in timeframe}
+        )
+        self.cross_time_agg = nn.ModuleDict(
+            {
+                ntype: TemporalAgg(n_hid, n_hid, len(timeframe), device)
+                for ntype in graph.ntypes
+            }
+        )
+        self.res_fc = nn.ModuleDict(
+            {ntype: nn.Linear(n_inp, n_hid) for ntype in graph.ntypes}
+        )
+        self.res_weight = nn.ParameterDict(
+            {ntype: nn.Parameter(torch.randn(1)) for ntype in graph.ntypes}
+        )
+        self.norm_layer = (
+            nn.ModuleDict({ntype: nn.LayerNorm(n_hid) for ntype in graph.ntypes})
+            if norm
+            else None
+        )
+        self.reset_parameters()
+
+    def reset_parameters(self):
+        gain = nn.init.calculate_gain("relu")
+        for layer in self.res_fc.values():
+            nn.init.xavier_normal_(layer.weight, gain=gain)
+
+    def forward(
+        self, graph: dgl.DGLGraph, node_features: dict[str, dict[str, torch.Tensor]]
+    ) -> dict[str, dict[str, torch.Tensor]]:
+        intra_features = {timestamp: {} for timestamp in self.timeframe}
+        for src_type, edge_type, dst_type in graph.canonical_etypes:
+            timestamp = edge_type.rsplit("_", 1)[-1]
+            relation_graph = graph[src_type, edge_type, dst_type]
+            destination = self.intra_rel_agg[edge_type](
+                relation_graph,
+                (
+                    node_features[src_type][timestamp],
+                    node_features[dst_type][timestamp],
+                ),
+            )
+            intra_features[timestamp][(src_type, edge_type, dst_type)] = (
+                destination.squeeze(1)
+            )
+
+        inter_features = {ntype: {} for ntype in graph.ntypes}
+        for timestamp in self.timeframe:
+            for ntype in graph.ntypes:
+                relations = [
+                    feature
+                    for (_, _, dst_type), feature in intra_features[timestamp].items()
+                    if dst_type == ntype
+                ]
+                # The traffic graph has source-only node/way types. The authors'
+                # datasets do not; carrying their state forward is the neutral
+                # extension needed for stacking multiple reference HTGNN layers.
+                inter_features[ntype][timestamp] = (
+                    self.inter_rel_agg[timestamp](torch.stack(relations, dim=1))
+                    if relations
+                    else node_features[ntype][timestamp]
+                )
+
+        output_features = {}
+        for ntype in graph.ntypes:
+            embeddings = torch.stack(
+                [inter_features[ntype][timestamp] for timestamp in self.timeframe],
+                dim=0,
+            )
+            temporal = self.cross_time_agg[ntype](embeddings).permute(1, 0, 2)
+            alpha = torch.sigmoid(self.res_weight[ntype])
+            output_features[ntype] = {}
+            for index, timestamp in enumerate(self.timeframe):
+                hidden = temporal[index] * alpha + self.res_fc[ntype](
+                    node_features[ntype][timestamp]
+                ) * (1 - alpha)
+                output_features[ntype][timestamp] = (
+                    self.norm_layer[ntype](hidden) if self.norm else hidden
+                )
+        return output_features
+
+
+class HTGNN(nn.Module):
+    """Reference HTGNN encoder with per-node-type traffic input adapters."""
+
+    def __init__(
+        self,
+        graph: dgl.DGLGraph,
+        n_inp: int,
         n_hid: int,
         n_layers: int,
+        n_heads: int,
         time_window: int,
+        norm: bool,
+        device: torch.device,
         dropout: float = 0.2,
         inp_list: dict[str, int] | None = None,
-        dynamic_input_dim: int | None = None,
         **_ignored,
     ):
         super().__init__()
-        if inp_list is None or dynamic_input_dim is None:
-            raise ValueError("HTGNN requires inp_list and dynamic_input_dim")
-        if n_layers < 1:
-            raise ValueError("n_layers must be >= 1")
-        self.timeframe = [f"t{i}" for i in range(time_window)]
-
-        self.dynamic_projection = nn.Linear(dynamic_input_dim, n_hid)
-        self.temporal_encoder = nn.GRU(n_hid, n_hid, batch_first=True)
-        self.static_projection = nn.ModuleDict(
-            {node_type: nn.Linear(inp_list[node_type], n_hid) for node_type in graph.ntypes}
+        if inp_list is None:
+            inp_list = {ntype: n_inp for ntype in graph.ntypes}
+        self.n_layers = n_layers
+        self.timeframe = [f"t{index}" for index in range(time_window)]
+        self.adaption_layer = nn.ModuleDict(
+            {ntype: nn.Linear(inp_list[ntype], n_hid) for ntype in graph.ntypes}
         )
-        self.layers = nn.ModuleList(
-            [HeterogeneousGraphLayer(graph, n_hid, dropout) for _ in range(n_layers)]
+        self.gnn_layers = nn.ModuleList(
+            [
+                HTGNNLayer(
+                    graph,
+                    n_hid,
+                    n_hid,
+                    n_heads,
+                    self.timeframe,
+                    norm,
+                    device,
+                    dropout,
+                )
+                for _ in range(n_layers)
+            ]
         )
-        self.output_norm = nn.LayerNorm(n_hid)
-        self.dropout = nn.Dropout(dropout)
 
     def forward(self, graph: dgl.DGLGraph, predict_type: str = "segment"):
-        if predict_type != "segment":
-            raise ValueError("This traffic HTGNN predicts segment nodes only")
-
-        sequence = torch.stack(
-            [graph.nodes["segment"].data[f"dynamic_{time}"] for time in self.timeframe],
-            dim=1,
-        )
-        encoded_sequence = self.dropout(F.relu(self.dynamic_projection(sequence)))
-        _, hidden = self.temporal_encoder(encoded_sequence)
         features = {
-            node_type: self.static_projection[node_type](graph.nodes[node_type].data["pe"])
-            for node_type in graph.ntypes
+            ntype: {
+                timestamp: self.adaption_layer[ntype](
+                    graph.nodes[ntype].data[timestamp]
+                )
+                for timestamp in self.timeframe
+            }
+            for ntype in graph.ntypes
         }
-        # Dynamic traffic is the segment state passed into HTGNN.  Segment PE is
-        # retained separately and added only after heterogeneous message passing.
-        segment_pe = features["segment"]
-        features["segment"] = hidden[-1]
-        for layer in self.layers:
+        for layer in self.gnn_layers:
             features = layer(graph, features)
-        return self.output_norm(features["segment"] + segment_pe)
+        return sum(features[predict_type][timestamp] for timestamp in self.timeframe)
 
 
 class NodePredictor(nn.Module):
-    """Lớp MLP cuối để dự báo
-    """
+    """Two-layer node predictor from the reference implementation."""
 
-    def __init__(self, n_inp: int, output_dim: int, dropout: float = 0.0):
+    def __init__(self, n_inp: int, output_dim: int, **_ignored):
         super().__init__()
-        self.network = nn.Sequential(
-            nn.Linear(n_inp, n_inp), nn.ReLU(), nn.Dropout(dropout),
-            nn.Linear(n_inp, output_dim),
-        )
+        self.fc1 = nn.Linear(n_inp, n_inp)
+        self.fc2 = nn.Linear(n_inp, output_dim)
 
     def forward(self, node_features: torch.Tensor):
-        return self.network(node_features)
+        return F.relu(self.fc2(F.relu(self.fc1(node_features))))

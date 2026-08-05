@@ -350,7 +350,9 @@ def main(default_architecture="sehtgnn"):
         target_mask_path=args.target_mask_path,
         window_size=args.window_size,
         horizon=args.horizon,
-        separate_dynamic=args.architecture == "htgnn",
+        # The reference HTGNN reads one complete feature tensor per node type
+        # and timestamp. SE-HTGNN uses the same concatenated dataset layout.
+        separate_dynamic=False,
     )
 
     train_ds, val_ds, test_ds = chronological_split(
@@ -452,11 +454,10 @@ def main(default_architecture="sehtgnn"):
             )
         if (
             args.architecture == "htgnn"
-            and resume_checkpoint.get("feature_layout") != "separate_pe_dynamic"
+            and resume_checkpoint.get("htgnn_variant") != "yeslab_reference"
         ):
             raise ValueError(
-                "This HTGNN checkpoint uses the legacy concatenated PE/dynamic "
-                "layout and cannot be resumed with the separated architecture. "
+                "This checkpoint was not trained with the YesLab reference HTGNN. "
                 "Start a new training run without --model."
             )
 
@@ -687,13 +688,9 @@ def main(default_architecture="sehtgnn"):
                     "architecture": args.architecture,
                     "args": vars(args),
                     "inp_list": dataset.inp_list,
-                    "dynamic_input_dim": (
-                        dataset.dynamic_dim if args.architecture == "htgnn" else None
-                    ),
-                    "feature_layout": (
-                        "separate_pe_dynamic"
-                        if args.architecture == "htgnn"
-                        else "concatenated"
+                    "feature_layout": "concatenated",
+                    "htgnn_variant": (
+                        "yeslab_reference" if args.architecture == "htgnn" else None
                     ),
                 }
             if llm_feature is not None:
