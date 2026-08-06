@@ -140,17 +140,6 @@ class DynamicPreprocess(Preprocess):
             columns=los_arr.columns,
             fill_value=0.0,
         )
-        los_observed_mask = los_observed_mask.reindex(
-            columns=los_arr.columns,
-            fill_value=0.0,
-        )
-        if not np.array_equal(
-            velocity_observed_mask.to_numpy(),
-            los_observed_mask.to_numpy(),
-        ):
-            raise ValueError(
-                "Velocity and LOS observation masks differ after alignment"
-            )
         if velocity_arr.isna().any().any():
             missing_segments = velocity_arr.columns[velocity_arr.isna().any()].tolist()
             raise ValueError(
@@ -188,10 +177,6 @@ class DynamicPreprocess(Preprocess):
         np.save(
             output_dir / "dynamic_velocity_observed_mask.npy",
             velocity_observed_mask.to_numpy(dtype=np.float32),
-        )
-        np.save(
-            output_dir / "dynamic_los_observed_mask.npy",
-            los_observed_mask.to_numpy(dtype=np.float32),
         )
 
         return dynamic_features
