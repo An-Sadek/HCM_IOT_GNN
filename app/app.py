@@ -1,7 +1,8 @@
-"""Interactive, end-to-end forecast viewer for result/model18."""
+"""Streamlit viewer for partial and full-dataset HTGNN forecasts."""
 
 from __future__ import annotations
 
+import csv
 import sys
 from pathlib import Path
 
@@ -10,199 +11,159 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 import torch
-from torch.utils.data import DataLoader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TRAIN_DIR = ROOT / "train"
-if str(TRAIN_DIR) not in sys.path:
-    sys.path.insert(0, str(TRAIN_DIR))
+TEST_DIR = ROOT / "test"
+if str(TEST_DIR) not in sys.path:
+    sys.path.insert(0, str(TEST_DIR))
 
-from data import SEHTGNNDataset, collate_sehtgnn  # noqa: E402
-from htgnn_model import HTGNN, NodePredictor  # noqa: E402
-from run_train import chronological_split  # noqa: E402
+from forecast_all import DEFAULT_CHECKPOINT, DEFAULT_OUTPUT, forecast_range, load_runtime  # noqa: E402
 
 
-CHECKPOINT = ROOT / "result" / "model18" / "htgnn_best.pt"
-CACHE_DIR = ROOT / "app" / ".cache"
+st.set_page_config(page_title="Dự báo giao thông HTGNN", layout="wide")
 
 
-st.set_page_config(page_title="Model18 traffic forecast", layout="wide")
-
-
-@st.cache_resource(show_spinner="Đang nạp model18 và dữ liệu...")
-def load_runtime(device_name: str):
-    checkpoint = torch.load(CHECKPOINT, map_location="cpu", weights_only=True)
-    if checkpoint.get("feature_layout") != "separate_pe_dynamic":
-        raise ValueError(
-            "Checkpoint uses the old concatenated PE/dynamic HTGNN layout; "
-            "select a checkpoint trained with the separated architecture."
-        )
-    args = checkpoint["args"]
-    dataset = SEHTGNNDataset(
-        preprocess_root=ROOT / args["preprocess_root"],
-        dynamic_path=ROOT / args["dynamic_path"],
-        target_path=ROOT / args["target_path"],
-        target_mask_path=ROOT / args["target_mask_path"],
-        window_size=args["window_size"],
-        horizon=args["horizon"],
-        separate_dynamic=True,
-    )
-    gap = args.get("split_gap")
-    gap = args["window_size"] + args["horizon"] - 1 if gap is None else gap
-    train_ds, val_ds, test_ds = chronological_split(
-        dataset, args["train_ratio"], args["val_ratio"], gap
-    )
-    train_end = train_ds.indices[-1] + args["window_size"] + args["horizon"]
-    dataset.fit_input_velocity_scaler(
-        0, train_end, velocity_channel=args.get("velocity_channel", 0)
-    )
-
-    device = torch.device(device_name)
-    graph, _, _ = dataset[0]
-    encoder = HTGNN(
-        graph=graph,
-        n_hid=args["hidden_dim"],
-        n_layers=args["layers"],
-        time_window=args["window_size"],
-        dropout=args["dropout"],
-        inp_list=checkpoint.get("inp_list", dataset.inp_list),
-        dynamic_input_dim=checkpoint.get("dynamic_input_dim", dataset.dynamic_dim),
-    ).to(device)
-    predictor = NodePredictor(args["hidden_dim"], args["horizon"]).to(device)
-    encoder.load_state_dict(checkpoint["encoder"])
-    predictor.load_state_dict(checkpoint["predictor"])
-    encoder.eval()
-    predictor.eval()
-    return dataset, encoder, predictor, args, (train_ds, val_ds, test_ds), device
+@st.cache_resource(show_spinner="Đang nạp model HTGNN và dữ liệu...")
+def cached_runtime(device_name):
+    return load_runtime(DEFAULT_CHECKPOINT, device_name)
 
 
 @st.cache_data(show_spinner=False)
 def segment_catalog():
     frame = pd.read_csv(ROOT / "data" / "preprocess" / "segments.csv")
     names = frame["name"].fillna("Không rõ").astype(str)
-    return [f"{idx} — {name}" for idx, name in zip(frame["id"], names)]
+    return {f"{idx} — {name}": int(idx) for idx, name in zip(frame["id"], names)}
 
 
 @st.cache_data(show_spinner=False)
-def timeline(total_timesteps: int):
-    status_path = ROOT / "data" / "raw" / "segment_status.csv"
+def timeline(total_timesteps):
     try:
-        dates = pd.read_csv(status_path, usecols=["updated_at"])["updated_at"]
+        dates = pd.read_csv(
+            ROOT / "data" / "raw" / "segment_status.csv", usecols=["updated_at"]
+        )["updated_at"]
         start = pd.to_datetime(dates, utc=True).min().floor("30min").tz_localize(None)
         return pd.date_range(start=start, periods=total_timesteps, freq="30min")
     except Exception:
         return pd.RangeIndex(total_timesteps, name="time_index")
 
 
-def cache_path(segment_id: int):
-    return CACHE_DIR / f"model18_segment_{segment_id}.npz"
+@st.cache_data(show_spinner="Đang đọc forecast_all.csv...")
+def read_segment_forecast(path_string, modified_time, segment_id):
+    """Scan the CSV for one segment without loading the multi-GB file into RAM."""
+    del modified_time  # cache key invalidates automatically when the file changes
+    with open(path_string, newline="", encoding="utf-8") as handle:
+        reader = csv.reader(handle)
+        header = next(reader)
+        if not header or header[0] != "segment_id":
+            raise ValueError("Cột đầu tiên của CSV phải là segment_id")
+        for row in reader:
+            if row and int(row[0]) == segment_id:
+                values = np.asarray(
+                    [np.nan if value == "" else float(value) for value in row[1:]],
+                    dtype=np.float32,
+                )
+                return values, len(header) - 1
+    raise KeyError(segment_id)
 
 
-def run_forecast(dataset, encoder, predictor, device, segment_id, batch_size):
-    """Predict every sliding window and average overlapping horizons."""
-    loader = DataLoader(
-        dataset, batch_size=batch_size, shuffle=False, collate_fn=collate_sehtgnn
-    )
-    pred_sum = np.zeros(dataset.total_timesteps, dtype=np.float64)
-    pred_count = np.zeros(dataset.total_timesteps, dtype=np.int32)
-    progress = st.progress(0, text="Bắt đầu dự báo...")
-    sample_start = 0
-    with torch.inference_mode():
-        for batch_no, (graph, _) in enumerate(loader, start=1):
-            current_batch = graph.batch_size
-            graph = graph.to(device)
-            output = predictor(encoder(graph, predict_type="segment"))
-            output = output.view(current_batch, dataset.num_segments, dataset.horizon)
-            selected = output[:, segment_id, :].detach().cpu().numpy()
-            for row in range(current_batch):
-                begin = sample_start + row + dataset.window_size
-                end = begin + dataset.horizon
-                pred_sum[begin:end] += selected[row]
-                pred_count[begin:end] += 1
-            sample_start += current_batch
-            progress.progress(
-                min(sample_start / len(dataset), 1.0),
-                text=f"Đã xử lý {sample_start:,}/{len(dataset):,} cửa sổ",
-            )
-    progress.empty()
-    prediction = np.full(dataset.total_timesteps, np.nan, dtype=np.float32)
-    valid = pred_count > 0
-    prediction[valid] = (pred_sum[valid] / pred_count[valid]).astype(np.float32)
-    CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(cache_path(segment_id), prediction=prediction)
-    return prediction
-
-
-def split_regions(dataset, splits, args):
-    regions = []
-    for label, subset, color in zip(
-        ("Train", "Validation", "Test"),
-        splits,
-        ("rgba(46, 204, 113, .12)", "rgba(241, 196, 15, .14)", "rgba(231, 76, 60, .12)"),
-    ):
-        start = subset.indices[0] + args["window_size"]
-        end = subset.indices[-1] + args["window_size"] + args["horizon"] - 1
-        regions.append((label, start, min(end, dataset.total_timesteps - 1), color))
-    return regions
-
-
-def make_chart(x, actual, prediction, regions):
+def make_chart(x, actual, prediction, title):
     fig = go.Figure()
-    for label, start, end, color in regions:
-        fig.add_vrect(
-            x0=x[start], x1=x[end], fillcolor=color, line_width=0,
-            annotation_text=label, annotation_position="top left",
-        )
     fig.add_trace(go.Scatter(x=x, y=actual, name="Thực tế", line=dict(width=1.4)))
-    fig.add_trace(go.Scatter(x=x, y=prediction, name="Model18", line=dict(width=1.4)))
+    fig.add_trace(go.Scatter(x=x, y=prediction, name="HTGNN", line=dict(width=1.4)))
     fig.update_layout(
-        height=650, hovermode="x unified", margin=dict(l=30, r=20, t=45, b=30),
-        xaxis=dict(title="Thời gian", rangeslider=dict(visible=True), type="date" if isinstance(x, pd.DatetimeIndex) else "linear"),
-        yaxis_title="Vận tốc",
-        legend=dict(orientation="h", y=1.08),
+        title=title, height=620, hovermode="x unified",
+        margin=dict(l=30, r=20, t=55, b=30),
+        xaxis=dict(title="Thời gian", rangeslider=dict(visible=True)),
+        yaxis_title="Vận tốc", legend=dict(orientation="h", y=1.08),
     )
     return fig
 
 
-st.title("Dự báo vận tốc toàn chuỗi — Model18")
-st.caption("Kéo thanh ngang bên dưới biểu đồ để phóng to hoặc di chuyển trên toàn bộ dữ liệu.")
+st.title("Dự báo vận tốc giao thông — HTGNN")
+st.caption("Chọn đoạn đường, sau đó dự báo một khoảng hoặc đọc dự báo toàn bộ từ CSV.")
 
-available_device = "cuda" if torch.cuda.is_available() else "cpu"
+device_name = "cuda" if torch.cuda.is_available() else "cpu"
+dataset, encoder, predictor, args, _, device = cached_runtime(device_name)
+catalog = segment_catalog()
+all_times = timeline(dataset.total_timesteps)
+
 with st.sidebar:
     st.header("Thiết lập")
-    labels = segment_catalog()
-    selected = st.selectbox("Đoạn đường", labels, index=0)
-    segment_id = int(selected.split(" — ", 1)[0])
-    batch_size = st.number_input("Batch size suy luận", 1, 256, 16, 1)
-    st.info(f"Thiết bị: {available_device.upper()}")
-
-dataset, encoder, predictor, args, splits, device = load_runtime(available_device)
-cached = cache_path(segment_id)
-prediction = None
-if cached.exists():
-    prediction = np.load(cached)["prediction"]
-
-button_text = "Chạy dự báo toàn bộ dữ liệu" if prediction is None else "Chạy lại dự báo"
-if st.button(button_text, type="primary"):
-    prediction = run_forecast(
-        dataset, encoder, predictor, device, segment_id, int(batch_size)
+    selected_label = st.selectbox("Đoạn đường", list(catalog))
+    segment_id = catalog[selected_label]
+    st.caption(f"Thiết bị suy luận: {device_name.upper()}")
+    batch_size = st.number_input("Batch size", min_value=1, max_value=256, value=16)
+    st.subheader("Khoảng dự báo một phần")
+    minimum = 0
+    start_time = st.number_input(
+        "Chỉ số bắt đầu", min_value=minimum,
+        max_value=dataset.total_timesteps - 1, value=minimum,
     )
+    end_default = min(47, dataset.total_timesteps - 1)
+    end_time = st.number_input(
+        "Chỉ số kết thúc", min_value=minimum,
+        max_value=dataset.total_timesteps - 1, value=end_default,
+    )
+    st.caption(f"Khoảng hợp lệ: {minimum}–{dataset.total_timesteps - 1} (bao gồm hai đầu)")
 
-if prediction is None:
-    st.warning("Chọn đoạn đường rồi bấm **Chạy dự báo toàn bộ dữ liệu**. Kết quả sẽ được cache cho lần mở sau.")
-    st.stop()
+partial_button, full_button = st.columns(2)
+run_partial = partial_button.button("Dự báo một phần", type="primary", use_container_width=True)
+run_full = full_button.button("Dự báo toàn bộ", use_container_width=True)
 
-actual = np.asarray(dataset.targets[:, segment_id], dtype=np.float32)
-x = timeline(dataset.total_timesteps)
-valid = np.isfinite(prediction)
-rmse = float(np.sqrt(np.mean((prediction[valid] - actual[valid]) ** 2)))
-mae = float(np.mean(np.abs(prediction[valid] - actual[valid])))
-c1, c2, c3 = st.columns(3)
-c1.metric("RMSE toàn chuỗi", f"{rmse:.3f}")
-c2.metric("MAE toàn chuỗi", f"{mae:.3f}")
-c3.metric("Số timestamp dự báo", f"{valid.sum():,}/{len(actual):,}")
-st.plotly_chart(
-    make_chart(x, actual, prediction, split_regions(dataset, splits, args)),
-    use_container_width=True,
-)
+if run_partial:
+    if start_time > end_time:
+        st.error("Chỉ số bắt đầu phải nhỏ hơn hoặc bằng chỉ số kết thúc.")
+    else:
+        bar = st.progress(0, text="Đang dự báo...")
+
+        def update(done, total):
+            bar.progress(min(done / total, 1.0), text=f"Đã xử lý {done:,}/{total:,} cửa sổ")
+
+        prediction = forecast_range(
+            dataset, encoder, predictor, device, int(start_time), int(end_time),
+            [segment_id], int(batch_size), update,
+        )[0]
+        bar.empty()
+        actual = np.asarray(dataset.targets[int(start_time):int(end_time) + 1, segment_id])
+        x = all_times[int(start_time):int(end_time) + 1]
+        st.session_state["forecast_result"] = (x, actual, prediction, "Dự báo một phần")
+
+if run_full:
+    if not DEFAULT_OUTPUT.exists():
+        st.error(
+            f"Chưa có {DEFAULT_OUTPUT}. Hãy chạy `python test/forecast_all.py` trước."
+        )
+    else:
+        try:
+            prediction, csv_width = read_segment_forecast(
+                str(DEFAULT_OUTPUT), DEFAULT_OUTPUT.stat().st_mtime_ns, segment_id
+            )
+        except KeyError:
+            st.error(f"CSV không chứa segment_id={segment_id}.")
+        except (OSError, ValueError) as exc:
+            st.error(f"Không thể đọc CSV: {exc}")
+        else:
+            if csv_width != dataset.total_timesteps:
+                st.error(
+                    f"CSV có {csv_width} timestamp, dữ liệu cần {dataset.total_timesteps}."
+                )
+                st.stop()
+            actual = np.asarray(dataset.targets[:, segment_id], dtype=np.float32)
+            st.session_state["forecast_result"] = (
+                all_times, actual, prediction, "Dự báo toàn bộ dữ liệu"
+            )
+
+if "forecast_result" not in st.session_state:
+    st.info("Chọn chế độ dự báo để hiển thị kết quả.")
+else:
+    x, actual, prediction, title = st.session_state["forecast_result"]
+    valid = np.isfinite(prediction) & np.isfinite(actual)
+    if valid.any():
+        rmse = float(np.sqrt(np.mean((prediction[valid] - actual[valid]) ** 2)))
+        mae = float(np.mean(np.abs(prediction[valid] - actual[valid])))
+        c1, c2, c3 = st.columns(3)
+        c1.metric("RMSE", f"{rmse:.3f}")
+        c2.metric("MAE", f"{mae:.3f}")
+        c3.metric("Số timestamp dự báo", f"{valid.sum():,}/{len(prediction):,}")
+    st.plotly_chart(make_chart(x, actual, prediction, title), use_container_width=True)

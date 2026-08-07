@@ -274,8 +274,18 @@ class SEHTGNNDataset(Dataset):
         for t in range(self.window_size):
             key = f"t{t}"
             timestamp = start_idx + t
-            dynamic_t = np.asarray(self.dynamic[timestamp], dtype=np.float32).copy()
-            if self.velocity_channel is not None:
+            # Inference may request a virtual window before timestamp 0 so the
+            # model can also produce predictions for the beginning of the
+            # series.  Missing history is represented as unobserved zero input.
+            if timestamp < 0:
+                dynamic_t = np.zeros(
+                    (self.num_segments, self.dynamic_dim), dtype=np.float32
+                )
+            else:
+                dynamic_t = np.asarray(
+                    self.dynamic[timestamp], dtype=np.float32
+                ).copy()
+            if self.velocity_channel is not None and timestamp >= 0:
                 raw_velocity = np.asarray(self.targets[timestamp], dtype=np.float32)
                 observed = np.asarray(self.target_mask[timestamp], dtype=bool)
                 normalized_velocity = (

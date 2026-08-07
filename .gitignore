@@ -10,5 +10,6 @@ data/raw/nodes_df/
 data/raw/nodes_meta/
 data/raw/osm_node_ids/
 **/*.npy
-test/
+test/*
+!test/forecast_all.py
 data/preprocess/hetero_data.pt

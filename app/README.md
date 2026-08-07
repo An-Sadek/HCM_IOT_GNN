@@ -1,13 +1,19 @@
-# Model18 Streamlit app
+# Ứng dụng dự báo HTGNN
 
-Chạy từ thư mục gốc của repository:
+Từ thư mục gốc của repository, tạo file dự báo toàn bộ rồi chạy app:
 
 ```powershell
-pip install -r app/requirements.txt
+python test/forecast_all.py --device cuda --batch-size 16
 streamlit run app/app.py
 ```
 
-App nạp `result/model18/htgnn_best.pt`, dự báo mọi sliding window, lấy trung
-bình các horizon chồng lấn, rồi cache kết quả riêng cho từng segment trong
-`app/.cache/`. Lần suy luận đầu tiên có thể lâu vì mỗi lượt model phải xử lý
-toàn bộ 10.027 segment của đồ thị.
+`result/htgnn/forecast_all.csv` chứa ma trận dự báo `|V| × |T|`: mỗi dòng là
+một đoạn đường và mỗi cột là một timestamp. Các horizon chồng lấn được lấy trung
+bình. Với các timestamp đầu chuỗi chưa đủ lịch sử, phần đầu vào thiếu được padding
+bằng giá trị 0 với trạng thái không quan sát; vì vậy model vẫn trả về dự báo cho
+toàn bộ `|T|` timestamp.
+
+Trong app:
+
+- **Dự báo một phần** chạy model cho đoạn đường và khoảng chỉ số hợp lệ đã chọn.
+- **Dự báo toàn bộ** đọc dòng tương ứng từ `forecast_all.csv`.
