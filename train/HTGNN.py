@@ -60,6 +60,8 @@ class TemporalAgg(nn.Module):
 
     @staticmethod
     def generate_positional_encoding(d_model: int, max_len: int) -> np.ndarray:
+        """
+        """
         pe = np.zeros((max_len, d_model))
         for timestamp in range(max_len):
             for channel in range(0, d_model, 2):

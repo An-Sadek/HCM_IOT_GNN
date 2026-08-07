@@ -130,6 +130,29 @@ class DynamicPreprocess(Preprocess):
 
         return dayweek_arr
 
+    def cyclic_time_preprocess(self, columns):
+        """Encode time of day and day of week as sine/cosine pairs."""
+        slots_per_day = 48  # The timeline uses 30-minute buckets.
+        time_slots = self.full_time.hour * 2 + self.full_time.minute // 30
+
+        time_angle = 2 * np.pi * time_slots / slots_per_day
+        week_angle = 2 * np.pi * self.full_time.dayofweek / 7
+        cyclic = np.stack(
+            [
+                np.sin(time_angle),
+                np.cos(time_angle),
+                np.sin(week_angle),
+                np.cos(week_angle),
+            ],
+            axis=-1,
+        ).astype(np.float32)
+
+        # Calendar features are identical for every segment at a timestamp.
+        return np.broadcast_to(
+            cyclic[:, None, :],
+            (len(self.full_time), len(columns), cyclic.shape[-1]),
+        )
+
     def save_dynamic_features(self):
         """
         """
@@ -147,22 +170,18 @@ class DynamicPreprocess(Preprocess):
                 f"{missing_segments[:10]}"
             )
 
-        los_dayweek_features = np.stack(
-            [
-                los_arr.to_numpy().astype(np.float32),
-            ],
-            axis=-1
-        )
+        cyclic_time = self.cyclic_time_preprocess(los_arr.columns)
 
         dynamic_features = np.concatenate(
             [
                 velocity_arr.to_numpy(dtype=np.float32)[:, :, None],
                 velocity_observed_mask.to_numpy(dtype=np.float32)[:, :, None],
                 los_arr.to_numpy(dtype=np.float32)[:, :, None],
+                cyclic_time,
             ],
             axis=2
         ).astype(np.float32)
-        print("Kích thước của dynamic LOS + dayweek:", los_dayweek_features.shape)
+        print("Kích thước của cyclic time feature:", cyclic_time.shape)
         print("Kích thước của dynamic feature:", dynamic_features.shape)
 
         output_dir = Path("data/preprocess")
