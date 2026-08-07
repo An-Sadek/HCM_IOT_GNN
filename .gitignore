@@ -12,3 +12,4 @@ data/raw/osm_node_ids/
 **/*.npy
 !test/forecast_all.py
 data/preprocess/hetero_data.pt
+**/forecast_all.csv
