@@ -8,8 +8,7 @@ bash script/create_dev_conda_env.sh -g 12.1
 
 conda activate dgl-dev-gpu-121
 conda install -y -c dglteam/label/th21_cu121 dgl
-pip install "transformers==4.45.2" "tokenizers<0.21" accelerate safetensors sentencepiece protobuf 
-pip install pyyaml pandas scikit-learn "numpy<2" streamlit plotly
+pip install "transformers==4.45.2" "tokenizers<0.21" accelerate safetensors sentencepiece protobuf pyyaml pandas scikit-learn "numpy<2" streamlit plotly
 
 cd ~
 git clone https://github.com/An-Sadek/HCM_IOT_GNN.git

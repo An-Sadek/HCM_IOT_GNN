@@ -30,7 +30,7 @@ HISTORY_FIELDS = [
     "val_rmse",
     "val_r2",
     "val_mape",
-    "best_val_r2",
+    "best_val_rmse",
     "is_best",
 ]
 
@@ -140,12 +140,26 @@ def regression_metrics(stats):
     return rmse, r2, mape
 
 
-def observed_mse(prediction, target, observed_mask):
-    """MSE over genuine ground truth only; filled labels never affect training."""
+def observed_loss(prediction, target, observed_mask, loss_name, huber_delta):
+    """Regression loss over genuine ground truth only; filled labels are ignored."""
     observed = observed_mask.to(dtype=torch.bool)
     if not observed.any():
         raise ValueError("Batch contains no observed target ground truth")
-    return F.mse_loss(prediction[observed], target[observed]), observed
+    observed_prediction = prediction[observed]
+    observed_target = target[observed]
+    if loss_name == "mae":
+        loss = F.l1_loss(observed_prediction, observed_target)
+    elif loss_name == "mse":
+        loss = F.mse_loss(observed_prediction, observed_target)
+    elif loss_name == "huber":
+        loss = F.huber_loss(
+            observed_prediction,
+            observed_target,
+            delta=huber_delta,
+        )
+    else:
+        raise ValueError(f"Unsupported loss: {loss_name!r}")
+    return loss, observed
 
 
 def batch_has_observed_targets(y_mask, device, distributed):
@@ -225,20 +239,32 @@ def parse_args(default_architecture="sehtgnn"):
         default=0,
         help=(
             "Optional: stop after this many consecutive epochs without a meaningful "
-            "validation R2 improvement. Disabled by default (0), so training runs "
-            "for all --epochs while still saving the best validation-R2 checkpoint."
+            "validation RMSE improvement. Disabled by default (0), so training runs "
+            "for all --epochs while still saving the lowest-validation-RMSE checkpoint."
         ),
     )
     parser.add_argument(
         "--early-stopping-min-delta",
         type=float,
         default=1e-4,
-        help="Minimum validation R2 increase counted as an improvement.",
+        help="Minimum validation RMSE decrease counted as an improvement.",
     )
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--grad-accum-steps", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--weight-decay", type=float, default=1e-5)
+    parser.add_argument(
+        "--loss",
+        choices=("mae", "mse", "huber"),
+        default="mae",
+        help="Masked regression loss used for training, validation, and test (default: mae).",
+    )
+    parser.add_argument(
+        "--huber-delta",
+        type=float,
+        default=1.0,
+        help="Transition point between quadratic and linear error for --loss huber.",
+    )
     parser.add_argument("--mape-epsilon", type=float, default=1e-8)
     parser.add_argument("--train-ratio", type=float, default=0.7)
     parser.add_argument("--val-ratio", type=float, default=0.2)
@@ -309,6 +335,8 @@ def main(default_architecture="sehtgnn"):
         raise ValueError("--early-stopping-min-delta must be >= 0")
     if args.mape_epsilon <= 0:
         raise ValueError("--mape-epsilon must be > 0")
+    if args.huber_delta <= 0:
+        raise ValueError("--huber-delta must be > 0")
     split_gap = (
         args.window_size + args.horizon - 1
         if args.split_gap is None
@@ -340,7 +368,8 @@ def main(default_architecture="sehtgnn"):
     if is_main:
         print(
             f"training_mode={'DDP' if distributed else 'single-process'} "
-            f"world_size={world_size} batch_size_per_gpu={args.batch_size}"
+            f"world_size={world_size} batch_size_per_gpu={args.batch_size} "
+            f"loss={args.loss}"
         )
 
     dataset = SEHTGNNDataset(
@@ -517,7 +546,7 @@ def main(default_architecture="sehtgnn"):
         lr=args.lr,
         weight_decay=args.weight_decay,
     )
-    best_val_r2 = float("-inf")
+    best_val_rmse = float("inf")
     epochs_without_improvement = 0
     start_epoch = 0
     saved_best_this_run = False
@@ -529,11 +558,14 @@ def main(default_architecture="sehtgnn"):
         if "optimizer" in resume_checkpoint:
             optimizer.load_state_dict(resume_checkpoint["optimizer"])
         start_epoch = int(resume_checkpoint.get("epoch", 0))
-        best_val_r2 = float(resume_checkpoint.get("best_val_r2", float("-inf")))
+        # Older checkpoints selected models by maximum validation R2 and do not
+        # contain a comparable best-RMSE value. Starting at infinity guarantees
+        # that the first resumed epoch establishes the new RMSE-based baseline.
+        best_val_rmse = float(resume_checkpoint.get("best_val_rmse", float("inf")))
         if is_main:
             print(
                 f"resumed_from={resume_path} start_epoch={start_epoch + 1} "
-                f"best_val_r2={best_val_r2:.4f}"
+                f"best_val_rmse={best_val_rmse:.4f}"
             )
 
     checkpoint_path = Path(args.checkpoint)
@@ -575,7 +607,9 @@ def main(default_architecture="sehtgnn"):
 
             segment_emb = encoder(graph, predict_type="segment")
             predictions = predictor(segment_emb).view(-1, args.horizon)
-            loss, observed = observed_mse(predictions, y, y_mask)
+            loss, observed = observed_loss(
+                predictions, y, y_mask, args.loss, args.huber_delta
+            )
             (loss / args.grad_accum_steps).backward()
 
             if valid_step % args.grad_accum_steps == 0:
@@ -636,7 +670,9 @@ def main(default_architecture="sehtgnn"):
                 predictions = predictor(encoder(graph, predict_type="segment")).view(
                     -1, args.horizon
                 )
-                loss, observed = observed_mse(predictions, y, y_mask)
+                loss, observed = observed_loss(
+                    predictions, y, y_mask, args.loss, args.huber_delta
+                )
                 target_count = observed.sum().item()
                 val_loss_sum += loss.item() * target_count
                 val_count += target_count
@@ -671,9 +707,9 @@ def main(default_architecture="sehtgnn"):
                 f"val_r2={val_r2:.4f} val_mape={val_mape:.2f}%"
             )
 
-        is_best = val_r2 > best_val_r2 + args.early_stopping_min_delta
+        is_best = val_rmse < best_val_rmse - args.early_stopping_min_delta
         if is_best:
-            best_val_r2 = val_r2
+            best_val_rmse = val_rmse
             epochs_without_improvement = 0
             saved_best_this_run = True
         else:
@@ -684,7 +720,7 @@ def main(default_architecture="sehtgnn"):
                     "predictor": (predictor.module if distributed else predictor).state_dict(),
                     "optimizer": optimizer.state_dict(),
                     "epoch": epoch,
-                    "best_val_r2": best_val_r2,
+                    "best_val_rmse": best_val_rmse,
                     "architecture": args.architecture,
                     "args": vars(args),
                     "inp_list": dataset.inp_list,
@@ -716,7 +752,7 @@ def main(default_architecture="sehtgnn"):
                         "val_rmse": val_rmse,
                         "val_r2": val_r2,
                         "val_mape": val_mape,
-                        "best_val_r2": best_val_r2,
+                        "best_val_rmse": best_val_rmse,
                         "is_best": int(is_best),
                     }
                 )
@@ -730,7 +766,7 @@ def main(default_architecture="sehtgnn"):
                 print(
                     f"early_stopping epoch={epoch:03d} "
                     f"patience={args.early_stopping_patience} "
-                    f"best_val_r2={best_val_r2:.4f}"
+                    f"best_val_rmse={best_val_rmse:.4f}"
                 )
             break
 
@@ -763,7 +799,9 @@ def main(default_architecture="sehtgnn"):
             prediction = predictor(encoder(graph, predict_type="segment")).view(
                 -1, args.horizon
             )
-            loss, observed = observed_mse(prediction, y, y_mask)
+            loss, observed = observed_loss(
+                prediction, y, y_mask, args.loss, args.huber_delta
+            )
             target_count = observed.sum().item()
             test_loss_sum += loss.item() * target_count
             test_count += target_count
@@ -804,7 +842,7 @@ def main(default_architecture="sehtgnn"):
                     "test_mape": test_mape,
                 }
             )
-        print(f"best_val_r2={best_val_r2:.4f}")
+        print(f"best_val_rmse={best_val_rmse:.4f}")
         print(
             f"test_loss={test_loss:.4f} test_rmse={test_rmse:.4f} "
             f"test_r2={test_r2:.4f} test_mape={test_mape:.2f}% test_csv={test_path}"
