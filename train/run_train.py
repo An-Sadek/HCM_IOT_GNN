@@ -246,7 +246,7 @@ def parse_args(default_architecture="sehtgnn"):
     parser.add_argument(
         "--early-stopping-min-delta",
         type=float,
-        default=1e-4,
+        default=1e-3,
         help="Minimum validation RMSE decrease counted as an improvement.",
     )
     parser.add_argument("--batch-size", type=int, default=64)

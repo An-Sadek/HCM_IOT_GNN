@@ -30,6 +30,18 @@ class DynamicPreprocess(Preprocess):
         # Metadata
         self.metadata = dict()
 
+    def create_mask(self, los_arr):
+        """
+        Tạo mask cho các ô chưa được điền. Sử dụng sau khi fill -1.
+
+        Args:
+            los_arr: Pivot table của LOS.
+
+        Returns:
+            mask_arr: Boolean arr, với 1 là giá trị bị thiếu, 0 là giá trị được điền.
+        """
+        return los_arr.ne(-1).astype(np.float32)
+
     def velocity_preprocess(self):
         # Chuyển thành datetime
         self.status_df["updated_at"] = pd.to_datetime(self.status_df["updated_at"])
@@ -61,12 +73,11 @@ class DynamicPreprocess(Preprocess):
         ).reindex(self.full_time)
 
         velocity_arr = velocity_mat.ffill()
-        velocity_observed_mask = velocity_mat.notna().astype(np.float32)
         velocity_arr = velocity_arr.clip(lower=1., upper=120.).fillna(0.0)
         
         print("Kích thước của pivot table velocity trong status df:", velocity_arr.shape)
         
-        return velocity_arr, velocity_observed_mask
+        return velocity_arr
 
     def los_preprocess(self):
         self.train_df["LOS"] = self.train_df["LOS"].apply(lambda x: ord(x) - ord('A'))
@@ -98,16 +109,13 @@ class DynamicPreprocess(Preprocess):
             values="LOS"
         ).reindex(self.full_time)
 
-        # Gộp lại, ffill rồi bỏ qua nan
-        # Create the mask from raw observations before filling.  Genuine LOS
-        # values are encoded in [0, 5], so -1 remains a safe missing sentinel.
-        los_observed_mask = los_mat.notna().astype(np.float32)
+        # Ffill, bỏ qua nan
         los_arr = los_mat.reindex(self.full_time)
         los_arr = los_arr.ffill().fillna(-1.)
 
         print("Kích thước của pivot table LOS và mask trong train df:", los_arr.shape)
 
-        return los_arr, los_observed_mask
+        return los_arr
 
     def dayweek_preprocess(self, columns=None):
         dayweek_arr = pd.DataFrame(
@@ -156,13 +164,11 @@ class DynamicPreprocess(Preprocess):
     def save_dynamic_features(self):
         """
         """
-        los_arr, los_observed_mask = self.los_preprocess()
-        velocity_arr, velocity_observed_mask = self.velocity_preprocess()
+        los_arr = self.los_preprocess()
+        los_observed_mask = self.create_mask(los_arr)
+        velocity_arr = self.velocity_preprocess()
         velocity_arr = velocity_arr.reindex(columns=los_arr.columns)
-        velocity_observed_mask = velocity_observed_mask.reindex(
-            columns=los_arr.columns,
-            fill_value=0.0,
-        )
+
         if velocity_arr.isna().any().any():
             missing_segments = velocity_arr.columns[velocity_arr.isna().any()].tolist()
             raise ValueError(
@@ -175,7 +181,7 @@ class DynamicPreprocess(Preprocess):
         dynamic_features = np.concatenate(
             [
                 velocity_arr.to_numpy(dtype=np.float32)[:, :, None],
-                velocity_observed_mask.to_numpy(dtype=np.float32)[:, :, None],
+                los_observed_mask.to_numpy(dtype=np.float32)[:, :, None],
                 los_arr.to_numpy(dtype=np.float32)[:, :, None],
                 cyclic_time,
             ],
@@ -195,7 +201,7 @@ class DynamicPreprocess(Preprocess):
         )
         np.save(
             output_dir / "dynamic_velocity_observed_mask.npy",
-            velocity_observed_mask.to_numpy(dtype=np.float32),
+            los_observed_mask.to_numpy(dtype=np.float32),
         )
 
         return dynamic_features
