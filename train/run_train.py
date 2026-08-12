@@ -2,6 +2,7 @@ import argparse
 import csv
 import gc
 import os
+import time
 from pathlib import Path
 
 import torch
@@ -138,6 +139,18 @@ def regression_metrics(stats):
     )
     mape = 100.0 * absolute_percentage_error / count
     return rmse, r2, mape
+
+
+def synchronize_device(device):
+    """Wait for queued GPU work so wall-clock timings are accurate."""
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
+
+
+def format_duration(seconds):
+    hours, remainder = divmod(int(seconds), 3600)
+    minutes, whole_seconds = divmod(remainder, 60)
+    return f"{hours:02d}:{minutes:02d}:{whole_seconds:02d}"
 
 
 def observed_loss(prediction, target, observed_mask, loss_name, huber_delta):
@@ -579,7 +592,15 @@ def main(default_architecture="sehtgnn"):
                 writer = csv.DictWriter(history_file, fieldnames=HISTORY_FIELDS)
                 writer.writeheader()
 
+    if distributed:
+        dist.barrier()
+    synchronize_device(device)
+    training_start_time = time.perf_counter()
+    completed_epochs = 0
+
     for epoch in range(start_epoch + 1, start_epoch + args.epochs + 1):
+        synchronize_device(device)
+        epoch_start_time = time.perf_counter()
         if train_sampler is not None:
             train_sampler.set_epoch(epoch)
         encoder.train()
@@ -647,6 +668,8 @@ def main(default_architecture="sehtgnn"):
         train_loss_sum, train_count = train_stats.tolist()
         train_loss = train_loss_sum / max(train_count, 1)
         train_rmse, train_r2, train_mape = regression_metrics(train_metric_stats)
+        synchronize_device(device)
+        train_seconds = time.perf_counter() - epoch_start_time
 
         encoder.eval()
         predictor.eval()
@@ -698,13 +721,20 @@ def main(default_architecture="sehtgnn"):
         val_loss_sum, val_count = val_stats.tolist()
         val_loss = val_loss_sum / max(val_count, 1)
         val_rmse, val_r2, val_mape = regression_metrics(val_metric_stats)
+        synchronize_device(device)
+        epoch_seconds = time.perf_counter() - epoch_start_time
+        val_seconds = epoch_seconds - train_seconds
+        completed_epochs += 1
         if is_main:
             print(
                 f"epoch={epoch:03d} "
                 f"train_loss={train_loss:.4f} train_rmse={train_rmse:.4f} "
                 f"train_r2={train_r2:.4f} train_mape={train_mape:.2f}% "
                 f"val_loss={val_loss:.4f} val_rmse={val_rmse:.4f} "
-                f"val_r2={val_r2:.4f} val_mape={val_mape:.2f}%"
+                f"val_r2={val_r2:.4f} val_mape={val_mape:.2f}% "
+                f"train_time={format_duration(train_seconds)} "
+                f"val_time={format_duration(val_seconds)} "
+                f"epoch_time={format_duration(epoch_seconds)}"
             )
 
         is_best = val_rmse < best_val_rmse - args.early_stopping_min_delta
@@ -772,6 +802,15 @@ def main(default_architecture="sehtgnn"):
 
     if distributed:
         dist.barrier()
+    synchronize_device(device)
+    total_training_seconds = time.perf_counter() - training_start_time
+    if is_main:
+        average_epoch_seconds = total_training_seconds / max(completed_epochs, 1)
+        print(
+            f"training_time={format_duration(total_training_seconds)} "
+            f"completed_epochs={completed_epochs} "
+            f"average_epoch_time={format_duration(average_epoch_seconds)}"
+        )
 
     best_model_path = checkpoint_path if saved_best_this_run else resume_path
     if best_model_path is None:
