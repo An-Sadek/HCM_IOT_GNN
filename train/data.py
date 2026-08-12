@@ -139,12 +139,16 @@ class SEHTGNNDataset(Dataset):
         check_mask = np.asarray(
             self.target_mask[check_timestamps, :], dtype=bool
         )
-        stored_mask = np.asarray(
+        stored_los = np.asarray(
             self.dynamic[check_timestamps, :, velocity_mask_channel], dtype=np.float32
         )
-        if not np.array_equal(stored_mask >= 0.5, check_mask):
+        # The configured channel stores LOS itself, not a binary mask:
+        # LOS -1 means missing, while every encoded class (including A=0)
+        # means observed.
+        stored_mask = stored_los != -1.0
+        if not np.array_equal(stored_mask, check_mask):
             raise ValueError(
-                "Configured velocity mask channel does not match target mask: "
+                "LOS-derived mask (LOS != -1) does not match target mask: "
                 f"channel={velocity_mask_channel}"
             )
         if not np.allclose(

@@ -292,7 +292,10 @@ def parse_args(default_architecture="sehtgnn"):
         "--velocity-mask-channel",
         type=int,
         default=1,
-        help="Channel in dynamic_features.npy containing the velocity observed mask.",
+        help=(
+            "Channel in dynamic_features.npy containing LOS; LOS=-1 is treated "
+            "as missing and every other LOS value as observed."
+        ),
     )
     parser.add_argument(
         "--split-gap",
