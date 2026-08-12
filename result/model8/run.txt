@@ -1,1 +1,0 @@
-torchrun --standalone --nproc_per_node=gpu train/run_train.py --epochs 100 --batch-size 96 --hidden-dim 16 --lr 0.01 --window-size 24 --horizon 24
