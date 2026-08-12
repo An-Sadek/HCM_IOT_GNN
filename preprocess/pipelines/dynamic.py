@@ -181,7 +181,6 @@ class DynamicPreprocess(Preprocess):
         dynamic_features = np.concatenate(
             [
                 velocity_arr.to_numpy(dtype=np.float32)[:, :, None],
-                los_observed_mask.to_numpy(dtype=np.float32)[:, :, None],
                 los_arr.to_numpy(dtype=np.float32)[:, :, None],
                 cyclic_time,
             ],
