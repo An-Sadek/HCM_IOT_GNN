@@ -154,7 +154,11 @@ def format_duration(seconds):
 
 
 def observed_loss(prediction, target, observed_mask, loss_name, huber_delta):
-    """Regression loss over genuine ground truth only; filled labels are ignored."""
+    """Regression loss after each segment's first genuine observation.
+
+    Leading placeholders are masked out; later forward-filled labels remain
+    eligible for loss and metrics.
+    """
     observed = observed_mask.to(dtype=torch.bool)
     if not observed.any():
         raise ValueError("Batch contains no observed target ground truth")
@@ -269,7 +273,7 @@ def parse_args(default_architecture="sehtgnn"):
     parser.add_argument(
         "--loss",
         choices=("mae", "mse", "huber"),
-        default="mae",
+        default="mse",
         help="Masked regression loss used for training, validation, and test (default: mae).",
     )
     parser.add_argument(

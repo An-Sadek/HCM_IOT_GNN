@@ -18,7 +18,7 @@ def _require_dgl():
 
 
 class SEHTGNNDataset(Dataset):
-    """Sliding-window heterograph dataset with observed-target masks."""
+    """Sliding-window heterograph dataset with post-first-observation loss masks."""
 
     def __init__(
         self,
@@ -72,6 +72,29 @@ class SEHTGNNDataset(Dataset):
             )
 
         self.total_timesteps, self.num_segments, self.dynamic_dim = self.dynamic.shape
+        # Targets are forward-filled during preprocessing.  A filled value is a
+        # valid training label once its segment has produced its first genuine
+        # observation, but the leading placeholder zeros before that point are
+        # not.  Keep ``self.target_mask`` unchanged because it is also needed to
+        # fit input scalers from genuine observations only.
+        self.first_observation_timestamp = np.full(
+            self.num_segments, self.total_timesteps, dtype=np.int64
+        )
+        for start in range(0, self.total_timesteps, 256):
+            unseen_segments = np.flatnonzero(
+                self.first_observation_timestamp == self.total_timesteps
+            )
+            if unseen_segments.size == 0:
+                break
+            end = min(start + 256, self.total_timesteps)
+            observed_chunk = np.asarray(
+                self.target_mask[start:end, unseen_segments], dtype=bool
+            )
+            newly_observed = observed_chunk.any(axis=0)
+            newly_observed_segments = unseen_segments[newly_observed]
+            self.first_observation_timestamp[newly_observed_segments] = (
+                start + observed_chunk[:, newly_observed].argmax(axis=0)
+            )
         self.num_samples = self.total_timesteps - self.window_size - self.horizon + 1
         if self.num_samples <= 0:
             raise ValueError(
@@ -243,9 +266,10 @@ class SEHTGNNDataset(Dataset):
         raw_target = np.asarray(
             self.targets[target_start:target_end, :].T
         ).copy()
-        raw_mask = np.asarray(
-            self.target_mask[target_start:target_end, :].T, dtype=np.float32
-        ).copy()
+        target_timestamps = np.arange(target_start, target_end, dtype=np.int64)
+        raw_mask = (
+            target_timestamps[:, None] >= self.first_observation_timestamp[None, :]
+        ).T.astype(np.float32)
         if not np.isfinite(raw_target).all():
             raise ValueError(f"Target contains a non-finite value at sample {idx}")
         y = torch.from_numpy(raw_target.astype(np.float32, copy=False))
