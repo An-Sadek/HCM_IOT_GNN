@@ -6,12 +6,12 @@ torchrun --standalone --nproc-per-node=gpu train/run_train.py \
   --layers 1 \
   --lr 0.001 \
   --weight-decay 0.0001 \
-  --window-size 12 \
-  --horizon 12 \
+  --window-size 24 \
+  --horizon 24 \
   --early-stopping-patience 10 \
   --device cuda \
   --llm-device cuda \
   --loss mse \
-  --checkpoint result/_sehtgnn1/sehtgnn_best.pt \
-  --history-csv result/_sehtgnn1/sehtgnn_train_history.csv \
-  --test-csv result/_sehtgnn1/sehtgnn_test.csv
+  --checkpoint result/_sehtgnn2/sehtgnn_best.pt \
+  --history-csv result/_sehtgnn2/sehtgnn_train_history.csv \
+  --test-csv result/_sehtgnn2/sehtgnn_test.csv

@@ -1,0 +1,42 @@
+provider: Vast.ai
+location: US
+machine_id: M732-AR0-00
+
+gpu:
+  model: RTX 4070 SUPER
+  quantity: 4
+  vram_per_gpu: 16 GB
+  total_performance: 171.9 TFLOPS
+  memory_bandwidth: 586.6 GB/s
+  max_cuda: "13.0"
+  pcie: "4.0 x16"
+  pcie_bandwidth: 24.7 GB/s
+
+cpu:
+  model: AMD EPYC 7532
+  cores_available: 64
+  cores_total: 64
+
+ram:
+  available: 113 GB
+  total: 113 GB
+
+storage:
+  type: NVMe
+  capacity: 1191.0 GB
+  speed: 2396 MB/s
+
+network:
+  download: 1222 Mbps
+  upload: 1547 Mbps
+  open_ports: 98
+
+pricing:
+  hourly: 0.541 USD
+  bandwidth_excluded: true
+
+reliability: 99.25%
+verification: verified
+max_duration: 5 months
+dlperf: 185.4
+dlperf_per_dollar: 343.3

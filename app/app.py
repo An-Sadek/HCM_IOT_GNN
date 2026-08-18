@@ -18,15 +18,24 @@ TEST_DIR = ROOT / "test"
 if str(TEST_DIR) not in sys.path:
     sys.path.insert(0, str(TEST_DIR))
 
-from forecast_all import DEFAULT_CHECKPOINT, DEFAULT_OUTPUT, forecast_range, load_runtime  # noqa: E402
+from forecast_all import forecast_range, load_runtime  # noqa: E402
 
 
 st.set_page_config(page_title="Dự báo giao thông HTGNN", layout="wide")
 
 
-@st.cache_resource(show_spinner="Đang nạp model HTGNN và dữ liệu...")
-def cached_runtime(device_name):
-    return load_runtime(DEFAULT_CHECKPOINT, device_name)
+MODEL_FILES = {
+    f"_htgnn{i}": ROOT / "result" / f"_htgnn{i}" / "htgnn_best.pt"
+    for i in range(1, 5)
+} | {
+    f"_sehtgnn{i}": ROOT / "result" / f"_sehtgnn{i}" / "sehtgnn_best.pt"
+    for i in range(1, 3)
+}
+
+
+@st.cache_resource(show_spinner="Đang nạp model và dữ liệu...")
+def cached_runtime(checkpoint_path, device_name):
+    return load_runtime(checkpoint_path, device_name)
 
 
 @st.cache_data(show_spinner=False)
@@ -81,63 +90,67 @@ def make_chart(x, actual, prediction, title):
 
 
 st.title("Dự báo vận tốc giao thông — HTGNN")
-st.caption("Chọn đoạn đường, sau đó dự báo một khoảng hoặc đọc dự báo toàn bộ từ CSV.")
+st.caption("Chọn model, đoạn đường và một mốc thời gian cần dự báo.")
 
 device_name = "cuda" if torch.cuda.is_available() else "cpu"
-dataset, encoder, predictor, args, _, device = cached_runtime(device_name)
-catalog = segment_catalog()
-all_times = timeline(dataset.total_timesteps)
-
 with st.sidebar:
     st.header("Thiết lập")
+    model_name = st.selectbox("Model", list(MODEL_FILES))
+
+checkpoint_path = MODEL_FILES[model_name]
+dataset, encoder, predictor, args, _, device = cached_runtime(str(checkpoint_path), device_name)
+catalog = segment_catalog()
+all_times = timeline(dataset.total_timesteps)
+forecast_csv = checkpoint_path.parent / "forecast_all.csv"
+
+with st.sidebar:
     selected_label = st.selectbox("Đoạn đường", list(catalog))
     segment_id = catalog[selected_label]
     st.caption(f"Thiết bị suy luận: {device_name.upper()}")
     batch_size = st.number_input("Batch size", min_value=1, max_value=256, value=16)
-    st.subheader("Khoảng dự báo một phần")
-    minimum = 0
-    start_time = st.number_input(
-        "Chỉ số bắt đầu", min_value=minimum,
-        max_value=dataset.total_timesteps - 1, value=minimum,
-    )
-    end_default = min(47, dataset.total_timesteps - 1)
-    end_time = st.number_input(
-        "Chỉ số kết thúc", min_value=minimum,
-        max_value=dataset.total_timesteps - 1, value=end_default,
-    )
-    st.caption(f"Khoảng hợp lệ: {minimum}–{dataset.total_timesteps - 1} (bao gồm hai đầu)")
+    st.subheader("Mốc dự báo")
+    if isinstance(all_times, pd.DatetimeIndex):
+        time_index = st.selectbox(
+            "Thời điểm",
+            range(dataset.total_timesteps),
+            format_func=lambda index: all_times[index].strftime("%d/%m/%Y %H:%M"),
+        )
+        st.caption(
+            f"Hợp lệ: {all_times[0]:%d/%m/%Y %H:%M} – "
+            f"{all_times[-1]:%d/%m/%Y %H:%M} (mỗi 30 phút)"
+        )
+    else:
+        time_index = st.selectbox("Chỉ số thời gian", range(dataset.total_timesteps))
+        st.caption(f"Khoảng hợp lệ: 0–{dataset.total_timesteps - 1}")
 
 partial_button, full_button = st.columns(2)
-run_partial = partial_button.button("Dự báo một phần", type="primary", use_container_width=True)
+run_partial = partial_button.button("Dự báo mốc đã chọn", type="primary", use_container_width=True)
 run_full = full_button.button("Dự báo toàn bộ", use_container_width=True)
 
 if run_partial:
-    if start_time > end_time:
-        st.error("Chỉ số bắt đầu phải nhỏ hơn hoặc bằng chỉ số kết thúc.")
-    else:
-        bar = st.progress(0, text="Đang dự báo...")
+    bar = st.progress(0, text="Đang dự báo...")
 
-        def update(done, total):
-            bar.progress(min(done / total, 1.0), text=f"Đã xử lý {done:,}/{total:,} cửa sổ")
+    def update(done, total):
+        bar.progress(min(done / total, 1.0), text=f"Đã xử lý {done:,}/{total:,} cửa sổ")
 
-        prediction = forecast_range(
-            dataset, encoder, predictor, device, int(start_time), int(end_time),
-            [segment_id], int(batch_size), update,
-        )[0]
-        bar.empty()
-        actual = np.asarray(dataset.targets[int(start_time):int(end_time) + 1, segment_id])
-        x = all_times[int(start_time):int(end_time) + 1]
-        st.session_state["forecast_result"] = (x, actual, prediction, "Dự báo một phần")
+    prediction = forecast_range(
+        dataset, encoder, predictor, device, int(time_index), int(time_index),
+        [segment_id], int(batch_size), update,
+    )[0]
+    bar.empty()
+    actual = np.asarray(dataset.targets[int(time_index):int(time_index) + 1, segment_id])
+    x = all_times[int(time_index):int(time_index) + 1]
+    st.session_state["forecast_result"] = (x, actual, prediction, f"{model_name} — một mốc")
 
 if run_full:
-    if not DEFAULT_OUTPUT.exists():
+    if not forecast_csv.exists():
         st.error(
-            f"Chưa có {DEFAULT_OUTPUT}. Hãy chạy `python test/forecast_all.py` trước."
+            f"Chưa có {forecast_csv}. Hãy chạy `forecast_all.py` cho model này trước."
         )
     else:
         try:
             prediction, csv_width = read_segment_forecast(
-                str(DEFAULT_OUTPUT), DEFAULT_OUTPUT.stat().st_mtime_ns, segment_id
+                str(forecast_csv), forecast_csv.stat().st_mtime_ns, segment_id
             )
         except KeyError:
             st.error(f"CSV không chứa segment_id={segment_id}.")
@@ -151,7 +164,7 @@ if run_full:
                 st.stop()
             actual = np.asarray(dataset.targets[:, segment_id], dtype=np.float32)
             st.session_state["forecast_result"] = (
-                all_times, actual, prediction, "Dự báo toàn bộ dữ liệu"
+                all_times, actual, prediction, f"{model_name} — toàn bộ dữ liệu"
             )
 
 if "forecast_result" not in st.session_state:

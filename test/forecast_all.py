@@ -28,7 +28,8 @@ if str(TRAIN_DIR) not in sys.path:
     sys.path.insert(0, str(TRAIN_DIR))
 
 from data import SEHTGNNDataset, _require_dgl  # noqa: E402
-from HTGNN import HTGNN, NodePredictor  # noqa: E402
+from HTGNN import HTGNN, NodePredictor as HTGNNNodePredictor  # noqa: E402
+from model import NodePredictor as SENodePredictor, SEHTGNN  # noqa: E402
 from run_train import chronological_split  # noqa: E402
 
 
@@ -63,9 +64,10 @@ def load_runtime(checkpoint_path: str | Path = DEFAULT_CHECKPOINT, device="cpu")
     """Recreate the dataset and model exactly as recorded in the checkpoint."""
     checkpoint_path = _resolve(checkpoint_path)
     checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=True)
-    if checkpoint.get("architecture") != "htgnn":
-        raise ValueError(f"Not an HTGNN checkpoint: {checkpoint_path}")
-    if checkpoint.get("htgnn_variant") != "yeslab_reference":
+    architecture = checkpoint.get("architecture")
+    if architecture not in {"htgnn", "sehtgnn"}:
+        raise ValueError(f"Unsupported architecture {architecture!r}: {checkpoint_path}")
+    if architecture == "htgnn" and checkpoint.get("htgnn_variant") != "yeslab_reference":
         raise ValueError("Checkpoint is not the supported YesLab-reference HTGNN")
 
     args = checkpoint["args"]
@@ -93,7 +95,9 @@ def load_runtime(checkpoint_path: str | Path = DEFAULT_CHECKPOINT, device="cpu")
 
     device = torch.device(device)
     sample_graph, _, _ = dataset[0]
-    encoder = HTGNN(
+    encoder_class = HTGNN if architecture == "htgnn" else SEHTGNN
+    predictor_class = HTGNNNodePredictor if architecture == "htgnn" else SENodePredictor
+    encoder_kwargs = dict(
         graph=sample_graph,
         n_inp=args["hidden_dim"],
         n_hid=args["hidden_dim"],
@@ -104,8 +108,16 @@ def load_runtime(checkpoint_path: str | Path = DEFAULT_CHECKPOINT, device="cpu")
         device=device,
         dropout=args["dropout"],
         inp_list=checkpoint.get("inp_list", dataset.inp_list),
-    ).to(device)
-    predictor = NodePredictor(args["hidden_dim"], args["horizon"]).to(device)
+    )
+    if architecture == "htgnn":
+        encoder_kwargs["dynamic_input_dim"] = dataset.dynamic_dim
+    else:
+        llm_feature = checkpoint.get("llm_feature")
+        if llm_feature is None:
+            raise ValueError(f"SEHTGNN checkpoint has no llm_feature: {checkpoint_path}")
+        encoder_kwargs["LLM_feature"] = llm_feature
+    encoder = encoder_class(**encoder_kwargs).to(device)
+    predictor = predictor_class(args["hidden_dim"], args["horizon"]).to(device)
     encoder.load_state_dict(checkpoint["encoder"])
     predictor.load_state_dict(checkpoint["predictor"])
     encoder.eval()
