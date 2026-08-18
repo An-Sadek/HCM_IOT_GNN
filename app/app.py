@@ -18,7 +18,7 @@ TEST_DIR = ROOT / "test"
 if str(TEST_DIR) not in sys.path:
     sys.path.insert(0, str(TEST_DIR))
 
-from forecast_all import forecast_range, load_runtime  # noqa: E402
+from forecast_all import load_runtime  # noqa: E402
 
 
 st.set_page_config(page_title="Dự báo giao thông HTGNN", layout="wide")
@@ -89,8 +89,28 @@ def make_chart(x, actual, prediction, title):
     return fig
 
 
+def forecast_future(dataset, encoder, predictor, device, observed_time, segment_id):
+    """Predict the complete model horizon after the last observed timestamp."""
+    window_start = int(observed_time) - dataset.window_size + 1
+    graph = dataset.build_graph(window_start).to(device)
+    with torch.inference_mode():
+        output = predictor(encoder(graph, predict_type="segment"))
+        output = output.view(dataset.num_segments, dataset.horizon)
+    return output[int(segment_id)].detach().cpu().numpy().astype(np.float32)
+
+
+def future_timeline(all_times, observed_time, horizon):
+    """Build labels for t+1..t+horizon, including times beyond the dataset."""
+    observed_time = int(observed_time)
+    if isinstance(all_times, pd.DatetimeIndex):
+        step = all_times.freq or pd.Timedelta(minutes=30)
+        start = all_times[observed_time] + step
+        return pd.date_range(start=start, periods=horizon, freq=step)
+    return pd.RangeIndex(observed_time + 1, observed_time + horizon + 1)
+
+
 st.title("Dự báo vận tốc giao thông — HTGNN")
-st.caption("Chọn model, đoạn đường và một mốc thời gian cần dự báo.")
+st.caption("Chọn mốc quan sát cuối cùng để dự báo nhiều bước trong tương lai.")
 
 device_name = "cuda" if torch.cuda.is_available() else "cpu"
 with st.sidebar:
@@ -107,11 +127,10 @@ with st.sidebar:
     selected_label = st.selectbox("Đoạn đường", list(catalog))
     segment_id = catalog[selected_label]
     st.caption(f"Thiết bị suy luận: {device_name.upper()}")
-    batch_size = st.number_input("Batch size", min_value=1, max_value=256, value=16)
-    st.subheader("Mốc dự báo")
+    st.subheader("Mốc quan sát")
     if isinstance(all_times, pd.DatetimeIndex):
         time_index = st.selectbox(
-            "Thời điểm",
+            "Thời điểm cuối đã quan sát",
             range(dataset.total_timesteps),
             format_func=lambda index: all_times[index].strftime("%d/%m/%Y %H:%M"),
         )
@@ -120,27 +139,39 @@ with st.sidebar:
             f"{all_times[-1]:%d/%m/%Y %H:%M} (mỗi 30 phút)"
         )
     else:
-        time_index = st.selectbox("Chỉ số thời gian", range(dataset.total_timesteps))
+        time_index = st.selectbox(
+            "Chỉ số cuối đã quan sát", range(dataset.total_timesteps)
+        )
         st.caption(f"Khoảng hợp lệ: 0–{dataset.total_timesteps - 1}")
+    st.caption(
+        f"Model sẽ dự báo {dataset.horizon} bước kế tiếp "
+        f"({dataset.horizon * 30} phút nếu mỗi bước là 30 phút)."
+    )
 
 partial_button, full_button = st.columns(2)
-run_partial = partial_button.button("Dự báo mốc đã chọn", type="primary", use_container_width=True)
+run_partial = partial_button.button("Dự báo tương lai", type="primary", use_container_width=True)
 run_full = full_button.button("Dự báo toàn bộ", use_container_width=True)
 
 if run_partial:
-    bar = st.progress(0, text="Đang dự báo...")
-
-    def update(done, total):
-        bar.progress(min(done / total, 1.0), text=f"Đã xử lý {done:,}/{total:,} cửa sổ")
-
-    prediction = forecast_range(
-        dataset, encoder, predictor, device, int(time_index), int(time_index),
-        [segment_id], int(batch_size), update,
-    )[0]
-    bar.empty()
-    actual = np.asarray(dataset.targets[int(time_index):int(time_index) + 1, segment_id])
-    x = all_times[int(time_index):int(time_index) + 1]
-    st.session_state["forecast_result"] = (x, actual, prediction, f"{model_name} — một mốc")
+    with st.spinner("Đang dự báo các bước tương lai..."):
+        prediction = forecast_future(
+            dataset, encoder, predictor, device, time_index, segment_id
+        )
+    future_start = int(time_index) + 1
+    future_end = future_start + dataset.horizon
+    available_end = min(future_end, dataset.total_timesteps)
+    actual = np.full(dataset.horizon, np.nan, dtype=np.float32)
+    if future_start < dataset.total_timesteps:
+        actual[:available_end - future_start] = np.asarray(
+            dataset.targets[future_start:available_end, segment_id], dtype=np.float32
+        )
+    x = future_timeline(all_times, time_index, dataset.horizon)
+    st.session_state["forecast_result"] = (
+        x,
+        actual,
+        prediction,
+        f"{model_name} — {dataset.horizon} bước tương lai",
+    )
 
 if run_full:
     if not forecast_csv.exists():
