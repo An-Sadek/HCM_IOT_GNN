@@ -82,9 +82,16 @@ def make_chart(x, actual, prediction, title):
     fig.add_trace(go.Scatter(x=x, y=prediction, name="HTGNN", line=dict(width=1.4)))
     fig.update_layout(
         title=title, height=620, hovermode="x unified",
-        margin=dict(l=30, r=20, t=55, b=30),
+        margin=dict(l=30, r=100, t=55, b=30),
         xaxis=dict(title="Thời gian", rangeslider=dict(visible=True)),
-        yaxis_title="Vận tốc", legend=dict(orientation="h", y=1.08),
+        yaxis_title="Vận tốc",
+        legend=dict(
+            orientation="v",
+            x=1.01,
+            xanchor="left",
+            y=1,
+            yanchor="top",
+        ),
     )
     return fig
 
