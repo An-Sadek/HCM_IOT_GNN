@@ -24,13 +24,17 @@ from forecast_all import load_runtime  # noqa: E402
 st.set_page_config(page_title="Dự báo giao thông HTGNN", layout="wide")
 
 
-MODEL_FILES = {
-    f"_htgnn{i}": ROOT / "result" / f"_htgnn{i}" / "htgnn_best.pt"
-    for i in range(1, 5)
-} | {
-    f"_sehtgnn{i}": ROOT / "result" / f"_sehtgnn{i}" / "sehtgnn_best.pt"
-    for i in range(1, 3)
-}
+def available_models():
+    """Return model folders that contain a supported checkpoint."""
+    models = {}
+    result_dir = ROOT / "result"
+    for checkpoint_name in ("htgnn_best.pt", "sehtgnn_best.pt"):
+        for checkpoint_path in result_dir.glob(f"*/{checkpoint_name}"):
+            models[checkpoint_path.parent.name] = checkpoint_path
+    return dict(sorted(models.items()))
+
+
+MODEL_FILES = available_models()
 
 
 @st.cache_resource(show_spinner="Đang nạp model và dữ liệu...")
@@ -122,6 +126,9 @@ st.caption("Chọn mốc quan sát cuối cùng để dự báo nhiều bước 
 device_name = "cuda" if torch.cuda.is_available() else "cpu"
 with st.sidebar:
     st.header("Thiết lập")
+    if not MODEL_FILES:
+        st.error("Không tìm thấy checkpoint model hợp lệ trong thư mục result.")
+        st.stop()
     model_name = st.selectbox("Model", list(MODEL_FILES))
 
 checkpoint_path = MODEL_FILES[model_name]

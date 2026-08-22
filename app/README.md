@@ -6,18 +6,19 @@ Từ thư mục gốc của repository, chạy app:
 streamlit run app/app.py
 ```
 
-App chỉ cho chọn 6 model: `_htgnn1`–`_htgnn4` và `_sehtgnn1`–`_sehtgnn2`.
+App tự động hiển thị các thư mục model trong `result/` có checkpoint
+`htgnn_best.pt` hoặc `sehtgnn_best.pt`.
 Chế độ dự báo trực tiếp nhận đúng một chỉ số thời gian; app hiển thị khoảng ngày giờ
 hợp lệ tương ứng.
 
-Để tạo dự báo toàn bộ cho một model (ví dụ `_htgnn1`):
+Để tạo dự báo toàn bộ cho một model (ví dụ `htgnn1`):
 
 ```powershell
-python test/forecast_all.py --checkpoint result/_htgnn1/htgnn_best.pt --output result/_htgnn1/forecast_all.csv --device cuda --batch-size 16
+python test/forecast_all.py --checkpoint result/htgnn1/htgnn_best.pt --output result/htgnn1/forecast_all.csv --device cuda --batch-size 16
 ```
 
 Với SEHTGNN, đổi checkpoint và output tương ứng, ví dụ
-`result/_sehtgnn1/sehtgnn_best.pt` và `result/_sehtgnn1/forecast_all.csv`.
+`result/sehtgnn1/sehtgnn_best.pt` và `result/sehtgnn1/forecast_all.csv`.
 
 `result/<model>/forecast_all.csv` chứa ma trận dự báo `|V| × |T|`: mỗi dòng là
 một đoạn đường và mỗi cột là một timestamp. Các horizon chồng lấn được lấy trung
